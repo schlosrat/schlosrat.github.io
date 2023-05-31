@@ -1,0 +1,1046 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DragArea2D
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DragArea2D
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="UnityEngine.UI.DragArea2D">
+
+
+
+  <h1 id="UnityEngine_UI_DragArea2D" data-uid="UnityEngine.UI.DragArea2D" class="text-break">
+    Class DragArea2D
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="UnityEngine.html">UnityEngine</a>.<a class="xref" href="UnityEngine.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DragArea2D : RawImage, ICanvasElement, IClippable, IMaskable, IMaterialModifier, IDragHandler, IPointerDownHandler, IEventSystemHandler</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><span class="xref">UIBehaviour</span></div>
+      <div><span class="xref">Graphic</span></div>
+      <div><span class="xref">MaskableGraphic</span></div>
+      <div><span class="xref">RawImage</span></div>
+      <div><span class="xref">DragArea2D</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><span class="xref">ICanvasElement</span></div>
+      <div><span class="xref">IClippable</span></div>
+      <div><span class="xref">IMaskable</span></div>
+      <div><span class="xref">IMaterialModifier</span></div>
+      <div><span class="xref">IDragHandler</span></div>
+      <div><span class="xref">IPointerDownHandler</span></div>
+      <div><span class="xref">IEventSystemHandler</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <span class="xref">RawImage.SetNativeSize()</span>
+    </div>
+    <div>
+      <span class="xref">RawImage.OnPopulateMesh(VertexHelper)</span>
+    </div>
+    <div>
+      <span class="xref">RawImage.OnDidApplyAnimationProperties()</span>
+    </div>
+    <div>
+      <span class="xref">RawImage.mainTexture</span>
+    </div>
+    <div>
+      <span class="xref">RawImage.texture</span>
+    </div>
+    <div>
+      <span class="xref">RawImage.uvRect</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.m_ShouldRecalculateStencil</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.m_MaskMaterial</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.m_StencilValue</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.GetModifiedMaterial(Material)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">MaskableGraphic.Cull(Rect, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">MaskableGraphic.SetClipRect(Rect, bool)</a>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.SetClipSoftness(Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.OnEnable()</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.OnDisable()</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.OnTransformParentChanged()</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.OnCanvasHierarchyChanged()</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.RecalculateClipping()</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.RecalculateMasking()</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.onCullStateChanged</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.maskable</span>
+    </div>
+    <div>
+      <span class="xref">MaskableGraphic.isMaskingGraphic</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.s_DefaultUI</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.s_WhiteTexture</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_Material</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_SkipLayoutUpdate</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_SkipMaterialUpdate</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_OnDirtyLayoutCallback</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_OnDirtyVertsCallback</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_OnDirtyMaterialCallback</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.s_Mesh</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_CachedMesh</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.m_CachedUvs</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.SetAllDirty()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.SetLayoutDirty()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.SetVerticesDirty()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.SetMaterialDirty()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.OnRectTransformDimensionsChange()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.OnBeforeTransformParentChanged()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.OnDestroy()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.OnCullingChanged()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.Rebuild(CanvasUpdate)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.LayoutComplete()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.GraphicUpdateComplete()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.UpdateMaterial()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.UpdateGeometry()</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.OnPopulateMesh(Mesh)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.Raycast(Vector2, Camera)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.PixelAdjustPoint(Vector2)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.GetPixelAdjustedRect()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Graphic.CrossFadeColor(Color, float, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Graphic.CrossFadeColor(Color, float, bool, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Graphic.CrossFadeAlpha(float, float, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Graphic.RegisterDirtyLayoutCallback(UnityAction)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.UnregisterDirtyLayoutCallback(UnityAction)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.RegisterDirtyVerticesCallback(UnityAction)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.UnregisterDirtyVerticesCallback(UnityAction)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.RegisterDirtyMaterialCallback(UnityAction)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.UnregisterDirtyMaterialCallback(UnityAction)</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.defaultGraphicMaterial</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.color</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.raycastTarget</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.raycastPadding</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.useLegacyMeshGeneration</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.depth</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.rectTransform</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.canvas</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.canvasRenderer</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.defaultMaterial</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.material</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.materialForRendering</span>
+    </div>
+    <div>
+      <span class="xref">Graphic.workerMesh</span>
+    </div>
+    <div>
+      <span class="xref">UIBehaviour.Awake()</span>
+    </div>
+    <div>
+      <span class="xref">UIBehaviour.Start()</span>
+    </div>
+    <div>
+      <span class="xref">UIBehaviour.IsActive()</span>
+    </div>
+    <div>
+      <span class="xref">UIBehaviour.OnCanvasGroupChanged()</span>
+    </div>
+    <div>
+      <span class="xref">UIBehaviour.IsDestroyed()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.GetComponentCached``1(UnityEngine.Component,``0@)">GameObjectExtension.GetComponentCached&lt;T&gt;(Component, ref T)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.GetComponentInParent``1(UnityEngine.Component,System.Boolean)">GameObjectExtension.GetComponentInParent&lt;T&gt;(Component, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.ComponentExtensions.html#KSP_ComponentExtensions_CopyFrom__1_UnityEngine_Component___0_">ComponentExtensions.CopyFrom&lt;T&gt;(Component, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.OAB.DataContextMonoBehaviorExtensionDooblyDo.html#KSP_OAB_DataContextMonoBehaviorExtensionDooblyDo_FindDataContextProviderInHierarchy_UnityEngine_MonoBehaviour_">DataContextMonoBehaviorExtensionDooblyDo.FindDataContextProviderInHierarchy(MonoBehaviour)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.SetDebugName(UnityEngine.Object,System.String)">GameObjectExtension.SetDebugName(Object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityEngine.UI.ScreenAdaptationExtension.html#UnityEngine_UI_ScreenAdaptationExtension_GetRectTransform__1___0_">ScreenAdaptationExtension.GetRectTransform&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="UnityEngine_UI_DragArea2D__ctor_" data-uid="UnityEngine.UI.DragArea2D.#ctor*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D__ctor" data-uid="UnityEngine.UI.DragArea2D.#ctor">
+  DragArea2D()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DragArea2D()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="UnityEngine_UI_DragArea2D_indicator" data-uid="UnityEngine.UI.DragArea2D.indicator">
+  indicator
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectTransform indicator</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RectTransform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_DragArea2D_onPointChanged" data-uid="UnityEngine.UI.DragArea2D.onPointChanged">
+  onPointChanged
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DragArea2D.DragArea2DPointEvent onPointChanged</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityEngine.UI.DragArea2D.html">DragArea2D</a>.<a class="xref" href="UnityEngine.UI.DragArea2D.DragArea2DPointEvent.html">DragArea2DPointEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="UnityEngine_UI_DragArea2D_Point_" data-uid="UnityEngine.UI.DragArea2D.Point*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D_Point" data-uid="UnityEngine.UI.DragArea2D.Point">
+  Point
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Point { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_DragArea2D_PointInWorld_" data-uid="UnityEngine.UI.DragArea2D.PointInWorld*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D_PointInWorld" data-uid="UnityEngine.UI.DragArea2D.PointInWorld">
+  PointInWorld
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 PointInWorld { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_DragArea2D_Size_" data-uid="UnityEngine.UI.DragArea2D.Size*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D_Size" data-uid="UnityEngine.UI.DragArea2D.Size">
+  Size
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Size { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="UnityEngine_UI_DragArea2D_OnDrag_" data-uid="UnityEngine.UI.DragArea2D.OnDrag*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D_OnDrag_UnityEngine_EventSystems_PointerEventData_" data-uid="UnityEngine.UI.DragArea2D.OnDrag(UnityEngine.EventSystems.PointerEventData)">
+  OnDrag(PointerEventData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnDrag(PointerEventData eventData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventData</code> <span class="xref">PointerEventData</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_DragArea2D_OnPointerDown_" data-uid="UnityEngine.UI.DragArea2D.OnPointerDown*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D_OnPointerDown_UnityEngine_EventSystems_PointerEventData_" data-uid="UnityEngine.UI.DragArea2D.OnPointerDown(UnityEngine.EventSystems.PointerEventData)">
+  OnPointerDown(PointerEventData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnPointerDown(PointerEventData eventData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventData</code> <span class="xref">PointerEventData</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_DragArea2D_Set_" data-uid="UnityEngine.UI.DragArea2D.Set*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D_Set_UnityEngine_Vector2_System_Boolean_" data-uid="UnityEngine.UI.DragArea2D.Set(UnityEngine.Vector2,System.Boolean)">
+  Set(Vector2, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(Vector2 value, bool skipEvent = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>skipEvent</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_DragArea2D_UpdatePosition2D_" data-uid="UnityEngine.UI.DragArea2D.UpdatePosition2D*"></a>
+
+  <h3 id="UnityEngine_UI_DragArea2D_UpdatePosition2D_UnityEngine_Vector2_" data-uid="UnityEngine.UI.DragArea2D.UpdatePosition2D(UnityEngine.Vector2)">
+  UpdatePosition2D(Vector2)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdatePosition2D(Vector2 cursorWorldPos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cursorWorldPos</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

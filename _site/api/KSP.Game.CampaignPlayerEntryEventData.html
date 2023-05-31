@@ -1,0 +1,2775 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CampaignPlayerEntryEventData
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CampaignPlayerEntryEventData
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="KSP.Game.CampaignPlayerEntryEventData">
+
+
+
+  <h1 id="KSP_Game_CampaignPlayerEntryEventData" data-uid="KSP.Game.CampaignPlayerEntryEventData" class="text-break">
+    Class CampaignPlayerEntryEventData
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="KSP.html">KSP</a>.<a class="xref" href="KSP.Game.html">Game</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CampaignPlayerEntryEventData</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CampaignPlayerEntryEventData</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData__ctor_" data-uid="KSP.Game.CampaignPlayerEntryEventData.#ctor*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData__ctor" data-uid="KSP.Game.CampaignPlayerEntryEventData.#ctor">
+  CampaignPlayerEntryEventData()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignPlayerEntryEventData()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData__ctor_" data-uid="KSP.Game.CampaignPlayerEntryEventData.#ctor*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData__ctor_KSP_Game_CampaignPlayerEntryEventData_" data-uid="KSP.Game.CampaignPlayerEntryEventData.#ctor(KSP.Game.CampaignPlayerEntryEventData)">
+  CampaignPlayerEntryEventData(CampaignPlayerEntryEventData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignPlayerEntryEventData(CampaignPlayerEntryEventData src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryEventData.html">CampaignPlayerEntryEventData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData__ctor_" data-uid="KSP.Game.CampaignPlayerEntryEventData.#ctor*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData__ctor_System_String_KSP_Game_CampaignPlayerEntryEvent_KSP_Game_CampaignPlayerEntryField_KSP_Game_GameState_KSP_Game_GameState_System_Int32_System_String_System_String_KSP_Game_ActiveCameraGroup_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_Boolean_System_String_System_String_UnityEngine_Color_UnityEngine_Color_" data-uid="KSP.Game.CampaignPlayerEntryEventData.#ctor(System.String,KSP.Game.CampaignPlayerEntryEvent,KSP.Game.CampaignPlayerEntryField,KSP.Game.GameState,KSP.Game.GameState,System.Int32,System.String,System.String,KSP.Game.ActiveCameraGroup,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,UnityEngine.Color,UnityEngine.Color)">
+  CampaignPlayerEntryEventData(string, CampaignPlayerEntryEvent, CampaignPlayerEntryField, GameState, GameState, int, string, string, ActiveCameraGroup, string, string, string, string, string, string, string, string, string, bool, string, string, Color, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignPlayerEntryEventData(string playerGuidString, CampaignPlayerEntryEvent campaignPlayerEntryEvent, CampaignPlayerEntryField campaignPlayerEntryField, GameState startingGameState, GameState historicalGameState, int agencyId, string activeVesselNameStringOrNull, string activeVesselGuidStringOrNull, ActiveCameraGroup activeCameraGroupValue, string activeCameraInfoStringOrNull, string flightControlStateStringOrNull, string lastOABWorkspaceSnapshotStringOrNull, string lastOABConfigStringOrNull, string activeLocalSpaceCBStringOrNull, string observedSimObjectGuidStringOrNull, string copyLocationStringOrNull, string favoritedPartsStringOrNull, string partNameStringOrNull, bool isFTUEEnabled, string missionsJsonStringOrNull, string completedTutorialsStringOrNull, Color partColorBase, Color partColorAccent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerGuidString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>campaignPlayerEntryEvent</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryEvent.html">CampaignPlayerEntryEvent</a></dt>
+    <dd></dd>
+    <dt><code>campaignPlayerEntryField</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryField.html">CampaignPlayerEntryField</a></dt>
+    <dd></dd>
+    <dt><code>startingGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+    <dt><code>historicalGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>activeVesselNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeVesselGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeCameraGroupValue</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+    <dt><code>activeCameraInfoStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>flightControlStateStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>lastOABWorkspaceSnapshotStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>lastOABConfigStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeLocalSpaceCBStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>observedSimObjectGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>copyLocationStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>favoritedPartsStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>isFTUEEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>missionsJsonStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>completedTutorialsStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partColorBase</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>partColorAccent</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_ACTIVE_CAMERA_GROUP" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_ACTIVE_CAMERA_GROUP">
+  DEFAULT_ACTIVE_CAMERA_GROUP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const ActiveCameraGroup DEFAULT_ACTIVE_CAMERA_GROUP = None</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_ACTIVE_CAMERA_INFO_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_ACTIVE_CAMERA_INFO_STRING_OR_NULL">
+  DEFAULT_ACTIVE_CAMERA_INFO_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_ACTIVE_CAMERA_INFO_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_ACTIVE_LOCAL_SPACE_CB_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_ACTIVE_LOCAL_SPACE_CB_STRING_OR_NULL">
+  DEFAULT_ACTIVE_LOCAL_SPACE_CB_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_ACTIVE_LOCAL_SPACE_CB_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_ACTIVE_VESSEL_GUID_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_ACTIVE_VESSEL_GUID_STRING_OR_NULL">
+  DEFAULT_ACTIVE_VESSEL_GUID_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_ACTIVE_VESSEL_GUID_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_ACTIVE_VESSEL_NAME_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_ACTIVE_VESSEL_NAME_STRING_OR_NULL">
+  DEFAULT_ACTIVE_VESSEL_NAME_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_ACTIVE_VESSEL_NAME_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_AGENCY_ID" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_AGENCY_ID">
+  DEFAULT_AGENCY_ID
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DEFAULT_AGENCY_ID = 0</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_CAMPAIGN_PLAYER_ENTRY_EVENT" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_CAMPAIGN_PLAYER_ENTRY_EVENT">
+  DEFAULT_CAMPAIGN_PLAYER_ENTRY_EVENT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const CampaignPlayerEntryEvent DEFAULT_CAMPAIGN_PLAYER_ENTRY_EVENT = None</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.CampaignPlayerEntryEvent.html">CampaignPlayerEntryEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_CAMPAIGN_PLAYER_ENTRY_FIELD" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_CAMPAIGN_PLAYER_ENTRY_FIELD">
+  DEFAULT_CAMPAIGN_PLAYER_ENTRY_FIELD
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const CampaignPlayerEntryField DEFAULT_CAMPAIGN_PLAYER_ENTRY_FIELD = None</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.CampaignPlayerEntryField.html">CampaignPlayerEntryField</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_COMPLETED_TUTORIALS_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_COMPLETED_TUTORIALS_STRING_OR_NULL">
+  DEFAULT_COMPLETED_TUTORIALS_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_COMPLETED_TUTORIALS_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_COPY_LOCATION_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_COPY_LOCATION_STRING_OR_NULL">
+  DEFAULT_COPY_LOCATION_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_COPY_LOCATION_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_FAVORITED_PARTS_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_FAVORITED_PARTS_STRING_OR_NULL">
+  DEFAULT_FAVORITED_PARTS_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_FAVORITED_PARTS_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_FLIGHT_CONTROL_STATE_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_FLIGHT_CONTROL_STATE_STRING_OR_NULL">
+  DEFAULT_FLIGHT_CONTROL_STATE_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_FLIGHT_CONTROL_STATE_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_HISTORICAL_GAME_STATE" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_HISTORICAL_GAME_STATE">
+  DEFAULT_HISTORICAL_GAME_STATE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const GameState DEFAULT_HISTORICAL_GAME_STATE = Invalid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_IS_FTUE_ENABLED" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_IS_FTUE_ENABLED">
+  DEFAULT_IS_FTUE_ENABLED
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_IS_FTUE_ENABLED = false</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_LAST_OAB_CONFIG_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_LAST_OAB_CONFIG_STRING_OR_NULL">
+  DEFAULT_LAST_OAB_CONFIG_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_LAST_OAB_CONFIG_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_LAST_OAB_WORKSPACE_SNAPSHOT_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_LAST_OAB_WORKSPACE_SNAPSHOT_STRING_OR_NULL">
+  DEFAULT_LAST_OAB_WORKSPACE_SNAPSHOT_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_LAST_OAB_WORKSPACE_SNAPSHOT_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_MISSIONS_JSON_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_MISSIONS_JSON_STRING_OR_NULL">
+  DEFAULT_MISSIONS_JSON_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_MISSIONS_JSON_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_OBSERVED_SIM_OBJECT_GUID_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_OBSERVED_SIM_OBJECT_GUID_STRING_OR_NULL">
+  DEFAULT_OBSERVED_SIM_OBJECT_GUID_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_OBSERVED_SIM_OBJECT_GUID_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_PART_COLOR_ACCENT" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_PART_COLOR_ACCENT">
+  DEFAULT_PART_COLOR_ACCENT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DEFAULT_PART_COLOR_ACCENT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_PART_COLOR_BASE" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_PART_COLOR_BASE">
+  DEFAULT_PART_COLOR_BASE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DEFAULT_PART_COLOR_BASE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_PART_NAME_STRING_OR_NULL" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_PART_NAME_STRING_OR_NULL">
+  DEFAULT_PART_NAME_STRING_OR_NULL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_PART_NAME_STRING_OR_NULL = null</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_PLAYER_GUID_STRING" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_PLAYER_GUID_STRING">
+  DEFAULT_PLAYER_GUID_STRING
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DEFAULT_PLAYER_GUID_STRING = &quot;&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_DEFAULT_STARTING_GAME_STATE" data-uid="KSP.Game.CampaignPlayerEntryEventData.DEFAULT_STARTING_GAME_STATE">
+  DEFAULT_STARTING_GAME_STATE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const GameState DEFAULT_STARTING_GAME_STATE = Invalid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ActiveCameraGroup_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveCameraGroup*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ActiveCameraGroup" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveCameraGroup">
+  ActiveCameraGroup
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActiveCameraGroup ActiveCameraGroup { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ActiveCameraInfoStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveCameraInfoStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ActiveCameraInfoStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveCameraInfoStringOrNull">
+  ActiveCameraInfoStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ActiveCameraInfoStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ActiveLocalSpaceCBStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveLocalSpaceCBStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ActiveLocalSpaceCBStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveLocalSpaceCBStringOrNull">
+  ActiveLocalSpaceCBStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ActiveLocalSpaceCBStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ActiveVesselGuidStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveVesselGuidStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ActiveVesselGuidStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveVesselGuidStringOrNull">
+  ActiveVesselGuidStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ActiveVesselGuidStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ActiveVesselNameStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveVesselNameStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ActiveVesselNameStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.ActiveVesselNameStringOrNull">
+  ActiveVesselNameStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ActiveVesselNameStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_AgencyId_" data-uid="KSP.Game.CampaignPlayerEntryEventData.AgencyId*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_AgencyId" data-uid="KSP.Game.CampaignPlayerEntryEventData.AgencyId">
+  AgencyId
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AgencyId { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_CampaignPlayerEntryEvent_" data-uid="KSP.Game.CampaignPlayerEntryEventData.CampaignPlayerEntryEvent*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_CampaignPlayerEntryEvent" data-uid="KSP.Game.CampaignPlayerEntryEventData.CampaignPlayerEntryEvent">
+  CampaignPlayerEntryEvent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignPlayerEntryEvent CampaignPlayerEntryEvent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.CampaignPlayerEntryEvent.html">CampaignPlayerEntryEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_CampaignPlayerEntryField_" data-uid="KSP.Game.CampaignPlayerEntryEventData.CampaignPlayerEntryField*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_CampaignPlayerEntryField" data-uid="KSP.Game.CampaignPlayerEntryEventData.CampaignPlayerEntryField">
+  CampaignPlayerEntryField
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignPlayerEntryField CampaignPlayerEntryField { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.CampaignPlayerEntryField.html">CampaignPlayerEntryField</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_CompletedTutorials_" data-uid="KSP.Game.CampaignPlayerEntryEventData.CompletedTutorials*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_CompletedTutorials" data-uid="KSP.Game.CampaignPlayerEntryEventData.CompletedTutorials">
+  CompletedTutorials
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CompletedTutorials { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_CopyLocationStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.CopyLocationStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_CopyLocationStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.CopyLocationStringOrNull">
+  CopyLocationStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CopyLocationStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_FavoritedPartsStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.FavoritedPartsStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_FavoritedPartsStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.FavoritedPartsStringOrNull">
+  FavoritedPartsStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FavoritedPartsStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_FlightControlStateStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.FlightControlStateStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_FlightControlStateStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.FlightControlStateStringOrNull">
+  FlightControlStateStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FlightControlStateStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_HistoricalGameState_" data-uid="KSP.Game.CampaignPlayerEntryEventData.HistoricalGameState*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_HistoricalGameState" data-uid="KSP.Game.CampaignPlayerEntryEventData.HistoricalGameState">
+  HistoricalGameState
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameState HistoricalGameState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_IsFTUEEnabled_" data-uid="KSP.Game.CampaignPlayerEntryEventData.IsFTUEEnabled*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_IsFTUEEnabled" data-uid="KSP.Game.CampaignPlayerEntryEventData.IsFTUEEnabled">
+  IsFTUEEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFTUEEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_LastOABConfigStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.LastOABConfigStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_LastOABConfigStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.LastOABConfigStringOrNull">
+  LastOABConfigStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LastOABConfigStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_LastOABWorkspaceSnapshotStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.LastOABWorkspaceSnapshotStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_LastOABWorkspaceSnapshotStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.LastOABWorkspaceSnapshotStringOrNull">
+  LastOABWorkspaceSnapshotStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LastOABWorkspaceSnapshotStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_MissionsJsonStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.MissionsJsonStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_MissionsJsonStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.MissionsJsonStringOrNull">
+  MissionsJsonStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MissionsJsonStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ObservedSimObjectGuidStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ObservedSimObjectGuidStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ObservedSimObjectGuidStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.ObservedSimObjectGuidStringOrNull">
+  ObservedSimObjectGuidStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ObservedSimObjectGuidStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_PartColorAccent_" data-uid="KSP.Game.CampaignPlayerEntryEventData.PartColorAccent*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_PartColorAccent" data-uid="KSP.Game.CampaignPlayerEntryEventData.PartColorAccent">
+  PartColorAccent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color PartColorAccent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_PartColorBase_" data-uid="KSP.Game.CampaignPlayerEntryEventData.PartColorBase*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_PartColorBase" data-uid="KSP.Game.CampaignPlayerEntryEventData.PartColorBase">
+  PartColorBase
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color PartColorBase { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_PartNameStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.PartNameStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_PartNameStringOrNull" data-uid="KSP.Game.CampaignPlayerEntryEventData.PartNameStringOrNull">
+  PartNameStringOrNull
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PartNameStringOrNull { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_PlayerGuidString_" data-uid="KSP.Game.CampaignPlayerEntryEventData.PlayerGuidString*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_PlayerGuidString" data-uid="KSP.Game.CampaignPlayerEntryEventData.PlayerGuidString">
+  PlayerGuidString
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PlayerGuidString { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_StartingGameState_" data-uid="KSP.Game.CampaignPlayerEntryEventData.StartingGameState*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_StartingGameState" data-uid="KSP.Game.CampaignPlayerEntryEventData.StartingGameState">
+  StartingGameState
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameState StartingGameState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_GetDebugString_" data-uid="KSP.Game.CampaignPlayerEntryEventData.GetDebugString*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_GetDebugString_System_Boolean_" data-uid="KSP.Game.CampaignPlayerEntryEventData.GetDebugString(System.Boolean)">
+  GetDebugString(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetDebugString(bool abbrev)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>abbrev</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_Init_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Init*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_Init" data-uid="KSP.Game.CampaignPlayerEntryEventData.Init">
+  Init()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Init()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_Init_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Init*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_Init_KSP_Game_CampaignPlayerEntryEventData_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Init(KSP.Game.CampaignPlayerEntryEventData)">
+  Init(CampaignPlayerEntryEventData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Init(CampaignPlayerEntryEventData src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryEventData.html">CampaignPlayerEntryEventData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_Init_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Init*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_Init_System_String_KSP_Game_CampaignPlayerEntryEvent_KSP_Game_CampaignPlayerEntryField_KSP_Game_GameState_KSP_Game_GameState_System_Int32_System_String_System_String_KSP_Game_ActiveCameraGroup_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_Boolean_System_String_System_String_UnityEngine_Color_UnityEngine_Color_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Init(System.String,KSP.Game.CampaignPlayerEntryEvent,KSP.Game.CampaignPlayerEntryField,KSP.Game.GameState,KSP.Game.GameState,System.Int32,System.String,System.String,KSP.Game.ActiveCameraGroup,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,UnityEngine.Color,UnityEngine.Color)">
+  Init(string, CampaignPlayerEntryEvent, CampaignPlayerEntryField, GameState, GameState, int, string, string, ActiveCameraGroup, string, string, string, string, string, string, string, string, string, bool, string, string, Color, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Init(string playerGuidString, CampaignPlayerEntryEvent campaignPlayerEntryEvent, CampaignPlayerEntryField campaignPlayerEntryField, GameState startingGameState, GameState historicalGameState, int agencyId, string activeVesselNameStringOrNull, string activeVesselGuidStringOrNull, ActiveCameraGroup activeCameraGroup, string activeCameraInfoStringOrNull, string flightControlStateStringOrNull, string lastOABWorkspaceSnapshotStringOrNull, string lastOABConfigStringOrNull, string activeLocalSpaceCBStringOrNull, string observedSimObjectGuidStringOrNull, string copyLocationStringOrNull, string favoritedPartsStringOrNull, string partNameStringOrNull, bool isFTUEEnabled, string missionsJsonStringOrNull, string completedTutorialsStringOrNull, Color partColorBase, Color partColorAccent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerGuidString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>campaignPlayerEntryEvent</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryEvent.html">CampaignPlayerEntryEvent</a></dt>
+    <dd></dd>
+    <dt><code>campaignPlayerEntryField</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryField.html">CampaignPlayerEntryField</a></dt>
+    <dd></dd>
+    <dt><code>startingGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+    <dt><code>historicalGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>activeVesselNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeVesselGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeCameraGroup</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+    <dt><code>activeCameraInfoStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>flightControlStateStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>lastOABWorkspaceSnapshotStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>lastOABConfigStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeLocalSpaceCBStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>observedSimObjectGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>copyLocationStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>favoritedPartsStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>isFTUEEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>missionsJsonStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>completedTutorialsStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partColorBase</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>partColorAccent</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ResetAllValues_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ResetAllValues*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ResetAllValues" data-uid="KSP.Game.CampaignPlayerEntryEventData.ResetAllValues">
+  ResetAllValues()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetAllValues()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_Set_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Set*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_Set_KSP_Game_CampaignPlayerEntryEventData_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Set(KSP.Game.CampaignPlayerEntryEventData)">
+  Set(CampaignPlayerEntryEventData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(CampaignPlayerEntryEventData src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryEventData.html">CampaignPlayerEntryEventData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_Set_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Set*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_Set_System_String_KSP_Game_CampaignPlayerEntryEvent_KSP_Game_CampaignPlayerEntryField_KSP_Game_GameState_KSP_Game_GameState_System_Int32_System_String_System_String_KSP_Game_ActiveCameraGroup_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_Boolean_System_String_System_String_UnityEngine_Color_UnityEngine_Color_" data-uid="KSP.Game.CampaignPlayerEntryEventData.Set(System.String,KSP.Game.CampaignPlayerEntryEvent,KSP.Game.CampaignPlayerEntryField,KSP.Game.GameState,KSP.Game.GameState,System.Int32,System.String,System.String,KSP.Game.ActiveCameraGroup,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,UnityEngine.Color,UnityEngine.Color)">
+  Set(string, CampaignPlayerEntryEvent, CampaignPlayerEntryField, GameState, GameState, int, string, string, ActiveCameraGroup, string, string, string, string, string, string, string, string, string, bool, string, string, Color, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Set(string playerGuidString, CampaignPlayerEntryEvent campaignPlayerEntryEvent, CampaignPlayerEntryField campaignPlayerEntryField, GameState startingGameState, GameState historicalGameState, int agencyId, string activeVesselNameStringOrNull, string activeVesselGuidStringOrNull, ActiveCameraGroup activeCameraGroup, string activeCameraInfoStringOrNull, string flightControlStateStringOrNull, string lastOABWorkspaceSnapshotStringOrNull, string lastOABConfigStringOrNull, string activeLocalSpaceCBStringOrNull, string observedSimObjectGuidStringOrNull, string copyLocationStringOrNull, string favoritedPartsStringOrNull, string partNameStringOrNull, bool isFTUEEnabled, string missionsJsonStringOrNull, string completedTutorialsStringOrNull, Color partColorBase, Color partColorAccent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerGuidString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>campaignPlayerEntryEvent</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryEvent.html">CampaignPlayerEntryEvent</a></dt>
+    <dd></dd>
+    <dt><code>campaignPlayerEntryField</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryField.html">CampaignPlayerEntryField</a></dt>
+    <dd></dd>
+    <dt><code>startingGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+    <dt><code>historicalGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>activeVesselNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeVesselGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeCameraGroup</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+    <dt><code>activeCameraInfoStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>flightControlStateStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>lastOABWorkspaceSnapshotStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>lastOABConfigStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>activeLocalSpaceCBStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>observedSimObjectGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>copyLocationStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>favoritedPartsStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>isFTUEEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>missionsJsonStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>completedTutorialsStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>partColorBase</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+    <dt><code>partColorAccent</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetActiveCameraGroup_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveCameraGroup*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetActiveCameraGroup_KSP_Game_ActiveCameraGroup_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveCameraGroup(KSP.Game.ActiveCameraGroup)">
+  SetActiveCameraGroup(ActiveCameraGroup)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCameraGroup(ActiveCameraGroup activeCameraGroup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCameraGroup</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetActiveCameraInfoStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveCameraInfoStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetActiveCameraInfoStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveCameraInfoStringOrNull(System.String)">
+  SetActiveCameraInfoStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCameraInfoStringOrNull(string activeCameraInfoStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCameraInfoStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetActiveLocalSpaceCBStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveLocalSpaceCBStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetActiveLocalSpaceCBStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveLocalSpaceCBStringOrNull(System.String)">
+  SetActiveLocalSpaceCBStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveLocalSpaceCBStringOrNull(string activeLocalSpaceCBStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeLocalSpaceCBStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetActiveVesselGuidStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveVesselGuidStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetActiveVesselGuidStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveVesselGuidStringOrNull(System.String)">
+  SetActiveVesselGuidStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveVesselGuidStringOrNull(string activeVesselGuidStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeVesselGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetActiveVesselNameStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveVesselNameStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetActiveVesselNameStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetActiveVesselNameStringOrNull(System.String)">
+  SetActiveVesselNameStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveVesselNameStringOrNull(string activeVesselNameStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeVesselNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetAgencyId_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetAgencyId*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetAgencyId_System_Int32_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetAgencyId(System.Int32)">
+  SetAgencyId(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgencyId(int agencyId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetCampaignPlayerEntryEvent_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCampaignPlayerEntryEvent*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetCampaignPlayerEntryEvent_KSP_Game_CampaignPlayerEntryEvent_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCampaignPlayerEntryEvent(KSP.Game.CampaignPlayerEntryEvent)">
+  SetCampaignPlayerEntryEvent(CampaignPlayerEntryEvent)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCampaignPlayerEntryEvent(CampaignPlayerEntryEvent campaignPlayerEntryEvent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>campaignPlayerEntryEvent</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryEvent.html">CampaignPlayerEntryEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetCampaignPlayerEntryField_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCampaignPlayerEntryField*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetCampaignPlayerEntryField_KSP_Game_CampaignPlayerEntryField_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCampaignPlayerEntryField(KSP.Game.CampaignPlayerEntryField)">
+  SetCampaignPlayerEntryField(CampaignPlayerEntryField)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCampaignPlayerEntryField(CampaignPlayerEntryField campaignPlayerEntryField)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>campaignPlayerEntryField</code> <a class="xref" href="KSP.Game.CampaignPlayerEntryField.html">CampaignPlayerEntryField</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetCompletedTutorialsStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCompletedTutorialsStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetCompletedTutorialsStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCompletedTutorialsStringOrNull(System.String)">
+  SetCompletedTutorialsStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCompletedTutorialsStringOrNull(string completedTutorialStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>completedTutorialStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetCopyLocationStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCopyLocationStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetCopyLocationStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetCopyLocationStringOrNull(System.String)">
+  SetCopyLocationStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCopyLocationStringOrNull(string copyLocationStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>copyLocationStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetFavoritedPartsStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetFavoritedPartsStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetFavoritedPartsStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetFavoritedPartsStringOrNull(System.String)">
+  SetFavoritedPartsStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFavoritedPartsStringOrNull(string favoritedPartsStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>favoritedPartsStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetFlightControlStateStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetFlightControlStateStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetFlightControlStateStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetFlightControlStateStringOrNull(System.String)">
+  SetFlightControlStateStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFlightControlStateStringOrNull(string flightControlStateStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flightControlStateStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetHistoricalGameState_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetHistoricalGameState*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetHistoricalGameState_KSP_Game_GameState_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetHistoricalGameState(KSP.Game.GameState)">
+  SetHistoricalGameState(GameState)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHistoricalGameState(GameState historicalGameState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>historicalGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetIsFTUEEnabled_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetIsFTUEEnabled*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetIsFTUEEnabled_System_Boolean_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetIsFTUEEnabled(System.Boolean)">
+  SetIsFTUEEnabled(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIsFTUEEnabled(bool isFTUEEnabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isFTUEEnabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetLastOABConfigStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetLastOABConfigStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetLastOABConfigStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetLastOABConfigStringOrNull(System.String)">
+  SetLastOABConfigStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLastOABConfigStringOrNull(string lastOABConfigStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lastOABConfigStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetLastOABWorkspaceSnapshotStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetLastOABWorkspaceSnapshotStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetLastOABWorkspaceSnapshotStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetLastOABWorkspaceSnapshotStringOrNull(System.String)">
+  SetLastOABWorkspaceSnapshotStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLastOABWorkspaceSnapshotStringOrNull(string lastOABWorkspaceSnapshotStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lastOABWorkspaceSnapshotStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetMissionsJsonStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetMissionsJsonStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetMissionsJsonStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetMissionsJsonStringOrNull(System.String)">
+  SetMissionsJsonStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMissionsJsonStringOrNull(string missionsJsonStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionsJsonStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetObservedSimObjectGuidStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetObservedSimObjectGuidStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetObservedSimObjectGuidStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetObservedSimObjectGuidStringOrNull(System.String)">
+  SetObservedSimObjectGuidStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetObservedSimObjectGuidStringOrNull(string observedSimObjectGuidStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>observedSimObjectGuidStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetPartColorAccent_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPartColorAccent*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetPartColorAccent_UnityEngine_Color_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPartColorAccent(UnityEngine.Color)">
+  SetPartColorAccent(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPartColorAccent(Color partColorAccent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partColorAccent</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetPartColorBase_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPartColorBase*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetPartColorBase_UnityEngine_Color_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPartColorBase(UnityEngine.Color)">
+  SetPartColorBase(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPartColorBase(Color partColorBase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partColorBase</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetPartNameStringOrNull_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPartNameStringOrNull*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetPartNameStringOrNull_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPartNameStringOrNull(System.String)">
+  SetPartNameStringOrNull(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPartNameStringOrNull(string partNameStringOrNull)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partNameStringOrNull</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetPlayerGuidString_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPlayerGuidString*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetPlayerGuidString_System_String_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetPlayerGuidString(System.String)">
+  SetPlayerGuidString(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPlayerGuidString(string playerGuidString)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerGuidString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_SetStartingGameState_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetStartingGameState*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_SetStartingGameState_KSP_Game_GameState_" data-uid="KSP.Game.CampaignPlayerEntryEventData.SetStartingGameState(KSP.Game.GameState)">
+  SetStartingGameState(GameState)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetStartingGameState(GameState startingGameState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>startingGameState</code> <a class="xref" href="KSP.Game.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_CampaignPlayerEntryEventData_ToString_" data-uid="KSP.Game.CampaignPlayerEntryEventData.ToString*"></a>
+
+  <h3 id="KSP_Game_CampaignPlayerEntryEventData_ToString" data-uid="KSP.Game.CampaignPlayerEntryEventData.ToString">
+  ToString()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,701 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PQSJobUtil
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PQSJobUtil
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="KSP.Rendering.Planets.PQSJobUtil">
+
+
+
+  <h1 id="KSP_Rendering_Planets_PQSJobUtil" data-uid="KSP.Rendering.Planets.PQSJobUtil" class="text-break">
+    Class PQSJobUtil
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="KSP.html">KSP</a>.<a class="xref" href="KSP.Rendering.html">Rendering</a>.<a class="xref" href="KSP.Rendering.Planets.html">Planets</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PQSJobUtil</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PQSJobUtil</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil__ctor_" data-uid="KSP.Rendering.Planets.PQSJobUtil.#ctor*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil__ctor" data-uid="KSP.Rendering.Planets.PQSJobUtil.#ctor">
+  PQSJobUtil()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PQSJobUtil()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_BiquadraticSample_" data-uid="KSP.Rendering.Planets.PQSJobUtil.BiquadraticSample*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_BiquadraticSample_UnityEngine_Vector2_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Int32_" data-uid="KSP.Rendering.Planets.PQSJobUtil.BiquadraticSample(UnityEngine.Vector2,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Int32)">
+  BiquadraticSample(Vector2, NativeArray&lt;ushort&gt;, int, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float BiquadraticSample(Vector2 uv, NativeArray&lt;ushort&gt; heightMap, int width, int height, int offset = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uv</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>heightMap</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>offset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_DoDecals_" data-uid="KSP.Rendering.Planets.PQSJobUtil.DoDecals*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_DoDecals_UnityEngine_Vector2_UnityEngine_Vector3_Unity_Collections_NativeList_DecalInstance__Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_" data-uid="KSP.Rendering.Planets.PQSJobUtil.DoDecals(UnityEngine.Vector2,UnityEngine.Vector3,Unity.Collections.NativeList{DecalInstance},Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32)">
+  DoDecals(Vector2, Vector3, NativeList&lt;DecalInstance&gt;, NativeArray&lt;ushort&gt;, int, int, NativeArray&lt;ushort&gt;, int, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float DoDecals(Vector2 uv, Vector3 vertexPos, NativeList&lt;DecalInstance&gt; decalInstances, NativeArray&lt;ushort&gt; declaHeights, int decalHeightsSizeX, int decalHeightsSizeY, NativeArray&lt;ushort&gt; decalAlpha, int decalAlphaSizeX, int decalAlphaSizeY)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uv</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>vertexPos</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>decalInstances</code> <span class="xref">NativeList</span>&lt;<a class="xref" href="DecalInstance.html">DecalInstance</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>declaHeights</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>decalHeightsSizeX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>decalHeightsSizeY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>decalAlpha</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>decalAlphaSizeX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>decalAlphaSizeY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_FixPoleDistortion_" data-uid="KSP.Rendering.Planets.PQSJobUtil.FixPoleDistortion*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_FixPoleDistortion_System_Single_System_Single_UnityEngine_Vector3_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_" data-uid="KSP.Rendering.Planets.PQSJobUtil.FixPoleDistortion(System.Single,System.Single,UnityEngine.Vector3,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+  FixPoleDistortion(float, float, Vector3, float, float, float, float, float, float, float, float, float, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float FixPoleDistortion(float height, float nearness, Vector3 dir, float northRadius, float northHeightOffset, float northNoiseFreq, float northNoiseScale, float northFalloff, float southRadius, float southHeightOffset, float southNoiseFreq, float southNoiseScale, float southFalloff)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>nearness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>dir</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>northRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northHeightOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northNoiseFreq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northNoiseScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northFalloff</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southHeightOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southNoiseFreq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southNoiseScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southFalloff</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_GetVertexSphericalUVs_" data-uid="KSP.Rendering.Planets.PQSJobUtil.GetVertexSphericalUVs*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_GetVertexSphericalUVs_UnityEngine_Vector3_" data-uid="KSP.Rendering.Planets.PQSJobUtil.GetVertexSphericalUVs(UnityEngine.Vector3)">
+  GetVertexSphericalUVs(Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 GetVertexSphericalUVs(Vector3 dir)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dir</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_GetVertexSphericalUVsForQuad_" data-uid="KSP.Rendering.Planets.PQSJobUtil.GetVertexSphericalUVsForQuad*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_GetVertexSphericalUVsForQuad_Unity_Mathematics_double3_UnityEngine_Vector3_" data-uid="KSP.Rendering.Planets.PQSJobUtil.GetVertexSphericalUVsForQuad(Unity.Mathematics.double3,UnityEngine.Vector3)">
+  GetVertexSphericalUVsForQuad(double3, Vector3)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double2 GetVertexSphericalUVsForQuad(double3 dir, Vector3 quadPos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dir</code> <span class="xref">double3</span></dt>
+    <dd></dd>
+    <dt><code>quadPos</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">double2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_HeightSample_" data-uid="KSP.Rendering.Planets.PQSJobUtil.HeightSample*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_HeightSample_UnityEngine_Vector2_UnityEngine_Vector3_System_Single_KSP_Rendering_Planets_PQS_" data-uid="KSP.Rendering.Planets.PQSJobUtil.HeightSample(UnityEngine.Vector2,UnityEngine.Vector3,System.Single,KSP.Rendering.Planets.PQS)">
+  HeightSample(Vector2, Vector3, float, PQS)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float HeightSample(Vector2 uv, Vector3 dir, float nearness, PQS owner)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uv</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>dir</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>nearness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>owner</code> <a class="xref" href="KSP.Rendering.Planets.PQS.html">PQS</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_HeightSample_" data-uid="KSP.Rendering.Planets.PQSJobUtil.HeightSample*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_HeightSample_UnityEngine_Vector2_UnityEngine_Vector3_Unity_Collections_NativeList_DecalInstance__Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_Unity_Collections_NativeArray_System_UInt16__System_Int32_System_Int32_System_Single_System_Single_System_Single_System_Single_Unity_Collections_NativeArray_UnityEngine_Color32__System_Int32_System_Int32_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_System_Boolean_" data-uid="KSP.Rendering.Planets.PQSJobUtil.HeightSample(UnityEngine.Vector2,UnityEngine.Vector3,Unity.Collections.NativeList{DecalInstance},Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,Unity.Collections.NativeArray{System.UInt16},System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Single,Unity.Collections.NativeArray{UnityEngine.Color32},System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean)">
+  HeightSample(Vector2, Vector3, NativeList&lt;DecalInstance&gt;, NativeArray&lt;ushort&gt;, int, int, NativeArray&lt;ushort&gt;, int, int, NativeArray&lt;ushort&gt;, int, int, float, NativeArray&lt;ushort&gt;, int, int, float, float, NativeArray&lt;ushort&gt;, int, int, float, float, NativeArray&lt;ushort&gt;, int, int, float, float, NativeArray&lt;ushort&gt;, int, int, float, float, NativeArray&lt;ushort&gt;, int, int, float, float, NativeArray&lt;ushort&gt;, int, int, float, float, NativeArray&lt;ushort&gt;, int, int, float, float, NativeArray&lt;ushort&gt;, int, int, float, float, float, float, NativeArray&lt;Color32&gt;, int, int, float, float, float, float, float, float, float, float, float, float, float, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float HeightSample(Vector2 uv, Vector3 dir, NativeList&lt;DecalInstance&gt; decalInstances, NativeArray&lt;ushort&gt; decalArray, int decalArraySizeX, int decalArraySizeY, NativeArray&lt;ushort&gt; decalAlpha, int decalAlphaSizeX, int decalAlphaSizeY, NativeArray&lt;ushort&gt; globalHeightMap, int globalWidth, int globalHeight, float globalMapScale, NativeArray&lt;ushort&gt; largeMapR, int largeMapWidthR, int largeMapHeightR, float largeUVScaleR, float largeHeightScaleR, NativeArray&lt;ushort&gt; largeMapG, int largeMapWidthG, int largeMapHeightG, float largeUVScaleG, float largeHeightScaleG, NativeArray&lt;ushort&gt; largeMapB, int largeMapWidthB, int largeMapHeightB, float largeUVScaleB, float largeHeightScaleB, NativeArray&lt;ushort&gt; largeMapA, int largeMapWidthA, int largeMapHeightA, float largeUVScaleA, float largeHeightScaleA, NativeArray&lt;ushort&gt; mediumMapR, int mediumMapWidthR, int mediumMapHeightR, float mediumUVScaleR, float mediumHeightScaleR, NativeArray&lt;ushort&gt; mediumMapG, int mediumMapWidthG, int mediumMapHeightG, float mediumUVScaleG, float mediumHeightScaleG, NativeArray&lt;ushort&gt; mediumMapB, int mediumMapWidthB, int mediumMapHeightB, float mediumUVScaleB, float mediumHeightScaleB, NativeArray&lt;ushort&gt; mediumMapA, int mediumMapWidthA, int mediumMapHeightA, float mediumUVScaleA, float mediumHeightScaleA, float tiledHeightMapContrast, float sphereRadius, NativeArray&lt;Color32&gt; mask, int maskWidth, int maskHeight, float poleNearness, float northRadius, float northHeightOffset, float northNoiseFreq, float northNoiseScale, float northFalloff, float southRadius, float southHeightOffset, float southNoiseFreq, float southNoiseScale, float southFalloff, bool onlyGlobalHeight = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uv</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>dir</code> <span class="xref">Vector3</span></dt>
+    <dd></dd>
+    <dt><code>decalInstances</code> <span class="xref">NativeList</span>&lt;<a class="xref" href="DecalInstance.html">DecalInstance</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>decalArray</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>decalArraySizeX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>decalArraySizeY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>decalAlpha</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>decalAlphaSizeX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>decalAlphaSizeY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>globalHeightMap</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>globalWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>globalHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>globalMapScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeMapR</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>largeMapWidthR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeMapHeightR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeUVScaleR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeHeightScaleR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeMapG</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>largeMapWidthG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeMapHeightG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeUVScaleG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeHeightScaleG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeMapB</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>largeMapWidthB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeMapHeightB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeUVScaleB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeHeightScaleB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeMapA</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>largeMapWidthA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeMapHeightA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>largeUVScaleA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>largeHeightScaleA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapR</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>mediumMapWidthR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapHeightR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumUVScaleR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumHeightScaleR</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapG</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>mediumMapWidthG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapHeightG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumUVScaleG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumHeightScaleG</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapB</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>mediumMapWidthB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapHeightB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumUVScaleB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumHeightScaleB</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapA</code> <span class="xref">NativeArray</span>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>mediumMapWidthA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumMapHeightA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>mediumUVScaleA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mediumHeightScaleA</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>tiledHeightMapContrast</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>sphereRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>mask</code> <span class="xref">NativeArray</span>&lt;<span class="xref">Color32</span>&gt;</dt>
+    <dd></dd>
+    <dt><code>maskWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>maskHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>poleNearness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northHeightOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northNoiseFreq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northNoiseScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>northFalloff</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southRadius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southHeightOffset</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southNoiseFreq</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southNoiseScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>southFalloff</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>onlyGlobalHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Rendering_Planets_PQSJobUtil_RangeFilter_" data-uid="KSP.Rendering.Planets.PQSJobUtil.RangeFilter*"></a>
+
+  <h3 id="KSP_Rendering_Planets_PQSJobUtil_RangeFilter_System_Single_UnityEngine_Vector4_" data-uid="KSP.Rendering.Planets.PQSJobUtil.RangeFilter(System.Single,UnityEngine.Vector4)">
+  RangeFilter(float, Vector4)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float RangeFilter(float v, Vector4 range)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>v</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>range</code> <span class="xref">Vector4</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

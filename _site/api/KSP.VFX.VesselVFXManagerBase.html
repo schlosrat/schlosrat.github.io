@@ -1,0 +1,2096 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VesselVFXManagerBase
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VesselVFXManagerBase
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="KSP.VFX.VesselVFXManagerBase">
+
+
+
+  <h1 id="KSP_VFX_VesselVFXManagerBase" data-uid="KSP.VFX.VesselVFXManagerBase" class="text-break">
+    Class VesselVFXManagerBase
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="KSP.html">KSP</a>.<a class="xref" href="KSP.VFX.html">VFX</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VesselVFXManagerBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VesselVFXManagerBase</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="KSP.VFX.VesselReentryVFXManager.html">VesselReentryVFXManager</a></div>
+      <div><a class="xref" href="KSP.VFX.VesseVaporConeVFXManager.html">VesseVaporConeVFXManager</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase__ctor_" data-uid="KSP.VFX.VesselVFXManagerBase.#ctor*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__ctor_KSP_VFX_VesselVFXManagerBase_EffectQuality_KSP_Sim_impl_VesselBehavior_" data-uid="KSP.VFX.VesselVFXManagerBase.#ctor(KSP.VFX.VesselVFXManagerBase.EffectQuality,KSP.Sim.impl.VesselBehavior)">
+  VesselVFXManagerBase(EffectQuality, VesselBehavior)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VesselVFXManagerBase(VesselVFXManagerBase.EffectQuality effectQuality, VesselBehavior vessel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectQuality</code> <a class="xref" href="KSP.VFX.VesselVFXManagerBase.html">VesselVFXManagerBase</a>.<a class="xref" href="KSP.VFX.VesselVFXManagerBase.EffectQuality.html">EffectQuality</a></dt>
+    <dd></dd>
+    <dt><code>vessel</code> <a class="xref" href="KSP.Sim.impl.VesselBehavior.html">VesselBehavior</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_CmdBufferName" data-uid="KSP.VFX.VesselVFXManagerBase.CmdBufferName">
+  CmdBufferName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string CmdBufferName</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_ComputeDepthMult" data-uid="KSP.VFX.VesselVFXManagerBase.ComputeDepthMult">
+  ComputeDepthMult
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ComputeDepthMult</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_ComputeThreadSize" data-uid="KSP.VFX.VesselVFXManagerBase.ComputeThreadSize">
+  ComputeThreadSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int ComputeThreadSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_DepthBlurShaderPath" data-uid="KSP.VFX.VesselVFXManagerBase.DepthBlurShaderPath">
+  DepthBlurShaderPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string DepthBlurShaderPath</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_DepthCamBoundsMult" data-uid="KSP.VFX.VesselVFXManagerBase.DepthCamBoundsMult">
+  DepthCamBoundsMult
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float DepthCamBoundsMult</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_DepthCamNearMult" data-uid="KSP.VFX.VesselVFXManagerBase.DepthCamNearMult">
+  DepthCamNearMult
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float DepthCamNearMult</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_DepthCamScale" data-uid="KSP.VFX.VesselVFXManagerBase.DepthCamScale">
+  DepthCamScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 DepthCamScale</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_DepthOnlyShaderPath" data-uid="KSP.VFX.VesselVFXManagerBase.DepthOnlyShaderPath">
+  DepthOnlyShaderPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string DepthOnlyShaderPath</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_EnableDownscaleBlur" data-uid="KSP.VFX.VesselVFXManagerBase.EnableDownscaleBlur">
+  EnableDownscaleBlur
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableDownscaleBlur</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_EnableParticleFX" data-uid="KSP.VFX.VesselVFXManagerBase.EnableParticleFX">
+  EnableParticleFX
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableParticleFX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_Game" data-uid="KSP.VFX.VesselVFXManagerBase.Game">
+  Game
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameInstance Game</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.GameInstance.html">GameInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_JumpFloodAlgoShaderPath" data-uid="KSP.VFX.VesselVFXManagerBase.JumpFloodAlgoShaderPath">
+  JumpFloodAlgoShaderPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string JumpFloodAlgoShaderPath</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_MaterialPath" data-uid="KSP.VFX.VesselVFXManagerBase.MaterialPath">
+  MaterialPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected string MaterialPath</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_MeshDepthMuliplier" data-uid="KSP.VFX.VesselVFXManagerBase.MeshDepthMuliplier">
+  MeshDepthMuliplier
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MeshDepthMuliplier</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_MeshDepthScale" data-uid="KSP.VFX.VesselVFXManagerBase.MeshDepthScale">
+  MeshDepthScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float MeshDepthScale</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_MeshDistanceOffset" data-uid="KSP.VFX.VesselVFXManagerBase.MeshDistanceOffset">
+  MeshDistanceOffset
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MeshDistanceOffset</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_MeshScale" data-uid="KSP.VFX.VesselVFXManagerBase.MeshScale">
+  MeshScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float MeshScale</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_MeshScaleFactor" data-uid="KSP.VFX.VesselVFXManagerBase.MeshScaleFactor">
+  MeshScaleFactor
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float MeshScaleFactor</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_MeshScaleMultiplier" data-uid="KSP.VFX.VesselVFXManagerBase.MeshScaleMultiplier">
+  MeshScaleMultiplier
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MeshScaleMultiplier</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_VFXCameraLayer" data-uid="KSP.VFX.VesselVFXManagerBase.VFXCameraLayer">
+  VFXCameraLayer
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int VFXCameraLayer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_VFXGameObject" data-uid="KSP.VFX.VesselVFXManagerBase.VFXGameObject">
+  VFXGameObject
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameObject VFXGameObject</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_Vessel" data-uid="KSP.VFX.VesselVFXManagerBase.Vessel">
+  Vessel
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected VesselBehavior Vessel</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Sim.impl.VesselBehavior.html">VesselBehavior</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_VfxBufferSize" data-uid="KSP.VFX.VesselVFXManagerBase.VfxBufferSize">
+  VfxBufferSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int VfxBufferSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_VfxPrefabPath" data-uid="KSP.VFX.VesselVFXManagerBase.VfxPrefabPath">
+  VfxPrefabPath
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VfxPrefabPath</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_VfxQuality" data-uid="KSP.VFX.VesselVFXManagerBase.VfxQuality">
+  VfxQuality
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int VfxQuality</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__cmdBuffer" data-uid="KSP.VFX.VesselVFXManagerBase._cmdBuffer">
+  _cmdBuffer
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CommandBuffer _cmdBuffer</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">CommandBuffer</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__currentQuality" data-uid="KSP.VFX.VesselVFXManagerBase._currentQuality">
+  _currentQuality
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+protected VesselVFXManagerBase.EffectQuality _currentQuality</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.VFX.VesselVFXManagerBase.html">VesselVFXManagerBase</a>.<a class="xref" href="KSP.VFX.VesselVFXManagerBase.EffectQuality.html">EffectQuality</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__debugFX" data-uid="KSP.VFX.VesselVFXManagerBase._debugFX">
+  _debugFX
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+protected bool _debugFX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__debugResetMesh" data-uid="KSP.VFX.VesselVFXManagerBase._debugResetMesh">
+  _debugResetMesh
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+protected bool _debugResetMesh</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__depthBlurMat" data-uid="KSP.VFX.VesselVFXManagerBase._depthBlurMat">
+  _depthBlurMat
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Material _depthBlurMat</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__depthOnlyMat" data-uid="KSP.VFX.VesselVFXManagerBase._depthOnlyMat">
+  _depthOnlyMat
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Material _depthOnlyMat</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__jumpFloodMaterial" data-uid="KSP.VFX.VesselVFXManagerBase._jumpFloodMaterial">
+  _jumpFloodMaterial
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Material _jumpFloodMaterial</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__meshVertices" data-uid="KSP.VFX.VesselVFXManagerBase._meshVertices">
+  _meshVertices
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3[] _meshVertices</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__particleSystem" data-uid="KSP.VFX.VesselVFXManagerBase._particleSystem">
+  _particleSystem
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ParticleSystem _particleSystem</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ParticleSystem</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vesselBounds" data-uid="KSP.VFX.VesselVFXManagerBase._vesselBounds">
+  _vesselBounds
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Bounds _vesselBounds</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Bounds</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vesselBoundsMaxExtent" data-uid="KSP.VFX.VesselVFXManagerBase._vesselBoundsMaxExtent">
+  _vesselBoundsMaxExtent
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float _vesselBoundsMaxExtent</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vesselBoundsMaxSize" data-uid="KSP.VFX.VesselVFXManagerBase._vesselBoundsMaxSize">
+  _vesselBoundsMaxSize
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float _vesselBoundsMaxSize</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vesselDir" data-uid="KSP.VFX.VesselVFXManagerBase._vesselDir">
+  _vesselDir
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[SerializeField]
+protected Vector3 _vesselDir</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vfxCamTransform" data-uid="KSP.VFX.VesselVFXManagerBase._vfxCamTransform">
+  _vfxCamTransform
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Transform _vfxCamTransform</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Transform</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vfxDepthTexture" data-uid="KSP.VFX.VesselVFXManagerBase._vfxDepthTexture">
+  _vfxDepthTexture
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RenderTexture _vfxDepthTexture</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">RenderTexture</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vfxIntensity" data-uid="KSP.VFX.VesselVFXManagerBase._vfxIntensity">
+  _vfxIntensity
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected float _vfxIntensity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vfxMaterial" data-uid="KSP.VFX.VesselVFXManagerBase._vfxMaterial">
+  _vfxMaterial
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Material _vfxMaterial</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Material</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vfxMesh" data-uid="KSP.VFX.VesselVFXManagerBase._vfxMesh">
+  _vfxMesh
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Mesh _vfxMesh</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Mesh</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vfxMeshGO" data-uid="KSP.VFX.VesselVFXManagerBase._vfxMeshGO">
+  _vfxMeshGO
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameObject _vfxMeshGO</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase__vfxMeshScale" data-uid="KSP.VFX.VesselVFXManagerBase._vfxMeshScale">
+  _vfxMeshScale
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Vector3 _vfxMeshScale</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_IsActive_" data-uid="KSP.VFX.VesselVFXManagerBase.IsActive*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_IsActive" data-uid="KSP.VFX.VesselVFXManagerBase.IsActive">
+  IsActive
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_IsSpawning_" data-uid="KSP.VFX.VesselVFXManagerBase.IsSpawning*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_IsSpawning" data-uid="KSP.VFX.VesselVFXManagerBase.IsSpawning">
+  IsSpawning
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSpawning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_VFXIntensity_" data-uid="KSP.VFX.VesselVFXManagerBase.VFXIntensity*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_VFXIntensity" data-uid="KSP.VFX.VesselVFXManagerBase.VFXIntensity">
+  VFXIntensity
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float VFXIntensity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_CalculateSetIntensity_" data-uid="KSP.VFX.VesselVFXManagerBase.CalculateSetIntensity*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_CalculateSetIntensity" data-uid="KSP.VFX.VesselVFXManagerBase.CalculateSetIntensity">
+  CalculateSetIntensity()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CalculateSetIntensity()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_CheckCondition_" data-uid="KSP.VFX.VesselVFXManagerBase.CheckCondition*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_CheckCondition_KSP_VFX_FXContextData_" data-uid="KSP.VFX.VesselVFXManagerBase.CheckCondition(KSP.VFX.FXContextData)">
+  CheckCondition(FXContextData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CheckCondition(FXContextData context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="KSP.VFX.FXContextData.html">FXContextData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_CreateComputeResources_" data-uid="KSP.VFX.VesselVFXManagerBase.CreateComputeResources*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_CreateComputeResources" data-uid="KSP.VFX.VesselVFXManagerBase.CreateComputeResources">
+  CreateComputeResources()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CreateComputeResources()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_CreateEvent_" data-uid="KSP.VFX.VesselVFXManagerBase.CreateEvent*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_CreateEvent_KSP_VFX_FXContextualEventParams_KSP_VFX_FXPartContextData_KSP_Sim_impl_VesselBehavior_" data-uid="KSP.VFX.VesselVFXManagerBase.CreateEvent(KSP.VFX.FXContextualEventParams,KSP.VFX.FXPartContextData,KSP.Sim.impl.VesselBehavior)">
+  CreateEvent(FXContextualEventParams, FXPartContextData, VesselBehavior)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual FXContextualEvent CreateEvent(FXContextualEventParams fxContextualEventParams, FXPartContextData fxPartContextData, VesselBehavior vessel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fxContextualEventParams</code> <a class="xref" href="KSP.VFX.FXContextualEventParams.html">FXContextualEventParams</a></dt>
+    <dd></dd>
+    <dt><code>fxPartContextData</code> <a class="xref" href="KSP.VFX.FXPartContextData.html">FXPartContextData</a></dt>
+    <dd></dd>
+    <dt><code>vessel</code> <a class="xref" href="KSP.Sim.impl.VesselBehavior.html">VesselBehavior</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.VFX.FXContextualEvent.html">FXContextualEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_DrawGizmos_" data-uid="KSP.VFX.VesselVFXManagerBase.DrawGizmos*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_DrawGizmos" data-uid="KSP.VFX.VesselVFXManagerBase.DrawGizmos">
+  DrawGizmos()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawGizmos()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_GUIDraw_" data-uid="KSP.VFX.VesselVFXManagerBase.GUIDraw*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_GUIDraw" data-uid="KSP.VFX.VesselVFXManagerBase.GUIDraw">
+  GUIDraw()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GUIDraw()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_GenerateMesh_" data-uid="KSP.VFX.VesselVFXManagerBase.GenerateMesh*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_GenerateMesh" data-uid="KSP.VFX.VesselVFXManagerBase.GenerateMesh">
+  GenerateMesh()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void GenerateMesh()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_PositionCameraAndMesh_" data-uid="KSP.VFX.VesselVFXManagerBase.PositionCameraAndMesh*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_PositionCameraAndMesh" data-uid="KSP.VFX.VesselVFXManagerBase.PositionCameraAndMesh">
+  PositionCameraAndMesh()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PositionCameraAndMesh()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_Reset_" data-uid="KSP.VFX.VesselVFXManagerBase.Reset*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_Reset" data-uid="KSP.VFX.VesselVFXManagerBase.Reset">
+  Reset()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_SetParameters_" data-uid="KSP.VFX.VesselVFXManagerBase.SetParameters*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_SetParameters" data-uid="KSP.VFX.VesselVFXManagerBase.SetParameters">
+  SetParameters()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetParameters()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_SetupParticleSystem_" data-uid="KSP.VFX.VesselVFXManagerBase.SetupParticleSystem*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_SetupParticleSystem_UnityEngine_GameObject_" data-uid="KSP.VFX.VesselVFXManagerBase.SetupParticleSystem(UnityEngine.GameObject)">
+  SetupParticleSystem(GameObject)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetupParticleSystem(GameObject prefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>prefab</code> <span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_SpawnVFX_" data-uid="KSP.VFX.VesselVFXManagerBase.SpawnVFX*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_SpawnVFX_UnityEngine_GameObject_" data-uid="KSP.VFX.VesselVFXManagerBase.SpawnVFX(UnityEngine.GameObject)">
+  SpawnVFX(GameObject)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SpawnVFX(GameObject particlePrefab)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>particlePrefab</code> <span class="xref">GameObject</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_UpdateEvent_" data-uid="KSP.VFX.VesselVFXManagerBase.UpdateEvent*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_UpdateEvent_KSP_VFX_FXContextData_" data-uid="KSP.VFX.VesselVFXManagerBase.UpdateEvent(KSP.VFX.FXContextData)">
+  UpdateEvent(FXContextData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateEvent(FXContextData context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <a class="xref" href="KSP.VFX.FXContextData.html">FXContextData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_VFX_VesselVFXManagerBase_UpdateVFX_" data-uid="KSP.VFX.VesselVFXManagerBase.UpdateVFX*"></a>
+
+  <h3 id="KSP_VFX_VesselVFXManagerBase_UpdateVFX_KSP_VFX_VesselVFXManagerBase_EffectQuality_KSP_Rendering_Planets_PQS_" data-uid="KSP.VFX.VesselVFXManagerBase.UpdateVFX(KSP.VFX.VesselVFXManagerBase.EffectQuality,KSP.Rendering.Planets.PQS)">
+  UpdateVFX(EffectQuality, PQS)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UpdateVFX(VesselVFXManagerBase.EffectQuality effectQuality, PQS pqs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>effectQuality</code> <a class="xref" href="KSP.VFX.VesselVFXManagerBase.html">VesselVFXManagerBase</a>.<a class="xref" href="KSP.VFX.VesselVFXManagerBase.EffectQuality.html">EffectQuality</a></dt>
+    <dd></dd>
+    <dt><code>pqs</code> <a class="xref" href="KSP.Rendering.Planets.PQS.html">PQS</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

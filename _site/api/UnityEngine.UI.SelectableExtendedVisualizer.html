@@ -1,0 +1,1224 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SelectableExtendedVisualizer
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SelectableExtendedVisualizer
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="UnityEngine.UI.SelectableExtendedVisualizer">
+
+
+
+  <h1 id="UnityEngine_UI_SelectableExtendedVisualizer" data-uid="UnityEngine.UI.SelectableExtendedVisualizer" class="text-break">
+    Class SelectableExtendedVisualizer
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="UnityEngine.html">UnityEngine</a>.<a class="xref" href="UnityEngine.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SelectableExtendedVisualizer : TransitionVisualizerBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><a class="xref" href="KSP.Game.KerbalMonoBehaviour.html">KerbalMonoBehaviour</a></div>
+      <div><a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html">TransitionVisualizerBase</a></div>
+      <div><span class="xref">SelectableExtendedVisualizer</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="KSP.UI.ButtonExtendedEventsVisualizer.html">ButtonExtendedEventsVisualizer</a></div>
+      <div><a class="xref" href="KSP.UI.DropdownExtendedEventsVisualizer.html">DropdownExtendedEventsVisualizer</a></div>
+      <div><a class="xref" href="KSP.UI.FlyoutExtendedEventVisualizer.html">FlyoutExtendedEventVisualizer</a></div>
+      <div><a class="xref" href="KSP.UI.InputFieldExtendedEventsVisualizer.html">InputFieldExtendedEventsVisualizer</a></div>
+      <div><a class="xref" href="KSP.UI.ScrollBarExtendedEventsVizualizer.html">ScrollBarExtendedEventsVizualizer</a></div>
+      <div><a class="xref" href="KSP.UI.SliderExtendedEventsVisualizer.html">SliderExtendedEventsVisualizer</a></div>
+      <div><a class="xref" href="KSP.UI.ToggleExtendedEventsVisualizer.html">ToggleExtendedEventsVisualizer</a></div>
+      <div><a class="xref" href="UnityEngine.UI.ButtonExtendedVisualizer.html">ButtonExtendedVisualizer</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_previousState">TransitionVisualizerBase.previousState</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_StateAnimator">TransitionVisualizerBase.StateAnimator</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_SetOverrideSelectionState_UnityEngine_UI_SelectionState_System_Boolean_">TransitionVisualizerBase.SetOverrideSelectionState(SelectionState, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_ClearOverrideSelectionState_System_Boolean_">TransitionVisualizerBase.ClearOverrideSelectionState(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_HandleStateTransitionWithOverrides_UnityEngine_UI_SelectionState_System_Boolean_">TransitionVisualizerBase.HandleStateTransitionWithOverrides(SelectionState, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_RefreshVisuals_System_Boolean_">TransitionVisualizerBase.RefreshVisuals(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_OnEnable">TransitionVisualizerBase.OnEnable()</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_OnDisable">TransitionVisualizerBase.OnDisable()</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_GetTriggerNameFromState_UnityEngine_UI_SelectionState_">TransitionVisualizerBase.GetTriggerNameFromState(SelectionState)</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_SendAnimationTrigger_UnityEngine_UI_SelectionState_">TransitionVisualizerBase.SendAnimationTrigger(SelectionState)</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_UpdateGraphicVisual_UnityEngine_UI_SelectionState_System_Boolean_UnityEngine_UI_Graphic_UnityEngine_UI_TransitionVisualData_">TransitionVisualizerBase.UpdateGraphicVisual(SelectionState, bool, Graphic, TransitionVisualData)</a>
+    </div>
+    <div>
+      <a class="xref" href="UnityEngine.UI.TransitionVisualizerBase.html#UnityEngine_UI_TransitionVisualizerBase_ResetGraphicVisual_UnityEngine_UI_Graphic_">TransitionVisualizerBase.ResetGraphicVisual(Graphic)</a>
+    </div>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_Game">KerbalMonoBehaviour.Game</a>
+    </div>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_Messages">KerbalMonoBehaviour.Messages</a>
+    </div>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_CFXSystem">KerbalMonoBehaviour.CFXSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_IsGameShuttingDown">KerbalMonoBehaviour.IsGameShuttingDown</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.GetComponentCached``1(UnityEngine.Component,``0@)">GameObjectExtension.GetComponentCached&lt;T&gt;(Component, ref T)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.GetComponentInParent``1(UnityEngine.Component,System.Boolean)">GameObjectExtension.GetComponentInParent&lt;T&gt;(Component, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.ComponentExtensions.html#KSP_ComponentExtensions_CopyFrom__1_UnityEngine_Component___0_">ComponentExtensions.CopyFrom&lt;T&gt;(Component, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.OAB.DataContextMonoBehaviorExtensionDooblyDo.html#KSP_OAB_DataContextMonoBehaviorExtensionDooblyDo_FindDataContextProviderInHierarchy_UnityEngine_MonoBehaviour_">DataContextMonoBehaviorExtensionDooblyDo.FindDataContextProviderInHierarchy(MonoBehaviour)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.SetDebugName(UnityEngine.Object,System.String)">GameObjectExtension.SetDebugName(Object, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityEngine.UI.ScreenAdaptationExtension.html#UnityEngine_UI_ScreenAdaptationExtension_GetRectTransform__1___0_">ScreenAdaptationExtension.GetRectTransform&lt;T&gt;(T)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer__ctor_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.#ctor*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer__ctor" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.#ctor">
+  SelectableExtendedVisualizer()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SelectableExtendedVisualizer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_DisabledSprite" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.DisabledSprite">
+  DisabledSprite
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite DisabledSprite</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_HighlightedSprite" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.HighlightedSprite">
+  HighlightedSprite
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite HighlightedSprite</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_NormalSprite" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.NormalSprite">
+  NormalSprite
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HideInInspector]
+public Sprite NormalSprite</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_OnButtonHoverEvents" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.OnButtonHoverEvents">
+  OnButtonHoverEvents
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonReorderable]
+public Event[] OnButtonHoverEvents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Event</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_OnButtonPressedEvents" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.OnButtonPressedEvents">
+  OnButtonPressedEvents
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NonReorderable]
+public Event[] OnButtonPressedEvents</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Event</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_PressedSprite" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.PressedSprite">
+  PressedSprite
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite PressedSprite</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_SelectableGraphic" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.SelectableGraphic">
+  SelectableGraphic
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Image SelectableGraphic</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Image</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_SelectedSprite" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.SelectedSprite">
+  SelectedSprite
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sprite SelectedSprite</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Sprite</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_disableAudio" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.disableAudio">
+  disableAudio
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool disableAudio</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_gameEventOnPressed" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.gameEventOnPressed">
+  gameEventOnPressed
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HideInInspector]
+public Type gameEventOnPressed</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_gameEventOnPressedIndex" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.gameEventOnPressedIndex">
+  gameEventOnPressedIndex
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HideInInspector]
+public int gameEventOnPressedIndex</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_transitionVisuals" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.transitionVisuals">
+  transitionVisuals
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransitionVisualSingle[] transitionVisuals</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="UnityEngine.UI.TransitionVisualSingle.html">TransitionVisualSingle</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_ChangeGraphicOnStateTransition_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.ChangeGraphicOnStateTransition*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_ChangeGraphicOnStateTransition_UnityEngine_UI_SelectionState_System_Boolean_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.ChangeGraphicOnStateTransition(UnityEngine.UI.SelectionState,System.Boolean)">
+  ChangeGraphicOnStateTransition(SelectionState, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ChangeGraphicOnStateTransition(SelectionState state, bool instant)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="UnityEngine.UI.SelectionState.html">SelectionState</a></dt>
+    <dd></dd>
+    <dt><code>instant</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_GetRTCPIDX_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.GetRTCPIDX*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_GetRTCPIDX" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.GetRTCPIDX">
+  GetRTCPIDX()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected uint GetRTCPIDX()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_GetRTCPIDY_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.GetRTCPIDY*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_GetRTCPIDY" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.GetRTCPIDY">
+  GetRTCPIDY()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected uint GetRTCPIDY()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_HandleStateTransition_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.HandleStateTransition*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_HandleStateTransition_UnityEngine_UI_SelectionState_System_Boolean_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.HandleStateTransition(UnityEngine.UI.SelectionState,System.Boolean)">
+  HandleStateTransition(SelectionState, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleStateTransition(SelectionState state, bool instant)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="UnityEngine.UI.SelectionState.html">SelectionState</a></dt>
+    <dd></dd>
+    <dt><code>instant</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_HasOnClickAudioEvents_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.HasOnClickAudioEvents*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_HasOnClickAudioEvents" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.HasOnClickAudioEvents">
+  HasOnClickAudioEvents()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasOnClickAudioEvents()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_HasOnHoverAudioEvents_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.HasOnHoverAudioEvents*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_HasOnHoverAudioEvents" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.HasOnHoverAudioEvents">
+  HasOnHoverAudioEvents()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool HasOnHoverAudioEvents()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_PlayAudioEventsOnStateTransition_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.PlayAudioEventsOnStateTransition*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_PlayAudioEventsOnStateTransition_UnityEngine_UI_SelectionState_System_Boolean_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.PlayAudioEventsOnStateTransition(UnityEngine.UI.SelectionState,System.Boolean)">
+  PlayAudioEventsOnStateTransition(SelectionState, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PlayAudioEventsOnStateTransition(SelectionState state, bool instant)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="UnityEngine.UI.SelectionState.html">SelectionState</a></dt>
+    <dd></dd>
+    <dt><code>instant</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_PostAKEventsWithPositionalRTPC_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.PostAKEventsWithPositionalRTPC*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_PostAKEventsWithPositionalRTPC_AK_Wwise_Event___" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.PostAKEventsWithPositionalRTPC(AK.Wwise.Event[])">
+  PostAKEventsWithPositionalRTPC(Event[])
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PostAKEventsWithPositionalRTPC(Event[] EventsToPost)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>EventsToPost</code> <span class="xref">Event</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="UnityEngine_UI_SelectableExtendedVisualizer_RemoveStateVisuals_" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.RemoveStateVisuals*"></a>
+
+  <h3 id="UnityEngine_UI_SelectableExtendedVisualizer_RemoveStateVisuals" data-uid="UnityEngine.UI.SelectableExtendedVisualizer.RemoveStateVisuals">
+  RemoveStateVisuals()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RemoveStateVisuals()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

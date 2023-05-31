@@ -1,0 +1,1643 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface GameInput.IOABActions
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface GameInput.IOABActions
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="KSP.Input.GameInput.IOABActions">
+
+
+
+  <h1 id="KSP_Input_GameInput_IOABActions" data-uid="KSP.Input.GameInput.IOABActions" class="text-break">
+    Interface GameInput.IOABActions
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="KSP.html">KSP</a>.<a class="xref" href="KSP.Input.html">Input</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface GameInput.IOABActions</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnAddFavorite_" data-uid="KSP.Input.GameInput.IOABActions.OnAddFavorite*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnAddFavorite_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnAddFavorite(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnAddFavorite(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnAddFavorite(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnBlueprintModeGamepad_" data-uid="KSP.Input.GameInput.IOABActions.OnBlueprintModeGamepad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnBlueprintModeGamepad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnBlueprintModeGamepad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnBlueprintModeGamepad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnBlueprintModeGamepad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCameraFastModifier_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraFastModifier*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCameraFastModifier_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraFastModifier(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCameraFastModifier(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCameraFastModifier(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCameraLook_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraLook*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCameraLook_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraLook(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCameraLook(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCameraLook(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCameraPan_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraPan*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCameraPan_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraPan(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCameraPan(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCameraPan(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCameraPanGamepad_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraPanGamepad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCameraPanGamepad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraPanGamepad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCameraPanGamepad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCameraPanGamepad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCameraRotate_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraRotate*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCameraRotate_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraRotate(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCameraRotate(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCameraRotate(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCameraZoom_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraZoom*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCameraZoom_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraZoom(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCameraZoom(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCameraZoom(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCameraZoomGamepad_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraZoomGamepad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCameraZoomGamepad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCameraZoomGamepad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCameraZoomGamepad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCameraZoomGamepad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnCopy_" data-uid="KSP.Input.GameInput.IOABActions.OnCopy*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnCopy_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnCopy(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnCopy(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnCopy(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnDelete_" data-uid="KSP.Input.GameInput.IOABActions.OnDelete*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnDelete_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnDelete(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnDelete(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnDelete(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnDisableStackAttachment_" data-uid="KSP.Input.GameInput.IOABActions.OnDisableStackAttachment*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnDisableStackAttachment_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnDisableStackAttachment(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnDisableStackAttachment(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnDisableStackAttachment(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnFastScrollModifier_" data-uid="KSP.Input.GameInput.IOABActions.OnFastScrollModifier*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnFastScrollModifier_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnFastScrollModifier(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnFastScrollModifier(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnFastScrollModifier(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnHotKeyModifier_" data-uid="KSP.Input.GameInput.IOABActions.OnHotKeyModifier*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnHotKeyModifier_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnHotKeyModifier(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnHotKeyModifier(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnHotKeyModifier(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnLaunch_" data-uid="KSP.Input.GameInput.IOABActions.OnLaunch*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnLaunch_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnLaunch(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnLaunch(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnLaunch(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnLockTarget_" data-uid="KSP.Input.GameInput.IOABActions.OnLockTarget*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnLockTarget_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnLockTarget(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnLockTarget(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnLockTarget(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnModifier_" data-uid="KSP.Input.GameInput.IOABActions.OnModifier*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnModifier_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnModifier(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnModifier(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnModifier(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnModifierGamepad_" data-uid="KSP.Input.GameInput.IOABActions.OnModifierGamepad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnModifierGamepad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnModifierGamepad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnModifierGamepad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnModifierGamepad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnMousePrimary_" data-uid="KSP.Input.GameInput.IOABActions.OnMousePrimary*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnMousePrimary_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnMousePrimary(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnMousePrimary(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnMousePrimary(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnMouseSecondary_" data-uid="KSP.Input.GameInput.IOABActions.OnMouseSecondary*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnMouseSecondary_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnMouseSecondary(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnMouseSecondary(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnMouseSecondary(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnMouseTertiary_" data-uid="KSP.Input.GameInput.IOABActions.OnMouseTertiary*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnMouseTertiary_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnMouseTertiary(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnMouseTertiary(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnMouseTertiary(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnNextSymmetryMode_" data-uid="KSP.Input.GameInput.IOABActions.OnNextSymmetryMode*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnNextSymmetryMode_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnNextSymmetryMode(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnNextSymmetryMode(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnNextSymmetryMode(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnPaste_" data-uid="KSP.Input.GameInput.IOABActions.OnPaste*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnPaste_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnPaste(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnPaste(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnPaste(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnPreviousSymmetryMode_" data-uid="KSP.Input.GameInput.IOABActions.OnPreviousSymmetryMode*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnPreviousSymmetryMode_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnPreviousSymmetryMode(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnPreviousSymmetryMode(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnPreviousSymmetryMode(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnQuitOrthoView_" data-uid="KSP.Input.GameInput.IOABActions.OnQuitOrthoView*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnQuitOrthoView_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnQuitOrthoView(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnQuitOrthoView(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnQuitOrthoView(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnRedo_" data-uid="KSP.Input.GameInput.IOABActions.OnRedo*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnRedo_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnRedo(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnRedo(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnRedo(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnResetCamera_" data-uid="KSP.Input.GameInput.IOABActions.OnResetCamera*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnResetCamera_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnResetCamera(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnResetCamera(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnResetCamera(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnResetPartRotation_" data-uid="KSP.Input.GameInput.IOABActions.OnResetPartRotation*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnResetPartRotation_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnResetPartRotation(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnResetPartRotation(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnResetPartRotation(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnRotatePartGamepad_" data-uid="KSP.Input.GameInput.IOABActions.OnRotatePartGamepad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnRotatePartGamepad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnRotatePartGamepad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnRotatePartGamepad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnRotatePartGamepad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnRotatePitch_" data-uid="KSP.Input.GameInput.IOABActions.OnRotatePitch*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnRotatePitch_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnRotatePitch(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnRotatePitch(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnRotatePitch(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnRotateRoll_" data-uid="KSP.Input.GameInput.IOABActions.OnRotateRoll*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnRotateRoll_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnRotateRoll(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnRotateRoll(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnRotateRoll(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnRotateYaw_" data-uid="KSP.Input.GameInput.IOABActions.OnRotateYaw*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnRotateYaw_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnRotateYaw(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnRotateYaw(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnRotateYaw(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnSearch_" data-uid="KSP.Input.GameInput.IOABActions.OnSearch*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnSearch_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnSearch(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnSearch(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnSearch(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnSelectAllPrimaryAssembly_" data-uid="KSP.Input.GameInput.IOABActions.OnSelectAllPrimaryAssembly*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnSelectAllPrimaryAssembly_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnSelectAllPrimaryAssembly(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnSelectAllPrimaryAssembly(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnSelectAllPrimaryAssembly(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnSetSymmetryMirrorMode_" data-uid="KSP.Input.GameInput.IOABActions.OnSetSymmetryMirrorMode*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnSetSymmetryMirrorMode_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnSetSymmetryMirrorMode(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnSetSymmetryMirrorMode(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnSetSymmetryMirrorMode(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnTestLoad_" data-uid="KSP.Input.GameInput.IOABActions.OnTestLoad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnTestLoad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnTestLoad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnTestLoad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnTestLoad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnTestSave_" data-uid="KSP.Input.GameInput.IOABActions.OnTestSave*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnTestSave_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnTestSave(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnTestSave(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnTestSave(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToggleAngleSnap_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleAngleSnap*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToggleAngleSnap_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleAngleSnap(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToggleAngleSnap(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToggleAngleSnap(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToggleCategoriesGamepad_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleCategoriesGamepad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToggleCategoriesGamepad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleCategoriesGamepad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToggleCategoriesGamepad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToggleCategoriesGamepad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToggleConsoleToolbox_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleConsoleToolbox*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToggleConsoleToolbox_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleConsoleToolbox(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToggleConsoleToolbox(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToggleConsoleToolbox(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToggleFilterGamepad_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleFilterGamepad*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToggleFilterGamepad_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleFilterGamepad(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToggleFilterGamepad(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToggleFilterGamepad(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToggleFrameOfReference_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleFrameOfReference*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToggleFrameOfReference_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToggleFrameOfReference(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToggleFrameOfReference(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToggleFrameOfReference(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToolMove_" data-uid="KSP.Input.GameInput.IOABActions.OnToolMove*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToolMove_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToolMove(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToolMove(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToolMove(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToolMoveUpDown_" data-uid="KSP.Input.GameInput.IOABActions.OnToolMoveUpDown*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToolMoveUpDown_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToolMoveUpDown(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToolMoveUpDown(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToolMoveUpDown(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnToolNumbers_" data-uid="KSP.Input.GameInput.IOABActions.OnToolNumbers*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnToolNumbers_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnToolNumbers(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnToolNumbers(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnToolNumbers(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnTooltipPageDown_" data-uid="KSP.Input.GameInput.IOABActions.OnTooltipPageDown*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnTooltipPageDown_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnTooltipPageDown(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnTooltipPageDown(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnTooltipPageDown(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnTooltipPageUp_" data-uid="KSP.Input.GameInput.IOABActions.OnTooltipPageUp*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnTooltipPageUp_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnTooltipPageUp(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnTooltipPageUp(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnTooltipPageUp(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Input_GameInput_IOABActions_OnUndo_" data-uid="KSP.Input.GameInput.IOABActions.OnUndo*"></a>
+
+  <h3 id="KSP_Input_GameInput_IOABActions_OnUndo_UnityEngine_InputSystem_InputAction_CallbackContext_" data-uid="KSP.Input.GameInput.IOABActions.OnUndo(UnityEngine.InputSystem.InputAction.CallbackContext)">
+  OnUndo(CallbackContext)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnUndo(InputAction.CallbackContext context)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>context</code> <span class="xref">InputAction</span>.<span class="xref">CallbackContext</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

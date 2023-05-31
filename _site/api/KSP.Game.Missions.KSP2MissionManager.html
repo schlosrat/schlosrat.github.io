@@ -1,0 +1,2766 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class KSP2MissionManager
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class KSP2MissionManager
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="KSP.Game.Missions.KSP2MissionManager">
+
+
+
+  <h1 id="KSP_Game_Missions_KSP2MissionManager" data-uid="KSP.Game.Missions.KSP2MissionManager" class="text-break">
+    Class KSP2MissionManager
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="KSP.html">KSP</a>.<a class="xref" href="KSP.Game.html">Game</a>.<a class="xref" href="KSP.Game.Missions.html">Missions</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KSP2MissionManager : KerbalMonoBehaviour</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Object</span></div>
+      <div><span class="xref">Component</span></div>
+      <div><span class="xref">Behaviour</span></div>
+      <div><span class="xref">MonoBehaviour</span></div>
+      <div><a class="xref" href="KSP.Game.KerbalMonoBehaviour.html">KerbalMonoBehaviour</a></div>
+      <div><span class="xref">KSP2MissionManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_Game">KerbalMonoBehaviour.Game</a>
+    </div>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_Messages">KerbalMonoBehaviour.Messages</a>
+    </div>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_CFXSystem">KerbalMonoBehaviour.CFXSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="KSP.Game.KerbalMonoBehaviour.html#KSP_Game_KerbalMonoBehaviour_IsGameShuttingDown">KerbalMonoBehaviour.IsGameShuttingDown</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.IsInvoking()</span>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.CancelInvoke()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.Invoke(string, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.InvokeRepeating(string, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.CancelInvoke(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.IsInvoking(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StartCoroutine(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StartCoroutine_Auto(IEnumerator)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerator">MonoBehaviour.StopCoroutine(IEnumerator)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopCoroutine(Coroutine)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">MonoBehaviour.StopCoroutine(string)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.StopAllCoroutines()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">MonoBehaviour.print(object)</a>
+    </div>
+    <div>
+      <span class="xref">MonoBehaviour.useGUILayout</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.enabled</span>
+    </div>
+    <div>
+      <span class="xref">Behaviour.isActiveAndEnabled</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.TryGetComponent(Type, out Component)</a>
+    </div>
+    <div>
+      <span class="xref">Component.TryGetComponent&lt;T&gt;(out T)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.GetComponent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInChildren(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInChildren&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInChildren&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponentsInChildren&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentInParent(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponentsInParent(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Component.GetComponentsInParent&lt;T&gt;(bool, List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponentsInParent&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Component.GetComponents(Type, List&lt;Component&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">Component.GetComponents&lt;T&gt;(List&lt;T&gt;)</a>
+    </div>
+    <div>
+      <span class="xref">Component.GetComponents&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.CompareTag(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessageUpwards(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.SendMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object, SendMessageOptions)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Component.BroadcastMessage(string, SendMessageOptions)</a>
+    </div>
+    <div>
+      <span class="xref">Component.transform</span>
+    </div>
+    <div>
+      <span class="xref">Component.gameObject</span>
+    </div>
+    <div>
+      <span class="xref">Component.tag</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetInstanceID()</span>
+    </div>
+    <div>
+      <span class="xref">Object.GetHashCode()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object.Equals(object)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate(Object, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate(Object, Transform, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Vector3, Quaternion, Transform)</span>
+    </div>
+    <div>
+      <span class="xref">Object.Instantiate&lt;T&gt;(T, Transform)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.Instantiate&lt;T&gt;(T, Transform, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.Destroy(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.Destroy(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.DestroyImmediate(Object, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyImmediate(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfType(Type, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DontDestroyOnLoad(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">Object.DestroyObject(Object, float)</a>
+    </div>
+    <div>
+      <span class="xref">Object.DestroyObject(Object)</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindSceneObjectsOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeIncludingAssets(Type)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectsOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectsOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.FindObjectOfType&lt;T&gt;()</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">Object.FindObjectOfType&lt;T&gt;(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectsOfTypeAll(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Object.FindObjectOfType(Type, bool)</a>
+    </div>
+    <div>
+      <span class="xref">Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">Object.name</span>
+    </div>
+    <div>
+      <span class="xref">Object.hideFlags</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="UnityEngine.UI.ScreenAdaptationExtension.html#UnityEngine_UI_ScreenAdaptationExtension_GetRectTransform__1___0_">ScreenAdaptationExtension.GetRectTransform&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.GetComponentCached``1(UnityEngine.Component,``0@)">GameObjectExtension.GetComponentCached&lt;T&gt;(Component, ref T)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.GetComponentInParent``1(UnityEngine.Component,System.Boolean)">GameObjectExtension.GetComponentInParent&lt;T&gt;(Component, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.ComponentExtensions.html#KSP_ComponentExtensions_CopyFrom__1_UnityEngine_Component___0_">ComponentExtensions.CopyFrom&lt;T&gt;(Component, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.OAB.DataContextMonoBehaviorExtensionDooblyDo.html#KSP_OAB_DataContextMonoBehaviorExtensionDooblyDo_FindDataContextProviderInHierarchy_UnityEngine_MonoBehaviour_">DataContextMonoBehaviorExtensionDooblyDo.FindDataContextProviderInHierarchy(MonoBehaviour)</a>
+  </div>
+  <div>
+      <a class="xref" href="GameObjectExtension.html#GameObjectExtension.SetDebugName(UnityEngine.Object,System.String)">GameObjectExtension.SetDebugName(Object, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager__ctor_" data-uid="KSP.Game.Missions.KSP2MissionManager.#ctor*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager__ctor" data-uid="KSP.Game.Missions.KSP2MissionManager.#ctor">
+  KSP2MissionManager()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KSP2MissionManager()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_DIALOG_PREFAB" data-uid="KSP.Game.Missions.KSP2MissionManager.DIALOG_PREFAB">
+  DIALOG_PREFAB
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DIALOG_PREFAB = &quot;TrainingCenter.prefab&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_HeavyPropertyCooldownTime" data-uid="KSP.Game.Missions.KSP2MissionManager.HeavyPropertyCooldownTime">
+  HeavyPropertyCooldownTime
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float HeavyPropertyCooldownTime</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_heavypropertyCooldownRate" data-uid="KSP.Game.Missions.KSP2MissionManager.heavypropertyCooldownRate">
+  heavypropertyCooldownRate
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float heavypropertyCooldownRate</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ActiveMission_" data-uid="KSP.Game.Missions.KSP2MissionManager.ActiveMission*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ActiveMission" data-uid="KSP.Game.Missions.KSP2MissionManager.ActiveMission">
+  ActiveMission
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MissionData ActiveMission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BackedUpOABHistoricalSnapshot_" data-uid="KSP.Game.Missions.KSP2MissionManager.BackedUpOABHistoricalSnapshot*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BackedUpOABHistoricalSnapshot" data-uid="KSP.Game.Missions.KSP2MissionManager.BackedUpOABHistoricalSnapshot">
+  BackedUpOABHistoricalSnapshot
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OABHistoricalSnapshot BackedUpOABHistoricalSnapshot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.OAB.OABHistoricalSnapshot.html">OABHistoricalSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BaseAgencyMissionDataList_" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseAgencyMissionDataList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BaseAgencyMissionDataList" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseAgencyMissionDataList">
+  BaseAgencyMissionDataList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MissionData&gt; BaseAgencyMissionDataList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BaseAgencyMissionJsonStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseAgencyMissionJsonStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BaseAgencyMissionJsonStringList" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseAgencyMissionJsonStringList">
+  BaseAgencyMissionJsonStringList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; BaseAgencyMissionJsonStringList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BaseGlobalMissionDataList_" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseGlobalMissionDataList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BaseGlobalMissionDataList" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseGlobalMissionDataList">
+  BaseGlobalMissionDataList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MissionData&gt; BaseGlobalMissionDataList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BaseGlobalMissionJsonStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseGlobalMissionJsonStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BaseGlobalMissionJsonStringList" data-uid="KSP.Game.Missions.KSP2MissionManager.BaseGlobalMissionJsonStringList">
+  BaseGlobalMissionJsonStringList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; BaseGlobalMissionJsonStringList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BasePlayerMissionDataList_" data-uid="KSP.Game.Missions.KSP2MissionManager.BasePlayerMissionDataList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BasePlayerMissionDataList" data-uid="KSP.Game.Missions.KSP2MissionManager.BasePlayerMissionDataList">
+  BasePlayerMissionDataList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MissionData&gt; BasePlayerMissionDataList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BasePlayerMissionJsonStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.BasePlayerMissionJsonStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BasePlayerMissionJsonStringList" data-uid="KSP.Game.Missions.KSP2MissionManager.BasePlayerMissionJsonStringList">
+  BasePlayerMissionJsonStringList
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; BasePlayerMissionJsonStringList { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_CompletedMission_" data-uid="KSP.Game.Missions.KSP2MissionManager.CompletedMission*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_CompletedMission" data-uid="KSP.Game.Missions.KSP2MissionManager.CompletedMission">
+  CompletedMission
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MissionData CompletedMission { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_CompletedTutorialIDs_" data-uid="KSP.Game.Missions.KSP2MissionManager.CompletedTutorialIDs*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_CompletedTutorialIDs" data-uid="KSP.Game.Missions.KSP2MissionManager.CompletedTutorialIDs">
+  CompletedTutorialIDs
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CompletedTutorialIDs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_IsInTutorial_" data-uid="KSP.Game.Missions.KSP2MissionManager.IsInTutorial*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_IsInTutorial" data-uid="KSP.Game.Missions.KSP2MissionManager.IsInTutorial">
+  IsInTutorial
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInTutorial { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_IsMyPlayersFTUEEnabled_" data-uid="KSP.Game.Missions.KSP2MissionManager.IsMyPlayersFTUEEnabled*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_IsMyPlayersFTUEEnabled" data-uid="KSP.Game.Missions.KSP2MissionManager.IsMyPlayersFTUEEnabled">
+  IsMyPlayersFTUEEnabled
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMyPlayersFTUEEnabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_IsReady_" data-uid="KSP.Game.Missions.KSP2MissionManager.IsReady*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_IsReady" data-uid="KSP.Game.Missions.KSP2MissionManager.IsReady">
+  IsReady
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReady { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_Missions_" data-uid="KSP.Game.Missions.KSP2MissionManager.Missions*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_Missions" data-uid="KSP.Game.Missions.KSP2MissionManager.Missions">
+  Missions
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MissionData&gt; Missions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_MissionsInitialized_" data-uid="KSP.Game.Missions.KSP2MissionManager.MissionsInitialized*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_MissionsInitialized" data-uid="KSP.Game.Missions.KSP2MissionManager.MissionsInitialized">
+  MissionsInitialized
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MissionsInitialized { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_RevertActiveVesselInOAB_" data-uid="KSP.Game.Missions.KSP2MissionManager.RevertActiveVesselInOAB*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_RevertActiveVesselInOAB" data-uid="KSP.Game.Missions.KSP2MissionManager.RevertActiveVesselInOAB">
+  RevertActiveVesselInOAB
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RevertActiveVesselInOAB { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_AbortTutorial_" data-uid="KSP.Game.Missions.KSP2MissionManager.AbortTutorial*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_AbortTutorial_System_Boolean_System_Action_" data-uid="KSP.Game.Missions.KSP2MissionManager.AbortTutorial(System.Boolean,System.Action)">
+  AbortTutorial(bool, Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AbortTutorial(bool reloadPriorState = false, Action onCompleteCallback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reloadPriorState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>onCompleteCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_AbortTutorialMessageHandler_" data-uid="KSP.Game.Missions.KSP2MissionManager.AbortTutorialMessageHandler*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_AbortTutorialMessageHandler_KSP_Messages_MessageCenterMessage_" data-uid="KSP.Game.Missions.KSP2MissionManager.AbortTutorialMessageHandler(KSP.Messages.MessageCenterMessage)">
+  AbortTutorialMessageHandler(MessageCenterMessage)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AbortTutorialMessageHandler(MessageCenterMessage msg)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>msg</code> <a class="xref" href="KSP.Messages.MessageCenterMessage.html">MessageCenterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ActivateMission_" data-uid="KSP.Game.Missions.KSP2MissionManager.ActivateMission*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ActivateMission_System_String_" data-uid="KSP.Game.Missions.KSP2MissionManager.ActivateMission(System.String)">
+  ActivateMission(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ActivateMission(string missionID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_AddTutorialWorkspaceToLoad_" data-uid="KSP.Game.Missions.KSP2MissionManager.AddTutorialWorkspaceToLoad*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_AddTutorialWorkspaceToLoad_System_Tuple_UnityEngine_TextAsset_UnityEngine_Texture2D__" data-uid="KSP.Game.Missions.KSP2MissionManager.AddTutorialWorkspaceToLoad(System.Tuple{UnityEngine.TextAsset,UnityEngine.Texture2D})">
+  AddTutorialWorkspaceToLoad(Tuple&lt;TextAsset, Texture2D&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddTutorialWorkspaceToLoad(Tuple&lt;TextAsset, Texture2D&gt; workspace)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>workspace</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<span class="xref">TextAsset</span>, <span class="xref">Texture2D</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ApplyMissionSaveDataToList_" data-uid="KSP.Game.Missions.KSP2MissionManager.ApplyMissionSaveDataToList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ApplyMissionSaveDataToList_System_Collections_Generic_List_KSP_Game_Missions_Definitions_MissionData__System_Collections_Generic_List_KSP_Game_Missions_Definitions_MissionData__" data-uid="KSP.Game.Missions.KSP2MissionManager.ApplyMissionSaveDataToList(System.Collections.Generic.List{KSP.Game.Missions.Definitions.MissionData},System.Collections.Generic.List{KSP.Game.Missions.Definitions.MissionData})">
+  ApplyMissionSaveDataToList(List&lt;MissionData&gt;, List&lt;MissionData&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ApplyMissionSaveDataToList(List&lt;MissionData&gt; missionDataList, List&lt;MissionData&gt; src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionDataList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ApplyProgressFromSavedGame_" data-uid="KSP.Game.Missions.KSP2MissionManager.ApplyProgressFromSavedGame*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ApplyProgressFromSavedGame_KSP_Sim_SerializedSavedGame_" data-uid="KSP.Game.Missions.KSP2MissionManager.ApplyProgressFromSavedGame(KSP.Sim.SerializedSavedGame)">
+  ApplyProgressFromSavedGame(SerializedSavedGame)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ApplyProgressFromSavedGame(SerializedSavedGame data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="KSP.Sim.SerializedSavedGame.html">SerializedSavedGame</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ApplyTutorialProgress_" data-uid="KSP.Game.Missions.KSP2MissionManager.ApplyTutorialProgress*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ApplyTutorialProgress" data-uid="KSP.Game.Missions.KSP2MissionManager.ApplyTutorialProgress">
+  ApplyTutorialProgress()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyTutorialProgress()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_BackupOABHistoricalSnapshot_" data-uid="KSP.Game.Missions.KSP2MissionManager.BackupOABHistoricalSnapshot*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_BackupOABHistoricalSnapshot_KSP_OAB_OABHistoricalSnapshot_" data-uid="KSP.Game.Missions.KSP2MissionManager.BackupOABHistoricalSnapshot(KSP.OAB.OABHistoricalSnapshot)">
+  BackupOABHistoricalSnapshot(OABHistoricalSnapshot)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BackupOABHistoricalSnapshot(OABHistoricalSnapshot snapshot)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>snapshot</code> <a class="xref" href="KSP.OAB.OABHistoricalSnapshot.html">OABHistoricalSnapshot</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_CheckForMyPlayersFTUEEnabled_" data-uid="KSP.Game.Missions.KSP2MissionManager.CheckForMyPlayersFTUEEnabled*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_CheckForMyPlayersFTUEEnabled" data-uid="KSP.Game.Missions.KSP2MissionManager.CheckForMyPlayersFTUEEnabled">
+  CheckForMyPlayersFTUEEnabled()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CheckForMyPlayersFTUEEnabled()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ClearTutorialWorkspacestoLoad_" data-uid="KSP.Game.Missions.KSP2MissionManager.ClearTutorialWorkspacestoLoad*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ClearTutorialWorkspacestoLoad" data-uid="KSP.Game.Missions.KSP2MissionManager.ClearTutorialWorkspacestoLoad">
+  ClearTutorialWorkspacestoLoad()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearTutorialWorkspacestoLoad()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_CreateReloadSnapshot_" data-uid="KSP.Game.Missions.KSP2MissionManager.CreateReloadSnapshot*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_CreateReloadSnapshot" data-uid="KSP.Game.Missions.KSP2MissionManager.CreateReloadSnapshot">
+  CreateReloadSnapshot()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateReloadSnapshot()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_DeleteBackupOABHistoricalSnapshot_" data-uid="KSP.Game.Missions.KSP2MissionManager.DeleteBackupOABHistoricalSnapshot*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_DeleteBackupOABHistoricalSnapshot" data-uid="KSP.Game.Missions.KSP2MissionManager.DeleteBackupOABHistoricalSnapshot">
+  DeleteBackupOABHistoricalSnapshot()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteBackupOABHistoricalSnapshot()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ExitTutorialSave_" data-uid="KSP.Game.Missions.KSP2MissionManager.ExitTutorialSave*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ExitTutorialSave_System_Action_" data-uid="KSP.Game.Missions.KSP2MissionManager.ExitTutorialSave(System.Action)">
+  ExitTutorialSave(Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ExitTutorialSave(Action onCompleteCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>onCompleteCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_FindMissionDataByID_" data-uid="KSP.Game.Missions.KSP2MissionManager.FindMissionDataByID*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_FindMissionDataByID_System_Collections_Generic_List_KSP_Game_Missions_Definitions_MissionData__System_String_" data-uid="KSP.Game.Missions.KSP2MissionManager.FindMissionDataByID(System.Collections.Generic.List{KSP.Game.Missions.Definitions.MissionData},System.String)">
+  FindMissionDataByID(List&lt;MissionData&gt;, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MissionData FindMissionDataByID(List&lt;MissionData&gt; missionDataList, string id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionDataList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_GetCompletedMissionsList_" data-uid="KSP.Game.Missions.KSP2MissionManager.GetCompletedMissionsList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_GetCompletedMissionsList" data-uid="KSP.Game.Missions.KSP2MissionManager.GetCompletedMissionsList">
+  GetCompletedMissionsList()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MissionData&gt; GetCompletedMissionsList()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_GetCompletedTutorialsList_" data-uid="KSP.Game.Missions.KSP2MissionManager.GetCompletedTutorialsList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_GetCompletedTutorialsList" data-uid="KSP.Game.Missions.KSP2MissionManager.GetCompletedTutorialsList">
+  GetCompletedTutorialsList()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;MissionData&gt; GetCompletedTutorialsList()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_GetLessons_" data-uid="KSP.Game.Missions.KSP2MissionManager.GetLessons*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_GetLessons" data-uid="KSP.Game.Missions.KSP2MissionManager.GetLessons">
+  GetLessons()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SubTutorialsItem[] GetLessons()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.UI.SubTutorialsItem.html">SubTutorialsItem</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_GetMissions_" data-uid="KSP.Game.Missions.KSP2MissionManager.GetMissions*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_GetMissions" data-uid="KSP.Game.Missions.KSP2MissionManager.GetMissions">
+  GetMissions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref List&lt;MissionData&gt; GetMissions()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_GetTutorials_" data-uid="KSP.Game.Missions.KSP2MissionManager.GetTutorials*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_GetTutorials" data-uid="KSP.Game.Missions.KSP2MissionManager.GetTutorials">
+  GetTutorials()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MainTutorialsItem[] GetTutorials()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.UI.MainTutorialsItem.html">MainTutorialsItem</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_HideDialogsAndStopTimewarp_" data-uid="KSP.Game.Missions.KSP2MissionManager.HideDialogsAndStopTimewarp*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_HideDialogsAndStopTimewarp" data-uid="KSP.Game.Missions.KSP2MissionManager.HideDialogsAndStopTimewarp">
+  HideDialogsAndStopTimewarp()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HideDialogsAndStopTimewarp()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ImportMissionJsonStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.ImportMissionJsonStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ImportMissionJsonStringList_System_Collections_Generic_List_KSP_Game_Missions_Definitions_MissionData__System_Collections_Generic_List_System_String__" data-uid="KSP.Game.Missions.KSP2MissionManager.ImportMissionJsonStringList(System.Collections.Generic.List{KSP.Game.Missions.Definitions.MissionData},System.Collections.Generic.List{System.String})">
+  ImportMissionJsonStringList(List&lt;MissionData&gt;, List&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ImportMissionJsonStringList(List&lt;MissionData&gt; missionDataList, List&lt;string&gt; src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionDataList</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_InitializeMissions_" data-uid="KSP.Game.Missions.KSP2MissionManager.InitializeMissions*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_InitializeMissions" data-uid="KSP.Game.Missions.KSP2MissionManager.InitializeMissions">
+  InitializeMissions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeMissions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_LoadMissions_" data-uid="KSP.Game.Missions.KSP2MissionManager.LoadMissions*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_LoadMissions_KSP_Game_Missions_Definitions_MissionData_" data-uid="KSP.Game.Missions.KSP2MissionManager.LoadMissions(KSP.Game.Missions.Definitions.MissionData)">
+  LoadMissions(MissionData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadMissions(MissionData mission)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mission</code> <a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_LoadTutorialSave_" data-uid="KSP.Game.Missions.KSP2MissionManager.LoadTutorialSave*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_LoadTutorialSave_System_String_KSP_Game_Missions_Definitions_MissionData_KSP_Game_OnLoadOrSaveCampaignFinishedCallback_" data-uid="KSP.Game.Missions.KSP2MissionManager.LoadTutorialSave(System.String,KSP.Game.Missions.Definitions.MissionData,KSP.Game.OnLoadOrSaveCampaignFinishedCallback)">
+  LoadTutorialSave(string, MissionData, OnLoadOrSaveCampaignFinishedCallback)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadTutorialSave(string saveFileAssetKey, MissionData caller, OnLoadOrSaveCampaignFinishedCallback onLoadOrSaveCampaignFinishedCallback)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>saveFileAssetKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>caller</code> <a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+    <dt><code>onLoadOrSaveCampaignFinishedCallback</code> <a class="xref" href="KSP.Game.OnLoadOrSaveCampaignFinishedCallback.html">OnLoadOrSaveCampaignFinishedCallback</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_LoadTutorials_" data-uid="KSP.Game.Missions.KSP2MissionManager.LoadTutorials*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_LoadTutorials" data-uid="KSP.Game.Missions.KSP2MissionManager.LoadTutorials">
+  LoadTutorials()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadTutorials()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_MergeMissionDataProgress_" data-uid="KSP.Game.Missions.KSP2MissionManager.MergeMissionDataProgress*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_MergeMissionDataProgress_KSP_Game_Missions_Definitions_MissionData_KSP_Game_Missions_Definitions_MissionData_" data-uid="KSP.Game.Missions.KSP2MissionManager.MergeMissionDataProgress(KSP.Game.Missions.Definitions.MissionData,KSP.Game.Missions.Definitions.MissionData)">
+  MergeMissionDataProgress(MissionData, MissionData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void MergeMissionDataProgress(MissionData fromData, MissionData toData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fromData</code> <a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+    <dt><code>toData</code> <a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_OnGameStateChanged_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnGameStateChanged*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_OnGameStateChanged_KSP_Messages_MessageCenterMessage_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnGameStateChanged(KSP.Messages.MessageCenterMessage)">
+  OnGameStateChanged(MessageCenterMessage)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnGameStateChanged(MessageCenterMessage msg)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>msg</code> <a class="xref" href="KSP.Messages.MessageCenterMessage.html">MessageCenterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_OnMapModeChanged_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnMapModeChanged*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_OnMapModeChanged_KSP_Messages_MessageCenterMessage_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnMapModeChanged(KSP.Messages.MessageCenterMessage)">
+  OnMapModeChanged(MessageCenterMessage)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnMapModeChanged(MessageCenterMessage msg)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>msg</code> <a class="xref" href="KSP.Messages.MessageCenterMessage.html">MessageCenterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_OnMissionSummaryActionDismissed_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnMissionSummaryActionDismissed*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_OnMissionSummaryActionDismissed" data-uid="KSP.Game.Missions.KSP2MissionManager.OnMissionSummaryActionDismissed">
+  OnMissionSummaryActionDismissed()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnMissionSummaryActionDismissed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_OnQuitToMainMenu_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnQuitToMainMenu*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_OnQuitToMainMenu_KSP_Messages_MessageCenterMessage_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnQuitToMainMenu(KSP.Messages.MessageCenterMessage)">
+  OnQuitToMainMenu(MessageCenterMessage)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnQuitToMainMenu(MessageCenterMessage msg)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>msg</code> <a class="xref" href="KSP.Messages.MessageCenterMessage.html">MessageCenterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_OnTutorialModeEnded_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnTutorialModeEnded*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_OnTutorialModeEnded" data-uid="KSP.Game.Missions.KSP2MissionManager.OnTutorialModeEnded">
+  OnTutorialModeEnded()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTutorialModeEnded()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_OnTutorialModeStarted_" data-uid="KSP.Game.Missions.KSP2MissionManager.OnTutorialModeStarted*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_OnTutorialModeStarted" data-uid="KSP.Game.Missions.KSP2MissionManager.OnTutorialModeStarted">
+  OnTutorialModeStarted()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTutorialModeStarted()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_PlayNextTutorial_" data-uid="KSP.Game.Missions.KSP2MissionManager.PlayNextTutorial*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_PlayNextTutorial_System_String_" data-uid="KSP.Game.Missions.KSP2MissionManager.PlayNextTutorial(System.String)">
+  PlayNextTutorial(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PlayNextTutorial(string nextMissionID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nextMissionID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ReloadSnapshot_" data-uid="KSP.Game.Missions.KSP2MissionManager.ReloadSnapshot*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ReloadSnapshot_System_String_" data-uid="KSP.Game.Missions.KSP2MissionManager.ReloadSnapshot(System.String)">
+  ReloadSnapshot(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReloadSnapshot(string missionID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ReplayTutorial_" data-uid="KSP.Game.Missions.KSP2MissionManager.ReplayTutorial*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ReplayTutorial" data-uid="KSP.Game.Missions.KSP2MissionManager.ReplayTutorial">
+  ReplayTutorial()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReplayTutorial()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ResetAllMissions_" data-uid="KSP.Game.Missions.KSP2MissionManager.ResetAllMissions*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ResetAllMissions" data-uid="KSP.Game.Missions.KSP2MissionManager.ResetAllMissions">
+  ResetAllMissions()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetAllMissions()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ResetCompletedTutorials_" data-uid="KSP.Game.Missions.KSP2MissionManager.ResetCompletedTutorials*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ResetCompletedTutorials" data-uid="KSP.Game.Missions.KSP2MissionManager.ResetCompletedTutorials">
+  ResetCompletedTutorials()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetCompletedTutorials()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ResetMissionState_" data-uid="KSP.Game.Missions.KSP2MissionManager.ResetMissionState*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ResetMissionState_System_String_" data-uid="KSP.Game.Missions.KSP2MissionManager.ResetMissionState(System.String)">
+  ResetMissionState(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetMissionState(string missionID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_RestoreBackupViewState_" data-uid="KSP.Game.Missions.KSP2MissionManager.RestoreBackupViewState*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_RestoreBackupViewState" data-uid="KSP.Game.Missions.KSP2MissionManager.RestoreBackupViewState">
+  RestoreBackupViewState()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RestoreBackupViewState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SaveProgressToSavedGame_" data-uid="KSP.Game.Missions.KSP2MissionManager.SaveProgressToSavedGame*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SaveProgressToSavedGame_KSP_Sim_SerializedSavedGame_" data-uid="KSP.Game.Missions.KSP2MissionManager.SaveProgressToSavedGame(KSP.Sim.SerializedSavedGame)">
+  SaveProgressToSavedGame(SerializedSavedGame)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaveProgressToSavedGame(SerializedSavedGame data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="KSP.Sim.SerializedSavedGame.html">SerializedSavedGame</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SetBackCachedActiveCampaignName_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBackCachedActiveCampaignName*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SetBackCachedActiveCampaignName" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBackCachedActiveCampaignName">
+  SetBackCachedActiveCampaignName()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBackCachedActiveCampaignName()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SetBackupViewState_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBackupViewState*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SetBackupViewState_KSP_UI_UIView_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBackupViewState(KSP.UI.UIView)">
+  SetBackupViewState(UIView)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBackupViewState(UIView view)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>view</code> <a class="xref" href="KSP.UI.UIView.html">UIView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SetBaseAgencyMissionJsonStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBaseAgencyMissionJsonStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SetBaseAgencyMissionJsonStringList_System_Collections_Generic_List_System_String__" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBaseAgencyMissionJsonStringList(System.Collections.Generic.List{System.String})">
+  SetBaseAgencyMissionJsonStringList(List&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBaseAgencyMissionJsonStringList(List&lt;string&gt; src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SetBaseGlobalMissionJsonStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBaseGlobalMissionJsonStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SetBaseGlobalMissionJsonStringList_System_Collections_Generic_List_System_String__" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBaseGlobalMissionJsonStringList(System.Collections.Generic.List{System.String})">
+  SetBaseGlobalMissionJsonStringList(List&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBaseGlobalMissionJsonStringList(List&lt;string&gt; src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SetBasePlayerMissionJsonStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBasePlayerMissionJsonStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SetBasePlayerMissionJsonStringList_System_Collections_Generic_List_System_String__" data-uid="KSP.Game.Missions.KSP2MissionManager.SetBasePlayerMissionJsonStringList(System.Collections.Generic.List{System.String})">
+  SetBasePlayerMissionJsonStringList(List&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBasePlayerMissionJsonStringList(List&lt;string&gt; src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SetMissionState_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetMissionState*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SetMissionState_System_String_KSP_Game_Missions_State_MissionState_System_Action_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetMissionState(System.String,KSP.Game.Missions.State.MissionState,System.Action)">
+  SetMissionState(string, MissionState, Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMissionState(string missionID, MissionState state, Action onMissionCompleteCallback = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>state</code> <a class="xref" href="KSP.Game.Missions.State.MissionState.html">MissionState</a></dt>
+    <dd></dd>
+    <dt><code>onMissionCompleteCallback</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_SetStringList_" data-uid="KSP.Game.Missions.KSP2MissionManager.SetStringList*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_SetStringList_System_Collections_Generic_List_System_String___System_Collections_Generic_List_System_String__" data-uid="KSP.Game.Missions.KSP2MissionManager.SetStringList(System.Collections.Generic.List{System.String}@,System.Collections.Generic.List{System.String})">
+  SetStringList(ref List&lt;string&gt;, List&lt;string&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetStringList(ref List&lt;string&gt; dest, List&lt;string&gt; src)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dest</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>src</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_Shutdown_" data-uid="KSP.Game.Missions.KSP2MissionManager.Shutdown*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_Shutdown" data-uid="KSP.Game.Missions.KSP2MissionManager.Shutdown">
+  Shutdown()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Shutdown()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_Start_" data-uid="KSP.Game.Missions.KSP2MissionManager.Start*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_Start" data-uid="KSP.Game.Missions.KSP2MissionManager.Start">
+  Start()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_ToggleMissionUI_" data-uid="KSP.Game.Missions.KSP2MissionManager.ToggleMissionUI*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_ToggleMissionUI_KSP_Messages_MessageCenterMessage_" data-uid="KSP.Game.Missions.KSP2MissionManager.ToggleMissionUI(KSP.Messages.MessageCenterMessage)">
+  ToggleMissionUI(MessageCenterMessage)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ToggleMissionUI(MessageCenterMessage message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="KSP.Messages.MessageCenterMessage.html">MessageCenterMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_TransitionToTrainingCenter_" data-uid="KSP.Game.Missions.KSP2MissionManager.TransitionToTrainingCenter*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_TransitionToTrainingCenter" data-uid="KSP.Game.Missions.KSP2MissionManager.TransitionToTrainingCenter">
+  TransitionToTrainingCenter()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void TransitionToTrainingCenter()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_TryGetMissionData_" data-uid="KSP.Game.Missions.KSP2MissionManager.TryGetMissionData*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_TryGetMissionData_System_String_KSP_Game_Missions_Definitions_MissionData__" data-uid="KSP.Game.Missions.KSP2MissionManager.TryGetMissionData(System.String,KSP.Game.Missions.Definitions.MissionData@)">
+  TryGetMissionData(string, out MissionData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetMissionData(string missionID, out MissionData missionData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>missionID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>missionData</code> <a class="xref" href="KSP.Game.Missions.Definitions.MissionData.html">MissionData</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_TryGetTutorialWorkspacesToLoad_" data-uid="KSP.Game.Missions.KSP2MissionManager.TryGetTutorialWorkspacesToLoad*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_TryGetTutorialWorkspacesToLoad_System_Collections_Generic_List_System_Tuple_UnityEngine_TextAsset_UnityEngine_Texture2D____" data-uid="KSP.Game.Missions.KSP2MissionManager.TryGetTutorialWorkspacesToLoad(System.Collections.Generic.List{System.Tuple{UnityEngine.TextAsset,UnityEngine.Texture2D}}@)">
+  TryGetTutorialWorkspacesToLoad(out List&lt;Tuple&lt;TextAsset, Texture2D&gt;&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetTutorialWorkspacesToLoad(out List&lt;Tuple&lt;TextAsset, Texture2D&gt;&gt; workspacesToLoad)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>workspacesToLoad</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<span class="xref">TextAsset</span>, <span class="xref">Texture2D</span>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_Update_" data-uid="KSP.Game.Missions.KSP2MissionManager.Update*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_Update" data-uid="KSP.Game.Missions.KSP2MissionManager.Update">
+  Update()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_Missions_KSP2MissionManager_UpdateTutorialsProgressToCampaignPlayer_" data-uid="KSP.Game.Missions.KSP2MissionManager.UpdateTutorialsProgressToCampaignPlayer*"></a>
+
+  <h3 id="KSP_Game_Missions_KSP2MissionManager_UpdateTutorialsProgressToCampaignPlayer" data-uid="KSP.Game.Missions.KSP2MissionManager.UpdateTutorialsProgressToCampaignPlayer">
+  UpdateTutorialsProgressToCampaignPlayer()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateTutorialsProgressToCampaignPlayer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

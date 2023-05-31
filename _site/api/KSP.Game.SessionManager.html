@@ -1,0 +1,5771 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SessionManager
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SessionManager
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="KSP.Game.SessionManager">
+
+
+
+  <h1 id="KSP_Game_SessionManager" data-uid="KSP.Game.SessionManager" class="text-break">
+    Class SessionManager
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="KSP.html">KSP</a>.<a class="xref" href="KSP.Game.html">Game</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+public class SessionManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SessionManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="KSP_Game_SessionManager__ctor_" data-uid="KSP.Game.SessionManager.#ctor*"></a>
+
+  <h3 id="KSP_Game_SessionManager__ctor" data-uid="KSP.Game.SessionManager.#ctor">
+  SessionManager()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SessionManager()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="KSP_Game_SessionManager_AXIS_CAMERA_HDG" data-uid="KSP.Game.SessionManager.AXIS_CAMERA_HDG">
+  AXIS_CAMERA_HDG
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding AXIS_CAMERA_HDG</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_AXIS_CAMERA_PITCH" data-uid="KSP.Game.SessionManager.AXIS_CAMERA_PITCH">
+  AXIS_CAMERA_PITCH
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding AXIS_CAMERA_PITCH</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_AXIS_MOUSEWHEEL" data-uid="KSP.Game.SessionManager.AXIS_MOUSEWHEEL">
+  AXIS_MOUSEWHEEL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding AXIS_MOUSEWHEEL</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_AXIS_PITCH" data-uid="KSP.Game.SessionManager.AXIS_PITCH">
+  AXIS_PITCH
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding AXIS_PITCH</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_AXIS_ROLL" data-uid="KSP.Game.SessionManager.AXIS_ROLL">
+  AXIS_ROLL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding AXIS_ROLL</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_AXIS_YAW" data-uid="KSP.Game.SessionManager.AXIS_YAW">
+  AXIS_YAW
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding AXIS_YAW</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_AUTO_ORBIT_TOGGLE" data-uid="KSP.Game.SessionManager.CAMERA_AUTO_ORBIT_TOGGLE">
+  CAMERA_AUTO_ORBIT_TOGGLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_AUTO_ORBIT_TOGGLE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_DOUBLECLICK_MOUSELOOK" data-uid="KSP.Game.SessionManager.CAMERA_DOUBLECLICK_MOUSELOOK">
+  CAMERA_DOUBLECLICK_MOUSELOOK
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CAMERA_DOUBLECLICK_MOUSELOOK</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_KEYINPUT_DECREASE" data-uid="KSP.Game.SessionManager.CAMERA_KEYINPUT_DECREASE">
+  CAMERA_KEYINPUT_DECREASE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_KEYINPUT_DECREASE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_KEYINPUT_INCREASE" data-uid="KSP.Game.SessionManager.CAMERA_KEYINPUT_INCREASE">
+  CAMERA_KEYINPUT_INCREASE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_KEYINPUT_INCREASE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_LOCAL_ROT_MODE" data-uid="KSP.Game.SessionManager.CAMERA_LOCAL_ROT_MODE">
+  CAMERA_LOCAL_ROT_MODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static KeyBinding CAMERA_LOCAL_ROT_MODE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KeyBinding.html">KeyBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_MODE" data-uid="KSP.Game.SessionManager.CAMERA_MODE">
+  CAMERA_MODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_MODE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_MOUSE_TOGGLE" data-uid="KSP.Game.SessionManager.CAMERA_MOUSE_TOGGLE">
+  CAMERA_MOUSE_TOGGLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_MOUSE_TOGGLE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ORBIT_DOWN" data-uid="KSP.Game.SessionManager.CAMERA_ORBIT_DOWN">
+  CAMERA_ORBIT_DOWN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ORBIT_DOWN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ORBIT_LEFT" data-uid="KSP.Game.SessionManager.CAMERA_ORBIT_LEFT">
+  CAMERA_ORBIT_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ORBIT_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ORBIT_RIGHT" data-uid="KSP.Game.SessionManager.CAMERA_ORBIT_RIGHT">
+  CAMERA_ORBIT_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ORBIT_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ORBIT_UP" data-uid="KSP.Game.SessionManager.CAMERA_ORBIT_UP">
+  CAMERA_ORBIT_UP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ORBIT_UP</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_PAN_DOWN" data-uid="KSP.Game.SessionManager.CAMERA_PAN_DOWN">
+  CAMERA_PAN_DOWN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_PAN_DOWN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_PAN_LEFT" data-uid="KSP.Game.SessionManager.CAMERA_PAN_LEFT">
+  CAMERA_PAN_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_PAN_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_PAN_RIGHT" data-uid="KSP.Game.SessionManager.CAMERA_PAN_RIGHT">
+  CAMERA_PAN_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_PAN_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_PAN_UP" data-uid="KSP.Game.SessionManager.CAMERA_PAN_UP">
+  CAMERA_PAN_UP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_PAN_UP</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_RESET" data-uid="KSP.Game.SessionManager.CAMERA_RESET">
+  CAMERA_RESET
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_RESET</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ROLL_LEFT" data-uid="KSP.Game.SessionManager.CAMERA_ROLL_LEFT">
+  CAMERA_ROLL_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ROLL_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ROLL_RIGHT" data-uid="KSP.Game.SessionManager.CAMERA_ROLL_RIGHT">
+  CAMERA_ROLL_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ROLL_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ZOOM" data-uid="KSP.Game.SessionManager.CAMERA_ZOOM">
+  CAMERA_ZOOM
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ZOOM</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CAMERA_ZOOM_SWITCH" data-uid="KSP.Game.SessionManager.CAMERA_ZOOM_SWITCH">
+  CAMERA_ZOOM_SWITCH
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding CAMERA_ZOOM_SWITCH</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_CHECK_FOR_UPDATES" data-uid="KSP.Game.SessionManager.CHECK_FOR_UPDATES">
+  CHECK_FOR_UPDATES
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool CHECK_FOR_UPDATES</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_DEFAULT_ACTIVE_CAMPAIGN_NEW_PLAYER_IS_FTUE_ENABLED" data-uid="KSP.Game.SessionManager.DEFAULT_ACTIVE_CAMPAIGN_NEW_PLAYER_IS_FTUE_ENABLED">
+  DEFAULT_ACTIVE_CAMPAIGN_NEW_PLAYER_IS_FTUE_ENABLED
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_ACTIVE_CAMPAIGN_NEW_PLAYER_IS_FTUE_ENABLED = false</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_DEFAULT_AGENCY_COLOR_ACCENT" data-uid="KSP.Game.SessionManager.DEFAULT_AGENCY_COLOR_ACCENT">
+  DEFAULT_AGENCY_COLOR_ACCENT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DEFAULT_AGENCY_COLOR_ACCENT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_DEFAULT_AGENCY_COLOR_BASE" data-uid="KSP.Game.SessionManager.DEFAULT_AGENCY_COLOR_BASE">
+  DEFAULT_AGENCY_COLOR_BASE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Color DEFAULT_AGENCY_COLOR_BASE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_DEFAULT_FLAG_SPRITE_LOCATION" data-uid="KSP.Game.SessionManager.DEFAULT_FLAG_SPRITE_LOCATION">
+  DEFAULT_FLAG_SPRITE_LOCATION
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string DEFAULT_FLAG_SPRITE_LOCATION</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_FLT_CAMERA_CHASE_SHARPNESS" data-uid="KSP.Game.SessionManager.FLT_CAMERA_CHASE_SHARPNESS">
+  FLT_CAMERA_CHASE_SHARPNESS
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float FLT_CAMERA_CHASE_SHARPNESS</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_HIGHLIGHT_FX" data-uid="KSP.Game.SessionManager.HIGHLIGHT_FX">
+  HIGHLIGHT_FX
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HIGHLIGHT_FX</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_IS_ACTIVE_CURSOR" data-uid="KSP.Game.SessionManager.IS_ACTIVE_CURSOR">
+  IS_ACTIVE_CURSOR
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IS_ACTIVE_CURSOR</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_IS_ACTIVE_FUNCTION_MENU_WHEEL" data-uid="KSP.Game.SessionManager.IS_ACTIVE_FUNCTION_MENU_WHEEL">
+  IS_ACTIVE_FUNCTION_MENU_WHEEL
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IS_ACTIVE_FUNCTION_MENU_WHEEL</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_IS_ACTIVE_MANRUVER_NODE" data-uid="KSP.Game.SessionManager.IS_ACTIVE_MANRUVER_NODE">
+  IS_ACTIVE_MANRUVER_NODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IS_ACTIVE_MANRUVER_NODE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_IS_ZOOM_MODE" data-uid="KSP.Game.SessionManager.IS_ZOOM_MODE">
+  IS_ZOOM_MODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IS_ZOOM_MODE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_KERBIN_TIME" data-uid="KSP.Game.SessionManager.KERBIN_TIME">
+  KERBIN_TIME
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool KERBIN_TIME</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_KerbalRosterManager" data-uid="KSP.Game.SessionManager.KerbalRosterManager">
+  KerbalRosterManager
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KerbalRosterManager KerbalRosterManager</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.KerbalRosterManager.html">KerbalRosterManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_LEGACY_ORBIT_TARGETING" data-uid="KSP.Game.SessionManager.LEGACY_ORBIT_TARGETING">
+  LEGACY_ORBIT_TARGETING
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LEGACY_ORBIT_TARGETING</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_LOG_INSTANT_FLUSH" data-uid="KSP.Game.SessionManager.LOG_INSTANT_FLUSH">
+  LOG_INSTANT_FLUSH
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LOG_INSTANT_FLUSH</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_LOG_MISSING_KEYS_TO_FILE" data-uid="KSP.Game.SessionManager.LOG_MISSING_KEYS_TO_FILE">
+  LOG_MISSING_KEYS_TO_FILE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool LOG_MISSING_KEYS_TO_FILE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MAP_VIEW_TOGGLE" data-uid="KSP.Game.SessionManager.MAP_VIEW_TOGGLE">
+  MAP_VIEW_TOGGLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MAP_VIEW_TOGGLE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MODIFIER_KEY" data-uid="KSP.Game.SessionManager.MODIFIER_KEY">
+  MODIFIER_KEY
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MODIFIER_KEY</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_AXIS_X" data-uid="KSP.Game.SessionManager.MOUSE_AXIS_X">
+  MOUSE_AXIS_X
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MOUSE_AXIS_X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_AXIS_Y" data-uid="KSP.Game.SessionManager.MOUSE_AXIS_Y">
+  MOUSE_AXIS_Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MOUSE_AXIS_Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_DOUBLE_CLICK_TIME" data-uid="KSP.Game.SessionManager.MOUSE_DOUBLE_CLICK_TIME">
+  MOUSE_DOUBLE_CLICK_TIME
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float MOUSE_DOUBLE_CLICK_TIME</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_LEFT" data-uid="KSP.Game.SessionManager.MOUSE_LEFT">
+  MOUSE_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MOUSE_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_MIDDLE" data-uid="KSP.Game.SessionManager.MOUSE_MIDDLE">
+  MOUSE_MIDDLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MOUSE_MIDDLE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_MOVEMENT_X" data-uid="KSP.Game.SessionManager.MOUSE_MOVEMENT_X">
+  MOUSE_MOVEMENT_X
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MOUSE_MOVEMENT_X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_MOVEMENT_Y" data-uid="KSP.Game.SessionManager.MOUSE_MOVEMENT_Y">
+  MOUSE_MOVEMENT_Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MOUSE_MOVEMENT_Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_RIGHT" data-uid="KSP.Game.SessionManager.MOUSE_RIGHT">
+  MOUSE_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding MOUSE_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_MOUSE_VIRTUAL_MOVE_SPEED" data-uid="KSP.Game.SessionManager.MOUSE_VIRTUAL_MOVE_SPEED">
+  MOUSE_VIRTUAL_MOVE_SPEED
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float MOUSE_VIRTUAL_MOVE_SPEED</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_NonIVACrewCamManager" data-uid="KSP.Game.SessionManager.NonIVACrewCamManager">
+  NonIVACrewCamManager
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NonIVACrewCamManager NonIVACrewCamManager</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.NonIVACrewCamManager.html">NonIVACrewCamManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_ORBIT_WARP_DOWN_AT_SOI" data-uid="KSP.Game.SessionManager.ORBIT_WARP_DOWN_AT_SOI">
+  ORBIT_WARP_DOWN_AT_SOI
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ORBIT_WARP_DOWN_AT_SOI</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PARTS_INFO_TOGGLE" data-uid="KSP.Game.SessionManager.PARTS_INFO_TOGGLE">
+  PARTS_INFO_TOGGLE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PARTS_INFO_TOGGLE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_BACK_PAUSE_MENU" data-uid="KSP.Game.SessionManager.PHOTO_MODE_BACK_PAUSE_MENU">
+  PHOTO_MODE_BACK_PAUSE_MENU
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_BACK_PAUSE_MENU</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_KEYBOARD_ESC_BACK_TO_PAUSE_MENU" data-uid="KSP.Game.SessionManager.PHOTO_MODE_KEYBOARD_ESC_BACK_TO_PAUSE_MENU">
+  PHOTO_MODE_KEYBOARD_ESC_BACK_TO_PAUSE_MENU
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_KEYBOARD_ESC_BACK_TO_PAUSE_MENU</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_KEYBOARD_SPACE" data-uid="KSP.Game.SessionManager.PHOTO_MODE_KEYBOARD_SPACE">
+  PHOTO_MODE_KEYBOARD_SPACE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_KEYBOARD_SPACE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_KeyBoard_ENTER" data-uid="KSP.Game.SessionManager.PHOTO_MODE_KeyBoard_ENTER">
+  PHOTO_MODE_KeyBoard_ENTER
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_KeyBoard_ENTER</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_LEGEND_MENU_NAVIGATE_DOWN" data-uid="KSP.Game.SessionManager.PHOTO_MODE_LEGEND_MENU_NAVIGATE_DOWN">
+  PHOTO_MODE_LEGEND_MENU_NAVIGATE_DOWN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_LEGEND_MENU_NAVIGATE_DOWN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_LEGEND_MENU_NAVIGATE_UP" data-uid="KSP.Game.SessionManager.PHOTO_MODE_LEGEND_MENU_NAVIGATE_UP">
+  PHOTO_MODE_LEGEND_MENU_NAVIGATE_UP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_LEGEND_MENU_NAVIGATE_UP</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_PAD_LEFT" data-uid="KSP.Game.SessionManager.PHOTO_MODE_PAD_LEFT">
+  PHOTO_MODE_PAD_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_PAD_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_PAD_LEFT_HOLDON" data-uid="KSP.Game.SessionManager.PHOTO_MODE_PAD_LEFT_HOLDON">
+  PHOTO_MODE_PAD_LEFT_HOLDON
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_PAD_LEFT_HOLDON</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_PAD_RIGHT" data-uid="KSP.Game.SessionManager.PHOTO_MODE_PAD_RIGHT">
+  PHOTO_MODE_PAD_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_PAD_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_PAD_RIGHT_HOLDON" data-uid="KSP.Game.SessionManager.PHOTO_MODE_PAD_RIGHT_HOLDON">
+  PHOTO_MODE_PAD_RIGHT_HOLDON
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_PAD_RIGHT_HOLDON</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_1" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_1">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_1
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_1</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_2" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_2">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_2
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_2</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_3" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_3">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_3
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_3</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_4" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_4">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_4
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_4</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_5" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_5">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_5
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_5</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_6" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_6">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_6
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_6</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_7" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_7">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_7
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_7</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_8" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_8">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_8
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_8</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_9" data-uid="KSP.Game.SessionManager.PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_9">
+  PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_9
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PHOTO_MODE_SAVE_CAMERA_POSITION_KeyBoard_9</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PITCH_DOWN" data-uid="KSP.Game.SessionManager.PITCH_DOWN">
+  PITCH_DOWN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PITCH_DOWN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_PITCH_UP" data-uid="KSP.Game.SessionManager.PITCH_UP">
+  PITCH_UP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding PITCH_UP</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_ROLL_LEFT" data-uid="KSP.Game.SessionManager.ROLL_LEFT">
+  ROLL_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding ROLL_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_ROLL_RIGHT" data-uid="KSP.Game.SessionManager.ROLL_RIGHT">
+  ROLL_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding ROLL_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_RSC_CONTROL_CAMERA_DOWN" data-uid="KSP.Game.SessionManager.RSC_CONTROL_CAMERA_DOWN">
+  RSC_CONTROL_CAMERA_DOWN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding RSC_CONTROL_CAMERA_DOWN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_RSC_CONTROL_CAMERA_LEFT" data-uid="KSP.Game.SessionManager.RSC_CONTROL_CAMERA_LEFT">
+  RSC_CONTROL_CAMERA_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding RSC_CONTROL_CAMERA_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_RSC_CONTROL_CAMERA_RIGHT" data-uid="KSP.Game.SessionManager.RSC_CONTROL_CAMERA_RIGHT">
+  RSC_CONTROL_CAMERA_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding RSC_CONTROL_CAMERA_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_RSC_CONTROL_CAMERA_UP" data-uid="KSP.Game.SessionManager.RSC_CONTROL_CAMERA_UP">
+  RSC_CONTROL_CAMERA_UP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding RSC_CONTROL_CAMERA_UP</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_SHIP_VOLUME" data-uid="KSP.Game.SessionManager.SHIP_VOLUME">
+  SHIP_VOLUME
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float SHIP_VOLUME</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_SHOW_DEADLINES_AS_DATES" data-uid="KSP.Game.SessionManager.SHOW_DEADLINES_AS_DATES">
+  SHOW_DEADLINES_AS_DATES
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SHOW_DEADLINES_AS_DATES</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_SHOW_PLATFORM_KEYBOARD" data-uid="KSP.Game.SessionManager.SHOW_PLATFORM_KEYBOARD">
+  SHOW_PLATFORM_KEYBOARD
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding SHOW_PLATFORM_KEYBOARD</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_SHOW_PWARP_WARNING" data-uid="KSP.Game.SessionManager.SHOW_PWARP_WARNING">
+  SHOW_PWARP_WARNING
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SHOW_PWARP_WARNING</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_SHOW_TRANSLATION_KEYS_ON_SCREEN" data-uid="KSP.Game.SessionManager.SHOW_TRANSLATION_KEYS_ON_SCREEN">
+  SHOW_TRANSLATION_KEYS_ON_SCREEN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SHOW_TRANSLATION_KEYS_ON_SCREEN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_ShowFrameTimes" data-uid="KSP.Game.SessionManager.ShowFrameTimes">
+  ShowFrameTimes
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ShowFrameTimes</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_TIME_WARP_DECREASE" data-uid="KSP.Game.SessionManager.TIME_WARP_DECREASE">
+  TIME_WARP_DECREASE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding TIME_WARP_DECREASE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_TIME_WARP_INCREASE" data-uid="KSP.Game.SessionManager.TIME_WARP_INCREASE">
+  TIME_WARP_INCREASE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding TIME_WARP_INCREASE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_TIME_WARP_STOP" data-uid="KSP.Game.SessionManager.TIME_WARP_STOP">
+  TIME_WARP_STOP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding TIME_WARP_STOP</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VAB_CAMERA_ORBIT_SENS" data-uid="KSP.Game.SessionManager.VAB_CAMERA_ORBIT_SENS">
+  VAB_CAMERA_ORBIT_SENS
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float VAB_CAMERA_ORBIT_SENS</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VAB_CAMERA_ZOOM_SENS" data-uid="KSP.Game.SessionManager.VAB_CAMERA_ZOOM_SENS">
+  VAB_CAMERA_ZOOM_SENS
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float VAB_CAMERA_ZOOM_SENS</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VAB_NAVIGATE_PAD_DOWN" data-uid="KSP.Game.SessionManager.VAB_NAVIGATE_PAD_DOWN">
+  VAB_NAVIGATE_PAD_DOWN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding VAB_NAVIGATE_PAD_DOWN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VAB_NAVIGATE_PAD_LEFT" data-uid="KSP.Game.SessionManager.VAB_NAVIGATE_PAD_LEFT">
+  VAB_NAVIGATE_PAD_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding VAB_NAVIGATE_PAD_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VAB_NAVIGATE_PAD_RIGHT" data-uid="KSP.Game.SessionManager.VAB_NAVIGATE_PAD_RIGHT">
+  VAB_NAVIGATE_PAD_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding VAB_NAVIGATE_PAD_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VAB_NAVIGATE_PAD_UP" data-uid="KSP.Game.SessionManager.VAB_NAVIGATE_PAD_UP">
+  VAB_NAVIGATE_PAD_UP
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding VAB_NAVIGATE_PAD_UP</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VAB_SYMMETRY_MODE" data-uid="KSP.Game.SessionManager.VAB_SYMMETRY_MODE">
+  VAB_SYMMETRY_MODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding VAB_SYMMETRY_MODE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_VOICE_VOLUME" data-uid="KSP.Game.SessionManager.VOICE_VOLUME">
+  VOICE_VOLUME
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static float VOICE_VOLUME</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_WHEEL_SELECT_X" data-uid="KSP.Game.SessionManager.WHEEL_SELECT_X">
+  WHEEL_SELECT_X
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding WHEEL_SELECT_X</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_WHEEL_SELECT_Y" data-uid="KSP.Game.SessionManager.WHEEL_SELECT_Y">
+  WHEEL_SELECT_Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding WHEEL_SELECT_Y</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_YAW_LEFT" data-uid="KSP.Game.SessionManager.YAW_LEFT">
+  YAW_LEFT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding YAW_LEFT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_YAW_RIGHT" data-uid="KSP.Game.SessionManager.YAW_RIGHT">
+  YAW_RIGHT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding YAW_RIGHT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_ZOOM_IN" data-uid="KSP.Game.SessionManager.ZOOM_IN">
+  ZOOM_IN
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding ZOOM_IN</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_ZOOM_MODE" data-uid="KSP.Game.SessionManager.ZOOM_MODE">
+  ZOOM_MODE
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding ZOOM_MODE</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="KSP_Game_SessionManager_ZOOM_OUT" data-uid="KSP.Game.SessionManager.ZOOM_OUT">
+  ZOOM_OUT
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Needs replacing with a GameInput actionmap equivalent as ControllerBinding is obsolete&quot;)]
+public static ControllerBinding ZOOM_OUT</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ControllerBinding.html">ControllerBinding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="KSP_Game_SessionManager_ActiveCampaignDescription_" data-uid="KSP.Game.SessionManager.ActiveCampaignDescription*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveCampaignDescription" data-uid="KSP.Game.SessionManager.ActiveCampaignDescription">
+  ActiveCampaignDescription
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ActiveCampaignDescription { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ActiveCampaignDifficultyLevel_" data-uid="KSP.Game.SessionManager.ActiveCampaignDifficultyLevel*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveCampaignDifficultyLevel" data-uid="KSP.Game.SessionManager.ActiveCampaignDifficultyLevel">
+  ActiveCampaignDifficultyLevel
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DifficultyLevel ActiveCampaignDifficultyLevel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.DifficultyLevel.html">DifficultyLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ActiveCampaignMode_" data-uid="KSP.Game.SessionManager.ActiveCampaignMode*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveCampaignMode" data-uid="KSP.Game.SessionManager.ActiveCampaignMode">
+  ActiveCampaignMode
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignMode ActiveCampaignMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.CampaignMode.html">CampaignMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ActiveCampaignName_" data-uid="KSP.Game.SessionManager.ActiveCampaignName*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveCampaignName" data-uid="KSP.Game.SessionManager.ActiveCampaignName">
+  ActiveCampaignName
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ActiveCampaignName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ActiveCampaignReadOnlyFlag_" data-uid="KSP.Game.SessionManager.ActiveCampaignReadOnlyFlag*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveCampaignReadOnlyFlag" data-uid="KSP.Game.SessionManager.ActiveCampaignReadOnlyFlag">
+  ActiveCampaignReadOnlyFlag
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ActiveCampaignReadOnlyFlag { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ActiveCampaignType_" data-uid="KSP.Game.SessionManager.ActiveCampaignType*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveCampaignType" data-uid="KSP.Game.SessionManager.ActiveCampaignType">
+  ActiveCampaignType
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CampaignType ActiveCampaignType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.CampaignType.html">CampaignType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ActiveGalaxyDefinitionKey_" data-uid="KSP.Game.SessionManager.ActiveGalaxyDefinitionKey*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveGalaxyDefinitionKey" data-uid="KSP.Game.SessionManager.ActiveGalaxyDefinitionKey">
+  ActiveGalaxyDefinitionKey
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ActiveGalaxyDefinitionKey { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ActiveTrackingStationObjectEntryFilters_" data-uid="KSP.Game.SessionManager.ActiveTrackingStationObjectEntryFilters*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ActiveTrackingStationObjectEntryFilters" data-uid="KSP.Game.SessionManager.ActiveTrackingStationObjectEntryFilters">
+  ActiveTrackingStationObjectEntryFilters
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public List&lt;TrackingStationObjectTypeFilter&gt; ActiveTrackingStationObjectEntryFilters { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Map.TrackingStationObjectTypeFilter.html">TrackingStationObjectTypeFilter</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ColonyManager_" data-uid="KSP.Game.SessionManager.ColonyManager*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ColonyManager" data-uid="KSP.Game.SessionManager.ColonyManager">
+  ColonyManager
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColonyManager ColonyManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.Colonies.ColonyManager.html">ColonyManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_CommNetManager_" data-uid="KSP.Game.SessionManager.CommNetManager*"></a>
+
+  <h3 id="KSP_Game_SessionManager_CommNetManager" data-uid="KSP.Game.SessionManager.CommNetManager">
+  CommNetManager
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CommNetManager CommNetManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.CommNetManager.html">CommNetManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_DefaultDifficultyOptions_" data-uid="KSP.Game.SessionManager.DefaultDifficultyOptions*"></a>
+
+  <h3 id="KSP_Game_SessionManager_DefaultDifficultyOptions" data-uid="KSP.Game.SessionManager.DefaultDifficultyOptions">
+  DefaultDifficultyOptions
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DifficultyOptionsData DefaultDifficultyOptions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.DifficultyOptionsData.html">DifficultyOptionsData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_DifficultyOptions_" data-uid="KSP.Game.SessionManager.DifficultyOptions*"></a>
+
+  <h3 id="KSP_Game_SessionManager_DifficultyOptions" data-uid="KSP.Game.SessionManager.DifficultyOptions">
+  DifficultyOptions
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DifficultyOptionsData DifficultyOptions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.DifficultyOptionsData.html">DifficultyOptionsData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_Game_" data-uid="KSP.Game.SessionManager.Game*"></a>
+
+  <h3 id="KSP_Game_SessionManager_Game" data-uid="KSP.Game.SessionManager.Game">
+  Game
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameInstance Game { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.GameInstance.html">GameInstance</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_LastLaunchLocation_" data-uid="KSP.Game.SessionManager.LastLaunchLocation*"></a>
+
+  <h3 id="KSP_Game_SessionManager_LastLaunchLocation" data-uid="KSP.Game.SessionManager.LastLaunchLocation">
+  LastLaunchLocation
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LastLaunchLocation { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_NewGameSetupInfo_" data-uid="KSP.Game.SessionManager.NewGameSetupInfo*"></a>
+
+  <h3 id="KSP_Game_SessionManager_NewGameSetupInfo" data-uid="KSP.Game.SessionManager.NewGameSetupInfo">
+  NewGameSetupInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NewGameSetupInfo NewGameSetupInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.NewGameSetupInfo.html">NewGameSetupInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_NewPlayerSetupInfo_" data-uid="KSP.Game.SessionManager.NewPlayerSetupInfo*"></a>
+
+  <h3 id="KSP_Game_SessionManager_NewPlayerSetupInfo" data-uid="KSP.Game.SessionManager.NewPlayerSetupInfo">
+  NewPlayerSetupInfo
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NewPlayerSetupInfo NewPlayerSetupInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.NewPlayerSetupInfo.html">NewPlayerSetupInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_TrainingCenterPopupAppearedOnceFlag_" data-uid="KSP.Game.SessionManager.TrainingCenterPopupAppearedOnceFlag*"></a>
+
+  <h3 id="KSP_Game_SessionManager_TrainingCenterPopupAppearedOnceFlag" data-uid="KSP.Game.SessionManager.TrainingCenterPopupAppearedOnceFlag">
+  TrainingCenterPopupAppearedOnceFlag
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrainingCenterPopupAppearedOnceFlag { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_TravelLogManager_" data-uid="KSP.Game.SessionManager.TravelLogManager*"></a>
+
+  <h3 id="KSP_Game_SessionManager_TravelLogManager" data-uid="KSP.Game.SessionManager.TravelLogManager">
+  TravelLogManager
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TravelLogManager TravelLogManager { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.TravelLogManager.html">TravelLogManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="KSP_Game_SessionManager_ExportSerializedSessionManager_" data-uid="KSP.Game.SessionManager.ExportSerializedSessionManager*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ExportSerializedSessionManager" data-uid="KSP.Game.SessionManager.ExportSerializedSessionManager">
+  ExportSerializedSessionManager()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SerializedSessionManager ExportSerializedSessionManager()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Sim.SerializedSessionManager.html">SerializedSessionManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetCameraForGroup_" data-uid="KSP.Game.SessionManager.GetCameraForGroup*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetCameraForGroup_KSP_Game_ActiveCameraGroup_" data-uid="KSP.Game.SessionManager.GetCameraForGroup(KSP.Game.ActiveCameraGroup)">
+  GetCameraForGroup(ActiveCameraGroup)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Camera GetCameraForGroup(ActiveCameraGroup group)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Camera</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetCameraRenderEffectsSystem_" data-uid="KSP.Game.SessionManager.GetCameraRenderEffectsSystem*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetCameraRenderEffectsSystem_KSP_Game_ActiveCameraGroup_KSP_Rendering_RenderSpaceType_" data-uid="KSP.Game.SessionManager.GetCameraRenderEffectsSystem(KSP.Game.ActiveCameraGroup,KSP.Rendering.RenderSpaceType)">
+  GetCameraRenderEffectsSystem(ActiveCameraGroup, RenderSpaceType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CameraEffectsSystem GetCameraRenderEffectsSystem(ActiveCameraGroup group, RenderSpaceType renderSpaceType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+    <dt><code>renderSpaceType</code> <a class="xref" href="KSP.Rendering.RenderSpaceType.html">RenderSpaceType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Rendering.CameraEffectsSystem.html">CameraEffectsSystem</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyActiveCamera_" data-uid="KSP.Game.SessionManager.GetMyActiveCamera*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyActiveCamera" data-uid="KSP.Game.SessionManager.GetMyActiveCamera">
+  GetMyActiveCamera()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Camera GetMyActiveCamera()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Camera</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyActiveCameraGroup_" data-uid="KSP.Game.SessionManager.GetMyActiveCameraGroup*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyActiveCameraGroup" data-uid="KSP.Game.SessionManager.GetMyActiveCameraGroup">
+  GetMyActiveCameraGroup()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActiveCameraGroup GetMyActiveCameraGroup()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyAgencyColorAccent_" data-uid="KSP.Game.SessionManager.GetMyAgencyColorAccent*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyAgencyColorAccent" data-uid="KSP.Game.SessionManager.GetMyAgencyColorAccent">
+  GetMyAgencyColorAccent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetMyAgencyColorAccent()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyAgencyColorBase_" data-uid="KSP.Game.SessionManager.GetMyAgencyColorBase*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyAgencyColorBase" data-uid="KSP.Game.SessionManager.GetMyAgencyColorBase">
+  GetMyAgencyColorBase()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetMyAgencyColorBase()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyAgencyFlagSpriteLocation_" data-uid="KSP.Game.SessionManager.GetMyAgencyFlagSpriteLocation*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyAgencyFlagSpriteLocation" data-uid="KSP.Game.SessionManager.GetMyAgencyFlagSpriteLocation">
+  GetMyAgencyFlagSpriteLocation()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetMyAgencyFlagSpriteLocation()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyAgencyID_" data-uid="KSP.Game.SessionManager.GetMyAgencyID*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyAgencyID_System_Boolean_" data-uid="KSP.Game.SessionManager.GetMyAgencyID(System.Boolean)">
+  GetMyAgencyID(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetMyAgencyID(bool logWarningIfFail = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logWarningIfFail</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyAgencyName_" data-uid="KSP.Game.SessionManager.GetMyAgencyName*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyAgencyName" data-uid="KSP.Game.SessionManager.GetMyAgencyName">
+  GetMyAgencyName()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetMyAgencyName()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyPlayerPartColorAccent_" data-uid="KSP.Game.SessionManager.GetMyPlayerPartColorAccent*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyPlayerPartColorAccent" data-uid="KSP.Game.SessionManager.GetMyPlayerPartColorAccent">
+  GetMyPlayerPartColorAccent()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetMyPlayerPartColorAccent()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_GetMyPlayerPartColorBase_" data-uid="KSP.Game.SessionManager.GetMyPlayerPartColorBase*"></a>
+
+  <h3 id="KSP_Game_SessionManager_GetMyPlayerPartColorBase" data-uid="KSP.Game.SessionManager.GetMyPlayerPartColorBase">
+  GetMyPlayerPartColorBase()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color GetMyPlayerPartColorBase()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ImportSerializedSessionManager_" data-uid="KSP.Game.SessionManager.ImportSerializedSessionManager*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ImportSerializedSessionManager_KSP_Sim_SerializedSessionManager_" data-uid="KSP.Game.SessionManager.ImportSerializedSessionManager(KSP.Sim.SerializedSessionManager)">
+  ImportSerializedSessionManager(SerializedSessionManager)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ImportSerializedSessionManager(SerializedSessionManager serializedSessionManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serializedSessionManager</code> <a class="xref" href="KSP.Sim.SerializedSessionManager.html">SerializedSessionManager</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_InitializeSessionData_" data-uid="KSP.Game.SessionManager.InitializeSessionData*"></a>
+
+  <h3 id="KSP_Game_SessionManager_InitializeSessionData_KSP_Game_LoadOrSaveCampaignTicket_KSP_Sim_SerializedSaveGameMetadata_" data-uid="KSP.Game.SessionManager.InitializeSessionData(KSP.Game.LoadOrSaveCampaignTicket,KSP.Sim.SerializedSaveGameMetadata)">
+  InitializeSessionData(LoadOrSaveCampaignTicket, SerializedSaveGameMetadata)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeSessionData(LoadOrSaveCampaignTicket loadOrSaveCampaignTicket, SerializedSaveGameMetadata sessionData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>loadOrSaveCampaignTicket</code> <a class="xref" href="KSP.Game.LoadOrSaveCampaignTicket.html">LoadOrSaveCampaignTicket</a></dt>
+    <dd></dd>
+    <dt><code>sessionData</code> <a class="xref" href="KSP.Sim.SerializedSaveGameMetadata.html">SerializedSaveGameMetadata</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_IsCelestialBodyDiscovered_" data-uid="KSP.Game.SessionManager.IsCelestialBodyDiscovered*"></a>
+
+  <h3 id="KSP_Game_SessionManager_IsCelestialBodyDiscovered_System_String_" data-uid="KSP.Game.SessionManager.IsCelestialBodyDiscovered(System.String)">
+  IsCelestialBodyDiscovered(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCelestialBodyDiscovered(string CelestialBodyID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>CelestialBodyID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_IsMPCampaign_" data-uid="KSP.Game.SessionManager.IsMPCampaign*"></a>
+
+  <h3 id="KSP_Game_SessionManager_IsMPCampaign" data-uid="KSP.Game.SessionManager.IsMPCampaign">
+  IsMPCampaign()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMPCampaign()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_IsMPClient_" data-uid="KSP.Game.SessionManager.IsMPClient*"></a>
+
+  <h3 id="KSP_Game_SessionManager_IsMPClient" data-uid="KSP.Game.SessionManager.IsMPClient">
+  IsMPClient()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMPClient()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_IsMPHosting_" data-uid="KSP.Game.SessionManager.IsMPHosting*"></a>
+
+  <h3 id="KSP_Game_SessionManager_IsMPHosting" data-uid="KSP.Game.SessionManager.IsMPHosting">
+  IsMPHosting()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMPHosting()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_IsPartUnlocked_" data-uid="KSP.Game.SessionManager.IsPartUnlocked*"></a>
+
+  <h3 id="KSP_Game_SessionManager_IsPartUnlocked_System_String_" data-uid="KSP.Game.SessionManager.IsPartUnlocked(System.String)">
+  IsPartUnlocked(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPartUnlocked(string partID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_IsReadOnlyCampaign_" data-uid="KSP.Game.SessionManager.IsReadOnlyCampaign*"></a>
+
+  <h3 id="KSP_Game_SessionManager_IsReadOnlyCampaign" data-uid="KSP.Game.SessionManager.IsReadOnlyCampaign">
+  IsReadOnlyCampaign()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnlyCampaign()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_IsSPCampaign_" data-uid="KSP.Game.SessionManager.IsSPCampaign*"></a>
+
+  <h3 id="KSP_Game_SessionManager_IsSPCampaign" data-uid="KSP.Game.SessionManager.IsSPCampaign">
+  IsSPCampaign()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSPCampaign()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_MarkCelestialBodyAsDiscovered_" data-uid="KSP.Game.SessionManager.MarkCelestialBodyAsDiscovered*"></a>
+
+  <h3 id="KSP_Game_SessionManager_MarkCelestialBodyAsDiscovered_System_String_" data-uid="KSP.Game.SessionManager.MarkCelestialBodyAsDiscovered(System.String)">
+  MarkCelestialBodyAsDiscovered(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MarkCelestialBodyAsDiscovered(string CelestialBodyID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>CelestialBodyID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_RegisterEnvironment_" data-uid="KSP.Game.SessionManager.RegisterEnvironment*"></a>
+
+  <h3 id="KSP_Game_SessionManager_RegisterEnvironment_KSP_ScriptInterop_IScriptEnvironment_" data-uid="KSP.Game.SessionManager.RegisterEnvironment(KSP.ScriptInterop.IScriptEnvironment)">
+  RegisterEnvironment(IScriptEnvironment)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterEnvironment(IScriptEnvironment scriptEnvironment)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scriptEnvironment</code> <a class="xref" href="KSP.ScriptInterop.IScriptEnvironment.html">IScriptEnvironment</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignDefaultDifficultyOptions_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDefaultDifficultyOptions*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignDefaultDifficultyOptions_KSP_Game_DifficultyOptionsData_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDefaultDifficultyOptions(KSP.Game.DifficultyOptionsData)">
+  SetActiveCampaignDefaultDifficultyOptions(DifficultyOptionsData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignDefaultDifficultyOptions(DifficultyOptionsData difficultyOptionsData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>difficultyOptionsData</code> <a class="xref" href="KSP.Game.DifficultyOptionsData.html">DifficultyOptionsData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignDescription_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDescription*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignDescription_System_String_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDescription(System.String)">
+  SetActiveCampaignDescription(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignDescription(string activeCampaignDescription)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCampaignDescription</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignDifficultyLevel_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDifficultyLevel*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignDifficultyLevel_KSP_Game_DifficultyLevel_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDifficultyLevel(KSP.Game.DifficultyLevel)">
+  SetActiveCampaignDifficultyLevel(DifficultyLevel)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignDifficultyLevel(DifficultyLevel activeCampaignDifficultyLevel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCampaignDifficultyLevel</code> <a class="xref" href="KSP.Game.DifficultyLevel.html">DifficultyLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignDifficultyOptions_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDifficultyOptions*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignDifficultyOptions_KSP_Game_DifficultyOptionsData_" data-uid="KSP.Game.SessionManager.SetActiveCampaignDifficultyOptions(KSP.Game.DifficultyOptionsData)">
+  SetActiveCampaignDifficultyOptions(DifficultyOptionsData)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignDifficultyOptions(DifficultyOptionsData difficultyOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>difficultyOptions</code> <a class="xref" href="KSP.Game.DifficultyOptionsData.html">DifficultyOptionsData</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignMode_" data-uid="KSP.Game.SessionManager.SetActiveCampaignMode*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignMode_KSP_Game_CampaignMode_" data-uid="KSP.Game.SessionManager.SetActiveCampaignMode(KSP.Game.CampaignMode)">
+  SetActiveCampaignMode(CampaignMode)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignMode(CampaignMode activeCampaignMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCampaignMode</code> <a class="xref" href="KSP.Game.CampaignMode.html">CampaignMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignName_" data-uid="KSP.Game.SessionManager.SetActiveCampaignName*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignName_System_String_" data-uid="KSP.Game.SessionManager.SetActiveCampaignName(System.String)">
+  SetActiveCampaignName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignName(string activeCampaignName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCampaignName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignReadOnlyFlag_" data-uid="KSP.Game.SessionManager.SetActiveCampaignReadOnlyFlag*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignReadOnlyFlag_System_Boolean_" data-uid="KSP.Game.SessionManager.SetActiveCampaignReadOnlyFlag(System.Boolean)">
+  SetActiveCampaignReadOnlyFlag(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignReadOnlyFlag(bool activeCampaignReadOnlyFlag)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCampaignReadOnlyFlag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveCampaignType_" data-uid="KSP.Game.SessionManager.SetActiveCampaignType*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveCampaignType_KSP_Game_CampaignType_" data-uid="KSP.Game.SessionManager.SetActiveCampaignType(KSP.Game.CampaignType)">
+  SetActiveCampaignType(CampaignType)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveCampaignType(CampaignType activeCampaignType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCampaignType</code> <a class="xref" href="KSP.Game.CampaignType.html">CampaignType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetActiveTrackingStationObjectEntryFilters_" data-uid="KSP.Game.SessionManager.SetActiveTrackingStationObjectEntryFilters*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetActiveTrackingStationObjectEntryFilters_System_Collections_Generic_List_KSP_Map_TrackingStationObjectTypeFilter__" data-uid="KSP.Game.SessionManager.SetActiveTrackingStationObjectEntryFilters(System.Collections.Generic.List{KSP.Map.TrackingStationObjectTypeFilter})">
+  SetActiveTrackingStationObjectEntryFilters(List&lt;TrackingStationObjectTypeFilter&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetActiveTrackingStationObjectEntryFilters(List&lt;TrackingStationObjectTypeFilter&gt; activeTrackingStationObjectEntryFilters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeTrackingStationObjectEntryFilters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KSP.Map.TrackingStationObjectTypeFilter.html">TrackingStationObjectTypeFilter</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetAgencyColorAccent_" data-uid="KSP.Game.SessionManager.SetAgencyColorAccent*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetAgencyColorAccent_System_Int32_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetAgencyColorAccent(System.Int32,UnityEngine.Color)">
+  SetAgencyColorAccent(int, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgencyColorAccent(int agencyId, Color colorAccent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>colorAccent</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetAgencyColorBase_" data-uid="KSP.Game.SessionManager.SetAgencyColorBase*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetAgencyColorBase_System_Int32_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetAgencyColorBase(System.Int32,UnityEngine.Color)">
+  SetAgencyColorBase(int, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgencyColorBase(int agencyId, Color colorBase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>colorBase</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetAgencyFlagSpriteLocation_" data-uid="KSP.Game.SessionManager.SetAgencyFlagSpriteLocation*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetAgencyFlagSpriteLocation_System_Int32_System_String_" data-uid="KSP.Game.SessionManager.SetAgencyFlagSpriteLocation(System.Int32,System.String)">
+  SetAgencyFlagSpriteLocation(int, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgencyFlagSpriteLocation(int agencyId, string flagSpriteLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>flagSpriteLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetAgencyName_" data-uid="KSP.Game.SessionManager.SetAgencyName*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetAgencyName_System_Int32_System_String_" data-uid="KSP.Game.SessionManager.SetAgencyName(System.Int32,System.String)">
+  SetAgencyName(int, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAgencyName(int agencyId, string agencyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>agencyId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>agencyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetDifficultyToDefault_" data-uid="KSP.Game.SessionManager.SetDifficultyToDefault*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetDifficultyToDefault" data-uid="KSP.Game.SessionManager.SetDifficultyToDefault">
+  SetDifficultyToDefault()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDifficultyToDefault()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetLastLaunchLocation_" data-uid="KSP.Game.SessionManager.SetLastLaunchLocation*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetLastLaunchLocation_System_String_" data-uid="KSP.Game.SessionManager.SetLastLaunchLocation(System.String)">
+  SetLastLaunchLocation(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SetLastLaunchLocation(string lastLaunchLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lastLaunchLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetMyActiveCameraGroup_" data-uid="KSP.Game.SessionManager.SetMyActiveCameraGroup*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetMyActiveCameraGroup_KSP_Game_ActiveCameraGroup_System_Boolean_" data-uid="KSP.Game.SessionManager.SetMyActiveCameraGroup(KSP.Game.ActiveCameraGroup,System.Boolean)">
+  SetMyActiveCameraGroup(ActiveCameraGroup, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SetMyActiveCameraGroup(ActiveCameraGroup activeCameraGroup, bool force = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>activeCameraGroup</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+    <dt><code>force</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetMyAgencyColorAccent_" data-uid="KSP.Game.SessionManager.SetMyAgencyColorAccent*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetMyAgencyColorAccent_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetMyAgencyColorAccent(UnityEngine.Color)">
+  SetMyAgencyColorAccent(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMyAgencyColorAccent(Color colorAccent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colorAccent</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetMyAgencyColorBase_" data-uid="KSP.Game.SessionManager.SetMyAgencyColorBase*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetMyAgencyColorBase_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetMyAgencyColorBase(UnityEngine.Color)">
+  SetMyAgencyColorBase(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMyAgencyColorBase(Color colorBase)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colorBase</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetMyAgencyFlagSpriteLocation_" data-uid="KSP.Game.SessionManager.SetMyAgencyFlagSpriteLocation*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetMyAgencyFlagSpriteLocation_System_String_" data-uid="KSP.Game.SessionManager.SetMyAgencyFlagSpriteLocation(System.String)">
+  SetMyAgencyFlagSpriteLocation(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMyAgencyFlagSpriteLocation(string flagSpriteLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flagSpriteLocation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetMyAgencyName_" data-uid="KSP.Game.SessionManager.SetMyAgencyName*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetMyAgencyName_System_String_" data-uid="KSP.Game.SessionManager.SetMyAgencyName(System.String)">
+  SetMyAgencyName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMyAgencyName(string agencyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>agencyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetMyPlayerPartColorAccent_" data-uid="KSP.Game.SessionManager.SetMyPlayerPartColorAccent*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetMyPlayerPartColorAccent_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetMyPlayerPartColorAccent(UnityEngine.Color)">
+  SetMyPlayerPartColorAccent(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMyPlayerPartColorAccent(Color newColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newColor</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetMyPlayerPartColorBase_" data-uid="KSP.Game.SessionManager.SetMyPlayerPartColorBase*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetMyPlayerPartColorBase_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetMyPlayerPartColorBase(UnityEngine.Color)">
+  SetMyPlayerPartColorBase(Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMyPlayerPartColorBase(Color newColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newColor</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetPlayerPartColorAccent_" data-uid="KSP.Game.SessionManager.SetPlayerPartColorAccent*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetPlayerPartColorAccent_System_Byte_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetPlayerPartColorAccent(System.Byte,UnityEngine.Color)">
+  SetPlayerPartColorAccent(byte, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPlayerPartColorAccent(byte playerId, Color newColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>newColor</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetPlayerPartColorBase_" data-uid="KSP.Game.SessionManager.SetPlayerPartColorBase*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetPlayerPartColorBase_System_Byte_UnityEngine_Color_" data-uid="KSP.Game.SessionManager.SetPlayerPartColorBase(System.Byte,UnityEngine.Color)">
+  SetPlayerPartColorBase(byte, Color)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPlayerPartColorBase(byte playerId, Color newColor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>playerId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd></dd>
+    <dt><code>newColor</code> <span class="xref">Color</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_SetTrainingCenterPopupAppearedFlag_" data-uid="KSP.Game.SessionManager.SetTrainingCenterPopupAppearedFlag*"></a>
+
+  <h3 id="KSP_Game_SessionManager_SetTrainingCenterPopupAppearedFlag_System_Boolean_" data-uid="KSP.Game.SessionManager.SetTrainingCenterPopupAppearedFlag(System.Boolean)">
+  SetTrainingCenterPopupAppearedFlag(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTrainingCenterPopupAppearedFlag(bool trainingCenterPopupAppearOnceFlag)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>trainingCenterPopupAppearOnceFlag</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_ShutdownSession_" data-uid="KSP.Game.SessionManager.ShutdownSession*"></a>
+
+  <h3 id="KSP_Game_SessionManager_ShutdownSession" data-uid="KSP.Game.SessionManager.ShutdownSession">
+  ShutdownSession()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ShutdownSession()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_TryGetCameraGimbalForGroup_" data-uid="KSP.Game.SessionManager.TryGetCameraGimbalForGroup*"></a>
+
+  <h3 id="KSP_Game_SessionManager_TryGetCameraGimbalForGroup_KSP_Game_ActiveCameraGroup_KSP_Sim_GimbalState__" data-uid="KSP.Game.SessionManager.TryGetCameraGimbalForGroup(KSP.Game.ActiveCameraGroup,KSP.Sim.GimbalState@)">
+  TryGetCameraGimbalForGroup(ActiveCameraGroup, out GimbalState)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetCameraGimbalForGroup(ActiveCameraGroup group, out GimbalState gimbalState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>group</code> <a class="xref" href="KSP.Game.ActiveCameraGroup.html">ActiveCameraGroup</a></dt>
+    <dd></dd>
+    <dt><code>gimbalState</code> <a class="xref" href="KSP.Sim.GimbalState.html">GimbalState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_TryGetMyActiveCameraGimbalState_" data-uid="KSP.Game.SessionManager.TryGetMyActiveCameraGimbalState*"></a>
+
+  <h3 id="KSP_Game_SessionManager_TryGetMyActiveCameraGimbalState_KSP_Sim_GimbalState__" data-uid="KSP.Game.SessionManager.TryGetMyActiveCameraGimbalState(KSP.Sim.GimbalState@)">
+  TryGetMyActiveCameraGimbalState(out GimbalState)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetMyActiveCameraGimbalState(out GimbalState gimbalState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gimbalState</code> <a class="xref" href="KSP.Sim.GimbalState.html">GimbalState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_UnlockPart_" data-uid="KSP.Game.SessionManager.UnlockPart*"></a>
+
+  <h3 id="KSP_Game_SessionManager_UnlockPart_System_String_" data-uid="KSP.Game.SessionManager.UnlockPart(System.String)">
+  UnlockPart(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnlockPart(string partID)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_Game_SessionManager_UpdateMyAgencyFlag_" data-uid="KSP.Game.SessionManager.UpdateMyAgencyFlag*"></a>
+
+  <h3 id="KSP_Game_SessionManager_UpdateMyAgencyFlag" data-uid="KSP.Game.SessionManager.UpdateMyAgencyFlag">
+  UpdateMyAgencyFlag()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateMyAgencyFlag()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

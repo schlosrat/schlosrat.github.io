@@ -1,0 +1,3801 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ApplySettings
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ApplySettings
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="KSP.UI.ApplySettings">
+
+
+
+  <h1 id="KSP_UI_ApplySettings" data-uid="KSP.UI.ApplySettings" class="text-break">
+    Class ApplySettings
+  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="KSP.html">KSP</a>.<a class="xref" href="KSP.UI.html">UI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Assembly-CSharp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ApplySettings</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ApplySettings</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Apply``1(``0,System.Action{``0})">ObjectExtensions.Apply&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Let``2(``0,System.Func{``0,``1})">ObjectExtensions.Let&lt;T, R&gt;(T, Func&lt;T, R&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="ObjectExtensions.html#ObjectExtensions.Use``1(``0,System.Action{``0})">ObjectExtensions.Use&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromFields_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromFields(object, object, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="KSP.Sim.Converters.TypeConverters.html#KSP_Sim_Converters_TypeConverters_CopyPropertiesFromProperties_System_Object_System_Object_System_Boolean_">TypeConverters.CopyPropertiesFromProperties(object, object, bool)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="KSP_UI_ApplySettings__ctor_" data-uid="KSP.UI.ApplySettings.#ctor*"></a>
+
+  <h3 id="KSP_UI_ApplySettings__ctor" data-uid="KSP.UI.ApplySettings.#ctor">
+  ApplySettings()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApplySettings()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="KSP_UI_ApplySettings_AddApplyListener_" data-uid="KSP.UI.ApplySettings.AddApplyListener*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_AddApplyListener_System_Action_" data-uid="KSP.UI.ApplySettings.AddApplyListener(System.Action)">
+  AddApplyListener(Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddApplyListener(Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_AddRevertListener_" data-uid="KSP.UI.ApplySettings.AddRevertListener*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_AddRevertListener_System_Action_" data-uid="KSP.UI.ApplySettings.AddRevertListener(System.Action)">
+  AddRevertListener(Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRevertListener(Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_ApplyAutoSaveTimeInMinutes_" data-uid="KSP.UI.ApplySettings.ApplyAutoSaveTimeInMinutes*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_ApplyAutoSaveTimeInMinutes" data-uid="KSP.UI.ApplySettings.ApplyAutoSaveTimeInMinutes">
+  ApplyAutoSaveTimeInMinutes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyAutoSaveTimeInMinutes()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_ApplyConicPatchDrawMode_" data-uid="KSP.UI.ApplySettings.ApplyConicPatchDrawMode*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_ApplyConicPatchDrawMode" data-uid="KSP.UI.ApplySettings.ApplyConicPatchDrawMode">
+  ApplyConicPatchDrawMode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyConicPatchDrawMode()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_ApplyEnableAutosaves_" data-uid="KSP.UI.ApplySettings.ApplyEnableAutosaves*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_ApplyEnableAutosaves" data-uid="KSP.UI.ApplySettings.ApplyEnableAutosaves">
+  ApplyEnableAutosaves()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyEnableAutosaves()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_ApplyMaxNumAutosaves_" data-uid="KSP.UI.ApplySettings.ApplyMaxNumAutosaves*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_ApplyMaxNumAutosaves" data-uid="KSP.UI.ApplySettings.ApplyMaxNumAutosaves">
+  ApplyMaxNumAutosaves()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ApplyMaxNumAutosaves()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetAmbienceVolume_" data-uid="KSP.UI.ApplySettings.GetAmbienceVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetAmbienceVolume" data-uid="KSP.UI.ApplySettings.GetAmbienceVolume">
+  GetAmbienceVolume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetAmbienceVolume()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetAnisotropicFiltering_" data-uid="KSP.UI.ApplySettings.GetAnisotropicFiltering*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetAnisotropicFiltering" data-uid="KSP.UI.ApplySettings.GetAnisotropicFiltering">
+  GetAnisotropicFiltering()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetAnisotropicFiltering()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetAntiAliasing_" data-uid="KSP.UI.ApplySettings.GetAntiAliasing*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetAntiAliasing" data-uid="KSP.UI.ApplySettings.GetAntiAliasing">
+  GetAntiAliasing()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetAntiAliasing()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetAutosaveTimeInMinutes_" data-uid="KSP.UI.ApplySettings.GetAutosaveTimeInMinutes*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetAutosaveTimeInMinutes" data-uid="KSP.UI.ApplySettings.GetAutosaveTimeInMinutes">
+  GetAutosaveTimeInMinutes()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetAutosaveTimeInMinutes()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetConicPatchDrawMode_" data-uid="KSP.UI.ApplySettings.GetConicPatchDrawMode*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetConicPatchDrawMode" data-uid="KSP.UI.ApplySettings.GetConicPatchDrawMode">
+  GetConicPatchDrawMode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetConicPatchDrawMode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetConicPatchLimit_" data-uid="KSP.UI.ApplySettings.GetConicPatchLimit*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetConicPatchLimit" data-uid="KSP.UI.ApplySettings.GetConicPatchLimit">
+  GetConicPatchLimit()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetConicPatchLimit()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetEnableAutosaves_" data-uid="KSP.UI.ApplySettings.GetEnableAutosaves*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetEnableAutosaves" data-uid="KSP.UI.ApplySettings.GetEnableAutosaves">
+  GetEnableAutosaves()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetEnableAutosaves()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetEnableClouds_" data-uid="KSP.UI.ApplySettings.GetEnableClouds*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetEnableClouds" data-uid="KSP.UI.ApplySettings.GetEnableClouds">
+  GetEnableClouds()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetEnableClouds()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetFullscreenOn_" data-uid="KSP.UI.ApplySettings.GetFullscreenOn*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetFullscreenOn" data-uid="KSP.UI.ApplySettings.GetFullscreenOn">
+  GetFullscreenOn()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetFullscreenOn()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetKerbalCommVolume_" data-uid="KSP.UI.ApplySettings.GetKerbalCommVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetKerbalCommVolume" data-uid="KSP.UI.ApplySettings.GetKerbalCommVolume">
+  GetKerbalCommVolume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetKerbalCommVolume()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetLanguageKey_" data-uid="KSP.UI.ApplySettings.GetLanguageKey*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetLanguageKey" data-uid="KSP.UI.ApplySettings.GetLanguageKey">
+  GetLanguageKey()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetLanguageKey()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetMasterVolume_" data-uid="KSP.UI.ApplySettings.GetMasterVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetMasterVolume" data-uid="KSP.UI.ApplySettings.GetMasterVolume">
+  GetMasterVolume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetMasterVolume()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetMaxNumAutosaves_" data-uid="KSP.UI.ApplySettings.GetMaxNumAutosaves*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetMaxNumAutosaves" data-uid="KSP.UI.ApplySettings.GetMaxNumAutosaves">
+  GetMaxNumAutosaves()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetMaxNumAutosaves()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetMusicVolume_" data-uid="KSP.UI.ApplySettings.GetMusicVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetMusicVolume" data-uid="KSP.UI.ApplySettings.GetMusicVolume">
+  GetMusicVolume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetMusicVolume()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetPartHighlighterBrightnessFactor_" data-uid="KSP.UI.ApplySettings.GetPartHighlighterBrightnessFactor*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetPartHighlighterBrightnessFactor" data-uid="KSP.UI.ApplySettings.GetPartHighlighterBrightnessFactor">
+  GetPartHighlighterBrightnessFactor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetPartHighlighterBrightnessFactor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetPartHighlighterEnabledInFlight_" data-uid="KSP.UI.ApplySettings.GetPartHighlighterEnabledInFlight*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetPartHighlighterEnabledInFlight" data-uid="KSP.UI.ApplySettings.GetPartHighlighterEnabledInFlight">
+  GetPartHighlighterEnabledInFlight()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetPartHighlighterEnabledInFlight()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetResolution_" data-uid="KSP.UI.ApplySettings.GetResolution*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetResolution" data-uid="KSP.UI.ApplySettings.GetResolution">
+  GetResolution()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetResolution()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetSFXVolume_" data-uid="KSP.UI.ApplySettings.GetSFXVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetSFXVolume" data-uid="KSP.UI.ApplySettings.GetSFXVolume">
+  GetSFXVolume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetSFXVolume()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetTextureQuality_" data-uid="KSP.UI.ApplySettings.GetTextureQuality*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetTextureQuality" data-uid="KSP.UI.ApplySettings.GetTextureQuality">
+  GetTextureQuality()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetTextureQuality()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetUIScaleFactor_" data-uid="KSP.UI.ApplySettings.GetUIScaleFactor*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetUIScaleFactor" data-uid="KSP.UI.ApplySettings.GetUIScaleFactor">
+  GetUIScaleFactor()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetUIScaleFactor()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetUIVolume_" data-uid="KSP.UI.ApplySettings.GetUIVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetUIVolume" data-uid="KSP.UI.ApplySettings.GetUIVolume">
+  GetUIVolume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetUIVolume()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetVSync_" data-uid="KSP.UI.ApplySettings.GetVSync*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetVSync" data-uid="KSP.UI.ApplySettings.GetVSync">
+  GetVSync()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetVSync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_GetVoiceoverVolume_" data-uid="KSP.UI.ApplySettings.GetVoiceoverVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_GetVoiceoverVolume" data-uid="KSP.UI.ApplySettings.GetVoiceoverVolume">
+  GetVoiceoverVolume()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float GetVoiceoverVolume()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_HideAndDisableUIElement_" data-uid="KSP.UI.ApplySettings.HideAndDisableUIElement*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_HideAndDisableUIElement_KSP_Sim_Definitions_MenuLocationEnum_System_String_System_String_System_String_" data-uid="KSP.UI.ApplySettings.HideAndDisableUIElement(KSP.Sim.Definitions.MenuLocationEnum,System.String,System.String,System.String)">
+  HideAndDisableUIElement(MenuLocationEnum, string, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HideAndDisableUIElement(MenuLocationEnum menuLocationToValidateAgainst, string settingName, string settingHeader = &quot;&quot;, string settingSpacer = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>menuLocationToValidateAgainst</code> <a class="xref" href="KSP.Sim.Definitions.MenuLocationEnum.html">MenuLocationEnum</a></dt>
+    <dd></dd>
+    <dt><code>settingName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>settingHeader</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>settingSpacer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_HideAudioUIElements_" data-uid="KSP.UI.ApplySettings.HideAudioUIElements*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_HideAudioUIElements_KSP_Sim_Definitions_MenuLocationEnum_" data-uid="KSP.UI.ApplySettings.HideAudioUIElements(KSP.Sim.Definitions.MenuLocationEnum)">
+  HideAudioUIElements(MenuLocationEnum)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HideAudioUIElements(MenuLocationEnum menuLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>menuLocation</code> <a class="xref" href="KSP.Sim.Definitions.MenuLocationEnum.html">MenuLocationEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_HideGameplayUIElements_" data-uid="KSP.UI.ApplySettings.HideGameplayUIElements*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_HideGameplayUIElements_KSP_Sim_Definitions_MenuLocationEnum_" data-uid="KSP.UI.ApplySettings.HideGameplayUIElements(KSP.Sim.Definitions.MenuLocationEnum)">
+  HideGameplayUIElements(MenuLocationEnum)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HideGameplayUIElements(MenuLocationEnum menuLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>menuLocation</code> <a class="xref" href="KSP.Sim.Definitions.MenuLocationEnum.html">MenuLocationEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_HideGraphicsUIElements_" data-uid="KSP.UI.ApplySettings.HideGraphicsUIElements*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_HideGraphicsUIElements_KSP_Sim_Definitions_MenuLocationEnum_" data-uid="KSP.UI.ApplySettings.HideGraphicsUIElements(KSP.Sim.Definitions.MenuLocationEnum)">
+  HideGraphicsUIElements(MenuLocationEnum)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HideGraphicsUIElements(MenuLocationEnum menuLocation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>menuLocation</code> <a class="xref" href="KSP.Sim.Definitions.MenuLocationEnum.html">MenuLocationEnum</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsAntiAliasingSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsAntiAliasingSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsAntiAliasingSelectionChanged" data-uid="KSP.UI.ApplySettings.IsAntiAliasingSelectionChanged">
+  IsAntiAliasingSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAntiAliasingSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsConicPatchLimitSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsConicPatchLimitSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsConicPatchLimitSelectionChanged" data-uid="KSP.UI.ApplySettings.IsConicPatchLimitSelectionChanged">
+  IsConicPatchLimitSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsConicPatchLimitSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsConicPathDrawModeSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsConicPathDrawModeSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsConicPathDrawModeSelectionChanged" data-uid="KSP.UI.ApplySettings.IsConicPathDrawModeSelectionChanged">
+  IsConicPathDrawModeSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsConicPathDrawModeSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsDefaultThrottleInPrelaunchChanged_" data-uid="KSP.UI.ApplySettings.IsDefaultThrottleInPrelaunchChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsDefaultThrottleInPrelaunchChanged" data-uid="KSP.UI.ApplySettings.IsDefaultThrottleInPrelaunchChanged">
+  IsDefaultThrottleInPrelaunchChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDefaultThrottleInPrelaunchChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsEnableCloudsSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsEnableCloudsSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsEnableCloudsSelectionChanged" data-uid="KSP.UI.ApplySettings.IsEnableCloudsSelectionChanged">
+  IsEnableCloudsSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEnableCloudsSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsEvasAutoRotateToCameraSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsEvasAutoRotateToCameraSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsEvasAutoRotateToCameraSelectionChanged" data-uid="KSP.UI.ApplySettings.IsEvasAutoRotateToCameraSelectionChanged">
+  IsEvasAutoRotateToCameraSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEvasAutoRotateToCameraSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsFullscreenSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsFullscreenSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsFullscreenSelectionChanged" data-uid="KSP.UI.ApplySettings.IsFullscreenSelectionChanged">
+  IsFullscreenSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFullscreenSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsLanguageSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsLanguageSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsLanguageSelectionChanged" data-uid="KSP.UI.ApplySettings.IsLanguageSelectionChanged">
+  IsLanguageSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsLanguageSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsPartHighlighterBrightnessFactorChanged_" data-uid="KSP.UI.ApplySettings.IsPartHighlighterBrightnessFactorChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsPartHighlighterBrightnessFactorChanged" data-uid="KSP.UI.ApplySettings.IsPartHighlighterBrightnessFactorChanged">
+  IsPartHighlighterBrightnessFactorChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPartHighlighterBrightnessFactorChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsPartHighlighterEnabledInFlightSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsPartHighlighterEnabledInFlightSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsPartHighlighterEnabledInFlightSelectionChanged" data-uid="KSP.UI.ApplySettings.IsPartHighlighterEnabledInFlightSelectionChanged">
+  IsPartHighlighterEnabledInFlightSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPartHighlighterEnabledInFlightSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsResolutionSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsResolutionSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsResolutionSelectionChanged" data-uid="KSP.UI.ApplySettings.IsResolutionSelectionChanged">
+  IsResolutionSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsResolutionSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsTemperatureGaugesSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsTemperatureGaugesSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsTemperatureGaugesSelectionChanged" data-uid="KSP.UI.ApplySettings.IsTemperatureGaugesSelectionChanged">
+  IsTemperatureGaugesSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTemperatureGaugesSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsTextureQualitySelectionChanged_" data-uid="KSP.UI.ApplySettings.IsTextureQualitySelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsTextureQualitySelectionChanged" data-uid="KSP.UI.ApplySettings.IsTextureQualitySelectionChanged">
+  IsTextureQualitySelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsTextureQualitySelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsUIScaleFactorChanged_" data-uid="KSP.UI.ApplySettings.IsUIScaleFactorChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsUIScaleFactorChanged" data-uid="KSP.UI.ApplySettings.IsUIScaleFactorChanged">
+  IsUIScaleFactorChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsUIScaleFactorChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_IsVSyncSelectionChanged_" data-uid="KSP.UI.ApplySettings.IsVSyncSelectionChanged*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_IsVSyncSelectionChanged" data-uid="KSP.UI.ApplySettings.IsVSyncSelectionChanged">
+  IsVSyncSelectionChanged()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsVSyncSelectionChanged()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_OnApply_" data-uid="KSP.UI.ApplySettings.OnApply*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_OnApply" data-uid="KSP.UI.ApplySettings.OnApply">
+  OnApply()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnApply()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_OnRevert_" data-uid="KSP.UI.ApplySettings.OnRevert*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_OnRevert" data-uid="KSP.UI.ApplySettings.OnRevert">
+  OnRevert()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnRevert()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_RemoveApplyListener_" data-uid="KSP.UI.ApplySettings.RemoveApplyListener*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_RemoveApplyListener_System_Action_" data-uid="KSP.UI.ApplySettings.RemoveApplyListener(System.Action)">
+  RemoveApplyListener(Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveApplyListener(Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_RemoveRevertListener_" data-uid="KSP.UI.ApplySettings.RemoveRevertListener*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_RemoveRevertListener_System_Action_" data-uid="KSP.UI.ApplySettings.RemoveRevertListener(System.Action)">
+  RemoveRevertListener(Action)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveRevertListener(Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetAmbienceVolume_" data-uid="KSP.UI.ApplySettings.SetAmbienceVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetAmbienceVolume_System_Single_" data-uid="KSP.UI.ApplySettings.SetAmbienceVolume(System.Single)">
+  SetAmbienceVolume(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAmbienceVolume(float newVolume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newVolume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetAnisotropicFiltering_" data-uid="KSP.UI.ApplySettings.SetAnisotropicFiltering*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetAnisotropicFiltering_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetAnisotropicFiltering(System.Boolean)">
+  SetAnisotropicFiltering(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAnisotropicFiltering(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetAntiAliasing_" data-uid="KSP.UI.ApplySettings.SetAntiAliasing*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetAntiAliasing_System_Int32_" data-uid="KSP.UI.ApplySettings.SetAntiAliasing(System.Int32)">
+  SetAntiAliasing(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAntiAliasing(int newAntiAliasing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newAntiAliasing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetApplyButton_" data-uid="KSP.UI.ApplySettings.SetApplyButton*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetApplyButton_UnityEngine_UI_Button_" data-uid="KSP.UI.ApplySettings.SetApplyButton(UnityEngine.UI.Button)">
+  SetApplyButton(Button)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetApplyButton(Button button)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>button</code> <span class="xref">Button</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetAutoSaveTimeInMinutes_" data-uid="KSP.UI.ApplySettings.SetAutoSaveTimeInMinutes*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetAutoSaveTimeInMinutes_System_Single_" data-uid="KSP.UI.ApplySettings.SetAutoSaveTimeInMinutes(System.Single)">
+  SetAutoSaveTimeInMinutes(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetAutoSaveTimeInMinutes(float num)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>num</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetConicPatchDrawMode_" data-uid="KSP.UI.ApplySettings.SetConicPatchDrawMode*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetConicPatchDrawMode_System_Int32_" data-uid="KSP.UI.ApplySettings.SetConicPatchDrawMode(System.Int32)">
+  SetConicPatchDrawMode(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetConicPatchDrawMode(int newConicPatchDrawMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newConicPatchDrawMode</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetConicPatchLimit_" data-uid="KSP.UI.ApplySettings.SetConicPatchLimit*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetConicPatchLimit_System_Single_" data-uid="KSP.UI.ApplySettings.SetConicPatchLimit(System.Single)">
+  SetConicPatchLimit(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetConicPatchLimit(float newConicPatchLimit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newConicPatchLimit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetDefaultThrottleInPrelaunch_" data-uid="KSP.UI.ApplySettings.SetDefaultThrottleInPrelaunch*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetDefaultThrottleInPrelaunch_System_Single_" data-uid="KSP.UI.ApplySettings.SetDefaultThrottleInPrelaunch(System.Single)">
+  SetDefaultThrottleInPrelaunch(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDefaultThrottleInPrelaunch(float newDefaultThrottleInPrelaunch)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newDefaultThrottleInPrelaunch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetEnableAutosaves_" data-uid="KSP.UI.ApplySettings.SetEnableAutosaves*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetEnableAutosaves_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetEnableAutosaves(System.Boolean)">
+  SetEnableAutosaves(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEnableAutosaves(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetEnableClouds_" data-uid="KSP.UI.ApplySettings.SetEnableClouds*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetEnableClouds_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetEnableClouds(System.Boolean)">
+  SetEnableClouds(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEnableClouds(bool isEnableCloudsOn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isEnableCloudsOn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetEvasAutoRotateToCamera_" data-uid="KSP.UI.ApplySettings.SetEvasAutoRotateToCamera*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetEvasAutoRotateToCamera_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetEvasAutoRotateToCamera(System.Boolean)">
+  SetEvasAutoRotateToCamera(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetEvasAutoRotateToCamera(bool isEvasAutoRotateToCameraOn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isEvasAutoRotateToCameraOn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetFullscreen_" data-uid="KSP.UI.ApplySettings.SetFullscreen*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetFullscreen_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetFullscreen(System.Boolean)">
+  SetFullscreen(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullscreen(bool isFullscreenOn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isFullscreenOn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetGraphicsSettingsReference_" data-uid="KSP.UI.ApplySettings.SetGraphicsSettingsReference*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetGraphicsSettingsReference_KSP_Rendering_GraphicsSettings_" data-uid="KSP.UI.ApplySettings.SetGraphicsSettingsReference(KSP.Rendering.GraphicsSettings)">
+  SetGraphicsSettingsReference(GraphicsSettings)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGraphicsSettingsReference(GraphicsSettings gs)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gs</code> <a class="xref" href="KSP.Rendering.GraphicsSettings.html">GraphicsSettings</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetKerbalCommVolume_" data-uid="KSP.UI.ApplySettings.SetKerbalCommVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetKerbalCommVolume_System_Single_" data-uid="KSP.UI.ApplySettings.SetKerbalCommVolume(System.Single)">
+  SetKerbalCommVolume(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetKerbalCommVolume(float newVolume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newVolume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetLanguageKey_" data-uid="KSP.UI.ApplySettings.SetLanguageKey*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetLanguageKey_System_String_" data-uid="KSP.UI.ApplySettings.SetLanguageKey(System.String)">
+  SetLanguageKey(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLanguageKey(string newLanguageKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newLanguageKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetMasterVolume_" data-uid="KSP.UI.ApplySettings.SetMasterVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetMasterVolume_System_Single_" data-uid="KSP.UI.ApplySettings.SetMasterVolume(System.Single)">
+  SetMasterVolume(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMasterVolume(float newMasterVolume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newMasterVolume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetMaxNumAutosaves_" data-uid="KSP.UI.ApplySettings.SetMaxNumAutosaves*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetMaxNumAutosaves_System_Single_" data-uid="KSP.UI.ApplySettings.SetMaxNumAutosaves(System.Single)">
+  SetMaxNumAutosaves(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMaxNumAutosaves(float num)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>num</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetMusicVolume_" data-uid="KSP.UI.ApplySettings.SetMusicVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetMusicVolume_System_Single_" data-uid="KSP.UI.ApplySettings.SetMusicVolume(System.Single)">
+  SetMusicVolume(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetMusicVolume(float newMusicVolume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newMusicVolume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetPartHighlighterBrightnessFactor_" data-uid="KSP.UI.ApplySettings.SetPartHighlighterBrightnessFactor*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetPartHighlighterBrightnessFactor_System_Single_" data-uid="KSP.UI.ApplySettings.SetPartHighlighterBrightnessFactor(System.Single)">
+  SetPartHighlighterBrightnessFactor(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPartHighlighterBrightnessFactor(float newPartHighlighterBrightnessFactor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newPartHighlighterBrightnessFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetPartHighlighterEnabledInFlight_" data-uid="KSP.UI.ApplySettings.SetPartHighlighterEnabledInFlight*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetPartHighlighterEnabledInFlight_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetPartHighlighterEnabledInFlight(System.Boolean)">
+  SetPartHighlighterEnabledInFlight(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPartHighlighterEnabledInFlight(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetReflectionsEnabled_" data-uid="KSP.UI.ApplySettings.SetReflectionsEnabled*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetReflectionsEnabled_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetReflectionsEnabled(System.Boolean)">
+  SetReflectionsEnabled(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetReflectionsEnabled(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetReflectionsQuality_" data-uid="KSP.UI.ApplySettings.SetReflectionsQuality*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetReflectionsQuality_System_Int32_" data-uid="KSP.UI.ApplySettings.SetReflectionsQuality(System.Int32)">
+  SetReflectionsQuality(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetReflectionsQuality(int value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetResolution_" data-uid="KSP.UI.ApplySettings.SetResolution*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetResolution_System_String_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetResolution(System.String,System.Boolean)">
+  SetResolution(string, bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetResolution(string newResolution, bool isFullscreenOn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newResolution</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>isFullscreenOn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetRevertButton_" data-uid="KSP.UI.ApplySettings.SetRevertButton*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetRevertButton_UnityEngine_UI_Button_" data-uid="KSP.UI.ApplySettings.SetRevertButton(UnityEngine.UI.Button)">
+  SetRevertButton(Button)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetRevertButton(Button button)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>button</code> <span class="xref">Button</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetSFXVolume_" data-uid="KSP.UI.ApplySettings.SetSFXVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetSFXVolume_System_Single_" data-uid="KSP.UI.ApplySettings.SetSFXVolume(System.Single)">
+  SetSFXVolume(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSFXVolume(float newSfxVolume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newSfxVolume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetSettingsProperties_" data-uid="KSP.UI.ApplySettings.SetSettingsProperties*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetSettingsProperties_KSP_Sim_Definitions_SettingsProperties_" data-uid="KSP.UI.ApplySettings.SetSettingsProperties(KSP.Sim.Definitions.SettingsProperties)">
+  SetSettingsProperties(SettingsProperties)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSettingsProperties(SettingsProperties inSettingsProperties)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inSettingsProperties</code> <a class="xref" href="KSP.Sim.Definitions.SettingsProperties.html">SettingsProperties</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetTemperatureGauges_" data-uid="KSP.UI.ApplySettings.SetTemperatureGauges*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetTemperatureGauges_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetTemperatureGauges(System.Boolean)">
+  SetTemperatureGauges(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTemperatureGauges(bool isTemperatureGaugesOn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isTemperatureGaugesOn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetTextureQuality_" data-uid="KSP.UI.ApplySettings.SetTextureQuality*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetTextureQuality_System_Int32_" data-uid="KSP.UI.ApplySettings.SetTextureQuality(System.Int32)">
+  SetTextureQuality(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetTextureQuality(int newTextureQuality)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newTextureQuality</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetThermalHighlights_" data-uid="KSP.UI.ApplySettings.SetThermalHighlights*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetThermalHighlights_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetThermalHighlights(System.Boolean)">
+  SetThermalHighlights(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetThermalHighlights(bool isThermalHighlightsOn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isThermalHighlightsOn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetUIScaleFactor_" data-uid="KSP.UI.ApplySettings.SetUIScaleFactor*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetUIScaleFactor_System_Single_" data-uid="KSP.UI.ApplySettings.SetUIScaleFactor(System.Single)">
+  SetUIScaleFactor(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUIScaleFactor(float newUIScaleFactor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newUIScaleFactor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetUIVolume_" data-uid="KSP.UI.ApplySettings.SetUIVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetUIVolume_System_Single_" data-uid="KSP.UI.ApplySettings.SetUIVolume(System.Single)">
+  SetUIVolume(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetUIVolume(float newVolume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newVolume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetVSync_" data-uid="KSP.UI.ApplySettings.SetVSync*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetVSync_System_Boolean_" data-uid="KSP.UI.ApplySettings.SetVSync(System.Boolean)">
+  SetVSync(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVSync(bool isVSyncOn)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isVSyncOn</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetVoiceoverVolume_" data-uid="KSP.UI.ApplySettings.SetVoiceoverVolume*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetVoiceoverVolume_System_Single_" data-uid="KSP.UI.ApplySettings.SetVoiceoverVolume(System.Single)">
+  SetVoiceoverVolume(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVoiceoverVolume(float newVoiceoverVolume)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newVoiceoverVolume</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupAutosaveTimeMinutes_" data-uid="KSP.UI.ApplySettings.SetupAutosaveTimeMinutes*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupAutosaveTimeMinutes_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupAutosaveTimeMinutes(UnityEngine.UI.Slider)">
+  SetupAutosaveTimeMinutes(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupAutosaveTimeMinutes(Slider slid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>slid</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupAutosavesEnabled_" data-uid="KSP.UI.ApplySettings.SetupAutosavesEnabled*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupAutosavesEnabled_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupAutosavesEnabled(UnityEngine.UI.Toggle)">
+  SetupAutosavesEnabled(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupAutosavesEnabled(Toggle tog)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>tog</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupEnableCloudsToggle_" data-uid="KSP.UI.ApplySettings.SetupEnableCloudsToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupEnableCloudsToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupEnableCloudsToggle(UnityEngine.UI.Toggle)">
+  SetupEnableCloudsToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupEnableCloudsToggle(Toggle enableCloudsToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enableCloudsToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupMaxAutosaves_" data-uid="KSP.UI.ApplySettings.SetupMaxAutosaves*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupMaxAutosaves_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupMaxAutosaves(UnityEngine.UI.Slider)">
+  SetupMaxAutosaves(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupMaxAutosaves(Slider slid)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>slid</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIAmbienceVolumeSlider_" data-uid="KSP.UI.ApplySettings.SetupUIAmbienceVolumeSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIAmbienceVolumeSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIAmbienceVolumeSlider(UnityEngine.UI.Slider)">
+  SetupUIAmbienceVolumeSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIAmbienceVolumeSlider(Slider target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIAntiAliasingDropDown_" data-uid="KSP.UI.ApplySettings.SetupUIAntiAliasingDropDown*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIAntiAliasingDropDown_TMPro_TMP_Dropdown_" data-uid="KSP.UI.ApplySettings.SetupUIAntiAliasingDropDown(TMPro.TMP_Dropdown)">
+  SetupUIAntiAliasingDropDown(TMP_Dropdown)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIAntiAliasingDropDown(TMP_Dropdown antiAliasingDropDown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>antiAliasingDropDown</code> <span class="xref">TMP_Dropdown</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIConicPatchDrawModeDropDown_" data-uid="KSP.UI.ApplySettings.SetupUIConicPatchDrawModeDropDown*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIConicPatchDrawModeDropDown_TMPro_TMP_Dropdown_" data-uid="KSP.UI.ApplySettings.SetupUIConicPatchDrawModeDropDown(TMPro.TMP_Dropdown)">
+  SetupUIConicPatchDrawModeDropDown(TMP_Dropdown)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIConicPatchDrawModeDropDown(TMP_Dropdown conicPatchDrawModeDropDown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conicPatchDrawModeDropDown</code> <span class="xref">TMP_Dropdown</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIConicPatchLimiterSlider_" data-uid="KSP.UI.ApplySettings.SetupUIConicPatchLimiterSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIConicPatchLimiterSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIConicPatchLimiterSlider(UnityEngine.UI.Slider)">
+  SetupUIConicPatchLimiterSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIConicPatchLimiterSlider(Slider conicPatchLimitSlider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>conicPatchLimitSlider</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIDefaultThrottleInPrelaunchSlider_" data-uid="KSP.UI.ApplySettings.SetupUIDefaultThrottleInPrelaunchSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIDefaultThrottleInPrelaunchSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIDefaultThrottleInPrelaunchSlider(UnityEngine.UI.Slider)">
+  SetupUIDefaultThrottleInPrelaunchSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIDefaultThrottleInPrelaunchSlider(Slider defaultThrottleInPrelaunchSlider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>defaultThrottleInPrelaunchSlider</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIEvasAutoRotateToCameraToggle_" data-uid="KSP.UI.ApplySettings.SetupUIEvasAutoRotateToCameraToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIEvasAutoRotateToCameraToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupUIEvasAutoRotateToCameraToggle(UnityEngine.UI.Toggle)">
+  SetupUIEvasAutoRotateToCameraToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIEvasAutoRotateToCameraToggle(Toggle evasAutoRotateToCameraToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>evasAutoRotateToCameraToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIFullscreenToggle_" data-uid="KSP.UI.ApplySettings.SetupUIFullscreenToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIFullscreenToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupUIFullscreenToggle(UnityEngine.UI.Toggle)">
+  SetupUIFullscreenToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIFullscreenToggle(Toggle fullscreenToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fullscreenToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIKerbalCommVolumeSlider_" data-uid="KSP.UI.ApplySettings.SetupUIKerbalCommVolumeSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIKerbalCommVolumeSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIKerbalCommVolumeSlider(UnityEngine.UI.Slider)">
+  SetupUIKerbalCommVolumeSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIKerbalCommVolumeSlider(Slider target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUILanguageDropDown_" data-uid="KSP.UI.ApplySettings.SetupUILanguageDropDown*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUILanguageDropDown_TMPro_TMP_Dropdown_" data-uid="KSP.UI.ApplySettings.SetupUILanguageDropDown(TMPro.TMP_Dropdown)">
+  SetupUILanguageDropDown(TMP_Dropdown)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUILanguageDropDown(TMP_Dropdown languageDropDown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>languageDropDown</code> <span class="xref">TMP_Dropdown</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIMasterVolumeSlider_" data-uid="KSP.UI.ApplySettings.SetupUIMasterVolumeSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIMasterVolumeSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIMasterVolumeSlider(UnityEngine.UI.Slider)">
+  SetupUIMasterVolumeSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIMasterVolumeSlider(Slider target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIMusicVolumeSlider_" data-uid="KSP.UI.ApplySettings.SetupUIMusicVolumeSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIMusicVolumeSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIMusicVolumeSlider(UnityEngine.UI.Slider)">
+  SetupUIMusicVolumeSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIMusicVolumeSlider(Slider target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIPartHighlighterBrightnessFactorSlider_" data-uid="KSP.UI.ApplySettings.SetupUIPartHighlighterBrightnessFactorSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIPartHighlighterBrightnessFactorSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIPartHighlighterBrightnessFactorSlider(UnityEngine.UI.Slider)">
+  SetupUIPartHighlighterBrightnessFactorSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIPartHighlighterBrightnessFactorSlider(Slider partHighlighterBrightnessFactorSlider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partHighlighterBrightnessFactorSlider</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIPartHighlighterEnabledInFlightToggle_" data-uid="KSP.UI.ApplySettings.SetupUIPartHighlighterEnabledInFlightToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIPartHighlighterEnabledInFlightToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupUIPartHighlighterEnabledInFlightToggle(UnityEngine.UI.Toggle)">
+  SetupUIPartHighlighterEnabledInFlightToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIPartHighlighterEnabledInFlightToggle(Toggle partHighlighterEnabledInFlightToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>partHighlighterEnabledInFlightToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIReflectionsEnabledToggle_" data-uid="KSP.UI.ApplySettings.SetupUIReflectionsEnabledToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIReflectionsEnabledToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupUIReflectionsEnabledToggle(UnityEngine.UI.Toggle)">
+  SetupUIReflectionsEnabledToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIReflectionsEnabledToggle(Toggle reflectionsEnabledToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reflectionsEnabledToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIReflectionsQualityDropDown_" data-uid="KSP.UI.ApplySettings.SetupUIReflectionsQualityDropDown*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIReflectionsQualityDropDown_TMPro_TMP_Dropdown_" data-uid="KSP.UI.ApplySettings.SetupUIReflectionsQualityDropDown(TMPro.TMP_Dropdown)">
+  SetupUIReflectionsQualityDropDown(TMP_Dropdown)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIReflectionsQualityDropDown(TMP_Dropdown reflectionQualityDropDown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>reflectionQualityDropDown</code> <span class="xref">TMP_Dropdown</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIResolutionDropDown_" data-uid="KSP.UI.ApplySettings.SetupUIResolutionDropDown*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIResolutionDropDown_TMPro_TMP_Dropdown_" data-uid="KSP.UI.ApplySettings.SetupUIResolutionDropDown(TMPro.TMP_Dropdown)">
+  SetupUIResolutionDropDown(TMP_Dropdown)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIResolutionDropDown(TMP_Dropdown resolutionDropDown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>resolutionDropDown</code> <span class="xref">TMP_Dropdown</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUISFXVolumeSlider_" data-uid="KSP.UI.ApplySettings.SetupUISFXVolumeSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUISFXVolumeSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUISFXVolumeSlider(UnityEngine.UI.Slider)">
+  SetupUISFXVolumeSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUISFXVolumeSlider(Slider target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIScaleSlider_" data-uid="KSP.UI.ApplySettings.SetupUIScaleSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIScaleSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIScaleSlider(UnityEngine.UI.Slider)">
+  SetupUIScaleSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIScaleSlider(Slider uiScaleSlider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uiScaleSlider</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUITemperatureGaugesToggle_" data-uid="KSP.UI.ApplySettings.SetupUITemperatureGaugesToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUITemperatureGaugesToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupUITemperatureGaugesToggle(UnityEngine.UI.Toggle)">
+  SetupUITemperatureGaugesToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUITemperatureGaugesToggle(Toggle temperatureGaugesToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>temperatureGaugesToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUITextureQualityDropDown_" data-uid="KSP.UI.ApplySettings.SetupUITextureQualityDropDown*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUITextureQualityDropDown_TMPro_TMP_Dropdown_" data-uid="KSP.UI.ApplySettings.SetupUITextureQualityDropDown(TMPro.TMP_Dropdown)">
+  SetupUITextureQualityDropDown(TMP_Dropdown)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUITextureQualityDropDown(TMP_Dropdown textureQualityDropDown)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>textureQualityDropDown</code> <span class="xref">TMP_Dropdown</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIThermalHighlightsToggle_" data-uid="KSP.UI.ApplySettings.SetupUIThermalHighlightsToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIThermalHighlightsToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupUIThermalHighlightsToggle(UnityEngine.UI.Toggle)">
+  SetupUIThermalHighlightsToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIThermalHighlightsToggle(Toggle thermalHighlightsToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>thermalHighlightsToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIUIVolumeSlider_" data-uid="KSP.UI.ApplySettings.SetupUIUIVolumeSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIUIVolumeSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIUIVolumeSlider(UnityEngine.UI.Slider)">
+  SetupUIUIVolumeSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIUIVolumeSlider(Slider target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIVSyncToggle_" data-uid="KSP.UI.ApplySettings.SetupUIVSyncToggle*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIVSyncToggle_UnityEngine_UI_Toggle_" data-uid="KSP.UI.ApplySettings.SetupUIVSyncToggle(UnityEngine.UI.Toggle)">
+  SetupUIVSyncToggle(Toggle)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIVSyncToggle(Toggle vsyncToggle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vsyncToggle</code> <span class="xref">Toggle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SetupUIVoiceoverVolumeSlider_" data-uid="KSP.UI.ApplySettings.SetupUIVoiceoverVolumeSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SetupUIVoiceoverVolumeSlider_UnityEngine_UI_Slider_" data-uid="KSP.UI.ApplySettings.SetupUIVoiceoverVolumeSlider(UnityEngine.UI.Slider)">
+  SetupUIVoiceoverVolumeSlider(Slider)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetupUIVoiceoverVolumeSlider(Slider target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>target</code> <span class="xref">Slider</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_SuspendScatterSystem_" data-uid="KSP.UI.ApplySettings.SuspendScatterSystem*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_SuspendScatterSystem_System_Boolean_" data-uid="KSP.UI.ApplySettings.SuspendScatterSystem(System.Boolean)">
+  SuspendScatterSystem(bool)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SuspendScatterSystem(bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_UIScaleConvertCanvasToSlider_" data-uid="KSP.UI.ApplySettings.UIScaleConvertCanvasToSlider*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_UIScaleConvertCanvasToSlider_System_Single_" data-uid="KSP.UI.ApplySettings.UIScaleConvertCanvasToSlider(System.Single)">
+  UIScaleConvertCanvasToSlider(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float UIScaleConvertCanvasToSlider(float canvasScale)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>canvasScale</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KSP_UI_ApplySettings_UIScaleConvertSliderToCanvas_" data-uid="KSP.UI.ApplySettings.UIScaleConvertSliderToCanvas*"></a>
+
+  <h3 id="KSP_UI_ApplySettings_UIScaleConvertSliderToCanvas_System_Single_" data-uid="KSP.UI.ApplySettings.UIScaleConvertSliderToCanvas(System.Single)">
+  UIScaleConvertSliderToCanvas(float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float UIScaleConvertSliderToCanvas(float sliderValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sliderValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
