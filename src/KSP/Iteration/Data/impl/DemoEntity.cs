@@ -1,0 +1,56 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: KSP.Iteration.Data.impl.DemoEntity
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: EF61A348-EB87-4C99-B6BD-CBCF875CC384
+// Assembly location: C:\KSP2\DLL_min\Assembly-CSharp.dll
+// XML documentation location: C:\KSP2\DLL_min\Assembly-CSharp.xml
+
+using KSP.Api.CoreTypes;
+using KSP.Api.Generic;
+using System;
+using System.Runtime.CompilerServices;
+using UnityEngine;
+
+namespace KSP.Iteration.Data.impl
+{
+  [Serializable]
+  public class DemoEntity : IDemoEntity
+  {
+    [SerializeField]
+    private string guid;
+    [SerializeField]
+    private int score;
+    [SerializeField]
+    private string name;
+    public PropertyExternal<string> GuidInternal;
+    public PropertyExternal<int> ScoreInternal;
+    public PropertyExternal<string> NameInternal;
+
+    public IProperty<string> Guid
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public IProperty<int> Score
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public IPropertyWritable<string> Name
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public DemoEntity() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public override bool Equals(object obj) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public override int GetHashCode() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void Randomize() => throw null;
+  }
+}
