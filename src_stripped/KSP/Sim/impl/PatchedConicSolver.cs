@@ -25,7 +25,7 @@ namespace KSP.Sim.impl
     public PatchedConicSolver(OrbiterComponent orbiter, UniverseModel universeModel) => throw null;
 
     /// <summary>
-    /// The maximum limit on the number of patches. The default value = 10. This member can be get, but not set.
+    /// The maximum limit on the number of patches. The default value = 10.
     /// </summary>
     public int MaxTotalPatches
     {
@@ -33,7 +33,7 @@ namespace KSP.Sim.impl
     }
 
     /// <summary>
-    /// The ObiterComponent object this class is associated with. This member can be get, but not set.
+    /// The ObiterComponent object this class is associated with.
     /// </summary>
     public OrbiterComponent Orbiter
     {
@@ -41,7 +41,7 @@ namespace KSP.Sim.impl
     }
 
     /// <summary>
-    /// A list of PatchedConicOrbits. May be given an index to obtain a particular trajectory. It’s basically a list of all the trajectories currently associated with this Orbiter object, and you can do things with it like any list. The length of the list will be no longer than MaxTotalPatches, with list members being chronologically organized from the patch that occurs first to the last patch. Unused members are null. This member can be get, but not set.
+    /// A list of PatchedConicOrbits. May be given an index to obtain a particular trajectory. It’s basically a list of all the trajectories currently associated with this Orbiter object, and you can do things with it like any list. The length of the list will be no longer than MaxTotalPatches, with list members being chronologically organized from the patch that occurs first to the last patch. Unused members are null.
     /// </summary>
     public List<PatchedConicsOrbit> CurrentTrajectory
     {
@@ -49,7 +49,7 @@ namespace KSP.Sim.impl
     }
 
     /// <summary>
-    /// The number of patches ahead. This member can be get or set. It is set in the private method PatchedConicSolver.CalculatePatchList()
+    /// The number of patches ahead. The game sets this in the private method PatchedConicSolver.CalculatePatchList()
     /// </summary>
     public int PatchesAhead
     {
