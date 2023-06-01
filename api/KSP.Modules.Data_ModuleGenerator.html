@@ -205,22 +205,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -293,7 +293,6 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;This should not be enabled at the same time as IsAlwaysActive&quot;)]
 public bool AutoShutdown</code></pre>
   </div>
 
@@ -356,7 +355,6 @@ public double AutoShutdownTemperature</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public double CurrentDecayTime</code></pre>
   </div>
 
@@ -388,7 +386,6 @@ public double CurrentDecayTime</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Curve that maps fractional lifetime to fractional output&quot;)]
 public FloatCurve DecayCurve</code></pre>
   </div>
 
@@ -420,7 +417,6 @@ public FloatCurve DecayCurve</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;How long the generator takes to decay completely, in seconds&quot;)]
 public double DecayTime</code></pre>
   </div>
 
@@ -641,9 +637,7 @@ public FloatCurve EmissiveTemperatureCurve</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;This should be 0 if IsAlwaysActive is enabled&quot;)]
-[KSPDefinition]
-[Header(&quot;Thermal Controls&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public double FluxGenerated</code></pre>
   </div>
 
@@ -707,8 +701,7 @@ public ModuleProperty&lt;bool&gt; GeneratorEnabled</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;General Parameters&quot;)]
-[KSPState]
+    <pre><code class="lang-csharp hljs">[KSPState]
 public bool GeneratorIsActive</code></pre>
   </div>
 
@@ -805,8 +798,7 @@ public ModuleProperty&lt;double&gt; HeatGenerated</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;This should not be enabled at the same time as AutoShutdown&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool IsAlwaysActive</code></pre>
   </div>
 
@@ -838,7 +830,6 @@ public bool IsAlwaysActive</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public bool IsDecaying</code></pre>
   </div>
 
@@ -962,7 +953,6 @@ public double SafeOperationTemperature</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;If true, the decay timer starts as soon as the part is spawned. If false, the decay timer starts when MET starts&quot;)]
 public bool StartDecayImmediately</code></pre>
   </div>
 
@@ -1024,9 +1014,7 @@ public GeneratorStatus Status</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Decay Controls&quot;)]
-[KSPDefinition]
-[Tooltip(&quot;Whether the output should be reduced with time&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool UseDecay</code></pre>
   </div>
 
@@ -1057,8 +1045,7 @@ public bool UseDecay</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Emissive Controls&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool UseEmissive</code></pre>
   </div>
 

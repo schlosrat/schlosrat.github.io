@@ -111,10 +111,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
@@ -124,12 +130,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -201,8 +201,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;A scalar for the speed of the camera when moving with the arrow keys&quot;)]
-public float CameraSpeedMove</code></pre>
+    <pre><code class="lang-csharp hljs">public float CameraSpeedMove</code></pre>
   </div>
 
 
@@ -232,8 +231,7 @@ public float CameraSpeedMove</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Scalar How responsive the camera is when looking about with right-click drag in free mode&quot;)]
-public float CameraSpeedRotate</code></pre>
+    <pre><code class="lang-csharp hljs">public float CameraSpeedRotate</code></pre>
   </div>
 
 
@@ -263,8 +261,7 @@ public float CameraSpeedRotate</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Scalar How responsive the camera is when looking about with right-click drag and the modifier key is pressed in free mode&quot;)]
-public float CameraSpeedRotatePrecise</code></pre>
+    <pre><code class="lang-csharp hljs">public float CameraSpeedRotatePrecise</code></pre>
   </div>
 
 
@@ -294,8 +291,7 @@ public float CameraSpeedRotatePrecise</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The value which camera changes get multiplied by when the fast movement multiplier (turbo button, usually shift) is on.&quot;)]
-public float CameraSpeedTurboScalar</code></pre>
+    <pre><code class="lang-csharp hljs">public float CameraSpeedTurboScalar</code></pre>
   </div>
 
 
@@ -325,9 +321,7 @@ public float CameraSpeedTurboScalar</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Camera&quot;)]
-[Tooltip(&quot;Scalar for how much movement is seen from a single scrollwheel tick&quot;)]
-public float CameraSpeedZoom</code></pre>
+    <pre><code class="lang-csharp hljs">public float CameraSpeedZoom</code></pre>
   </div>
 
 
@@ -357,8 +351,7 @@ public float CameraSpeedZoom</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Scalar for how much movement is seen from a single scrollwheel tick with the modifier key pressed&quot;)]
-public float CameraSpeedZoomPrecise</code></pre>
+    <pre><code class="lang-csharp hljs">public float CameraSpeedZoomPrecise</code></pre>
   </div>
 
 
@@ -388,8 +381,7 @@ public float CameraSpeedZoomPrecise</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;If mirror technique is auto, this is the technique we use instead. Cannot be auto.&quot;)]
-public MirrorTechnique DefaultMirrorTechnique</code></pre>
+    <pre><code class="lang-csharp hljs">public MirrorTechnique DefaultMirrorTechnique</code></pre>
   </div>
 
 
@@ -419,9 +411,7 @@ public MirrorTechnique DefaultMirrorTechnique</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Panning speed when using the middle mouse click&quot;)]
-[Header(&quot;General&quot;)]
-public float DragSpeed</code></pre>
+    <pre><code class="lang-csharp hljs">public float DragSpeed</code></pre>
   </div>
 
 
@@ -451,8 +441,7 @@ public float DragSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Scalar How responsive the camera is when looking about with right stick.&quot;)]
-public float GamepadCameraSpeedRotate</code></pre>
+    <pre><code class="lang-csharp hljs">public float GamepadCameraSpeedRotate</code></pre>
   </div>
 
 
@@ -482,8 +471,7 @@ public float GamepadCameraSpeedRotate</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Attachment Behaviors&quot;)]
-public float NodeDistToConsiderConnection</code></pre>
+    <pre><code class="lang-csharp hljs">public float NodeDistToConsiderConnection</code></pre>
   </div>
 
 
@@ -513,8 +501,7 @@ public float NodeDistToConsiderConnection</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;A value that impacts all attach node snapping distances. The higher the multiplier, the more likely it is to snap to a node from a further distance.&quot;)]
-public float NodeSnapScalar</code></pre>
+    <pre><code class="lang-csharp hljs">public float NodeSnapScalar</code></pre>
   </div>
 
 
@@ -544,8 +531,7 @@ public float NodeSnapScalar</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Scalar How responsive the camera is when looking about with right-click drag in orbit mode&quot;)]
-public float OrbitalCameraSpeedRotate</code></pre>
+    <pre><code class="lang-csharp hljs">public float OrbitalCameraSpeedRotate</code></pre>
   </div>
 
 
@@ -575,8 +561,7 @@ public float OrbitalCameraSpeedRotate</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Scalar How responsive the camera is when looking about with right-click drag and the modifier key is pressed in orbit mode&quot;)]
-public float OrbitalCameraSpeedRotatePrecise</code></pre>
+    <pre><code class="lang-csharp hljs">public float OrbitalCameraSpeedRotatePrecise</code></pre>
   </div>
 
 
@@ -606,8 +591,7 @@ public float OrbitalCameraSpeedRotatePrecise</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Mesured in seconds. An action opening the PAM must have the input start and end within this time, otherwise that possibility times out and we don&#39;t display the PAM. Other restrictions include &#39;must be the same part you started on&#39;&quot;)]
-public float PAMClickTimeout</code></pre>
+    <pre><code class="lang-csharp hljs">public float PAMClickTimeout</code></pre>
   </div>
 
 
@@ -637,8 +621,7 @@ public float PAMClickTimeout</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The Action that will cause a part to become the camera orbit center&quot;)]
-public AutoFocusActionBind PartAutoFocusAction</code></pre>
+    <pre><code class="lang-csharp hljs">public AutoFocusActionBind PartAutoFocusAction</code></pre>
   </div>
 
 
@@ -668,8 +651,7 @@ public AutoFocusActionBind PartAutoFocusAction</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Distance from Environment Center to place the Blueprint Grid.&quot;)]
-public float blueprintDistance</code></pre>
+    <pre><code class="lang-csharp hljs">public float blueprintDistance</code></pre>
   </div>
 
 
@@ -699,10 +681,7 @@ public float blueprintDistance</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Interval of Grid Divisions for the Heavy grid lines.&quot;)]
-[Range(2, 64)]
-[Header(&quot;Blueprint&quot;)]
-public int gridDivisions</code></pre>
+    <pre><code class="lang-csharp hljs">public int gridDivisions</code></pre>
   </div>
 
 
@@ -732,9 +711,7 @@ public int gridDivisions</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Interval of Grid Subdivisions for the Light grid lines.&quot;)]
-[Range(2, 10)]
-public int gridSubdivisions</code></pre>
+    <pre><code class="lang-csharp hljs">public int gridSubdivisions</code></pre>
   </div>
 
 

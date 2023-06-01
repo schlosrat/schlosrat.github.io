@@ -202,22 +202,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -322,7 +322,6 @@
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Command/ActiveControlName&quot;)]
 [KSPState]
 [PAMDisplayControl(SortIndex = 5)]
-[HideInInspector]
 public ModuleProperty&lt;string&gt; activeControlName</code></pre>
   </div>
 
@@ -384,8 +383,7 @@ public Data_Command.ControlPoint[] alternateControlOrientations</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[LocalizedField(&quot;PartModules/Command/ControlStatus&quot;)]
+    <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Command/ControlStatus&quot;)]
 [KSPState]
 [PAMDisplayControl(SortIndex = 2)]
 public ModuleProperty&lt;CommandControlState&gt; controlStatus</code></pre>
@@ -546,8 +544,7 @@ public float hibernationMultiplier</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPState(CopyToSymmetrySet = true)]
+    <pre><code class="lang-csharp hljs">[KSPState(CopyToSymmetrySet = true)]
 [LocalizedField(&quot;PartModules/Command/CommandEnabled&quot;)]
 [PAMDisplayControl(SortIndex = 3)]
 public ModuleProperty&lt;bool&gt; isCommandEnabled</code></pre>
@@ -678,8 +675,7 @@ public bool requiresCommNet</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public DictionaryValueList&lt;string, Data_Command.ControlPoint&gt; ControlPoints { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DictionaryValueList&lt;string, Data_Command.ControlPoint&gt; ControlPoints { get; }</code></pre>
   </div>
 
 

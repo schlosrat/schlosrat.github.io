@@ -205,22 +205,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -323,7 +323,6 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public bool HasResourcesToOperate</code></pre>
   </div>
 
@@ -415,8 +414,7 @@ public float PitchTorque</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public ResourceFlowRequestCommandConfig RequestConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public ResourceFlowRequestCommandConfig RequestConfig</code></pre>
   </div>
 
 
@@ -510,7 +508,6 @@ public float RollTorque</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 1)]
 [LocalizedField(&quot;PartModules/ReactionWheel/WheelStatus&quot;)]
-[HideInInspector]
 [KSPState]
 public ModuleProperty&lt;string&gt; StatusText</code></pre>
   </div>
@@ -545,7 +542,6 @@ public ModuleProperty&lt;string&gt; StatusText</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/ReactionWheel/TorqueEnabled&quot;)]
 [PAMDisplayControl(SortIndex = 2)]
 [KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; ToggleTorque</code></pre>
   </div>
 
@@ -610,7 +606,6 @@ public float TorqueResponseSpeed</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/ReactionWheel/WheelSetting&quot;)]
 [PAMDisplayControl(SortIndex = 3)]
 [KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 public ModuleProperty&lt;Data_ReactionWheel.ActuatorModes&gt; WheelActuatorMode</code></pre>
   </div>
 
@@ -642,7 +637,6 @@ public ModuleProperty&lt;Data_ReactionWheel.ActuatorModes&gt; WheelActuatorMode<
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 4)]
-[HideInInspector]
 [SteppedRange(0, 1, 0.01)]
 [KSPState(CopyToSymmetrySet = true)]
 [LocalizedField(&quot;PartModules/ReactionWheel/WheelAuthority&quot;)]
@@ -677,7 +671,6 @@ public ModuleProperty&lt;float&gt; WheelAuthority</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public Data_ReactionWheel.ReactionWheelState WheelState</code></pre>
   </div>
 

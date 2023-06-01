@@ -208,22 +208,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -296,7 +296,6 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The axis the bogey rotates around.&quot;)]
 public Vector3 bogeyAxis</code></pre>
   </div>
 
@@ -327,8 +326,7 @@ public Vector3 bogeyAxis</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The bogey reference transform&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public string bogeyRefTransformName</code></pre>
   </div>
 
@@ -359,8 +357,7 @@ public string bogeyRefTransformName</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The transform name for the bogey that is rotated/pitched.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public string bogeyTransformName</code></pre>
   </div>
 
@@ -391,8 +388,7 @@ public string bogeyTransformName</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The up axis for the bogey.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public Vector3 bogeyUpAxis</code></pre>
   </div>
 
@@ -423,8 +419,7 @@ public Vector3 bogeyUpAxis</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float maxPitch</code></pre>
   </div>
 
@@ -456,7 +451,6 @@ public float maxPitch</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The minimum pitch angle&quot;)]
 public float minPitch</code></pre>
   </div>
 
@@ -488,7 +482,6 @@ public float minPitch</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;How fast the pitch of the bogey is rotated (in secs).&quot;)]
 public float pitchResponse</code></pre>
   </div>
 
@@ -520,7 +513,6 @@ public float pitchResponse</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The resting pitch (angle in degrees)&quot;)]
 public float restPitch</code></pre>
   </div>
 
@@ -552,7 +544,6 @@ public float restPitch</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The wheel transform name (the spinny bits). If multiple they have to have the same transform name.&quot;)]
 public string wheelTransformBaseName</code></pre>
   </div>
 
@@ -584,7 +575,6 @@ public string wheelTransformBaseName</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The reference transform for the wheels (the spinny bits).&quot;)]
 public string wheelTransformRefName</code></pre>
   </div>
 

@@ -111,10 +111,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
@@ -124,12 +130,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -201,8 +201,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[FormerlySerializedAs(&quot;altitudeTemperatureFluxCurve&quot;)]
-public FloatCurve BodyAltitudeFluxCurve</code></pre>
+    <pre><code class="lang-csharp hljs">public FloatCurve BodyAltitudeFluxCurve</code></pre>
   </div>
 
 
@@ -262,8 +261,7 @@ public FloatCurve BodyAltitudeFluxCurve</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[FormerlySerializedAs(&quot;surfaceTemperatureFluxCurve&quot;)]
-public FloatCurve BodyAltitudeSurfaceFluxCurve</code></pre>
+    <pre><code class="lang-csharp hljs">public FloatCurve BodyAltitudeSurfaceFluxCurve</code></pre>
   </div>
 
 
@@ -293,8 +291,7 @@ public FloatCurve BodyAltitudeSurfaceFluxCurve</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[FormerlySerializedAs(&quot;atmosphereTemperatureCurve&quot;)]
-public FloatCurve BodyAltitudeTemperatureCurve</code></pre>
+    <pre><code class="lang-csharp hljs">public FloatCurve BodyAltitudeTemperatureCurve</code></pre>
   </div>
 
 
@@ -324,8 +321,7 @@ public FloatCurve BodyAltitudeTemperatureCurve</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Properties - Thermals&quot;)]
-public string BodySurfaceFluxMapPath</code></pre>
+    <pre><code class="lang-csharp hljs">public string BodySurfaceFluxMapPath</code></pre>
   </div>
 
 
@@ -415,8 +411,7 @@ public string BodySurfaceFluxMapPath</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public List&lt;PredefinedColonyObject&gt; LocalColonyObjects</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;PredefinedColonyObject&gt; LocalColonyObjects</code></pre>
   </div>
 
 
@@ -446,9 +441,7 @@ public List&lt;PredefinedColonyObject&gt; LocalColonyObjects</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[SerializeField]
-[HideInInspector]
-public List&lt;SerializedPredefinedColonyObject&gt; LocalColonyObjectsData</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;SerializedPredefinedColonyObject&gt; LocalColonyObjectsData</code></pre>
   </div>
 
 
@@ -478,8 +471,7 @@ public List&lt;SerializedPredefinedColonyObject&gt; LocalColonyObjectsData</code
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public List&lt;PredefinedSimObject&gt; LocalSimObjects</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;PredefinedSimObject&gt; LocalSimObjects</code></pre>
   </div>
 
 
@@ -509,10 +501,7 @@ public List&lt;PredefinedSimObject&gt; LocalSimObjects</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Local SimObjects&quot;)]
-[HideInInspector]
-[SerializeField]
-public List&lt;SerializedPredefinedSimObject&gt; LocalSimObjectsData</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;SerializedPredefinedSimObject&gt; LocalSimObjectsData</code></pre>
   </div>
 
 
@@ -632,8 +621,7 @@ public List&lt;SerializedPredefinedSimObject&gt; LocalSimObjectsData</code></pre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Properties - Star&quot;)]
-public double StarLuminosity</code></pre>
+    <pre><code class="lang-csharp hljs">public double StarLuminosity</code></pre>
   </div>
 
 
@@ -693,8 +681,7 @@ public double StarLuminosity</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The offset above Atmo/TerrainHeight when we can engage time warp higher than 4x&quot;)]
-public double TimeWarpAltitudeOffset</code></pre>
+    <pre><code class="lang-csharp hljs">public double TimeWarpAltitudeOffset</code></pre>
   </div>
 
 
@@ -1054,8 +1041,7 @@ public double TimeWarpAltitudeOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Decoration&quot;)]
-public string bodyDisplayName</code></pre>
+    <pre><code class="lang-csharp hljs">public string bodyDisplayName</code></pre>
   </div>
 
 
@@ -1085,8 +1071,7 @@ public string bodyDisplayName</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Meta data&quot;)]
-public string bodyName</code></pre>
+    <pre><code class="lang-csharp hljs">public string bodyName</code></pre>
   </div>
 
 
@@ -1146,8 +1131,7 @@ public string bodyName</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Properties - Atmosphere&quot;)]
-public bool hasAtmosphere</code></pre>
+    <pre><code class="lang-csharp hljs">public bool hasAtmosphere</code></pre>
   </div>
 
 
@@ -1267,8 +1251,7 @@ public bool hasAtmosphere</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Properties - Movement&quot;)]
-public bool hasSolarRotationPeriod</code></pre>
+    <pre><code class="lang-csharp hljs">public bool hasSolarRotationPeriod</code></pre>
   </div>
 
 
@@ -1298,8 +1281,7 @@ public bool hasSolarRotationPeriod</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Properties - General&quot;)]
-public bool hasSolidSurface</code></pre>
+    <pre><code class="lang-csharp hljs">public bool hasSolidSurface</code></pre>
   </div>
 
 
@@ -1449,8 +1431,7 @@ public bool hasSolidSurface</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Descriptors&quot;)]
-public bool isStar</code></pre>
+    <pre><code class="lang-csharp hljs">public bool isStar</code></pre>
   </div>
 
 
@@ -1510,8 +1491,7 @@ public bool isStar</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The altitude (Above Sea Level) when the navball will auto switch to Orbit Mode when the altitude gets above this&quot;)]
-public double navballSwitchAltitudeHigh</code></pre>
+    <pre><code class="lang-csharp hljs">public double navballSwitchAltitudeHigh</code></pre>
   </div>
 
 
@@ -1541,8 +1521,7 @@ public double navballSwitchAltitudeHigh</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The altitude Above Sea Level when the navball will auto switch to Surface Mode when the altitude gets below this&quot;)]
-public double navballSwitchAltitudeLow</code></pre>
+    <pre><code class="lang-csharp hljs">public double navballSwitchAltitudeLow</code></pre>
   </div>
 
 
@@ -1662,10 +1641,7 @@ public double navballSwitchAltitudeLow</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NonReorderable]
-[SerializeField]
-[Header(&quot;Properties - Rings&quot;)]
-public List&lt;CelestialBodyRingData&gt; ringGroupData</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;CelestialBodyRingData&gt; ringGroupData</code></pre>
   </div>
 
 

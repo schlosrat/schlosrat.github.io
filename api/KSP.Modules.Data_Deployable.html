@@ -208,22 +208,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -509,7 +509,6 @@ public string ActionGroupToggleName</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public ModuleProperty&lt;float&gt; AnimationNormalizedTime</code></pre>
   </div>
 
@@ -571,8 +570,7 @@ public Vector2 AxisMinMaxRotation</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-[PAMDisplayControl(ExcludeFromContext = true)]
+    <pre><code class="lang-csharp hljs">[PAMDisplayControl(ExcludeFromContext = true)]
 [KSPState(CopyToSymmetrySet = true)]
 public ModuleProperty&lt;Data_Deployable.DeployState&gt; CurrentDeployState</code></pre>
   </div>
@@ -635,8 +633,7 @@ public KSPActionGroup DefaultActionGroup</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public Data_Deployable.DeployState DefaultDeployState</code></pre>
+    <pre><code class="lang-csharp hljs">public Data_Deployable.DeployState DefaultDeployState</code></pre>
   </div>
 
 
@@ -730,7 +727,6 @@ public Data_Deployable.DeployState DefaultDeployState</code></pre>
 [PAMDisplayControl(SortIndex = 4)]
 [SteppedRange(0, 1, 0.01)]
 [KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 public ModuleProperty&lt;float&gt; DeployLimit</code></pre>
   </div>
 
@@ -1693,7 +1689,6 @@ public bool showStatus</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Deployable/Status&quot;)]
 [PAMDisplayControl(SortIndex = 3)]
 [KSPState]
-[HideInInspector]
 public ModuleProperty&lt;string&gt; statusTxt</code></pre>
   </div>
 
@@ -1756,7 +1751,6 @@ public string targetGUID</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 [LocalizedField(&quot;Extend Part&quot;)]
 [PAMDisplayControl(SortIndex = 1)]
 public ModuleProperty&lt;bool&gt; toggleExtend</code></pre>

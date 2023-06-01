@@ -205,22 +205,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -292,8 +292,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPState]
+    <pre><code class="lang-csharp hljs">[KSPState]
 public float DriveInput</code></pre>
   </div>
 
@@ -324,8 +323,7 @@ public float DriveInput</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPState]
+    <pre><code class="lang-csharp hljs">[KSPState]
 public float MaxDriveTorque</code></pre>
   </div>
 
@@ -388,7 +386,6 @@ public float MaxTorque</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public Data_WheelMotor.MotorState MotorDriveState</code></pre>
   </div>
 
@@ -420,7 +417,6 @@ public Data_WheelMotor.MotorState MotorDriveState</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public bool MotorOperative</code></pre>
   </div>
 
@@ -451,8 +447,7 @@ public bool MotorOperative</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPState]
+    <pre><code class="lang-csharp hljs">[KSPState]
 public bool MotorPhysXActive</code></pre>
   </div>
 
@@ -514,7 +509,6 @@ public bool MotorPhysXActive</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public double ResourceFractionOutput</code></pre>
   </div>
 
@@ -647,7 +641,6 @@ public ModuleProperty&lt;float&gt; driveOutput</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;This is the wheel drive response. How fast the motor applies torque.&quot;)]
 public float driveResponse</code></pre>
   </div>
 
@@ -679,7 +672,6 @@ public float driveResponse</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The amount of EC consumed when the motor is at idle. Total drain is rate * (inputApplied + idleDrain).\nRate is the rate defined in the requiredResource construct.&quot;)]
 public double idleDrain</code></pre>
   </div>
 
@@ -746,7 +738,6 @@ public ModuleProperty&lt;bool&gt; motorEnabled</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Wheels/MotorInverted&quot;)]
 [PAMDisplayControl(SortIndex = 5)]
 [KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; motorInverted</code></pre>
   </div>
 
@@ -810,8 +801,7 @@ public ModuleProperty&lt;string&gt; motorStateString</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Resource required to operate this module if the above property is true. &quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public PartModuleResourceSetting requiredResource</code></pre>
   </div>
 
@@ -843,7 +833,6 @@ public PartModuleResourceSetting requiredResource</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The motor torque curve.\nThe X axis is the curent velocity, the Y axis is how much torque the motor will generate at the X velocity.&quot;)]
 public FloatCurve torqueCurve</code></pre>
   </div>
 
@@ -908,8 +897,7 @@ public ModuleProperty&lt;float&gt; tractionControlScale</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Whether the motor consumes resources.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool useResources</code></pre>
   </div>
 
@@ -941,7 +929,6 @@ public bool useResources</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Maximum speed the wheel can do.&quot;)]
 public float wheelSpeedMax</code></pre>
   </div>
 
