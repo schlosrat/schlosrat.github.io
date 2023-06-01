@@ -208,22 +208,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -296,7 +296,6 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Height of the character&#39;s Capsule Collider when they are in the Climb CharacterStateHandler.&quot;)]
 public float ClimbCapsuleHeight</code></pre>
   </div>
 
@@ -327,8 +326,7 @@ public float ClimbCapsuleHeight</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Radius of the character&#39;s Capsule Collider when they are in the Climb CharacterStateHandler.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float ClimbCapsuleRadius</code></pre>
   </div>
 
@@ -360,7 +358,6 @@ public float ClimbCapsuleRadius</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Minimum height of a climbable object. Applies to very small Ladders where the climbable surface is too small compared to the character capsule dimensions. We still want the player to experience climbing height adjustments as they provide input for these small climbable objects.&quot;)]
 public float ClimbMinObjectHeight</code></pre>
   </div>
 
@@ -392,7 +389,6 @@ public float ClimbMinObjectHeight</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Climb Move Animation speed in meters per second. This animator provided value will be used to avoid foot sliding, when applying the gameplay facing speed. If you do not know what this value should be, and don&#39;t mind foot/hand sliding temporarily, keep it at 0.&quot;)]
 public float ClimbMoveAnimationSpeed</code></pre>
   </div>
 
@@ -424,7 +420,6 @@ public float ClimbMoveAnimationSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Climb Move speed in meters per second. This is the gameplay facing speed. Once the other animation speed field is tuned correctly, you can increase or decrease this value freely without foot/hand sliding.&quot;)]
 public float ClimbMoveSpeed</code></pre>
   </div>
 
@@ -455,9 +450,7 @@ public float ClimbMoveSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Climb&quot;)]
-[KSPDefinition]
-[Tooltip(&quot;Duration in seconds to dock the Kerbal to the Ladder when Climb is started. I.e., the duration of the StartClimbDock sub-state of Climb.&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float ClimbStartDockDuration</code></pre>
   </div>
 
@@ -488,8 +481,7 @@ public float ClimbStartDockDuration</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Duration in seconds to dock the Kerbal to the Ladder when Climb is stopped. I.e., the duration of the StopClimbUndock sub-state of Climb.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float ClimbStopDockDuration</code></pre>
   </div>
 
@@ -520,8 +512,7 @@ public float ClimbStopDockDuration</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Whether EVA and Flight Interact inputs be disabled while the plant flag animation is playing.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool DisableEVAAndFlightInteractInputs</code></pre>
   </div>
 
@@ -552,9 +543,7 @@ public bool DisableEVAAndFlightInteractInputs</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Local position offset added when instantiating the flag prefab.&quot;)]
-[Header(&quot;Flag&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public Vector3d FlagLocalPositionOffset</code></pre>
   </div>
 
@@ -586,7 +575,6 @@ public Vector3d FlagLocalPositionOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Altitude above both Sea Level and Ground Level the character needs to be to be considered Above High Altitude or In-Orbit.&quot;)]
 public float GroundAndSeaHighAltitude</code></pre>
   </div>
 
@@ -617,8 +605,7 @@ public float GroundAndSeaHighAltitude</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Length in meters of the physics spherecast of the &#39;In the Future&#39; Ground spherecast. This physics spherecast occurs downwards opposite to HorizonUp, is positioned such that it is offset by a fixed amount along the move input direction.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float GroundSpherecastFutureLength</code></pre>
   </div>
 
@@ -650,7 +637,6 @@ public float GroundSpherecastFutureLength</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Offset in meters along the character velocity direction during character movement that the &#39;In the Future&#39; Ground spherecast downwards opposite to HorizonUp is positioned.&quot;)]
 public float GroundSpherecastFutureMoveOffset</code></pre>
   </div>
 
@@ -681,8 +667,7 @@ public float GroundSpherecastFutureMoveOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Radius in meters of the physics spherecast of the &#39;In the Future&#39; Ground spherecast. This physics spherecast occurs downwards opposite to HorizonUp, is positioned such that it is offset by a fixed amount along the move input direction.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float GroundSpherecastFutureRadius</code></pre>
   </div>
 
@@ -714,7 +699,6 @@ public float GroundSpherecastFutureRadius</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Length in meters of the physics spherecast of the &#39;In the Present&#39; Ground spherecast. This physics spherecast occurs downwards opposite to HorizonUp, is positioned such that it is not offset by the move input direction.&quot;)]
 public float GroundSpherecastPresentLength</code></pre>
   </div>
 
@@ -746,7 +730,6 @@ public float GroundSpherecastPresentLength</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Radius in meters of the physics spherecast of the &#39;In the Present&#39; Ground spherecast. This physics spherecast occurs downwards opposite to HorizonUp, is positioned such that it is not offset by the move input direction.&quot;)]
 public float GroundSpherecastPresentRadius</code></pre>
   </div>
 
@@ -777,9 +760,7 @@ public float GroundSpherecastPresentRadius</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Ground&quot;)]
-[KSPDefinition]
-[Tooltip(&quot;How high up in meters from character pivot upwards along HorizonUp should the Ground spherecast originate from. This physics spherecast is responsible for ground detection.&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float GroundSpherecastUpOffset</code></pre>
   </div>
 
@@ -810,8 +791,7 @@ public float GroundSpherecastUpOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Jetpack&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool IsJetpackEquipped</code></pre>
   </div>
 
@@ -842,8 +822,7 @@ public bool IsJetpackEquipped</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Whether Jetpack Align to Camera is enabled. If enabled Rotate Input is applied to align the Character direction to Camera direction. Uses Jetpack Rotate Torque thrusts for said alignment. Occurs when Jetpack In-Use while falling.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool JetpackAlignToCameraEnabled</code></pre>
   </div>
 
@@ -875,7 +854,6 @@ public bool JetpackAlignToCameraEnabled</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Angle in degrees about Camera direction to align Character direction to Camera direction, at and above which the Align to Camera feature will provide JetpackAlignToCameraMaxRotateInput input delta. Reduce this angle to make things feel snappier.&quot;)]
 public float JetpackAlignToCameraMaxAngle</code></pre>
   </div>
 
@@ -907,7 +885,6 @@ public float JetpackAlignToCameraMaxAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Maximum normalized value [0, 1] to apply as Rotate Input to align Character direction to Camera direction. This will be multiplied by the PAM JetpackThrustForcePercentage to affect the Rotate Torque accordingly.&quot;)]
 public float JetpackAlignToCameraMaxRotateInput</code></pre>
   </div>
 
@@ -938,8 +915,7 @@ public float JetpackAlignToCameraMaxRotateInput</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Angle in degrees about Camera direction to align Character direction to Camera direction, above which the Align to Camera feature kicks in.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float JetpackAlignToCameraMinAngle</code></pre>
   </div>
 
@@ -971,7 +947,6 @@ public float JetpackAlignToCameraMinAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Minimum normalized value [0, 1] to apply as Rotate Input to align Character direction to Camera direction. This will be multiplied by the PAM JetpackThrustForcePercentage to affect the Rotate Torque accordingly.&quot;)]
 public float JetpackAlignToCameraMinRotateInput</code></pre>
   </div>
 
@@ -1003,7 +978,6 @@ public float JetpackAlignToCameraMinRotateInput</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;A curve to determine loss or gain of thrust due to changes in atmosphere vs vacuum values are based on ISP to ATM Pressure.&quot;)]
 public FloatCurve JetpackAtmosphereCurve</code></pre>
   </div>
 
@@ -1034,9 +1008,7 @@ public FloatCurve JetpackAtmosphereCurve</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[HideInInspector]
-public PropellantState JetpackForcePropellantState</code></pre>
+    <pre><code class="lang-csharp hljs">public PropellantState JetpackForcePropellantState</code></pre>
   </div>
 
 
@@ -1069,7 +1041,6 @@ public PropellantState JetpackForcePropellantState</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Kerbals/Jetpack/ISP&quot;)]
 [KSPState]
 [PAMDisplayControl(SortIndex = 2)]
-[HideInInspector]
 public ModuleProperty&lt;float&gt; JetpackISP</code></pre>
   </div>
 
@@ -1101,7 +1072,6 @@ public ModuleProperty&lt;float&gt; JetpackISP</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;How much Move force in kN the Jetpack produces at 100% throttle at atmospheric pressure of 0.&quot;)]
 public float JetpackMoveForce</code></pre>
   </div>
 
@@ -1133,7 +1103,6 @@ public float JetpackMoveForce</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The local-space offset, applied to each coordinate axis, at which Move forces are applied. This offset is from the object CoM.&quot;)]
 public double JetpackMoveForceOffset</code></pre>
   </div>
 
@@ -1165,7 +1134,6 @@ public double JetpackMoveForceOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Propellant that the Jetpack consumes while running.&quot;)]
 public PropellantDefinition JetpackPropellantDefinition</code></pre>
   </div>
 
@@ -1197,7 +1165,6 @@ public PropellantDefinition JetpackPropellantDefinition</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Max Speed in degrees per second at which Jetpack Rotate Torque can accelerate the angular velocity to, when Rotate input is being applied.&quot;)]
 public float JetpackRotateMaxAngularSpeed</code></pre>
   </div>
 
@@ -1228,8 +1195,7 @@ public float JetpackRotateMaxAngularSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Speed in degrees per second at which Jetpack Rotate gradually settles to zero angular velocity, when no Rotate input is being applied.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float JetpackRotateResetAngularSpeed</code></pre>
   </div>
 
@@ -1260,8 +1226,7 @@ public float JetpackRotateResetAngularSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Speed in degrees per second above which Jetpack Rotate Reset kicks in.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float JetpackRotateResetAngularSpeedThreshold</code></pre>
   </div>
 
@@ -1292,8 +1257,7 @@ public float JetpackRotateResetAngularSpeedThreshold</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Whether Jetpack Rotate Reset is enabled. If enabled, the Jetpack will automatically try to stop rotation, gradually, when no rotate input is pressed.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool JetpackRotateResetEnabled</code></pre>
   </div>
 
@@ -1324,8 +1288,7 @@ public bool JetpackRotateResetEnabled</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;How much Rotate torque in kN.m the Jetpack produces at 100% throttle at atmospheric pressure of 0.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float JetpackRotateTorque</code></pre>
   </div>
 
@@ -1356,8 +1319,7 @@ public float JetpackRotateTorque</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The local-space offset, applied to each coordinate axis, at which Rotate torques are applied.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public double JetpackRotateTorqueOffset</code></pre>
   </div>
 
@@ -1390,7 +1352,6 @@ public double JetpackRotateTorqueOffset</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Kerbals/Jetpack/Status&quot;)]
 [PAMDisplayControl(SortIndex = 1)]
-[HideInInspector]
 [KSPState]
 public ModuleProperty&lt;string&gt; JetpackStatusText</code></pre>
   </div>
@@ -1423,7 +1384,6 @@ public ModuleProperty&lt;string&gt; JetpackStatusText</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public Data_Kerbal.JetpackStatus JetpackStatusType</code></pre>
   </div>
 
@@ -1455,7 +1415,6 @@ public Data_Kerbal.JetpackStatus JetpackStatusType</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 3)]
-[HideInInspector]
 [SteppedRange(0, 100, 1)]
 [KSPState]
 [LocalizedField(&quot;PartModules/Kerbals/Jetpack/ThrustForcePercentage&quot;)]
@@ -1489,8 +1448,7 @@ public ModuleProperty&lt;float&gt; JetpackThrustForcePercentage</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Rigidbody Angular Drag scalar to apply when the Jetpack is thrusting in a liquid or underwater. Use this to tune ease of thrusting while underwater.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public double JetpackThrustLiquidAngularDragScalar</code></pre>
   </div>
 
@@ -1522,7 +1480,6 @@ public double JetpackThrustLiquidAngularDragScalar</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Rigidbody Drag scalar to apply when the Jetpack is thrusting in a liquid or underwater. Use this to tune ease of thrusting while underwater.&quot;)]
 public double JetpackThrustLiquidDragScalar</code></pre>
   </div>
 
@@ -1553,9 +1510,7 @@ public double JetpackThrustLiquidDragScalar</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-[HideInInspector]
-public PropellantState JetpackTorquePropellantState</code></pre>
+    <pre><code class="lang-csharp hljs">public PropellantState JetpackTorquePropellantState</code></pre>
   </div>
 
 
@@ -1586,7 +1541,6 @@ public PropellantState JetpackTorquePropellantState</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Duration in seconds over which the Jump force is applied during the Extend sub-state of Jump.&quot;)]
 public float JumpExtendForceDuration</code></pre>
   </div>
 
@@ -1617,9 +1571,7 @@ public float JumpExtendForceDuration</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Jump&quot;)]
-[Tooltip(&quot;Magnitude of Jump Force that is continually applied during the Initial and Extend sub-states of Jump, if sub-state conditions are met. Where, X-axis: GravityMultiplier; Y-axis: ForceMagnitude.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public FloatCurve JumpForceMagnitudeCurve</code></pre>
   </div>
 
@@ -1650,8 +1602,7 @@ public FloatCurve JumpForceMagnitudeCurve</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Duration in seconds over which the Jump force is applied during the Initial sub-state of Jump.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float JumpInitialForceDuration</code></pre>
   </div>
 
@@ -1682,8 +1633,7 @@ public float JumpInitialForceDuration</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Maximum duration in seconds for which the Jumping CharacterState should be true. The time starts the moment the Jump Handler starts.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float JumpMaxStateDuration</code></pre>
   </div>
 
@@ -1714,8 +1664,7 @@ public float JumpMaxStateDuration</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Minimum duration in seconds for which the Jumping CharacterState should be true. The time starts the moment the &#39;DoJumpImpulse&#39; Animation Event is received.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float JumpMinStateDuration</code></pre>
   </div>
 
@@ -1747,7 +1696,6 @@ public float JumpMinStateDuration</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;When Jump is triggered during move, the angle in degrees by which to rotate the move input direction upwards in Character local-space. This helps make the Character jump in some angled move direction when moving, as opposed to jumping straight up when stationary.&quot;)]
 public float JumpMoveAngle</code></pre>
   </div>
 
@@ -1779,7 +1727,6 @@ public float JumpMoveAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Jump Rotate angular speed in degrees per second. This is used to align the character&#39;s forward direction to the jump direction, when not strafing.&quot;)]
 public float JumpRotateAngularSpeed</code></pre>
   </div>
 
@@ -1811,7 +1758,6 @@ public float JumpRotateAngularSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Jump Rotate change angular speed in degrees per second. I.e., how quickly it approaches the Angular Speed. This is used to align the character&#39;s forward direction to the jump direction, when not strafing.&quot;)]
 public float JumpRotateChangeAngularSpeed</code></pre>
   </div>
 
@@ -1843,7 +1789,6 @@ public float JumpRotateChangeAngularSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Magnitude multiplier of Jump Force that is applied when the Character is running when they press the Jump input.&quot;)]
 public float JumpRunMoveForceMagnitudeMultiplier</code></pre>
   </div>
 
@@ -1875,7 +1820,6 @@ public float JumpRunMoveForceMagnitudeMultiplier</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Duration in seconds of the delay before the clamber. I.e., the duration of a delay within the ClamberingSubState sub-state of Climb for Ladder Top clambering, specifically. Use this when a custom Climb to Clamber animation transition doesn&#39;t exist.&quot;)]
 public float LadderTopClamberDelayDuration</code></pre>
   </div>
 
@@ -1907,7 +1851,6 @@ public float LadderTopClamberDelayDuration</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Duration in seconds to dock the Kerbal to the valid Step &#39;Top&#39; position. I.e., the duration of the ClamberingSubState sub-state of Climb for Ladder Top clambering, specifically.&quot;)]
 public float LadderTopClamberDuration</code></pre>
   </div>
 
@@ -1939,7 +1882,6 @@ public float LadderTopClamberDuration</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Percentage as normalized [0, 1] for the interpolation value at which we reach the Step&#39;s Height in the Character Up direction only, for Ladder Top Clamber purposes, before proceeding in the Character Forward direction to reach the final valid Step &#39;Top&#39; position thereafter. E.g., Choose a percentage somewhere in the middle to break apart this up-to-forward motion relatively evenly.&quot;)]
 public float LadderTopClamberHeightInterpValue</code></pre>
   </div>
 
@@ -1971,7 +1913,6 @@ public float LadderTopClamberHeightInterpValue</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Max angle in degrees up to which a contact found by Step &#39;Top&#39; detection is considered valid, for Ladder Top Clamber purposes. This is the max allowed angle between the following directions: [StepTopContactNormal], [CharacterUp].&quot;)]
 public float LadderTopMaxAngle</code></pre>
   </div>
 
@@ -2002,9 +1943,7 @@ public float LadderTopMaxAngle</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Ladder Top Clamber&quot;)]
-[KSPDefinition]
-[Tooltip(&quot;Maximum height for Ladder &#39;Top&#39; platform detection, by repurposing the Step detection system with different data. A detected height must be below this height to be considered a valid Ladder Top. Valid Ladder Top will show an Interact which performs a Ladder Top Clamber to the platform on use.&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float LadderTopMaxHeight</code></pre>
   </div>
 
@@ -2036,7 +1975,6 @@ public float LadderTopMaxHeight</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Distance offset along Character Forward in meters to help determine the Step &#39;Top&#39; physics raycast position, for Ladder Top Clamber purposes. The physics raycast direction will be downwards opposite to Character Up, and originates from Character position before Forward and Up offsets are applied.&quot;)]
 public float LadderTopRaycastForwardOffset</code></pre>
   </div>
 
@@ -2068,7 +2006,6 @@ public float LadderTopRaycastForwardOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Length in meters of the physics raycast of the Step &#39;Top&#39; physics raycast, for Ladder Top Clamber purposes. The physics raycast direction will be downwards opposite to Character Up, and originates from Character position before Forward and Up offsets are applied.&quot;)]
 public float LadderTopRaycastLength</code></pre>
   </div>
 
@@ -2099,8 +2036,7 @@ public float LadderTopRaycastLength</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Distance offset along Character Up in meters to help determine the Step &#39;Top&#39; physics raycast position, for Ladder Top Clamber purposes. The physics raycast direction will be downwards opposite to Character Up, and originates from Character position before Forward and Up offsets are applied.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float LadderTopRaycastUpOffset</code></pre>
   </div>
 
@@ -2131,8 +2067,7 @@ public float LadderTopRaycastUpOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Distance offset along Character Forward in meters to help determine the Step &#39;Unobstructed&#39; physics raycast position, for Ladder Top Clamber purposes. The physics raycast direction will be the Character Forward, and originates from CharacterCapsuleBottomPos position before Forward and Up offsets are applied.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float LadderUnobstructedRaycastForwardOffset</code></pre>
   </div>
 
@@ -2163,8 +2098,7 @@ public float LadderUnobstructedRaycastForwardOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Length in meters of the physics raycast of the Step &#39;Unobstructed&#39; physics raycast, for Ladder Top Clamber purposes. The physics raycast direction will be the Character Forward, and originates from CharacterCapsuleBottomPos position before Forward and Up offsets are applied.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float LadderUnobstructedRaycastLength</code></pre>
   </div>
 
@@ -2195,8 +2129,7 @@ public float LadderUnobstructedRaycastLength</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Distance offset along Character Up in meters to help determine the Step &#39;Unobstructed&#39; physics raycast position, for Ladder Top Clamber purposes. The physics raycast direction will be the Character Forward, and originates from CharacterCapsuleBottomPos position before Forward and Up offsets are applied.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float LadderUnobstructedRaycastUpOffset</code></pre>
   </div>
 
@@ -2228,7 +2161,6 @@ public float LadderUnobstructedRaycastUpOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Minimum angle in degrees above which we consider the Camera upside down and flip move left and move right directions. This is the angle between the following directions: [GroundContactNormal], [CameraUp].&quot;)]
 public float MoveCameraUpFlipMinAngle</code></pre>
   </div>
 
@@ -2260,7 +2192,6 @@ public float MoveCameraUpFlipMinAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Equal and opposite angle in degrees under which we rotate the camera-relative move input direction by 90 degrees to improve the player&#39;s navigation experience, and also to prevent cross product from approaching zero magnitude, which would have resulted in an invalid move input direction. This is the angle between the following directions: [MoveOnGroundDirection], [GroundContactNormal].&quot;)]
 public float MoveDirectionRotateFallbackAngle</code></pre>
   </div>
 
@@ -2292,7 +2223,6 @@ public float MoveDirectionRotateFallbackAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Value multiplied by delta time to speed up/slow down the lerp between normal movement and running/sprinting&quot;)]
 public float NormalToSprintLerpSpeed</code></pre>
   </div>
 
@@ -2323,8 +2253,7 @@ public float NormalToSprintLerpSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Angle in degrees within which the current direction to desired direction angle needs to be for the alignment to be considered complete.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float RotateDesiredDirectionEqualAngle</code></pre>
   </div>
 
@@ -2356,7 +2285,6 @@ public float RotateDesiredDirectionEqualAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Run Move Animation speed in meters per second. This animator provided value will be used to avoid foot sliding, when applying the gameplay facing speed. If you do not know what this value should be, and don&#39;t mind foot sliding temporarily, keep it at 0.&quot;)]
 public float RunMoveAnimationSpeed</code></pre>
   </div>
 
@@ -2388,7 +2316,6 @@ public float RunMoveAnimationSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Run Move speed in meters per second. This is the gameplay facing speed. Once the other animation speed field is tuned correctly, you can increase or decrease this value freely without foot sliding.&quot;)]
 public float RunMoveSpeed</code></pre>
   </div>
 
@@ -2420,7 +2347,6 @@ public float RunMoveSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Run Rotate angular speed in degrees per second.&quot;)]
 public float RunRotateAngularSpeed</code></pre>
   </div>
 
@@ -2452,7 +2378,6 @@ public float RunRotateAngularSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Run Rotate change angular speed in degrees per second. I.e., how quickly it approaches the Angular Speed.&quot;)]
 public float RunRotateChangeAngularSpeed</code></pre>
   </div>
 
@@ -2483,9 +2408,7 @@ public float RunRotateChangeAngularSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Slope&quot;)]
-[KSPDefinition]
-[Tooltip(&quot;Max angle in degrees up to which Move velocity is applied along the Slope incline. This is the max allowed angle between the following directions: [GroundContactNormal], [HorizonUp].&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float SlopeMoveGroundMaxAngle</code></pre>
   </div>
 
@@ -2517,7 +2440,6 @@ public float SlopeMoveGroundMaxAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Angle in degrees under which Move Up Slope is detected. This is the angle between the following directions: [HorizonUp], [MoveOnGroundDirection].&quot;)]
 public float SlopeMoveUpDetectAngle</code></pre>
   </div>
 
@@ -2549,7 +2471,6 @@ public float SlopeMoveUpDetectAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Duration in seconds to dock the Kerbal to the valid Step &#39;Top&#39; position. I.e., the duration of the ClamberingSubState sub-state of Climb for Step clambering, specifically.&quot;)]
 public float StepClamberDuration</code></pre>
   </div>
 
@@ -2581,7 +2502,6 @@ public float StepClamberDuration</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Percentage as normalized [0, 1] for the interpolation value at which we reach the Step&#39;s Height in the Character Up direction only, before proceeding in the Character Forward direction to reach the final valid Step &#39;Top&#39; position thereafter. E.g., Choose a percentage somewhere in the middle to break apart this up-to-forward motion relatively evenly.&quot;)]
 public float StepClamberHeightInterpValue</code></pre>
   </div>
 
@@ -2613,7 +2533,6 @@ public float StepClamberHeightInterpValue</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Distance offset along Character Forward in meters to help determine the Step &#39;Front&#39; physics raycast position. The physics raycast direction will be the Character Forward.&quot;)]
 public float StepFrontRaycastForwardOffset</code></pre>
   </div>
 
@@ -2644,8 +2563,7 @@ public float StepFrontRaycastForwardOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Length in meters of the physics raycast of the Step &#39;Front&#39; physics raycast. The physics raycast direction will be the Character Forward.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float StepFrontRaycastLength</code></pre>
   </div>
 
@@ -2677,7 +2595,6 @@ public float StepFrontRaycastLength</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Distance offset along Character Up in meters to help determine the Step &#39;Front&#39; physics raycast position. The physics raycast direction will be the Character Forward.&quot;)]
 public float StepFrontRaycastUpOffset</code></pre>
   </div>
 
@@ -2709,7 +2626,6 @@ public float StepFrontRaycastUpOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Maximum height for Step detection. A detected step must be below this height to be considered a valid Step. Valid Steps will show an Interact which performs a Step Clamber on use.&quot;)]
 public float StepMaxHeight</code></pre>
   </div>
 
@@ -2740,9 +2656,7 @@ public float StepMaxHeight</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Step Clamber&quot;)]
-[KSPDefinition]
-[Tooltip(&quot;Minimum height for Step detection. A detected step must be above this height to be considered a valid Step. Valid Steps will show an Interact which performs a Step Clamber on use.&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float StepMinHeight</code></pre>
   </div>
 
@@ -2774,7 +2688,6 @@ public float StepMinHeight</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Max angle in degrees up to which a contact found by Step &#39;Top&#39; detection is considered valid. This is the max allowed angle between the following directions: [StepTopContactNormal], [HorizonUp].&quot;)]
 public float StepTopMaxAngle</code></pre>
   </div>
 
@@ -2806,7 +2719,6 @@ public float StepTopMaxAngle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Distance offset along Character Forward in meters to help determine the Step &#39;Top&#39; physics raycast position. The physics raycast direction will be downwards opposite to Character Up.&quot;)]
 public float StepTopRaycastForwardOffset</code></pre>
   </div>
 
@@ -2838,7 +2750,6 @@ public float StepTopRaycastForwardOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Length in meters of the physics raycast of the Step &#39;Top&#39; physics raycast. The physics raycast direction will be downwards opposite to Character Up.&quot;)]
 public float StepTopRaycastLength</code></pre>
   </div>
 
@@ -2870,7 +2781,6 @@ public float StepTopRaycastLength</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Distance offset along Character Up in meters to help determine the Step &#39;Top&#39; physics raycast position. The physics raycast direction will be downwards opposite to Character Up.&quot;)]
 public float StepTopRaycastUpOffset</code></pre>
   </div>
 
@@ -2902,7 +2812,6 @@ public float StepTopRaycastUpOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Distance offset along Character Forward in meters to help determine the Step &#39;Unobstructed&#39; physics raycast position. The physics raycast direction will be the Character Forward.&quot;)]
 public float StepUnobstructedRaycastForwardOffset</code></pre>
   </div>
 
@@ -2934,7 +2843,6 @@ public float StepUnobstructedRaycastForwardOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Length in meters of the physics raycast of the Step &#39;Unobstructed&#39; physics raycast. The physics raycast direction will be the Character Forward.&quot;)]
 public float StepUnobstructedRaycastLength</code></pre>
   </div>
 
@@ -2966,7 +2874,6 @@ public float StepUnobstructedRaycastLength</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Distance offset along Character Up in meters to help determine the Step &#39;Unobstructed&#39; physics raycast position. The physics raycast direction will be the Character Forward.&quot;)]
 public float StepUnobstructedRaycastUpOffset</code></pre>
   </div>
 
@@ -2998,7 +2905,6 @@ public float StepUnobstructedRaycastUpOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Swim Fast Move Animation speed in meters per second. This animator provided value will be used to avoid sliding, when applying the gameplay facing speed. If you do not know what this value should be, and don&#39;t mind sliding temporarily, keep it at 0.&quot;)]
 public float SwimFastMoveAnimationSpeed</code></pre>
   </div>
 
@@ -3030,7 +2936,6 @@ public float SwimFastMoveAnimationSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Magnitude multiplier of SwimSlowMove Force that is applied when the Character is swimming and they have the run input pressed.&quot;)]
 public double SwimFastMoveForceMagnitudeMultiplier</code></pre>
   </div>
 
@@ -3061,8 +2966,7 @@ public double SwimFastMoveForceMagnitudeMultiplier</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Swim Fast Move speed in meters per second. This is the gameplay facing speed. Once the other animation speed field is tuned correctly, you can increase or decrease this value freely without sliding.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float SwimFastMoveSpeed</code></pre>
   </div>
 
@@ -3094,7 +2998,6 @@ public float SwimFastMoveSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Swim Fast Rotate speed in degrees per second.&quot;)]
 public float SwimFastRotateSpeed</code></pre>
   </div>
 
@@ -3126,7 +3029,6 @@ public float SwimFastRotateSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Swim Up offset from the Swim Surface to help determine target position to float to. Use this if the character&#39;s origin is at their feet and we want floating position should be offset downwards.&quot;)]
 public float SwimFloatSurfaceUpOffset</code></pre>
   </div>
 
@@ -3157,8 +3059,7 @@ public float SwimFloatSurfaceUpOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Minimum depth in meters for the Character to be in the Swim state.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float SwimMinDepth</code></pre>
   </div>
 
@@ -3189,8 +3090,7 @@ public float SwimMinDepth</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The local-space offset, applied to each coordinate axis, at which Swim Move force is applied. This offset is from the object CoM.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public double SwimMoveForceOffset</code></pre>
   </div>
 
@@ -3222,7 +3122,6 @@ public double SwimMoveForceOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Swim Slow Move Animation speed in meters per second. This animator provided value will be used to avoid sliding, when applying the gameplay facing speed. If you do not know what this value should be, and don&#39;t mind sliding temporarily, keep it at 0.&quot;)]
 public float SwimSlowMoveAnimationSpeed</code></pre>
   </div>
 
@@ -3254,7 +3153,6 @@ public float SwimSlowMoveAnimationSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Magnitude of SwimSlowMove Force in kN. Where, X-axis: GravityMultiplier; Y-axis: ForceMagnitude.&quot;)]
 public FloatCurve SwimSlowMoveForceCurve</code></pre>
   </div>
 
@@ -3286,8 +3184,6 @@ public FloatCurve SwimSlowMoveForceCurve</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Header(&quot;Swim&quot;)]
-[Tooltip(&quot;Swim Slow Move speed in meters per second. This is the gameplay facing speed. Once the other animation speed field is tuned correctly, you can increase or decrease this value freely without sliding.&quot;)]
 public float SwimSlowMoveSpeed</code></pre>
   </div>
 
@@ -3318,8 +3214,7 @@ public float SwimSlowMoveSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Swim Slow Rotate speed in degrees per second.&quot;)]
-public float SwimSlowRotateSpeed</code></pre>
+    <pre><code class="lang-csharp hljs">public float SwimSlowRotateSpeed</code></pre>
   </div>
 
 
@@ -3350,8 +3245,6 @@ public float SwimSlowRotateSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Upright Rotate correction angular speed in degrees per second.&quot;)]
-[Header(&quot;Upright&quot;)]
 public float UprightRotateAngularSpeed</code></pre>
   </div>
 
@@ -3382,8 +3275,7 @@ public float UprightRotateAngularSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Upright Rotate correction change angular speed in degrees per second. I.e., how quickly it approaches the Angular Speed.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float UprightRotateChangeAngularSpeed</code></pre>
   </div>
 
@@ -3415,7 +3307,6 @@ public float UprightRotateChangeAngularSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Walk Move Animation speed in meters per second. This animator provided value will be used to avoid foot sliding, when applying the gameplay facing speed. If you do not know what this value should be, and don&#39;t mind foot sliding temporarily, keep it at 0.&quot;)]
 public float WalkMoveAnimationSpeed</code></pre>
   </div>
 
@@ -3446,8 +3337,7 @@ public float WalkMoveAnimationSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Walk Move speed in meters per second. This is the gameplay facing speed. Once the other animation speed field is tuned correctly, you can increase or decrease this value freely without foot sliding.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float WalkMoveSpeed</code></pre>
   </div>
 
@@ -3479,7 +3369,6 @@ public float WalkMoveSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Walk Move Strafe Animation speed in meters per second. This animator provided value will be used to avoid foot sliding, when applying the gameplay facing speed. If you do not know what this value should be, and don&#39;t mind foot sliding temporarily, keep it at 0.&quot;)]
 public float WalkMoveStrafeAnimationSpeed</code></pre>
   </div>
 
@@ -3511,7 +3400,6 @@ public float WalkMoveStrafeAnimationSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Walk Move Strafe speed in meters per second. This is the gameplay facing speed. Once the other animation speed field is tuned correctly, you can increase or decrease this value freely without foot sliding.&quot;)]
 public float WalkMoveStrafeSpeed</code></pre>
   </div>
 
@@ -3542,9 +3430,7 @@ public float WalkMoveStrafeSpeed</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Walk/Run&quot;)]
-[KSPDefinition]
-[Tooltip(&quot;Walk Rotate angular speed in degrees per second.&quot;)]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float WalkRotateAngularSpeed</code></pre>
   </div>
 
@@ -3576,7 +3462,6 @@ public float WalkRotateAngularSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Walk Rotate change angular speed in degrees per second. I.e., how quickly it approaches the Angular Speed.&quot;)]
 public float WalkRotateChangeAngularSpeed</code></pre>
   </div>
 

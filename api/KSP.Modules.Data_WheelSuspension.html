@@ -208,22 +208,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -296,7 +296,6 @@
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The Local Axis the Ssuspension transform travels in.&quot;)]
 public Data_WheelSuspension.TransformDir SuspensionDirection</code></pre>
   </div>
 
@@ -328,7 +327,6 @@ public Data_WheelSuspension.TransformDir SuspensionDirection</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Set to true and Gee for the wheel is &gt; highGeeThreshold autoBoost will be turned off\nand highGeeSpringTweakable applied only if autoSpringDamper is true.&quot;)]
 public bool adjustForHighGee</code></pre>
   </div>
 
@@ -360,7 +358,6 @@ public bool adjustForHighGee</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public float autoBoost</code></pre>
   </div>
 
@@ -424,8 +421,7 @@ public ModuleProperty&lt;bool&gt; autoSpringDamper</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The Boost Ratio. KSP suspension can be boosted.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float boostRatio</code></pre>
   </div>
 
@@ -457,7 +453,6 @@ public float boostRatio</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Damper Ratio.\nRefer to Suspension settings https://vehiclephysics.com/components/wheel-collider/#suspension-parameters&quot;)]
 public float damperRatio</code></pre>
   </div>
 
@@ -522,8 +517,7 @@ public ModuleProperty&lt;float&gt; damperTweakable</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The damper tweakable setting that will be applied if adjustForHighGee is true.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float highGeeDamperTweakable</code></pre>
   </div>
 
@@ -554,8 +548,7 @@ public float highGeeDamperTweakable</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The spring tweakable setting that will be applied if adjustForHighGee is true.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float highGeeSpringTweakable</code></pre>
   </div>
 
@@ -586,8 +579,7 @@ public float highGeeSpringTweakable</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The GeeASL where high gee spring will be applied.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float highGeeThreshold</code></pre>
   </div>
 
@@ -619,7 +611,6 @@ public float highGeeThreshold</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The maximum load for the wheel suspension.&quot;)]
 public float maximumLoad</code></pre>
   </div>
 
@@ -651,7 +642,6 @@ public float maximumLoad</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Spring Ratio.\nRefer to Suspension settings https://vehiclephysics.com/components/wheel-collider/#suspension-parameters&quot;)]
 public float springRatio</code></pre>
   </div>
 
@@ -717,7 +707,6 @@ public ModuleProperty&lt;float&gt; springTweakable</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The transform name where the wheel coillider is.\nShould be a separate transform from the rest of the model and have a disabled Unity Wheel Collider component on it.&quot;)]
 public string suspensionColliderName</code></pre>
   </div>
 
@@ -748,8 +737,7 @@ public string suspensionColliderName</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPState]
+    <pre><code class="lang-csharp hljs">[KSPState]
 public Vector3 suspensionDefaultPos</code></pre>
   </div>
 
@@ -781,7 +769,6 @@ public Vector3 suspensionDefaultPos</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The distance the Suspension moves.\nLength of the suspension travel (m).\nRefer to Suspension settings https://vehiclephysics.com/components/wheel-collider/#suspension-parameters&quot;)]
 public float suspensionDistance</code></pre>
   </div>
 
@@ -812,8 +799,7 @@ public float suspensionDistance</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The Suspension Offset.\nThis is the offset between the suspension transform and the wheel collider transform.\nThis is a KSP customization.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float suspensionOffset</code></pre>
   </div>
 
@@ -845,7 +831,6 @@ public float suspensionOffset</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState]
-[HideInInspector]
 public Vector3 suspensionPos</code></pre>
   </div>
 
@@ -877,7 +862,6 @@ public Vector3 suspensionPos</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The Suspension Transform Name&quot;)]
 public string suspensionTransformName</code></pre>
   </div>
 
@@ -909,7 +893,6 @@ public string suspensionTransformName</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The Wheel collider Target (anchor) position.\nRelative position in the suspension travel (compression) where the wheel is located at design time.\nIt&#39;s a normalized value between 0 and 1 (0 - 100%)\nRefer to Suspension settings https://vehiclephysics.com/components/wheel-collider/#suspension-parameters&quot;)]
 public float targetPosition</code></pre>
   </div>
 
@@ -940,8 +923,7 @@ public float targetPosition</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Set false to not use KSP suspension boost.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool useAutoBoost</code></pre>
   </div>
 
@@ -973,7 +955,6 @@ public bool useAutoBoost</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Set true to use mass distrubited across all the vehicles wheels.\nLeave this as true.&quot;)]
 public bool useDistributedMass</code></pre>
   </div>
 

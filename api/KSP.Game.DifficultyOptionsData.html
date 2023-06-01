@@ -111,10 +111,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
@@ -124,12 +130,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -263,8 +263,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool AllowQuickLoad</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AllowQuickLoad</code></pre>
   </div>
 
 
@@ -294,8 +293,7 @@ public bool AllowQuickLoad</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool AllowRevert</code></pre>
+    <pre><code class="lang-csharp hljs">public bool AllowRevert</code></pre>
   </div>
 
 
@@ -325,8 +323,7 @@ public bool AllowRevert</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool CommNetRequired</code></pre>
+    <pre><code class="lang-csharp hljs">public bool CommNetRequired</code></pre>
   </div>
 
 
@@ -356,8 +353,7 @@ public bool CommNetRequired</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_ALLOW_QUICK_LOAD = true</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_ALLOW_QUICK_LOAD = true</code></pre>
   </div>
 
 
@@ -387,8 +383,7 @@ public const bool DEFAULT_ALLOW_QUICK_LOAD = true</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_ALLOW_REVERT = true</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_ALLOW_REVERT = true</code></pre>
   </div>
 
 
@@ -418,8 +413,7 @@ public const bool DEFAULT_ALLOW_REVERT = true</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_COMM_NET_REQUIRED = false</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_COMM_NET_REQUIRED = false</code></pre>
   </div>
 
 
@@ -449,8 +443,7 @@ public const bool DEFAULT_COMM_NET_REQUIRED = false</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const DifficultyLevel DEFAULT_DIFFICULTY = Normal</code></pre>
+    <pre><code class="lang-csharp hljs">public const DifficultyLevel DEFAULT_DIFFICULTY = Normal</code></pre>
   </div>
 
 
@@ -480,8 +473,7 @@ public const DifficultyLevel DEFAULT_DIFFICULTY = Normal</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const float DEFAULT_DOCKING_TOLERANCE = 100</code></pre>
+    <pre><code class="lang-csharp hljs">public const float DEFAULT_DOCKING_TOLERANCE = 100</code></pre>
   </div>
 
 
@@ -511,8 +503,7 @@ public const float DEFAULT_DOCKING_TOLERANCE = 100</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_INCLUDE_STOCK_VESSELS = true</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_INCLUDE_STOCK_VESSELS = true</code></pre>
   </div>
 
 
@@ -542,8 +533,7 @@ public const bool DEFAULT_INCLUDE_STOCK_VESSELS = true</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_INFINITE_FUEL = false</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_INFINITE_FUEL = false</code></pre>
   </div>
 
 
@@ -573,8 +563,7 @@ public const bool DEFAULT_INFINITE_FUEL = false</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_INFINITE_POWER = false</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_INFINITE_POWER = false</code></pre>
   </div>
 
 
@@ -604,8 +593,7 @@ public const bool DEFAULT_INFINITE_POWER = false</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const CampaignMode DEFAULT_MODE = Exploration</code></pre>
+    <pre><code class="lang-csharp hljs">public const CampaignMode DEFAULT_MODE = Exploration</code></pre>
   </div>
 
 
@@ -635,8 +623,7 @@ public const CampaignMode DEFAULT_MODE = Exploration</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const DifficultyModeAndLevel DEFAULT_NAME = Invalid</code></pre>
+    <pre><code class="lang-csharp hljs">public const DifficultyModeAndLevel DEFAULT_NAME = Invalid</code></pre>
   </div>
 
 
@@ -666,8 +653,7 @@ public const DifficultyModeAndLevel DEFAULT_NAME = Invalid</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_NO_CRASH_DAMAGE = false</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_NO_CRASH_DAMAGE = false</code></pre>
   </div>
 
 
@@ -697,8 +683,7 @@ public const bool DEFAULT_NO_CRASH_DAMAGE = false</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public const bool DEFAULT_UNBREAKABLE_JOINTS = false</code></pre>
+    <pre><code class="lang-csharp hljs">public const bool DEFAULT_UNBREAKABLE_JOINTS = false</code></pre>
   </div>
 
 
@@ -728,8 +713,7 @@ public const bool DEFAULT_UNBREAKABLE_JOINTS = false</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public DifficultyLevel Difficulty</code></pre>
+    <pre><code class="lang-csharp hljs">public DifficultyLevel Difficulty</code></pre>
   </div>
 
 
@@ -759,8 +743,7 @@ public DifficultyLevel Difficulty</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public float DockingTolerance</code></pre>
+    <pre><code class="lang-csharp hljs">public float DockingTolerance</code></pre>
   </div>
 
 
@@ -790,8 +773,7 @@ public float DockingTolerance</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool IncludeStockVessels</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IncludeStockVessels</code></pre>
   </div>
 
 
@@ -821,8 +803,7 @@ public bool IncludeStockVessels</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool InfiniteFuel</code></pre>
+    <pre><code class="lang-csharp hljs">public bool InfiniteFuel</code></pre>
   </div>
 
 
@@ -852,8 +833,7 @@ public bool InfiniteFuel</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool InfinitePower</code></pre>
+    <pre><code class="lang-csharp hljs">public bool InfinitePower</code></pre>
   </div>
 
 
@@ -883,8 +863,7 @@ public bool InfinitePower</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public CampaignMode Mode</code></pre>
+    <pre><code class="lang-csharp hljs">public CampaignMode Mode</code></pre>
   </div>
 
 
@@ -914,8 +893,7 @@ public CampaignMode Mode</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool NoCrashDamage</code></pre>
+    <pre><code class="lang-csharp hljs">public bool NoCrashDamage</code></pre>
   </div>
 
 
@@ -945,8 +923,7 @@ public bool NoCrashDamage</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public bool UnbreakableJoints</code></pre>
+    <pre><code class="lang-csharp hljs">public bool UnbreakableJoints</code></pre>
   </div>
 
 
@@ -976,8 +953,7 @@ public bool UnbreakableJoints</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonProperty]
-public DifficultyModeAndLevel name</code></pre>
+    <pre><code class="lang-csharp hljs">public DifficultyModeAndLevel name</code></pre>
   </div>
 
 

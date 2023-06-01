@@ -205,22 +205,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -416,7 +416,6 @@ public double ChuteThermalMassPerArea</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Parachute/DeployMode&quot;)]
 [PAMDisplayControl(SortIndex = 8)]
 [KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 public ModuleProperty&lt;Data_Parachute.DeployMode&gt; DeploymentMode</code></pre>
   </div>
 
@@ -449,7 +448,6 @@ public ModuleProperty&lt;Data_Parachute.DeployMode&gt; DeploymentMode</code></pr
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/Parachute/DeploySettings&quot;)]
 [PAMDisplayControl(SortIndex = 7)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; IsDeploySettingsShown</code></pre>
   </div>
 
@@ -699,7 +697,6 @@ public double areaDeployed</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 2)]
 [KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 [LocalizedField(&quot;PartModules/Parachute/ArmedToggle&quot;)]
 public ModuleProperty&lt;bool&gt; armedToggle</code></pre>
   </div>
@@ -763,7 +760,6 @@ public float autoCutSpeed</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[FormerlySerializedAs(&quot;canopyName&quot;)]
 public string canopyBoneName</code></pre>
   </div>
 
@@ -1046,7 +1042,6 @@ public ModuleProperty&lt;Data_Parachute.DeploymentStates&gt; deployState</code><
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 1)]
-[HideInInspector]
 [KSPState]
 [LocalizedField(&quot;PartModules/Parachute/ChuteSafety&quot;)]
 public ModuleProperty&lt;Data_Parachute.DeploymentSafeStates&gt; deploymentSafetyState</code></pre>
@@ -1143,7 +1138,6 @@ public bool invertCanopy</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 9)]
 [KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 [SteppedRange(0.01, 0.75, 0.01)]
 [LocalizedField(&quot;PartModules/Parachute/MinPressure&quot;)]
 public ModuleProperty&lt;float&gt; minAirPressureToOpen</code></pre>
@@ -1239,7 +1233,6 @@ public float oscillationAnimationFrequencyMultiplier</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[FormerlySerializedAs(&quot;maximumPressureShakeVelocity&quot;)]
 public float oscillationAnimationVelocityThreshold</code></pre>
   </div>
 
@@ -1270,8 +1263,7 @@ public float oscillationAnimationVelocityThreshold</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[FormerlySerializedAs(&quot;pressureShakeLayerIndex&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public int pressureOscillationLayerIndex</code></pre>
   </div>
 
@@ -1396,7 +1388,6 @@ public bool shieldedCanDeploy</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[SteppedRange(0, 10, 1)]
-[HideInInspector]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 11)]
 [LocalizedField(&quot;PartModules/Parachute/SpreadAngle&quot;)]

@@ -111,10 +111,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
@@ -124,12 +130,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -201,8 +201,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Space(5)]
-public AudioSource retarderAudioSource</code></pre>
+    <pre><code class="lang-csharp hljs">public AudioSource retarderAudioSource</code></pre>
   </div>
 
 
@@ -232,8 +231,7 @@ public AudioSource retarderAudioSource</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 3)]
-public float retarderMaxPitch</code></pre>
+    <pre><code class="lang-csharp hljs">public float retarderMaxPitch</code></pre>
   </div>
 
 
@@ -293,8 +291,7 @@ public float retarderMaxPitch</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 1)]
-public float retarderMaxVolume</code></pre>
+    <pre><code class="lang-csharp hljs">public float retarderMaxVolume</code></pre>
   </div>
 
 
@@ -325,7 +322,6 @@ public float retarderMaxVolume</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HelpBox(&quot;Retarder Min Pitch and Max Pitch are applied to Transmission Min Rpm and Max Rpm&quot;, HelpBoxMessageType.Info)]
-[Range(0, 3)]
 public float retarderMinPitch</code></pre>
   </div>
 
@@ -356,8 +352,7 @@ public float retarderMinPitch</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Space(5)]
-public AudioSource transmissionAudioSource</code></pre>
+    <pre><code class="lang-csharp hljs">public AudioSource transmissionAudioSource</code></pre>
   </div>
 
 
@@ -387,8 +382,7 @@ public AudioSource transmissionAudioSource</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 3)]
-public float transmissionMaxPitch</code></pre>
+    <pre><code class="lang-csharp hljs">public float transmissionMaxPitch</code></pre>
   </div>
 
 
@@ -448,8 +442,7 @@ public float transmissionMaxPitch</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 1)]
-public float transmissionMaxVolume</code></pre>
+    <pre><code class="lang-csharp hljs">public float transmissionMaxVolume</code></pre>
   </div>
 
 
@@ -479,8 +472,7 @@ public float transmissionMaxVolume</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 3)]
-public float transmissionMinPitch</code></pre>
+    <pre><code class="lang-csharp hljs">public float transmissionMinPitch</code></pre>
   </div>
 
 
@@ -540,8 +532,7 @@ public float transmissionMinPitch</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 1)]
-public float transmissionMinVolume</code></pre>
+    <pre><code class="lang-csharp hljs">public float transmissionMinVolume</code></pre>
   </div>
 
 
@@ -601,8 +592,7 @@ public float transmissionMinVolume</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 3)]
-public float turboMaxPitch</code></pre>
+    <pre><code class="lang-csharp hljs">public float turboMaxPitch</code></pre>
   </div>
 
 
@@ -662,8 +652,7 @@ public float turboMaxPitch</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 1)]
-public float turboMaxVolume</code></pre>
+    <pre><code class="lang-csharp hljs">public float turboMaxVolume</code></pre>
   </div>
 
 
@@ -693,8 +682,7 @@ public float turboMaxVolume</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 3)]
-public float turboMinPitch</code></pre>
+    <pre><code class="lang-csharp hljs">public float turboMinPitch</code></pre>
   </div>
 
 

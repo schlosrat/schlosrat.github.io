@@ -208,22 +208,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -589,7 +589,6 @@ public ModuleProperty&lt;float&gt; TotalArea</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState(CopyToSymmetrySet = false)]
-[HideInInspector]
 public bool UpdateExposedArea</code></pre>
   </div>
 
@@ -651,8 +650,7 @@ public float bodyLiftMultiplier</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public Data_Drag.CubeData cubeData</code></pre>
+    <pre><code class="lang-csharp hljs">public Data_Drag.CubeData cubeData</code></pre>
   </div>
 
 
@@ -714,7 +712,6 @@ public List&lt;DragCube&gt; cubes</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[HideInInspector]
 public Quaternion dragCubeRotation</code></pre>
   </div>
 
@@ -746,7 +743,6 @@ public Quaternion dragCubeRotation</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[HideInInspector]
 public bool isDragCubeRotated</code></pre>
   </div>
 
@@ -777,8 +773,7 @@ public bool isDragCubeRotated</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float[] weightedArea</code></pre>
   </div>
 
@@ -810,7 +805,6 @@ public float[] weightedArea</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[HideInInspector]
 public Vector3 weightedCenter</code></pre>
   </div>
 
@@ -842,7 +836,6 @@ public Vector3 weightedCenter</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[HideInInspector]
 public float[] weightedDepth</code></pre>
   </div>
 
@@ -874,7 +867,6 @@ public float[] weightedDepth</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[HideInInspector]
 public float[] weightedDrag</code></pre>
   </div>
 
@@ -906,7 +898,6 @@ public float[] weightedDrag</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[HideInInspector]
 public float[] weightedDragMultiplier</code></pre>
   </div>
 
@@ -938,7 +929,6 @@ public float[] weightedDragMultiplier</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[HideInInspector]
 public float[] weightedExposedArea</code></pre>
   </div>
 
@@ -969,8 +959,7 @@ public float[] weightedExposedArea</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public Vector3 weightedSize</code></pre>
   </div>
 

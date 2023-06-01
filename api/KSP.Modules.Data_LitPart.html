@@ -205,22 +205,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -292,8 +292,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Alpha component colors of the gradient mapping the color transition&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public FloatCurve AlphaColorGradient</code></pre>
   </div>
 
@@ -324,8 +323,7 @@ public FloatCurve AlphaColorGradient</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Green component colors of the gradient mapping the color transition&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public FloatCurve BlueColorGradient</code></pre>
   </div>
 
@@ -356,8 +354,7 @@ public FloatCurve BlueColorGradient</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public List&lt;Vector4&gt; ColorGradientColors</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Vector4&gt; ColorGradientColors</code></pre>
   </div>
 
 
@@ -387,8 +384,7 @@ public List&lt;Vector4&gt; ColorGradientColors</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public List&lt;float&gt; ColorGradientTimes</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;float&gt; ColorGradientTimes</code></pre>
   </div>
 
 
@@ -418,8 +414,7 @@ public List&lt;float&gt; ColorGradientTimes</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public float CurrentLightIntensity</code></pre>
+    <pre><code class="lang-csharp hljs">public float CurrentLightIntensity</code></pre>
   </div>
 
 
@@ -449,8 +444,7 @@ public float CurrentLightIntensity</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Action group set by default&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public KSPActionGroup DefaultActionGroup</code></pre>
   </div>
 
@@ -481,8 +475,7 @@ public KSPActionGroup DefaultActionGroup</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Whether the light starts enabled or not&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool DefaultEnabledState</code></pre>
   </div>
 
@@ -514,7 +507,6 @@ public bool DefaultEnabledState</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The duration of the on/off transition in seconds. The gradient in colorGradient will be applied over this duration.&quot;)]
 public float Duration</code></pre>
   </div>
 
@@ -545,8 +537,7 @@ public float Duration</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public float DurationMultiplier</code></pre>
+    <pre><code class="lang-csharp hljs">public float DurationMultiplier</code></pre>
   </div>
 
 
@@ -577,7 +568,6 @@ public float DurationMultiplier</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Blue component colors of the gradient mapping the color transition&quot;)]
 public FloatCurve GreenColorGradient</code></pre>
   </div>
 
@@ -608,8 +598,7 @@ public FloatCurve GreenColorGradient</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPState]
+    <pre><code class="lang-csharp hljs">[KSPState]
 public bool HasEnoughResources</code></pre>
   </div>
 
@@ -640,8 +629,7 @@ public bool HasEnoughResources</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public float Interpolation</code></pre>
+    <pre><code class="lang-csharp hljs">public float Interpolation</code></pre>
   </div>
 
 
@@ -671,8 +659,7 @@ public float Interpolation</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public bool IsTransitioning</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsTransitioning</code></pre>
   </div>
 
 
@@ -703,7 +690,6 @@ public bool IsTransitioning</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;HDR color intensity multiplier for the emissive&quot;)]
 public float LightIntensityMultiplier</code></pre>
   </div>
 
@@ -735,7 +721,6 @@ public float LightIntensityMultiplier</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Names of the materials that should be affected by the light state&quot;)]
 public List&lt;string&gt; LightMaterialNames</code></pre>
   </div>
 
@@ -766,8 +751,7 @@ public List&lt;string&gt; LightMaterialNames</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Names of the gameObject that should be affected by the light state&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public List&lt;string&gt; LightObjectNames</code></pre>
   </div>
 
@@ -798,8 +782,7 @@ public List&lt;string&gt; LightObjectNames</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[KSPState]
+    <pre><code class="lang-csharp hljs">[KSPState]
 public bool LightStateOnBlackout</code></pre>
   </div>
 
@@ -864,7 +847,6 @@ public ModuleProperty&lt;bool&gt; LightToggle</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;Red component colors of the gradient mapping the color transition&quot;)]
 public FloatCurve RedColorGradient</code></pre>
   </div>
 
@@ -895,8 +877,7 @@ public FloatCurve RedColorGradient</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;The resource for determining if lights are on. If not specificed, no resource is tracked and lights will always stay on&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public string RequiredResourceName</code></pre>
   </div>
 
@@ -928,7 +909,6 @@ public string RequiredResourceName</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The minimum amount needed to keep the lights on&quot;)]
 public float RequiredResourceThreshold</code></pre>
   </div>
 
@@ -959,8 +939,7 @@ public float RequiredResourceThreshold</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public float TargetLightIntensity</code></pre>
+    <pre><code class="lang-csharp hljs">public float TargetLightIntensity</code></pre>
   </div>
 
 

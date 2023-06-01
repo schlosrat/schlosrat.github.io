@@ -208,22 +208,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -298,7 +298,6 @@
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/AdvancedSettings&quot;)]
 [KSPState]
 [PAMDisplayControl(SortIndex = 4)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; IsAdvancedSettingsShown</code></pre>
   </div>
 
@@ -360,9 +359,7 @@ public PropellantDefinition Propellant</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[JsonIgnore]
-public PropellantState PropellantState</code></pre>
+    <pre><code class="lang-csharp hljs">public PropellantState PropellantState</code></pre>
   </div>
 
 
@@ -392,8 +389,7 @@ public PropellantState PropellantState</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[PAMDisplayControl(SortIndex = 1)]
+    <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 1)]
 [KSPState]
 [LocalizedField(&quot;PartModules/RCS/Status&quot;)]
 public ModuleProperty&lt;string&gt; ThrustStatus</code></pre>
@@ -426,8 +422,7 @@ public ModuleProperty&lt;string&gt; ThrustStatus</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;A curve to determine loss or gain of thrust due to changes in atmosphere vs vacuum values are based on ISP to ATM Pressure&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public FloatCurve atmosphereCurve</code></pre>
   </div>
 
@@ -458,8 +453,7 @@ public FloatCurve atmosphereCurve</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Is this engine disabled when under water?&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool disableUnderwater</code></pre>
   </div>
 
@@ -493,7 +487,6 @@ public bool disableUnderwater</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/Pitch&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 5)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; enablePitch</code></pre>
   </div>
 
@@ -527,7 +520,6 @@ public ModuleProperty&lt;bool&gt; enablePitch</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/Roll&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 7)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; enableRoll</code></pre>
   </div>
 
@@ -561,7 +553,6 @@ public ModuleProperty&lt;bool&gt; enableRoll</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/PortStarboard&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 8)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; enableX</code></pre>
   </div>
 
@@ -595,7 +586,6 @@ public ModuleProperty&lt;bool&gt; enableX</code></pre>
     <pre><code class="lang-csharp hljs">[KSPState(CopyToSymmetrySet = true)]
 [LocalizedField(&quot;PartModules/RCS/DorsalVentral&quot;)]
 [PAMDisplayControl(SortIndex = 9)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; enableY</code></pre>
   </div>
 
@@ -627,7 +617,6 @@ public ModuleProperty&lt;bool&gt; enableY</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/Yaw&quot;)]
-[HideInInspector]
 [PAMDisplayControl(SortIndex = 6)]
 [KSPState(CopyToSymmetrySet = true)]
 public ModuleProperty&lt;bool&gt; enableYaw</code></pre>
@@ -663,7 +652,6 @@ public ModuleProperty&lt;bool&gt; enableYaw</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/ForeAft&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 10)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; enableZ</code></pre>
   </div>
 
@@ -697,7 +685,6 @@ public ModuleProperty&lt;bool&gt; enableZ</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/ForeByThrottle&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 11)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; foreByThrottle</code></pre>
   </div>
 
@@ -728,8 +715,7 @@ public ModuleProperty&lt;bool&gt; foreByThrottle</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[LocalizedField(&quot;PartModules/RCS/AlwaysFullAction&quot;)]
+    <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/AlwaysFullAction&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 12)]
 public ModuleProperty&lt;bool&gt; fullThrust</code></pre>
@@ -796,7 +782,6 @@ public float fullThrustMin</code></pre>
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/RCS/IsEnabled&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 [PAMDisplayControl(SortIndex = 2)]
-[HideInInspector]
 public ModuleProperty&lt;bool&gt; isEnabled</code></pre>
   </div>
 
@@ -827,9 +812,7 @@ public ModuleProperty&lt;bool&gt; isEnabled</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[FormerlySerializedAs(&quot;thrusterPower&quot;)]
-[Tooltip(&quot;Maximum Thrust in kN this engine produces at 100% throttle.&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public float maxThrust</code></pre>
   </div>
 
@@ -860,8 +843,7 @@ public float maxThrust</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Can the engine be be activated when shielded from airstream? ie: inside a fairing?&quot;)]
-[KSPDefinition]
+    <pre><code class="lang-csharp hljs">[KSPDefinition]
 public bool shieldedCanActivate</code></pre>
   </div>
 
@@ -893,7 +875,6 @@ public bool shieldedCanActivate</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;The thrust curve to use if useThrustCurve is true.&quot;)]
 public FloatCurve thrustCurve</code></pre>
   </div>
 
@@ -925,7 +906,6 @@ public FloatCurve thrustCurve</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPState(CopyToSymmetrySet = true)]
-[HideInInspector]
 [PAMDisplayControl(SortIndex = 3)]
 [LocalizedField(&quot;PartModules/RCS/RCSThrust&quot;)]
 [SteppedRange(0, 100, 1)]
@@ -991,7 +971,6 @@ public bool useLever</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[KSPDefinition]
-[Tooltip(&quot;should we use a thrust curve (based on resource remaining) ?&quot;)]
 public bool useThrustCurve</code></pre>
   </div>
 

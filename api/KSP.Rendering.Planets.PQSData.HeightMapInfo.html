@@ -111,10 +111,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
@@ -124,12 +130,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -201,9 +201,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0.001, 10)]
-[Tooltip(&quot;Dithering Scale&quot;)]
-public float DitheringScale</code></pre>
+    <pre><code class="lang-csharp hljs">public float DitheringScale</code></pre>
   </div>
 
 
@@ -233,9 +231,7 @@ public float DitheringScale</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Offsets for direction value used for UV calculation&quot;)]
-[Header(&quot;Pole Distortion Settings&quot;)]
-public Vector2 PoleDirectionOffset</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 PoleDirectionOffset</code></pre>
   </div>
 
 
@@ -265,8 +261,7 @@ public Vector2 PoleDirectionOffset</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Settings for the pole decals to fix pole distortion issues&quot;)]
-public PQSData.PoleHeightSettings PoleHeightDecalSettings</code></pre>
+    <pre><code class="lang-csharp hljs">public PQSData.PoleHeightSettings PoleHeightDecalSettings</code></pre>
   </div>
 
 
@@ -296,8 +291,7 @@ public PQSData.PoleHeightSettings PoleHeightDecalSettings</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Offset for the v parameter to fix distortion near the poles&quot;)]
-public float UVOffsetV</code></pre>
+    <pre><code class="lang-csharp hljs">public float UVOffsetV</code></pre>
   </div>
 
 
@@ -387,8 +381,7 @@ public float UVOffsetV</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;HeightMap16 used for entire planet&quot;)]
-public Texture2D globalHeightMap</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture2D globalHeightMap</code></pre>
   </div>
 
 
@@ -478,8 +471,7 @@ public Texture2D globalHeightMap</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Scale of displacement from height map&quot;)]
-public float heightMapScale</code></pre>
+    <pre><code class="lang-csharp hljs">public float heightMapScale</code></pre>
   </div>
 
 
@@ -659,9 +651,7 @@ public float heightMapScale</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Local Heightmaps&quot;)]
-[Tooltip(&quot;Biome Mask&quot;)]
-public Texture2D mask</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture2D mask</code></pre>
   </div>
 
 
@@ -841,8 +831,7 @@ public Texture2D mask</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Blend Value to transition scaled to local&quot;)]
-public float scaledToLocalBlend</code></pre>
+    <pre><code class="lang-csharp hljs">public float scaledToLocalBlend</code></pre>
   </div>
 
 
@@ -872,8 +861,7 @@ public float scaledToLocalBlend</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Transition distance to change from scaled to local&quot;)]
-public float scaledToLocalTransition</code></pre>
+    <pre><code class="lang-csharp hljs">public float scaledToLocalTransition</code></pre>
   </div>
 
 

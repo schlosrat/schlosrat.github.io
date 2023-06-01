@@ -205,22 +205,22 @@
       <a class="xref" href="KSP.Sim.Definitions.ModuleData.html#KSP_Sim_Definitions_ModuleData_IsActiveInStagingProp">ModuleData.IsActiveInStagingProp</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -292,8 +292,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public ResourceDefinitionID IntakeResourceID</code></pre>
+    <pre><code class="lang-csharp hljs">public ResourceDefinitionID IntakeResourceID</code></pre>
   </div>
 
 
@@ -323,8 +322,7 @@ public ResourceDefinitionID IntakeResourceID</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public bool ModuleEnabled</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ModuleEnabled</code></pre>
   </div>
 
 
@@ -354,8 +352,7 @@ public bool ModuleEnabled</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public ResourceFlowRequestCommandConfig RequestConfig</code></pre>
+    <pre><code class="lang-csharp hljs">public ResourceFlowRequestCommandConfig RequestConfig</code></pre>
   </div>
 
 
@@ -385,8 +382,7 @@ public ResourceFlowRequestCommandConfig RequestConfig</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public ResourceDefinitionData ResourceDefinitionData</code></pre>
+    <pre><code class="lang-csharp hljs">public ResourceDefinitionData ResourceDefinitionData</code></pre>
   </div>
 
 
@@ -416,8 +412,7 @@ public ResourceDefinitionData ResourceDefinitionData</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[JsonIgnore]
-public double ResourceUnits</code></pre>
+    <pre><code class="lang-csharp hljs">public double ResourceUnits</code></pre>
   </div>
 
 
@@ -573,7 +568,6 @@ public bool disableUnderwater</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 3)]
 [KSPState]
-[HideInInspector]
 [LocalizedField(&quot;PartModules/ResourceIntake/Flow&quot;)]
 public ModuleProperty&lt;float&gt; flowRate</code></pre>
   </div>
@@ -793,7 +787,6 @@ public string resourceName</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[LocalizedField(&quot;PartModules/ResourceIntake/Status&quot;)]
 [KSPState]
-[HideInInspector]
 [PAMDisplayControl(SortIndex = 1)]
 public ModuleProperty&lt;string&gt; statusTxt</code></pre>
   </div>
@@ -825,8 +818,7 @@ public ModuleProperty&lt;string&gt; statusTxt</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-[PAMDisplayControl(SortIndex = 2)]
+    <pre><code class="lang-csharp hljs">[PAMDisplayControl(SortIndex = 2)]
 [LocalizedField(&quot;PartModules/ResourceIntake/IntakeEnabled&quot;)]
 [KSPState(CopyToSymmetrySet = true)]
 public ModuleProperty&lt;bool&gt; toggleResourceIntake</code></pre>

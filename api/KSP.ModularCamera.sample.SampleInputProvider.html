@@ -117,10 +117,16 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
@@ -130,12 +136,6 @@
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
   </dd></dl>
 
@@ -237,8 +237,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 0.995)]
-public float dragInputAttack</code></pre>
+    <pre><code class="lang-csharp hljs">public float dragInputAttack</code></pre>
   </div>
 
 
@@ -268,8 +267,7 @@ public float dragInputAttack</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 0.995)]
-public float dragInputDecay</code></pre>
+    <pre><code class="lang-csharp hljs">public float dragInputDecay</code></pre>
   </div>
 
 
@@ -299,8 +297,7 @@ public float dragInputDecay</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Drag(2d) Inputs&quot;)]
-public float dragSensitivity</code></pre>
+    <pre><code class="lang-csharp hljs">public float dragSensitivity</code></pre>
   </div>
 
 
@@ -330,8 +327,7 @@ public float dragSensitivity</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public Dictionary&lt;KeyCode, Vector2&gt; lastDragInputs</code></pre>
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;KeyCode, Vector2&gt; lastDragInputs</code></pre>
   </div>
 
 
@@ -361,8 +357,7 @@ public Dictionary&lt;KeyCode, Vector2&gt; lastDragInputs</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public Vector3 lastMoveInput</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector3 lastMoveInput</code></pre>
   </div>
 
 
@@ -392,8 +387,7 @@ public Vector3 lastMoveInput</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public float lastScrollInput</code></pre>
+    <pre><code class="lang-csharp hljs">public float lastScrollInput</code></pre>
   </div>
 
 
@@ -423,8 +417,7 @@ public float lastScrollInput</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HideInInspector]
-public KeyCode mouseKeyLocked</code></pre>
+    <pre><code class="lang-csharp hljs">public KeyCode mouseKeyLocked</code></pre>
   </div>
 
 
@@ -484,8 +477,7 @@ public KeyCode mouseKeyLocked</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 0.995)]
-public float moveInputAttack</code></pre>
+    <pre><code class="lang-csharp hljs">public float moveInputAttack</code></pre>
   </div>
 
 
@@ -515,8 +507,7 @@ public float moveInputAttack</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 0.995)]
-public float moveInputDecay</code></pre>
+    <pre><code class="lang-csharp hljs">public float moveInputDecay</code></pre>
   </div>
 
 
@@ -546,10 +537,7 @@ public float moveInputDecay</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Attack/Decay:   0 = fast, 1 = slow&quot;)]
-[Space]
-[Header(&quot;Move(3d) Inputs&quot;)]
-public float moveSlowSensitivity</code></pre>
+    <pre><code class="lang-csharp hljs">public float moveSlowSensitivity</code></pre>
   </div>
 
 
@@ -609,8 +597,7 @@ public float moveSlowSensitivity</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 0.995)]
-public float scrollInputAttack</code></pre>
+    <pre><code class="lang-csharp hljs">public float scrollInputAttack</code></pre>
   </div>
 
 
@@ -640,8 +627,7 @@ public float scrollInputAttack</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 0.995)]
-public float scrollInputDecay</code></pre>
+    <pre><code class="lang-csharp hljs">public float scrollInputDecay</code></pre>
   </div>
 
 
@@ -671,8 +657,7 @@ public float scrollInputDecay</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Header(&quot;Scroll(1d) Inputs&quot;)]
-public float scrollSlowSensitivity</code></pre>
+    <pre><code class="lang-csharp hljs">public float scrollSlowSensitivity</code></pre>
   </div>
 
 

@@ -116,10 +116,10 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 
@@ -161,8 +161,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Sets the vignette center point (screen center is [0.5,0.5]).&quot;)]
-public Vector2 center</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 center</code></pre>
   </div>
 
 
@@ -192,9 +191,7 @@ public Vector2 center</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ColorUsage(false)]
-[Tooltip(&quot;Vignette color. Use the alpha channel for transparency.&quot;)]
-public Color color</code></pre>
+    <pre><code class="lang-csharp hljs">public Color color</code></pre>
   </div>
 
 
@@ -224,9 +221,7 @@ public Color color</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0, 1)]
-[Tooltip(&quot;Amount of vignetting on screen.&quot;)]
-public float intensity</code></pre>
+    <pre><code class="lang-csharp hljs">public float intensity</code></pre>
   </div>
 
 
@@ -256,8 +251,7 @@ public float intensity</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;A black and white mask to use as a vignette.&quot;)]
-public Texture mask</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture mask</code></pre>
   </div>
 
 
@@ -287,8 +281,7 @@ public Texture mask</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Use the \&quot;Classic\&quot; mode for parametric controls. Use the \&quot;Masked\&quot; mode to use your own texture mask.&quot;)]
-public VignetteModel.Mode mode</code></pre>
+    <pre><code class="lang-csharp hljs">public VignetteModel.Mode mode</code></pre>
   </div>
 
 
@@ -318,9 +311,7 @@ public VignetteModel.Mode mode</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Mask opacity.&quot;)]
-[Range(0, 1)]
-public float opacity</code></pre>
+    <pre><code class="lang-csharp hljs">public float opacity</code></pre>
   </div>
 
 
@@ -350,8 +341,7 @@ public float opacity</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Should the vignette be perfectly round or be dependent on the current aspect ratio?&quot;)]
-public bool rounded</code></pre>
+    <pre><code class="lang-csharp hljs">public bool rounded</code></pre>
   </div>
 
 
@@ -381,9 +371,7 @@ public bool rounded</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Lower values will make a square-ish vignette.&quot;)]
-[Range(0, 1)]
-public float roundness</code></pre>
+    <pre><code class="lang-csharp hljs">public float roundness</code></pre>
   </div>
 
 
@@ -413,9 +401,7 @@ public float roundness</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0.01, 1)]
-[Tooltip(&quot;Smoothness of the vignette borders.&quot;)]
-public float smoothness</code></pre>
+    <pre><code class="lang-csharp hljs">public float smoothness</code></pre>
   </div>
 
 

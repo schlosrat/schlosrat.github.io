@@ -116,10 +116,10 @@
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
     </div>
   </dd></dl>
 
@@ -161,8 +161,7 @@
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;How the reflections are blended into the render.&quot;)]
-public ScreenSpaceReflectionModel.SSRReflectionBlendType blendType</code></pre>
+    <pre><code class="lang-csharp hljs">public ScreenSpaceReflectionModel.SSRReflectionBlendType blendType</code></pre>
   </div>
 
 
@@ -192,9 +191,7 @@ public ScreenSpaceReflectionModel.SSRReflectionBlendType blendType</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(16, 1024)]
-[Tooltip(&quot;Max raytracing length.&quot;)]
-public int iterationCount</code></pre>
+    <pre><code class="lang-csharp hljs">public int iterationCount</code></pre>
   </div>
 
 
@@ -224,9 +221,7 @@ public int iterationCount</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(0.1, 300)]
-[Tooltip(&quot;Maximum reflection distance in world units.&quot;)]
-public float maxDistance</code></pre>
+    <pre><code class="lang-csharp hljs">public float maxDistance</code></pre>
   </div>
 
 
@@ -256,8 +251,7 @@ public float maxDistance</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Disable for a performance gain in scenes where most glossy objects are horizontal, like floors, water, and tables. Leave on for scenes with glossy vertical objects.&quot;)]
-public bool reflectBackfaces</code></pre>
+    <pre><code class="lang-csharp hljs">public bool reflectBackfaces</code></pre>
   </div>
 
 
@@ -287,9 +281,7 @@ public bool reflectBackfaces</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Blurriness of reflections.&quot;)]
-[Range(0.1, 8)]
-public float reflectionBlur</code></pre>
+    <pre><code class="lang-csharp hljs">public float reflectionBlur</code></pre>
   </div>
 
 
@@ -319,8 +311,7 @@ public float reflectionBlur</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Half resolution SSRR is much faster, but less accurate.&quot;)]
-public ScreenSpaceReflectionModel.SSRResolution reflectionQuality</code></pre>
+    <pre><code class="lang-csharp hljs">public ScreenSpaceReflectionModel.SSRResolution reflectionQuality</code></pre>
   </div>
 
 
@@ -350,9 +341,7 @@ public ScreenSpaceReflectionModel.SSRResolution reflectionQuality</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Range(1, 16)]
-[Tooltip(&quot;Log base 2 of ray tracing coarse step size. Higher traces farther, lower gives better quality silhouettes.&quot;)]
-public int stepSize</code></pre>
+    <pre><code class="lang-csharp hljs">public int stepSize</code></pre>
   </div>
 
 
@@ -382,9 +371,7 @@ public int stepSize</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Tooltip(&quot;Typical thickness of columns, walls, furniture, and other objects that reflection rays might pass behind.&quot;)]
-[Range(0.01, 10)]
-public float widthModifier</code></pre>
+    <pre><code class="lang-csharp hljs">public float widthModifier</code></pre>
   </div>
 
 
