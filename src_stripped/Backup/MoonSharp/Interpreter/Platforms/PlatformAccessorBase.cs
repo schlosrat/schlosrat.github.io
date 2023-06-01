@@ -1,0 +1,82 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: MoonSharp.Interpreter.Platforms.PlatformAccessorBase
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: EF61A348-EB87-4C99-B6BD-CBCF875CC384
+// Assembly location: C:\KSP2\DLL_min\Assembly-CSharp.dll
+// XML documentation location: C:\KSP2\DLL_min\Assembly-CSharp.xml
+
+using System;
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Text;
+
+namespace MoonSharp.Interpreter.Platforms
+{
+  public abstract class PlatformAccessorBase : IPlatformAccessor
+  {
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract string GetPlatformNamePrefix() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public string GetPlatformName() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private string GetUnityRuntimeName() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private string GetUnityPlatformName() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract void DefaultPrint(string content) => throw null;
+
+    [Obsolete("Replace with DefaultInput(string)")]
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public virtual string DefaultInput() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public virtual string DefaultInput(string prompt) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract Stream IO_OpenFile(
+      Script script,
+      string filename,
+      Encoding encoding,
+      string mode)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract Stream IO_GetStandardStream(StandardFileType type) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract string IO_OS_GetTempFilename() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract void OS_ExitFast(int exitCode) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract bool OS_FileExists(string file) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract void OS_FileDelete(string file) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract void OS_FileMove(string src, string dst) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract int OS_Execute(string cmdline) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract CoreModules FilterSupportedCoreModules(CoreModules module) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public abstract string GetEnvironmentVariable(string envvarname) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public virtual bool IsRunningOnAOT() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    protected PlatformAccessorBase() => throw null;
+  }
+}

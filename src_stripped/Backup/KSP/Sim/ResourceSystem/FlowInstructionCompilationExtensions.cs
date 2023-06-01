@@ -1,0 +1,39 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: KSP.Sim.ResourceSystem.FlowInstructionCompilationExtensions
+// Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: EF61A348-EB87-4C99-B6BD-CBCF875CC384
+// Assembly location: C:\KSP2\DLL_min\Assembly-CSharp.dll
+// XML documentation location: C:\KSP2\DLL_min\Assembly-CSharp.xml
+
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+namespace KSP.Sim.ResourceSystem
+{
+  public static class FlowInstructionCompilationExtensions
+  {
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public static List<FlowInstructionConfig> CompileToInstructionConfigs(
+      this ResourceFlowRequestConfig resourceFlowRequestConfig,
+      ResourceDefinitionDatabase database,
+      double basePriority = 0.0,
+      IFlowNode target = null)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private static FlowInstructionConfig _CompileInstructionDefinition(
+      ResourceFlowRequestCommandConfig itemConfig,
+      ResourceDefinitionData curResource,
+      double curUnits,
+      double targetUnits,
+      IFlowNode target,
+      double flowPriority,
+      RequestFlowUpdateMode flowUpdateMode,
+      double flowMinimumNormalized)
+    {
+      throw null;
+    }
+  }
+}
