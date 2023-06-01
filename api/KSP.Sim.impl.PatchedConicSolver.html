@@ -205,7 +205,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of PatchedConicOrbits. May be given an index to obtain a particular trajectory. It’s basically a list of all the trajectories currently associated with this Orbiter object, and you can do things with it like any list. The length of the list will be no longer than MaxTotalPatches, with list members being chronologically organized from the patch that occurs first to the last patch. Unused members are null. This member can be get, but not set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -236,7 +237,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The maximum limit on the number of patches. The default value = 10. This member can be get, but not set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -267,7 +269,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ObiterComponent object this class is associated with. This member can be get, but not set.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -298,7 +301,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of patches ahead. This member can be get or set. It is set in the private method PatchedConicSolver.CalculatePatchList()</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -333,7 +337,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Decreases the current setting of the private _pathcLimit property by 1 to a value that is never less than 1.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -359,7 +364,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Accepts a double (the universal time of interest) and returns the PatchedConicOrbit for the patch associated with that time.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -395,7 +401,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Increases the current setting of the private _pathcLimit property by 1 to a value that is never more than 5.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -421,7 +428,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>First tests to see if the Orbiter object is null. If it is, then it returns immediately. Otherwise, it will remove the handler for OnReferenceBodyChange which was added by the OnStart method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -447,7 +455,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>First tests to see if the Orbiter object is null. If it is, then it returns immediately. Otherwise, it will remove the handler for OnReferenceBodyChange which was added by the OnStart method.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -473,7 +482,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a new handler for the Orbiter.OnReferenceBodyChange method so that OnReferenceBodyChange will be called when necessary. It then sets the private _patchLimit to be the max of PersistentProfileManager.ConicPatchLimit and 1, adds this.Orbiter.PatchedConicsOrbit to the CurrentTrajectory list, and similarly adds any remaining patches from 1 to MaxTotalPatches.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -499,7 +509,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clamps the current setting of the private _pathcLimit property to be between 1 and 5 inclusively.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -558,7 +569,8 @@
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Accepts a CelestialBodyComponent and uses that to set the private _targetBody. This sets the target to be used when generating the patch list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
