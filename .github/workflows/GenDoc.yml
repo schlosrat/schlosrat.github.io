@@ -34,6 +34,7 @@ jobs:
           GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
           dir DLL_stripped
         shell: cmd
+      - name: Upload Artifact
       - uses: actions/upload-artifact@v3
         with:
           name: Assembly-CSharp.xml
