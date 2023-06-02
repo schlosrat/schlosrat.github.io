@@ -29,10 +29,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - name: Check Assembly-CSharp.xml
+        run: dir DLL_stripped
+        shell: cmd
       - name: Generate XML Documentation Directly
-        run: |
-          GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
-          dir DLL_stripped
+        run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
+        shell: cmd
+      - name: Check Assembly-CSharp.xml
+        run: dir DLL_stripped
         shell: cmd
       - name: Upload Artifact
       - uses: actions/upload-artifact@v3
