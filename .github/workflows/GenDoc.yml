@@ -32,4 +32,5 @@ jobs:
     steps:
       - name: Generate XML Documentation
         run: Import-Module GenDoc
-        run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped 
+        run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
+        run: call GenDoc.bat
