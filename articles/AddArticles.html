@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Adding and Editing Articles on This Site </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Adding and Editing Articles on This Site ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/schlosrat/schlosrat.github.io/blob/main/docfx_project/articles/AddArticles.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="adding-and-editing-articles-on-this-site">Adding and Editing Articles on This Site</h1>
+
+<p>The first thing you need to do if you've not done this already is to fork this GitHub repo. All the changes you make will be made on your local fork. To incorporate them simply use a Pull Request (PR) from your frok to the main branch of this repo. That said, adding a <em>new</em> article is a two-step process.</p>
+<h2 id="editing-an-existing-article-on-this-site">Editing an Existing Article on This Site</h2>
+<p>To edit articles on this site you simply need to find the MarkDown (.md) file that defines them and edit that. DocFX automaticallly generates the HTML files served to site visitors based on the content of the corresponding MarkDown file, so editing the HTML files directly will not accomplish anything as they'll just be overwritten based on what's in the MarkDown file they're generated from.</p>
+<p>With the exception of the main site's intro page (docfx_project/index.md) and the API Documentation intro page (docfx_project/api/index.md) all the articles for this site are located in the <strong>docfx_project/articles</strong> folder. Simply open the one you'd like to edit with a MarkDown capable editor and you're in business. Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
+<h2 id="adding-a-new-article-to-this-site">Adding a New Article to This Site</h2>
+<p>Adding a <em>new</em> article is only slightly more complex than editing an existing one in that it's a two-step process.</p>
+<ol>
+<li>First, create a new MarkDown file in the <strong>docfx_project/articles</strong> folder. Give it a useful descriptive name that ends in the .md suffix, and then you can edit that file in any markdown capable editor you like. Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</li>
+<li>Second, you need to edit the <strong>toc.yml</strong> file, which is also in the <strong>docfx_project/articles</strong> folder. If you don't do this, then site visitors will not be shown the spiffy new article you've added. As with editing code or articles, you do this on your fork of the repo and submit your updates to toc.yml along with the new .md file you've added to the <strong>docfx_project/articles</strong> folder. The toc.yml file's contents will something look like this.</li>
+</ol>
+<pre><code class="lang-yml">- name: Introduction
+  href: intro.md
+- name: Adding Comments to Code
+  href: AddCodeComments.md
+- name: Adding/Editing Articles
+  href: AddArticles.md
+</code></pre>
+<p>All you need to do is add two lines to this file so that your new article will be included. The first (<code>- name: ...</code>) provides a visitor-friendly name for the article. You should use something simple enough to fit in the left side ToC section of the page and yet descriptive of what would be found in your new article. The second (<code>href: fileName.md</code>) tells the site where to find your file. This can be just the name of your new .md file if it's located in the  <strong>docfx_project/articles</strong> folder, or it can be a relative path to find your file starting from this folder.</p>
+<p>Rinse and repeat for as many new articles as you would like to contribute, then create a PR to get your updates into the main branch of this repo.</p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/schlosrat/schlosrat.github.io/blob/main/docfx_project/articles/AddArticles.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
