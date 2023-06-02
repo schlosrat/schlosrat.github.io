@@ -32,6 +32,7 @@ jobs:
       - name: Generate XML Documentation Directly
         run: |
           GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
+          dir DLL_stripped
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add DLL_stripped\Assembly-CSharp.xml
