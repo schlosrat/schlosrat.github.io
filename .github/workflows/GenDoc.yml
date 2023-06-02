@@ -2,7 +2,7 @@
 name: Generate XML Documentation
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting the default branch and impacting the src_stripped folder
   push:
     branches: ["main"]
     paths: ["src_stripped"]
@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 jobs:
-  # Single deploy job since we're just deploying
+  # Build the XML documentation from the src_stripped files
   build:
     runs-on: windows-latest
     steps:
