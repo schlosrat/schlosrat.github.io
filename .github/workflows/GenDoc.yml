@@ -39,7 +39,7 @@ jobs:
         run: dir DLL_stripped
         shell: cmd
       - name: Upload Artifact
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: Assembly-CSharp.xml
           path: DLL_stripped/Assembly-CSharp.xml
