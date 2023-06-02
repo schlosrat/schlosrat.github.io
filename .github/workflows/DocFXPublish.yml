@@ -45,6 +45,8 @@ jobs:
     steps:
       - name: Chekout
         uses: actions/checkout@v3
+      - name: Remove old Assembly-CSharp.xml
+        run: rm DLL_stripped/Assembly-CSharp.xml
       - name: Download Assembly-CSharp.xml Artifact
         uses: actions/download-artifact@v3
         with:
