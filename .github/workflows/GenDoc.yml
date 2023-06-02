@@ -39,8 +39,3 @@ jobs:
         with:
           name: Assembly-CSharp.xml
           path: DLL_stripped/Assembly-CSharp.xml
-      # - name: Generate XML Documentation via Batch File
-      #   run: GenDoc.bat
-      #   shell: cmd
-      # - name: Import-Module
-      #   run: Import-Module GenDoc
