@@ -2,10 +2,10 @@
 name: Generate and Publish DocFx Content
 
 on:
-  # Runs on pushes targeting the default branch and impacting either the docfx_project, public, or DLL_stripped folders
+  # Runs on pushes targeting the default branch and impacting either the src_stripped, docfx_project, public, or DLL_stripped folders
   push:
     branches: ["main"]
-    paths: ["docfx_project", "public", "DLL_stripped"]
+    paths: ["src_stripped", "docfx_project", "public", "DLL_stripped"]
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
