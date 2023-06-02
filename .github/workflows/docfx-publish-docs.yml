@@ -1,4 +1,10 @@
-on: push
+# Simple workflow for deploying static content to GitHub Pages
+name: Generate DocFx content to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
 
 jobs:
   publish-docs:
