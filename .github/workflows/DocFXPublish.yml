@@ -1,5 +1,5 @@
-# Simple workflow for generating DocFx Content
-name: Generate DocFx Content
+# Simple workflow for generating DocFx Content and publish to GitHub Pages
+name: Generate and Publish DocFx Content
 
 on:
   # Runs on pushes targeting the default branch and impacting either the docfx_project, public, or DLL_stripped folders
