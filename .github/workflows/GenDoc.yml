@@ -31,5 +31,6 @@ jobs:
       #   run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
       - name: Generate XML Documentation via Batch File
         run: GenDoc.bat
+        shell: cmd
       # - name: Import-Module
       #   run: Import-Module GenDoc
