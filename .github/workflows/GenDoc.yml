@@ -30,6 +30,6 @@ jobs:
       # - name: Generate XML Documentation Directly
       #   run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
       - name: Generate XML Documentation via Batch File
-        run: call GenDoc.bat
+        run: GenDoc.bat
       # - name: Import-Module
       #   run: Import-Module GenDoc
