@@ -31,4 +31,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Generate XML Documentation
-        run: GenDoc\GenDoc src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped 
+        run: Import-Module GenDoc
+        run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped 
