@@ -72,7 +72,8 @@ jobs:
           echo "newSize=$(find "DLL_stripped/Assembly-CSharp.xml" -printf "%s")" >> "$GITHUB_ENV"
           now=$(date +%Y.%m.%d)
           echo "now=$(date +%Y.%m.%d)" >> "$GITHUB_ENV"
-          fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')
+          fileTime=$(date -r "DLL_stripped/Assembly-CSharp.xml" "+%Y.%m.%d.%H.%M.%S")
+          # fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')
           echo "fileTime=$(find -name DLL_stripped/Assembly-CSharp.xml -prune -printf '%TY.%Tm.%Td\n')" >> "$GITHUB_ENV"
           echo "${{ env.newSize }}"
           echo "${{ env.now }}"
