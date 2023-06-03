@@ -36,12 +36,8 @@ jobs:
       - name: Generate XML Documentation Directly
         run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
         shell: cmd
-      - name: Check XML file again...
-        run: |
-          cd DLL_stripped
-          dir
-          fc Assembly-CSharp.xml Assembly-CSharp.xml.bak
-          cd ..
+      - name: Check XML file
+        run: dir DLL_stripped
         shell: cmd
       - name: Upload Assembly-CSharp.xml Artifact
         uses: actions/upload-artifact@v3
@@ -67,11 +63,7 @@ jobs:
           name: Assembly-CSharp.xml
           path: DLL_stripped
       - name: Compare old Assembly-CSharp.xml to new
-        run: |
-          cd DLL_stripped
-          ls -l
-          diff Assembly-CSharp.xml Assembly-CSharp.xml.bak
-          cd ..
+        run: ls -l DLL_stripped
       - name: Dotnet Setup
         uses: actions/setup-dotnet@v3
         with:
