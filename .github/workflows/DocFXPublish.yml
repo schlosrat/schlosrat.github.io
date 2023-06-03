@@ -82,3 +82,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        
+      - name: Push Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "DLL_stripped/Assembly-CSharp.xml"
+          body: "* Updated XML Documentation"
