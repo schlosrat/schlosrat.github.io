@@ -58,6 +58,7 @@ jobs:
           mv DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
           ls -l DLL_stripped
           oldSize=$(find "DLL_stripped/Assembly-CSharp.xml.bak" -printf "%s")
+          echo "oldSize=$(find "DLL_stripped/Assembly-CSharp.xml.bak" -printf "%s")" >> "$GITHUB_ENV"
       - name: Download Assembly-CSharp.xml Artifact
         uses: actions/download-artifact@v3
         with:
@@ -68,8 +69,10 @@ jobs:
           ls -l DLL_stripped
           newSize=$(find "DLL_stripped/Assembly-CSharp.xml" -printf "%s")
           now=$(date +%Y.%m.%d)
+          echo "now=$(date +%Y.%m.%d)" >> "$GITHUB_ENV"
           echo $now
           fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')
+          echo "fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')" >> "$GITHUB_ENV"
           echo $fileTime
       - name: Dotnet Setup
         uses: actions/setup-dotnet@v3
@@ -90,7 +93,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         
-        if: $newSize != $oldSize
+        if: ${{ env.newSize != env.oldSize }}
       - name: Push Release
         uses: ncipollo/release-action@v1
         with:
