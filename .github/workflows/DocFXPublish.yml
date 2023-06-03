@@ -38,8 +38,10 @@ jobs:
         shell: cmd
       - name: Check XML file again...
         run: |
-          dir DLL_stripped
-          fc DLL_stripped\Assembly-CSharp.xml DLL_stripped\Assembly-CSharp.xml.bak
+          cd DLL_stripped
+          dir
+          fc Assembly-CSharp.xml Assembly-CSharp.xml.bak
+          cd ..
       - name: Upload Assembly-CSharp.xml Artifact
         uses: actions/upload-artifact@v3
         with:
