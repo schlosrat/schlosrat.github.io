@@ -90,7 +90,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         
-        if: newSize != oldSize
+        if: $newSize != $oldSize
       - name: Push Release
         uses: ncipollo/release-action@v1
         with:
