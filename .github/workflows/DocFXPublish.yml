@@ -59,7 +59,7 @@ jobs:
           ls -l DLL_stripped
           oldSize=$(find "DLL_stripped/Assembly-CSharp.xml.bak" -printf "%s")
           echo "oldSize=$(find "DLL_stripped/Assembly-CSharp.xml.bak" -printf "%s")" >> "$GITHUB_ENV"
-          echo ${{ env.oldSize }}
+          # echo ${{ env.oldSize }}
       - name: Download Assembly-CSharp.xml Artifact
         uses: actions/download-artifact@v3
         with:
@@ -74,9 +74,9 @@ jobs:
           echo "now=$(date +%Y.%m.%d)" >> "$GITHUB_ENV"
           fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')
           echo "fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')" >> "$GITHUB_ENV"
-          echo ${{ env.now }}
-          echo ${{ env.fileTime }}
-          echo ${{ env.newSize }}
+          # echo ${{ env.now }}
+          # echo ${{ env.fileTime }}
+          # echo ${{ env.newSize }}
       - name: Dotnet Setup
         uses: actions/setup-dotnet@v3
         with:
