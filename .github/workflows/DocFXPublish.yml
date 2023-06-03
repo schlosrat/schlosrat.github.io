@@ -42,6 +42,7 @@ jobs:
           dir
           fc Assembly-CSharp.xml Assembly-CSharp.xml.bak
           cd ..
+        shell: cmd
       - name: Upload Assembly-CSharp.xml Artifact
         uses: actions/upload-artifact@v3
         with:
