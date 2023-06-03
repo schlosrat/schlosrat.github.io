@@ -218,6 +218,239 @@
     <param name="referenceBodyHeight"></param>
 </member>
 
+<member name="F:KSP.Sim.impl.ManeuverPlanSolver.MAX_PATCHEDNBODY_SOLVES">
+    <summary>
+    Max value = 10
+    </summary>
+</member>
+
+<member name="P:KSP.Sim.impl.ManeuverPlanSolver.ManeuverTrajectory">
+    <summary>
+    List of maneuver trajecotries.
+    </summary>
+</member>
+
+<member name="P:KSP.Sim.impl.ManeuverPlanSolver.PatchedConicsList">
+    <summary>
+    List of patched conic orbits.
+    </summary>
+</member>
+
+<member name="P:KSP.Sim.impl.ManeuverPlanSolver.PatchedNBodyList">
+    <summary>
+    List of Patched N-Body Orbits.
+    </summary>
+</member>
+
+<member name="P:KSP.Sim.impl.ManeuverPlanSolver.TargetBody">
+    <summary>
+    The target celestial body.
+    </summary>
+</member>
+
+<member name="P:KSP.Sim.impl.ManeuverPlanSolver.HasActiveManeuver">
+    <summary>
+    A flag indicating if this maneuver plan has an active maneuver.
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.#ctor(KSP.Sim.impl.UniverseModel,KSP.Sim.impl.OrbiterComponent)">
+    <summary>
+    Creates a ManeuverPlanSolver using the supplied UniverseModel for the supplied OrbiterComponent.
+    </summary>
+    <param name="universeModel"></param>
+    <param name="orbiter"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.Dispose">
+    <summary>
+    Good question!
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.OnStart">
+    <summary>
+    Mono behavior called automatically.
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.OnUpdate">
+    <summary>
+    Mono behavior called automatically.
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.UpdateManeuverTrajectory">
+    <summary>
+    Updates all the PatchedConicsOrbit list for this maneuver plan?
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.SetManeuverTrajectoryDirty">
+    <summary>
+    Sets the maneuver trajectory to be "dirty" - meaning in need of update?
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.SetManeuverStartIndex(System.Int32)">
+    <summary>
+    Sets this maneuver plan to start at the given maneuver node index.
+    </summary>
+    <param name="index"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.SetTarget(KSP.Sim.impl.CelestialBodyComponent)">
+    <summary>
+    Set the TargetBody pameter using the supplied CelestialBodyComponent.
+    </summary>
+    <param name="targetBody"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.CalculatePatchConicList(System.Int32)">
+    <summary>
+    Calculates the PatchedConicsList.
+    </summary>
+    <param name="maneuverNumber"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.InitializeFirstPatchConic(System.Int32)">
+    <summary>
+    Initialized the first patched conic orbit in the PatchedConicsList using the supplied maneuverNumber.
+    </summary>
+    <param name="maneuverNumber"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.SolveManeuver(KSP.Sim.impl.OdeManeuverNode)">
+    <summary>
+    Attempts to solve the maneuver plan using the odeManeuverNode.
+    </summary>
+    <param name="odeManeuverNode"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.UpdatePositionVelocityForSoiCross(KSP.Sim.IPatchedOrbit,KSP.Sim.impl.PatchedNBodyOrbit,System.Double,Vector3d@,Vector3d@)">
+    <summary>
+    Updates the position and velocity vectors for the SOI transition using the supplier patch and patchedNBodyOrbit.
+    </summary>
+    <param name="patch"></param>
+    <param name="patchedNBodyOrbit"></param>
+    <param name="subStageStartUt"></param>
+    <param name="localPosition"></param>
+    <param name="localVelocity"></param>
+</member>
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanSolver.GetPatchEndTransitionType(KSP.Sim.impl.PatchedNBodyOrbit,System.Int32,System.Int32,System.Int32,OdeSolverStageComponent)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanSolver.IsAllFuelConsumed(OdeSolverStageComponent)" -->
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.FindPatchContainingUt(System.Double,List{KSP.Sim.IPatchedOrbit},KSP.Sim.IPatchedOrbit@,System.Int32@)">
+    <summary>
+    Returns the patch from the supplied pathcLust containing the supplied ut.
+    </summary>
+    <param name="ut"></param>
+    <param name="patchList"></param>
+    <param name="patch"></param>
+    <param name="patchIndex"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.FindPatchContainingUt(System.Double,List{KSP.Sim.impl.PatchedConicsOrbit},KSP.Sim.IPatchedOrbit@,System.Int32@)">
+    <summary>
+    Returns the patch from the supplied pathcLust containing the supplied ut.
+    </summary>
+    <param name="ut"></param>
+    <param name="patchList"></param>
+    <param name="patch"></param>
+    <param name="patchIndex"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.RemoveAllOdeManeuverNodes">
+    <summary>
+    Removes all ODE Maneuver Nodes for this ManeuverPlanSolver.
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.SetAllPatchesInactive">
+    <summary>
+    Sets all patches in the PatchedConicList to be inactive.
+    </summary>
+</member>
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanSolver.GetBurnDuration(System.Double,OdeSolverStageComponent)" -->
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.HandleNodeAdded(List{KSP.Sim.Maneuver.ManeuverNodeData},KSP.Sim.Maneuver.ManeuverNodeData)">
+    <summary>
+    Handles adding the supplied nodeAdded to the supplied list of nodes.
+    </summary>
+    <param name="nodes"></param>
+    <param name="nodeAdded"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.HandleNodesRemoved(List{KSP.Sim.Maneuver.ManeuverNodeData},List{KSP.Sim.Maneuver.ManeuverNodeData})">
+    <summary>
+    Handles removing the supplied list of nodes to remove (removedNodes) from the supplier list of currentNodes.
+    </summary>
+    <param name="currentNodes"></param>
+    <param name="removedNodes"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.SetDoManeuverSolve(System.Boolean)">
+    <summary>
+    Sets the doSolve flag to the supplied value for this ManeuverPlanSolver.
+    </summary>
+    <param name="doSolve"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.HandleNodeBurnChanged(List{KSP.Sim.Maneuver.ManeuverNodeData},KSP.Sim.Maneuver.ManeuverNodeData)">
+    <summary>
+    Applies the updated ManeuverNodeData (nodeChanged) to the list of nodes for this ManeuverPlanSolver.
+    </summary>
+    <param name="nodes"></param>
+    <param name="nodeChanged"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.FindPatchesForNodeChange(List{KSP.Sim.Maneuver.ManeuverNodeData},KSP.Sim.Maneuver.ManeuverNodeData,System.Int32@,System.Int32@,System.Boolean@)">
+    <summary>
+    Finds the patches affected by the specified nodeChanged for the list of nodes, outputting the nunConics, numNBody and the wasFound flag.
+    </summary>
+    <param name="nodes"></param>
+    <param name="nodeChanged"></param>
+    <param name="numConics"></param>
+    <param name="numNBody"></param>
+    <param name="wasFound"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.HandleNodePositionChanged(List{KSP.Sim.Maneuver.ManeuverNodeData},KSP.Sim.Maneuver.ManeuverNodeData)">
+    <summary>
+    Updates the list of maneuver nodes supplied using the nodeChanged structure supplied.
+    </summary>
+    <param name="nodes"></param>
+    <param name="nodeChanged"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.HandleNodeChange(List{KSP.Sim.Maneuver.ManeuverNodeData},KSP.Sim.Maneuver.ManeuverNodeData,System.Int32,System.Int32)">
+    <summary>
+    Updates the list of maneuver nodes supplied using the nodeChanged structure supplied (default null), numNBody (default 0), and numConics (default 0).
+    </summary>
+    <param name="maneuverNodes"></param>
+    <param name="nodeChanged"></param>
+    <param name="numNBody"></param>
+    <param name="numConics"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanSolver.CalculateOdeManeuverNodes(List{KSP.Sim.Maneuver.ManeuverNodeData})">
+    <summary>
+    Calculates the ODE Maneuver Nodes for the list of maneuver nodes supplied.
+    </summary>
+    <param name="maneuverNodes"></param>
+</member>
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanSolver.GetVelocityAfterFirstManeuver(System.Double@)" -->
+
+<member name="T:KSP.Sim.impl.ManeuverPlanSolver.IntegratorMethodEnum">
+    <summary>
+    Integrator method enumeration (RK23, RK45)
+    </summary>
+</member>
+
 <member name="P:KSP.Sim.impl.PatchedConicSolver.MaxTotalPatches">
     <summary>
     The maximum limit on the number of patches. The default value = 10.
