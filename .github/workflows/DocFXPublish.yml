@@ -104,5 +104,5 @@ jobs:
         with:
           artifacts: "DLL_stripped/Assembly-CSharp.xml"
           body: "* Updated XML Documentation"
-          tag: "Initial" # "${{ env.now }}"
-          commit: true
+          tag: "${{ env.now }}"
+          commit: "main"
