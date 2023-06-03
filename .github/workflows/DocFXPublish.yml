@@ -57,7 +57,9 @@ jobs:
       - name: Compare old Assembly-CSharp.xml to new
         run: |
           ls -l DLL_stripped
-          diff DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
+          cd DLL_stripped
+          diff Assembly-CSharp.xml Assembly-CSharp.xml.bak
+          cd ..
       - name: Dotnet Setup
         uses: actions/setup-dotnet@v3
         with:
