@@ -97,3 +97,4 @@ jobs:
           artifacts: "DLL_stripped/Assembly-CSharp.xml"
           body: "* Updated XML Documentation"
           tag: $fileTime
+          commit: true
