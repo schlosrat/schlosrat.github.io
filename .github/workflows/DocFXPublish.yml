@@ -45,15 +45,19 @@ jobs:
     steps:
       - name: Chekout
         uses: actions/checkout@v3
-      - name: Remove old Assembly-CSharp.xml
-        run: mv DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
+      - name: Move old Assembly-CSharp.xml
+        run: |
+          mv DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
+          ls -l DLL_stripped
       - name: Download Assembly-CSharp.xml Artifact
         uses: actions/download-artifact@v3
         with:
           name: Assembly-CSharp.xml
           path: DLL_stripped/Assembly-CSharp.xml
       - name: Compare old Assembly-CSharp.xml to new
-        run: diff DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
+        run: |
+          ls -l DLL_stripped
+          diff DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
       - name: Dotnet Setup
         uses: actions/setup-dotnet@v3
         with:
