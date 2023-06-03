@@ -57,13 +57,16 @@ jobs:
         run: |
           mv DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
           ls -l DLL_stripped
+          oldSize=$(find "DLL_stripped/Assembly-CSharp.xml.bak" -printf "%s")
       - name: Download Assembly-CSharp.xml Artifact
         uses: actions/download-artifact@v3
         with:
           name: Assembly-CSharp.xml
           path: DLL_stripped
       - name: Compare old Assembly-CSharp.xml to new
-        run: ls -l DLL_stripped
+        run: |
+          ls -l DLL_stripped
+          newSize=$(find "DLL_stripped/Assembly-CSharp.xml" -printf "%s")
       - name: Dotnet Setup
         uses: actions/setup-dotnet@v3
         with:
@@ -82,7 +85,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        
+        if: newSize != oldSize
       - name: Push Release
         uses: ncipollo/release-action@v1
         with:
