@@ -74,8 +74,8 @@ jobs:
           echo "now=$(date +%Y.%m.%d)" >> "$GITHUB_ENV"
           # fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')
           # echo "fileTime=$(find -name DLL_stripped/Assembly-CSharp.xml -prune -printf '%TY.%Tm.%Td\n')" >> "$GITHUB_ENV"
-          fileTime=$(date -r "DLL_stripped/Assembly-CSharp.xml" "+%Y.%m.%d.%H.%M.%S")
-          echo "fileTime=$(date -r "DLL_stripped/Assembly-CSharp.xml" "+%Y.%m.%d.%H.%M.%S")" >> "$GITHUB_ENV"
+          fileTime=$(date -r "DLL_stripped/Assembly-CSharp.xml" "+%Y.%m.%d.%H.%M")
+          echo "fileTime=$(date -r "DLL_stripped/Assembly-CSharp.xml" "+%Y.%m.%d.%H.%M")" >> "$GITHUB_ENV"
           echo "${{ env.newSize }}"
           echo "${{ env.now }}"
           echo "${{ env.fileTime }}"
@@ -104,5 +104,5 @@ jobs:
         with:
           artifacts: "DLL_stripped/Assembly-CSharp.xml"
           body: "* Updated XML Documentation"
-          tag: "${{ env.now }}"
+          tag: "${{ env.fileTime }}"
           commit: "main"
