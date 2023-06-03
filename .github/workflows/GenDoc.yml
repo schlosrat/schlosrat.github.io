@@ -19,13 +19,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Check Assembly-CSharp.xml
-        run: dir DLL_stripped
+        run: move DLL_stripped\Assembly-CSharp.xml DLL_stripped\Assembly-CSharp.xml.bak
         shell: cmd
       - name: Generate XML Documentation Directly
         run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
         shell: cmd
       - name: Check Assembly-CSharp.xml
-        run: dir DLL_stripped
+        run: fc DLL_stripped\Assembly-CSharp.xml DLL_stripped\Assembly-CSharp.xml.bak
         shell: cmd
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
