@@ -65,7 +65,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Assembly-CSharp.xml
-          path: DLL_stripped/Assembly-CSharp.xml
+          path: DLL_stripped
       - name: Compare old Assembly-CSharp.xml to new
         run: |
           cd DLL_stripped
