@@ -102,5 +102,5 @@ jobs:
         with:
           artifacts: "DLL_stripped/Assembly-CSharp.xml"
           body: "* Updated XML Documentation"
-          tag: ${{ env.fileTime }}
+          tag: ${{ env.now }}
           commit: true
