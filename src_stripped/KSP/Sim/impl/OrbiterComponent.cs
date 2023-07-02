@@ -165,7 +165,8 @@ namespace KSP.Sim.impl
 
     /// <summary>
     /// The current local position for this OrbiterComponent.
-    /// </summary>    [TypeConverterIgnore]
+    /// </summary>
+    [TypeConverterIgnore]
     public Vector3d localPosition
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
@@ -228,7 +229,7 @@ namespace KSP.Sim.impl
     /// Updates the Velocity structure for this OrbiterComponent. To update both position and velocity use UpdateFromStateVectors
     /// </summary>
     /// <param name="newVelocity"></param>
-     [MethodImpl(MethodImplOptions.NoInlining)]
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public void UpdateVelocity(Velocity newVelocity) => throw null;
 
     /// <summary>
