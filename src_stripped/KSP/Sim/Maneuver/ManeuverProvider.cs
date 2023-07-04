@@ -93,15 +93,41 @@ namespace KSP.Sim.Maneuver
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnManeuverDataUpdated() => throw null;
 
+    /// <summary>
+    /// Returns all maneuver nodes for this vessel.
+    /// </summary>
+    /// <param name="vesselID"></param>
+    /// <returns List{ManeuverNodeData}></returns>
     [MethodImpl(MethodImplOptions.NoInlining)]
     public List<ManeuverNodeData> GetNodesForVessel(IGGuid vesselID) => throw null;
 
+    /// <summary>
+    /// Main entry point for creating a new node on a vessel. This method calls ManeuverPlanComponent.AddNode. If successful, it will then call UpdateActiveNode.
+    /// </summary>
+    /// <param name="node"></param>
+    /// <returns bool></returns>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool AddNodeToVessel(ManeuverNodeData node) => throw null;
 
+    /// <summary>
+    /// Removes the provided list of nodes from the specified vessel.
+    /// </summary>
+    /// <param name="vesselID"></param>
+    /// <param name="nodeData"></param>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void RemoveNodesFromVessel(IGGuid vesselID, List<ManeuverNodeData> nodeData) => throw null;
 
+    /// <summary>
+    /// Process an update to the burn vector (change parameter) for the provided node (nodeData parameter). This method checks EnoughDeltaVToChangeNode,
+    /// limiting the amount of the change if more is requested than the vessel is capable of. If the vessel is out of fuel the node is not updated, otherwise
+    /// the limited change is applied, ManeuverPlanComponent.UpdateChangeOnNode() is called, followed by this.UpdateActiveNode(), and this.UpdateAllChildNodeDetails().
+    /// </summary>
+    /// <param name="nodeData"></param>
+    /// <param name="change"></param>
+    /// <param name="lookupGizmoValues"></param>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void UpdateChangeOnNode(
       ManeuverNodeData nodeData,
@@ -111,6 +137,13 @@ namespace KSP.Sim.Maneuver
       throw null;
     }
 
+    /// <summary>
+    /// Process an update to the node.Time parameter
+    /// </summary>
+    /// <param name="nodeData"></param>
+    /// <param name="time"></param>
+    /// <param name="lookupGizmoValues"></param>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void UpdateTimeOnNode(
       ManeuverNodeData nodeData,
@@ -120,6 +153,12 @@ namespace KSP.Sim.Maneuver
       throw null;
     }
 
+    /// <summary>
+    /// Update all nodes that are subordinate to (later than and dependent upon) this node. This method calls this._game.SpaceSimulation.Maneuvers.UpdateNodeDetails.
+    /// </summary>
+    /// <param name="nodeData"></param>
+    /// <param name="lookupGizmoValues"></param>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void UpdateAllChildNodeDetails(
       ManeuverNodeData nodeData,
@@ -128,12 +167,26 @@ namespace KSP.Sim.Maneuver
       throw null;
     }
 
+    /// <summary>
+    /// Calls ManeuverPlanComponent.UpdateNodeDetails() and then this.UpdateActiveNode()
+    /// </summary>
+    /// <param name="nodeData"></param>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void UpdateNodeDetails(ManeuverNodeData nodeData) => throw null;
 
+    /// <summary>
+    /// Sets _activeManeuverProperty true and then validates the burn properties.
+    /// </summary>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void UpdateActiveNodeEta() => throw null;
 
+    /// <summary>
+    /// If there is an _activeVesselPlan and that object has an ActiveNode, then sets _activeManeuverProperty true, sets _maneuverNodeNameProperty to the NodeName,
+    /// and then validates the burn properties, otherwsie sets _activeManeuverProperty false.
+    /// </summary>
+    /// <exception cref="NullReferenceException"></exception>
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void UpdateActiveNode() => throw null;
 
