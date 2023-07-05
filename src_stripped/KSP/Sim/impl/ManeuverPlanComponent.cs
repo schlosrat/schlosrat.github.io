@@ -244,7 +244,8 @@ namespace KSP.Sim.impl
 
     /// <summary>
     /// Processes an update on the specified node structure applying the specified change to the burn vector provided there is sufficient DeltaV available.
-    /// If there is some DeltaV, but not enough for the whole change then a partial change will be applied.
+    /// If there is some DeltaV, but not enough for the whole change then a partial change will be applied. NOTE: This method just calls the next one by
+    /// passing it data.NodeID and the requested change.
     /// </summary>
     /// <param name="data"></param>
     /// <param name="change"></param>
@@ -261,7 +262,8 @@ namespace KSP.Sim.impl
     private void UpdateChangeOnNode(System.Guid nodeId, Vector3 change) => throw null;
 
     /// <summary>
-    /// Processes an update on the specified nodeData setting a new nodeData.Time value to adjust the timing of the node.
+    /// Processes an update on the specified nodeData setting a new nodeData.Time value to adjust the timing of the node. NOTE: This method just calls the
+    /// next one bypassing it nodeData.NodeID and the updated time.
     /// </summary>
     /// <param name="nodeData"></param>
     /// <param name="time"></param>
