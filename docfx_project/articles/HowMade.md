@@ -3,7 +3,7 @@ This site is the direct result of necessity, ingenuity, perseverance, and curios
 
 OK, seriously. There are only two ways a site like this is possible. First, and this would be our strong preference, if there is support for modding and the game developers were to make their XML docs available, then making a site like this largely comes down to processing a stripped version of the DLL in conjunction with the XML docs - and Bingo! you have a site far better than this! Sadly, that's not the story of this site...
 
-Fortunately, there's another way to get a site like this - exactly like this, in fact - and it doesn't require the game developers to share their XML documentation. Instead, the basic process is this.
+Fortunately, there's another way to get a site like this - exactly like this, in fact - and it doesn't require the game developers to share their XML documentation, nor does it require decompiling the actual source of the game. Instead, the basic process is this.
 
 1. **Produce a Stripped DLL**. Using the Assembly-CSharp.dll that ships with the game it's possible to produce a stripped version of the original in which all the internal code has been removed leaving only the external interface the DLL exposes naturally. There are a number of tools that can be used for this. We chose to use the [BepInEx Publicizer](https://github.com/BepInEx/BepInEx.AssemblyPublicizer) (assembly-publicizer), and we used it like this.
 ```
