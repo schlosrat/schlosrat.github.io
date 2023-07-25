@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Animation.AnimationManager_IVA
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -24,8 +24,8 @@ namespace KSP.Animation
     [Space(10f)]
     [SerializeField]
     private string _expressionParamName;
-    [SerializeField]
     [FormerlySerializedAs("bodyFidgetTriggerName")]
+    [SerializeField]
     private string _bodyFidgetTriggerParamName;
     [FormerlySerializedAs("bodyFidgetRandomIntName")]
     [SerializeField]
@@ -39,11 +39,11 @@ namespace KSP.Animation
     [FormerlySerializedAs("headFidgetTriggerName")]
     [SerializeField]
     private string _headFidgetTriggerParamName;
-    [SerializeField]
     [FormerlySerializedAs("headFidgetRandomIntName")]
-    private string _headFidgetIndexParamName;
-    [FormerlySerializedAs("headFidgetDelayMin")]
     [SerializeField]
+    private string _headFidgetIndexParamName;
+    [SerializeField]
+    [FormerlySerializedAs("headFidgetDelayMin")]
     private float _minHeadFidgetDelay;
     [FormerlySerializedAs("headFidgetDelayMax")]
     [SerializeField]
@@ -51,11 +51,11 @@ namespace KSP.Animation
     [FormerlySerializedAs("panickedBreathTriggerName")]
     [SerializeField]
     private string _panickedBreathTriggerParamName;
-    [SerializeField]
     [FormerlySerializedAs("panickedBreathDelayMin")]
-    private float _minPanickedBreathDelay;
     [SerializeField]
+    private float _minPanickedBreathDelay;
     [FormerlySerializedAs("panickedBreathDelayMax")]
+    [SerializeField]
     private float _maxPanickedBreathDelay;
     [SerializeField]
     private float _panickedBreathExpressionThreshold;
@@ -68,8 +68,8 @@ namespace KSP.Animation
     [SerializeField]
     private float _maxFidgetDelay;
     [FormerlySerializedAs("activateStageTriggerName")]
-    [Space(10f)]
     [SerializeField]
+    [Space(10f)]
     private string _activateStageTriggerParamName;
     [SerializeField]
     private string _transitioningStateParamName;
@@ -116,8 +116,8 @@ namespace KSP.Animation
     private string _crashedBlendStateName;
     [SerializeField]
     private string _crashedRecoveryIndexName;
-    [Tooltip("Multiplier we apply to the Vessel's Angular Acceleration in radians/second^2 with the intent of bringing it within the [-1, +1] range of animation variables before the clamp. Tune this well enough to where normal Angular Acceleration changes utilize most of the [-1, +1] range in a normal gameplay scenario. I.e., we don't want animation variables to be stuck at min -1 or max +1 during non-extreme changes.")]
     [SerializeField]
+    [Tooltip("Multiplier we apply to the Vessel's Angular Acceleration in radians/second^2 with the intent of bringing it within the [-1, +1] range of animation variables before the clamp. Tune this well enough to where normal Angular Acceleration changes utilize most of the [-1, +1] range in a normal gameplay scenario. I.e., we don't want animation variables to be stuck at min -1 or max +1 during non-extreme changes.")]
     private float _angularAccelerationMultiplier;
     [SerializeField]
     [Tooltip("Multiplier we apply to the Vessel's Linear Acceleration in meters/second^2 with the intent of bringing it within the [-1, +1] range of animation variables before the clamp. Tune this well enough to where normal Linear Acceleration changes utilize most of the [-1, +1] range in a normal gameplay scenario. I.e., we don't want animation variables to be stuck at min -1 or max +1 during non-extreme changes.")]
@@ -125,12 +125,12 @@ namespace KSP.Animation
     [Tooltip("Duration in seconds for the Damp Time while setting animation variables via Animator.SetFloat() calls. I.e., this helps smooth out abrupt value changes.")]
     [SerializeField]
     private float _animVarDampTime;
+    [ReadOnly]
+    [SerializeField]
     [Space(30f)]
-    [SerializeField]
-    [ReadOnly]
     private float _curAngularVelocity;
-    [SerializeField]
     [ReadOnly]
+    [SerializeField]
     private float _curGForce;
     private VesselBehavior _vessel;
     private Module_CrewedInterior _managingInterior;

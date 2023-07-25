@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.BuiltinDebugViewsModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -39,8 +39,8 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct DepthSettings
     {
-      [Range(0.0f, 1f)]
       [Tooltip("Scales the camera far plane before displaying the depth map.")]
+      [Range(0.0f, 1f)]
       public float scale;
 
       public static BuiltinDebugViewsModel.DepthSettings defaultSettings
@@ -58,14 +58,14 @@ namespace UnityEngine.PostProcessing
       [Range(0.0f, 1f)]
       [Tooltip("Opacity of the per-pixel motion vector colors.")]
       public float motionImageOpacity;
-      [Min(0.0f)]
       [Tooltip("Because motion vectors are mainly very small vectors, you can use this setting to make them more visible.")]
+      [Min(0.0f)]
       public float motionImageAmplitude;
       [Tooltip("Opacity for the motion vector arrows.")]
       [Range(0.0f, 1f)]
       public float motionVectorsOpacity;
-      [Range(8f, 64f)]
       [Tooltip("The arrow density on screen.")]
+      [Range(8f, 64f)]
       public int motionVectorsResolution;
       [Tooltip("Tweaks the arrows length.")]
       [Min(0.0f)]

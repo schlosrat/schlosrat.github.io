@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.GameInstance
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -47,8 +47,8 @@ namespace KSP.Game
     private LocalPlayer _localPlayer;
     private CampaignPlayerManager _campaignPlayerManager;
     private AgencyManager _agencyManager;
-    [ReadOnly]
     [SerializeField]
+    [ReadOnly]
     private AssetProvider _assets;
     [ReadOnly]
     private SaveLoadManager _saveLoadManager;
@@ -73,9 +73,9 @@ namespace KSP.Game
     private UIManager _ui;
     [SerializeField]
     private GameObject _uiManagerPrefab;
-    [Header("Audio Initializer")]
-    [ReadOnly]
     [SerializeField]
+    [ReadOnly]
+    [Header("Audio Initializer")]
     private KSPAudioInitializer _kspAudioInitializer;
     [Tooltip("Provide a reference to a prefab to determine the type of KSPAudioInitializer that will be created.")]
     [SerializeField]

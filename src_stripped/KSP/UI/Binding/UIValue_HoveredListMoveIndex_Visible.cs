@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIValue_HoveredListMoveIndex_Visible
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,8 +14,8 @@ namespace KSP.UI.Binding
 {
   public class UIValue_HoveredListMoveIndex_Visible : UIValueBinder<int>
   {
-    [Header("Assign in Prefab")]
     [Tooltip(" behaviour we want to enable or disable depending if the next element will be GREATER than our current index")]
+    [Header("Assign in Prefab")]
     public CanvasGroup movingToGrater;
     [Tooltip(" behaviour we want to enable or disable depending if the next element will be LOWER than our current index")]
     public CanvasGroup movingToLower;

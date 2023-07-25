@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: VehiclePhysics.VPAudio
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -232,8 +232,8 @@ namespace VehiclePhysics
       [Space(5f)]
       public AudioSource retarderAudioSource;
       public float retarderMaxTorque;
-      [HelpBox("Retarder Min Pitch and Max Pitch are applied to Transmission Min Rpm and Max Rpm", HelpBoxMessageType.Info)]
       [Range(0.0f, 3f)]
+      [HelpBox("Retarder Min Pitch and Max Pitch are applied to Transmission Min Rpm and Max Rpm", HelpBoxMessageType.Info)]
       public float retarderMinPitch;
       [Range(0.0f, 3f)]
       public float retarderMaxPitch;

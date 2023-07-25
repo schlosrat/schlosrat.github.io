@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.VolumeCloud.VolumeCloudBakeCubemap
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,10 +14,10 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace KSP.VolumeCloud
 {
-  [ImageEffectAllowedInSceneView]
-  [RequireComponent(typeof (Camera))]
   [ImageEffectOpaque]
+  [RequireComponent(typeof (Camera))]
   [ExecuteInEditMode]
+  [ImageEffectAllowedInSceneView]
   public class VolumeCloudBakeCubemap : EffectBase
   {
     public bool enableClouds;
@@ -48,8 +48,8 @@ namespace KSP.VolumeCloud
     private GameManager gameManager;
     private PrevisGameInstance previsGame;
     private Camera mCamera;
-    [SerializeField]
     [Header("Shader references(DONT EDIT)")]
+    [SerializeField]
     private Shader cumulusCloudShader;
     [SerializeField]
     private ComputeShader cloudsComputeShader;

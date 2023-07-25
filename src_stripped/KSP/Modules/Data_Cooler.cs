@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Cooler
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -22,22 +22,22 @@ namespace KSP.Modules
     [KSPState]
     [HideInInspector]
     public CoolerStates currentCoolerState;
-    [LocalizedField("PartModules/Cooler/Enabled")]
+    [HideInInspector]
     [KSPState(CopyToSymmetrySet = true)]
-    [HideInInspector]
+    [LocalizedField("PartModules/Cooler/Enabled")]
     public ModuleProperty<bool> coolerEnabled;
+    [HideInInspector]
+    [KSPState]
     [LocalizedField("PartModules/Cooler/Status")]
-    [HideInInspector]
-    [KSPState]
     public ModuleProperty<string> coolerStatusText;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public bool isTransformInContact;
     [KSPState]
     [HideInInspector]
     public bool hasEnoughResources;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public string[] resourceDiplayNames;
     [KSPDefinition]
     public double fluxRemoved;

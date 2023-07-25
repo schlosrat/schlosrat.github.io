@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_WheelBrakes
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,16 +17,16 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_WheelBrakes : ModuleData
   {
-    [Tooltip("The maximum brake torque that the brakes can apply.")]
     [KSPDefinition]
+    [Tooltip("The maximum brake torque that the brakes can apply.")]
     public float MaxBrakeTorque;
     [Tooltip("The brake response time to full brake force being applied in seconds.")]
     [KSPDefinition]
     public float BrakeResponse;
-    [PAMDisplayControl(SortIndex = 11)]
-    [SteppedRange(0.0f, 200f, 1f)]
     [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Wheels/Brakes")]
+    [PAMDisplayControl(SortIndex = 11)]
+    [SteppedRange(0.0f, 200f, 1f)]
     public ModuleProperty<float> BrakeTweakable;
     [KSPState]
     [HideInInspector]

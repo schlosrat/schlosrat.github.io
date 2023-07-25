@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSPVFXAudio
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Game;
 using KSP.Rendering.Planets;
 using KSP.Sim.impl;
@@ -22,8 +23,8 @@ public class KSPVFXAudio : MonoBehaviour, WaterManager.IWaterDetectObject
   private bool _isEmitting;
   private bool _isUnderwater;
   private uint _waterDetectObjectId;
-  public AK.Wwise.Event[] OnParticleStart;
-  public AK.Wwise.Event[] OnParticleStop;
+  public Event[] OnParticleStart;
+  public Event[] OnParticleStop;
 
   private GameInstance _game
   {
@@ -46,7 +47,7 @@ public class KSPVFXAudio : MonoBehaviour, WaterManager.IWaterDetectObject
   private void OnStopEmitting() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  private void PlayAudioEvents(AK.Wwise.Event[] audioEvents) => throw null;
+  private void PlayAudioEvents(Event[] audioEvents) => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   Vector3 WaterManager.IWaterDetectObject.GetPosition() => throw null;

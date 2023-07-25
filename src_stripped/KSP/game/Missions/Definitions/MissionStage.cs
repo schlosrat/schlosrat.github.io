@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.Missions.Definitions.MissionStage
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -20,24 +20,24 @@ namespace KSP.Game.Missions.Definitions
     public const int INVALID_ID = -1;
     [JsonProperty]
     public int StageID;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public string name;
     [KSPDefinition]
     [JsonProperty]
     public string description;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public bool IgnoreExceptionBranches;
     [KSPDefinition]
     public List<IMissionAction> actions;
     [KSPDefinition]
     public List<MissionBranch> branches;
+    [KSPDefinition]
     [JsonProperty]
-    [KSPDefinition]
     public string parentMissionID;
-    [KSPDefinition]
     [JsonIgnore]
+    [KSPDefinition]
     public Condition condition;
     [JsonProperty]
     [KSPDefinition]
@@ -45,8 +45,8 @@ namespace KSP.Game.Missions.Definitions
     [JsonProperty]
     [KSPState]
     public bool completed;
-    [JsonProperty]
     [KSPState]
+    [JsonProperty]
     public bool active;
     [JsonIgnore]
     [NonSerialized]

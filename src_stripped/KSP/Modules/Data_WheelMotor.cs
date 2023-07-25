@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_WheelMotor
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -24,66 +24,66 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("The amount of EC consumed when the motor is at idle. Total drain is rate * (inputApplied + idleDrain).\nRate is the rate defined in the requiredResource construct.")]
     public double idleDrain;
-    [KSPDefinition]
     [Tooltip("Maximum speed the wheel can do.")]
+    [KSPDefinition]
     public float wheelSpeedMax;
-    [PAMDisplayControl(SortIndex = 6)]
     [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Wheels/TractionControlMode")]
+    [PAMDisplayControl(SortIndex = 6)]
     public ModuleProperty<bool> autoTorque;
-    [KSPState]
     [LocalizedField("PartModules/Wheels/MotorState")]
     [PAMDisplayControl(SortIndex = 4)]
+    [KSPState]
     public ModuleProperty<string> motorStateString;
     [PAMDisplayControl(SortIndex = 3)]
     [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Wheels/MotorEnabled")]
     public ModuleProperty<bool> motorEnabled;
-    [PAMDisplayControl(SortIndex = 5)]
-    [LocalizedField("PartModules/Wheels/MotorInverted")]
     [HideInInspector]
     [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/Wheels/MotorInverted")]
+    [PAMDisplayControl(SortIndex = 5)]
     public ModuleProperty<bool> motorInverted;
-    [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 8)]
-    [LocalizedField("PartModules/Wheels/MotorLimiter")]
     [SteppedRange(0.0f, 100f, 1f)]
+    [PAMDisplayControl(SortIndex = 8)]
+    [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/Wheels/MotorLimiter")]
     public ModuleProperty<float> driveLimiter;
     [PAMDisplayControl(SortIndex = 7)]
-    [SteppedRange(0.0f, 5f, 0.1f)]
     [LocalizedField("PartModules/Wheels/TractionControl")]
+    [SteppedRange(0.0f, 5f, 0.1f)]
     [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<float> tractionControlScale;
-    [PAMDisplayControl(ExcludeFromContext = true)]
-    [SteppedRange(0.0f, 100f, 1f)]
     [LocalizedField("PartModules/Wheels/DriveOutput")]
+    [SteppedRange(0.0f, 100f, 1f)]
+    [PAMDisplayControl(ExcludeFromContext = true)]
     [KSPState]
     public ModuleProperty<float> driveOutput;
     [Tooltip("The motor torque curve.\nThe X axis is the curent velocity, the Y axis is how much torque the motor will generate at the X velocity.")]
     [KSPDefinition]
     public FloatCurve torqueCurve;
+    [KSPDefinition]
     [Tooltip("Whether the motor consumes resources.")]
-    [KSPDefinition]
     public bool useResources;
-    [KSPDefinition]
     [Tooltip("Resource required to operate this module if the above property is true. ")]
+    [KSPDefinition]
     public PartModuleResourceSetting requiredResource;
     [KSPState]
     public float MaxTorque;
     [HideInInspector]
     [KSPState]
     public bool MotorPhysXActive;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public float DriveInput;
     [HideInInspector]
     [KSPState]
     public double ResourceFractionOutput;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public Data_WheelMotor.MotorState MotorDriveState;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public bool MotorOperative;
     [KSPState]
     [HideInInspector]

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Audio.KSPAudioInitializer
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -51,7 +51,7 @@ namespace KSP.Audio
     public void Update() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void OnApplicationFocusChanged(bool focus) => throw null;
+    protected virtual void OnApplicationFocusChanged(bool focus) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void RegisterForLateAudioUpdates(GameObject go) => throw null;
@@ -63,7 +63,7 @@ namespace KSP.Audio
     public void UnregisterForLateAudioUpdates(GameObject go) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private new void LateUpdate() => throw null;
+    private void LateUpdate() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnFrameSnapPositions(Vector3d physicStepVector, List<Action> actionList) => throw null;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.FlagObject
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -15,8 +15,8 @@ namespace KSP.Game
     public const string PLANT_FLAG_PREFAB_NAME = "flag_portable";
     [Tooltip("Renderer for the cloth part of the flag.")]
     public SkinnedMeshRenderer ClothSkinnedMeshRenderer;
-    [Space(10f)]
     [Tooltip("Name for the planted flag animation state.")]
+    [Space(10f)]
     public string PlantedFlagAnimationStateName;
     [Tooltip("Name for the trigger parameter that starts the plant flag animation.")]
     public string FlagTriggerParamName;

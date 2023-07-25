@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: Shapes.FpsController
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -30,8 +30,8 @@ namespace Shapes
     private float pitch;
     private Vector2 moveInput;
     private Vector3 moveVel;
-    [Header("Sidebar Style")]
     [Range(0.0f, 3.14159274f)]
+    [Header("Sidebar Style")]
     public float ammoBarAngularSpanRad;
     [Range(0.0f, 0.05f)]
     public float ammoBarOutlineThickness;
@@ -39,8 +39,8 @@ namespace Shapes
     public float ammoBarThickness;
     [Range(0.0f, 0.2f)]
     public float ammoBarRadius;
-    [Header("Animation")]
     [Range(0.0f, 0.3f)]
+    [Header("Animation")]
     public float fireSidebarRadiusPunchAmount;
     public AnimationCurve shakeAnimX;
     public AnimationCurve shakeAnimY;

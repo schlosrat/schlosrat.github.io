@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.UI.InputFieldExtended
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,35 +18,35 @@ namespace UnityEngine.UI
     public SelectionStateEvent onStateTransition;
     [Range(0.0f, 1f)]
     public float alphaHitTestThreshold;
-    private UnityEngine.UI.SelectionState lastState;
+    private SelectionState lastState;
 
     public SelectionStateEvent OnStateTransition
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
-    public UnityEngine.UI.SelectionState CurrentSelectionState
+    public SelectionState CurrentSelectionState
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void DoStateTransition(Selectable.SelectionState state, bool instant) => throw null;
+    protected virtual void DoStateTransition(Selectable.SelectionState state, bool instant) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void Start() => throw null;
+    protected virtual void Start() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void OnDestroy() => throw null;
+    protected virtual void OnDestroy() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public override void OnSelect(BaseEventData eventData) => throw null;
+    public virtual void OnSelect(BaseEventData eventData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public override void OnDeselect(BaseEventData eventData) => throw null;
+    public virtual void OnDeselect(BaseEventData eventData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public override void OnPointerClick(PointerEventData eventData) => throw null;
+    public virtual void OnPointerClick(PointerEventData eventData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void SetText(string inString) => throw null;
@@ -55,11 +55,7 @@ namespace UnityEngine.UI
     private void OnEndEdit(string text) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private static UnityEngine.UI.SelectionState ToExtendedSelectionState(
-      Selectable.SelectionState state)
-    {
-      throw null;
-    }
+    private static SelectionState ToExtendedSelectionState(Selectable.SelectionState state) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public InputFieldExtended() => throw null;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Engine
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -22,10 +22,10 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_Engine : ModuleData
   {
-    [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 12)]
     [LocalizedField("PartModules/Engine/IndependentThrottle")]
+    [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
+    [PAMDisplayControl(SortIndex = 12)]
     public ModuleProperty<bool> IndependentThrottle;
     [LocalizedField("PartModules/Engine/EngineThrottle")]
     [KSPState(CopyToSymmetrySet = true)]
@@ -47,39 +47,39 @@ namespace KSP.Modules
     public EngineState EngineStatePriorChangeMode;
     [KSPState(CopyToSymmetrySet = false)]
     public int EngineChangingToMode;
-    [HideInInspector]
     [PAMDisplayControl(SortIndex = 4)]
+    [HideInInspector]
     [LocalizedField("PartModules/Engine/AutoSwitch")]
     [KSPState]
     public ModuleProperty<bool> EngineAutoSwitchMode;
-    [LocalizedField("PartModules/Engine/EngineThrustLimiter")]
-    [PAMDisplayControl(SortIndex = 7)]
-    [KSPState(CopyToSymmetrySet = true)]
-    [HideInInspector]
     [SteppedRange(0.0f, 100f, 1f)]
+    [HideInInspector]
+    [PAMDisplayControl(SortIndex = 7)]
+    [LocalizedField("PartModules/Engine/EngineThrustLimiter")]
+    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<float> thrustPercentage;
     public float FinalThrustValue;
     public float RealISPValue;
     private EngineState _state;
-    [KSPState]
-    [HideInInspector]
     [LocalizedField("PartModules/Engine/EngineStatus")]
     [PAMDisplayControl(SortIndex = 1)]
+    [KSPState]
+    [HideInInspector]
     public ModuleProperty<string> StatusString;
+    [HideInInspector]
     [LocalizedField("PartModules/Engine/EngineISP")]
     [PAMDisplayControl(SortIndex = 2)]
     [KSPState]
-    [HideInInspector]
     public ModuleProperty<float> StatusISPString;
-    [LocalizedField("PartModules/Engine/EngineStaging")]
     [PAMDisplayControl(SortIndex = 11)]
     [KSPState]
+    [LocalizedField("PartModules/Engine/EngineStaging")]
     public ModuleProperty<bool> stagingOn;
     [KSPState]
     [HideInInspector]
     public bool staged;
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
     [FormerlySerializedAs("flameout")]
     public bool Flameout;
     [KSPState]
@@ -89,10 +89,10 @@ namespace KSP.Modules
     [HideInInspector]
     [FormerlySerializedAs("engineShutdown")]
     public bool EngineShutdown;
-    [PAMDisplayControl(SortIndex = 9)]
+    [LocalizedField("PartModules/Engine/EngineHeat")]
     [HideInInspector]
     [KSPState]
-    [LocalizedField("PartModules/Engine/EngineHeat")]
+    [PAMDisplayControl(SortIndex = 9)]
     public ModuleProperty<float> HeatProduced;
     [HideInInspector]
     [KSPState]
@@ -105,11 +105,11 @@ namespace KSP.Modules
     [JsonIgnore]
     public List<PropellantState> PropellantStates;
     [FormerlySerializedAs("engineSpool")]
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public float EngineSpool;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public Vector3 ThrustDirRelativePartWorldSpace;
     [KSPState]
     [HideInInspector]
@@ -331,34 +331,34 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("The Thrust Transform name in the model for this engine mode.\nThis is only used to find the thrust transforms if ThrustTransformNamesMultipliers list below is left empty.")]
       public string thrustVectorTransformName;
-      [Tooltip("The Thrust Transform names and Thrust multipliers in the model for this engine mode.\nThis will override the thrustVectorTransformName field above.")]
       [KSPDefinition]
+      [Tooltip("The Thrust Transform names and Thrust multipliers in the model for this engine mode.\nThis will override the thrustVectorTransformName field above.")]
       public ThrustTransformGroup[] ThrustTransformNamesMultipliers;
       [HideInInspector]
       [JsonIgnore]
       public List<Transform> ThrustTransforms;
-      [HideInInspector]
       [JsonIgnore]
+      [HideInInspector]
       public List<float> ThrustTransformMultipliers;
-      [KSPDefinition]
       [Tooltip("Is the throttle locked in this engine mode? EG: SRB or can be changed by the player.")]
+      [KSPDefinition]
       public bool throttleLocked;
+      [KSPDefinition]
       [Tooltip("When will the engine fail from lack of propellants?\n Default = 0.1 or at 10% of required fuel or less the engine flames out.")]
-      [KSPDefinition]
       public float ignitionThreshold;
-      [Tooltip("Do we clamp the return percent to the min ratio (and never request more on followups) or do we request all always, and average?")]
       [KSPDefinition]
+      [Tooltip("Do we clamp the return percent to the min ratio (and never request more on followups) or do we request all always, and average?")]
       public bool clampPropReceived;
       [KSPDefinition]
       public double clampPropReceivedMinLowerAmount;
-      [KSPDefinition]
       [Tooltip("Can the engine be restarted in this mode? eg: SRB would be false.")]
+      [KSPDefinition]
       public bool allowRestart;
       [KSPDefinition]
       [Tooltip("Can the engine be shut down in this mode? eg: SRB would be false.")]
       public bool allowShutdown;
-      [KSPDefinition]
       [Tooltip("Can the engine be be activated when shielded from airstream? ie: inside a fairing?")]
+      [KSPDefinition]
       public bool shieldedCanActivate;
       [KSPDefinition]
       [Tooltip("A curve to determine loss or gain of thrust due to changes in atmosphere vs vacuum values are based on ISP to ATM Pressure")]
@@ -366,8 +366,8 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("should we use a thrust curve (based on resource remaining) ?")]
       public bool useThrustCurve;
-      [KSPDefinition]
       [Tooltip("The thrust curve to use if useThrustCurve is true.")]
+      [KSPDefinition]
       public FloatCurve thrustCurve;
       [KSPDefinition]
       [Tooltip("Is this engine disabled when under water?")]
@@ -381,8 +381,8 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("Maximum Thrust in kN this engine produces at 100% throttle.")]
       public float maxThrust;
-      [KSPDefinition]
       [Tooltip("What type of engine is this?")]
+      [KSPDefinition]
       public EngineType engineType;
       [KSPDefinition]
       public PropellantDefinition propellant;
@@ -395,12 +395,12 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("How quickly the engine can decrease its thrust production, as a fraction of maximum/second.")]
       public float engineDecelerationSpeed;
-      [KSPDefinition]
-      [Tooltip("Does this engine generate heat at all?")]
       [Header("Heat Variables")]
-      public bool GenerateHeat;
+      [Tooltip("Does this engine generate heat at all?")]
       [KSPDefinition]
+      public bool GenerateHeat;
       [Tooltip("Curve to adjust heat produced based on atmosphere pressure key (coordinate)\nX: Atmospheric Pressure.  1 = Kerbin Atmosphere at sea level.\nY: Defines the heat production  at the given atmosphere of pressure.")]
+      [KSPDefinition]
       public FloatCurve HeatAtmosphereCurve;
       [KSPDefinition]
       [Tooltip("Do we divide the heat produced by the flow multiplier to get the final flux?\ni.e. do we always produce the same heat for the same throttle setting?")]
@@ -409,14 +409,14 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("Determines whether the engine heats up and pushes on parts that are arranged in its exhaust path.")]
       public bool exhaustDamage;
-      [Tooltip("A multiplier to the exhaust damage radius.\n The radius is calculated from the Part Size category * this multiplier")]
       [KSPDefinition]
+      [Tooltip("A multiplier to the exhaust damage radius.\n The radius is calculated from the Part Size category * this multiplier")]
       public float exhaustDamageRadiusMultiplier;
       [KSPDefinition]
       [Tooltip("The amount of heat added from exhaust to a part, in kW.")]
       public float ExhaustDamageValue;
-      [KSPDefinition]
       [Tooltip("Whether damage from the engine exhaust is logged for debugging.")]
+      [KSPDefinition]
       public bool exhaustDamageLogEvent;
       [KSPDefinition]
       [Tooltip("Whether the engine will receive heating from the exhaust splashing back.")]
@@ -433,27 +433,27 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("The maximum amount of splashback damage that can occur.")]
       public double exhaustDamageSplashbackMaxMutliplier;
-      [KSPDefinition]
       [Tooltip("Distance from the thrust transform where exhaust damage starts to occur.")]
+      [KSPDefinition]
       public double exhaustDamageDistanceOffset;
       [KSPDefinition]
       [Tooltip("Maximum range in meters that the exhaust damage is applied.")]
       public float exhaustDamageMaxRange;
+      [KSPDefinition]
       [Tooltip("Cap on the maximum multiplier to above factors that the exhaust damage can be at.")]
-      [KSPDefinition]
       public double exhaustDamageMaxMutliplier;
-      [Tooltip("Whether this engine creates a shockwave.")]
-      [KSPDefinition]
       [Header("Exhaust Shockwave Variables")]
-      public bool exhaustShockwave;
-      [Tooltip("Whether damage from shockwave events are logged for debugging.")]
       [KSPDefinition]
+      [Tooltip("Whether this engine creates a shockwave.")]
+      public bool exhaustShockwave;
+      [KSPDefinition]
+      [Tooltip("Whether damage from shockwave events are logged for debugging.")]
       public bool exhaustShockwaveLogEvent;
       [Tooltip("Period of time between shockwaves. A value of -1 means this shockwave always occurs.")]
       [KSPDefinition]
       public float exhaustShockwaveInterval;
-      [Tooltip("Adjusts the force in Newtons a shockwave produces for damage purposes.")]
       [KSPDefinition]
+      [Tooltip("Adjusts the force in Newtons a shockwave produces for damage purposes.")]
       public double exhaustShockwaveMultiplier;
       [KSPDefinition]
       [Tooltip("Adjusts the exponent of the shockwave damage distance falloff curve.")]
@@ -461,8 +461,8 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("Distance from the thrust transform that the shockwave starts.")]
       public float exhaustShockwaveDistanceOffset;
-      [Tooltip("Maximum range in meters that shockwave damage is applied.")]
       [KSPDefinition]
+      [Tooltip("Maximum range in meters that shockwave damage is applied.")]
       public float exhaustShockwaveMaxRange;
       [KSPDefinition]
       [Tooltip("Cap on the maximum multiplier that shockwave damage can be at.")]
@@ -490,12 +490,12 @@ namespace KSP.Modules
       public double throttlingBaseClamp;
       [KSPDefinition]
       public double throttlingBaseDivisor;
-      [KSPDefinition]
       [Tooltip("Atmospheric density will change fuel flow (and thus thrust)")]
+      [KSPDefinition]
       [Header("Jet Variables")]
       public bool atmChangeFlow;
-      [KSPDefinition]
       [Tooltip("Normally thrust is proportional to density, but we allow tuning.\nTuning is especially needed because there's no stratosphere, so temperature keeps decreasing and thus speed of sound keeps decreasing.")]
+      [KSPDefinition]
       public FloatCurve atmCurve;
       [KSPDefinition]
       [Tooltip("Do we use the atm curve? If not, and atmChangeFlow is true, just use atm linearly.")]
@@ -506,17 +506,17 @@ namespace KSP.Modules
       [Tooltip("If false, we don't use the new velCurve above.")]
       [KSPDefinition]
       public bool useVelCurve;
-      [Tooltip("tunable clamp. The flow multiplier will never go below this.")]
       [KSPDefinition]
+      [Tooltip("tunable clamp. The flow multiplier will never go below this.")]
       public float CLAMP;
       [Tooltip("Same as atmCurve, but changes Isp not flow")]
       [KSPDefinition]
       public FloatCurve atmCurveIsp;
+      [KSPDefinition]
       [Tooltip("Whether to use the atmCurveIsp curve above.")]
-      [KSPDefinition]
       public bool useAtmCurveIsp;
-      [Tooltip("Same as velCurve but changes Isp not flow.")]
       [KSPDefinition]
+      [Tooltip("Same as velCurve but changes Isp not flow.")]
       public FloatCurve velCurveIsp;
       [Tooltip("Whether to use the velCurveIsp curve above.")]
       [KSPDefinition]
@@ -527,14 +527,14 @@ namespace KSP.Modules
       [KSPDefinition]
       [Tooltip("cap beyond which increases to flow multiplier aren't fully felt (start to taper off)")]
       public float flowMultCap;
+      [KSPDefinition]
       [Tooltip("Sharpness of the tapering off of flow increase beyond cap.")]
-      [KSPDefinition]
       public float flowMultCapSharpness;
+      [KSPDefinition]
       [Tooltip("Multiplier to final flow as calculated.")]
-      [KSPDefinition]
       public float multFlow;
-      [KSPDefinition]
       [Tooltip("Multiplier to final Isp as calculated.")]
+      [KSPDefinition]
       public float multIsp;
       [Header("Turbine Variables")]
       [KSPDefinition]
@@ -542,31 +542,31 @@ namespace KSP.Modules
       public float engineSpoolTime;
       [KSPDefinition]
       public float engineSpoolIdle;
-      [Tooltip("The time to wait when exiting this engine mode in seconds.")]
-      [KSPDefinition]
       [Header("Wait Time Variables")]
+      [KSPDefinition]
+      [Tooltip("The time to wait when exiting this engine mode in seconds.")]
       public float ModeExitWaitTime;
+      [KSPDefinition]
       [Tooltip("The time to wait when exiting running state in this engine mode in seconds.")]
-      [KSPDefinition]
       public float ModeExitRunningWaitTime;
+      [KSPDefinition]
       [Tooltip("The time to wait when entering this engine mode in seconds.")]
-      [KSPDefinition]
       public float ModeEnterWaitTime;
+      [KSPDefinition]
       [Tooltip("The time to wait when entering running state in this engine mode in seconds.")]
-      [KSPDefinition]
       public float ModeEnterRunningWaitTime;
+      [KSPDefinition]
       [Tooltip("The time to wait when deactivating this engine mode in seconds.")]
-      [KSPDefinition]
       public float DeactivateEngineWaitTime;
-      [Tooltip("The time to wait when activating this engine mode in seconds.")]
       [KSPDefinition]
+      [Tooltip("The time to wait when activating this engine mode in seconds.")]
       public float ActivateEngineWaitTime;
       [KSPDefinition]
       [Tooltip("Set this to true will run the Deploy/Retract animation on Activation and Deactivation of the engine.")]
       public bool RunAnimationOnActivateDeactivate;
-      [Tooltip("Should we use the Throttle ISP curve?")]
       [Header("Other Variables")]
       [KSPDefinition]
+      [Tooltip("Should we use the Throttle ISP curve?")]
       public bool useThrottleIspCurve;
       [KSPDefinition]
       [Tooltip("Modifies Isp based on throttle.\nTime is pressure in atm, value is how much throttling affects Isp\n(i.e. Isp = input * Lerp(1, throttleIspCurve, throttleIspCurveAtmStrength)")]

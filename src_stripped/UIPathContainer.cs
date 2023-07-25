@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UIPathContainer
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,24 +18,24 @@ public class UIPathContainer : MonoBehaviour
   private static readonly float SQRT_2;
   private static readonly float SQRT_3;
   [Header("Path Config")]
+  [Tooltip("0.0 = Chordal\n0.5 = Centripetal\n1 = Uniform\n See 'Centripetal Catmull-Rom Spline' wikipedia article")]
   [FormerlySerializedAs("pathParameter")]
   [SerializeField]
   [Range(0.0f, 1f)]
-  [Tooltip("0.0 = Chordal\n0.5 = Centripetal\n1 = Uniform\n See 'Centripetal Catmull-Rom Spline' wikipedia article")]
   private float _pathParameter;
-  [Tooltip("0 = Completely smooth line\n 1 = Completely straight lines")]
   [FormerlySerializedAs("pathTension")]
-  [SerializeField]
   [Range(0.0f, 1f)]
-  private float _pathTension;
+  [Tooltip("0 = Completely smooth line\n 1 = Completely straight lines")]
   [SerializeField]
-  [FormerlySerializedAs("_respectDistance")]
-  [Space]
+  private float _pathTension;
   [Tooltip("If true, moving between nodes that are far away will take 'longer' than nodes close\nIf false, moving between any two nodes takes the same 'time' regardless of distance")]
+  [Space]
+  [FormerlySerializedAs("_respectDistance")]
+  [SerializeField]
   [FormerlySerializedAs("respectDistance")]
   private bool _isDistanceRespected;
-  [FormerlySerializedAs("_runtimeCheckForChanges")]
   [SerializeField]
+  [FormerlySerializedAs("_runtimeCheckForChanges")]
   private bool _willCheckForRuntimeNodeChanges;
   private RectTransform _rectTransform;
   private bool _isCacheDirty;

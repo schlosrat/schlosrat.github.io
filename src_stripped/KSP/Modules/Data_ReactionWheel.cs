@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ReactionWheel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -20,26 +20,26 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_ReactionWheel : ModuleData
   {
-    [LocalizedField("PartModules/ReactionWheel/WheelAuthority")]
-    [PAMDisplayControl(SortIndex = 4)]
     [SteppedRange(0.0f, 1f, 0.01f)]
     [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
+    [LocalizedField("PartModules/ReactionWheel/WheelAuthority")]
+    [PAMDisplayControl(SortIndex = 4)]
     public ModuleProperty<float> WheelAuthority;
     [LocalizedField("PartModules/ReactionWheel/WheelSetting")]
+    [HideInInspector]
     [PAMDisplayControl(SortIndex = 3)]
     [KSPState(CopyToSymmetrySet = true)]
-    [HideInInspector]
     public ModuleProperty<Data_ReactionWheel.ActuatorModes> WheelActuatorMode;
+    [PAMDisplayControl(SortIndex = 2)]
     [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
     [LocalizedField("PartModules/ReactionWheel/TorqueEnabled")]
-    [PAMDisplayControl(SortIndex = 2)]
     public ModuleProperty<bool> ToggleTorque;
+    [LocalizedField("PartModules/ReactionWheel/WheelStatus")]
     [PAMDisplayControl(SortIndex = 1)]
     [KSPState]
     [HideInInspector]
-    [LocalizedField("PartModules/ReactionWheel/WheelStatus")]
     public ModuleProperty<string> StatusText;
     [KSPState]
     [HideInInspector]

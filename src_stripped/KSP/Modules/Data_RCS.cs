@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_RCS
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -21,26 +21,26 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_RCS : ModuleData
   {
-    [LocalizedField("PartModules/RCS/Status")]
-    [KSPState]
-    [PAMDisplayControl(SortIndex = 1)]
     [HideInInspector]
+    [PAMDisplayControl(SortIndex = 1)]
+    [KSPState]
+    [LocalizedField("PartModules/RCS/Status")]
     public ModuleProperty<string> ThrustStatus;
     [LocalizedField("PartModules/RCS/IsEnabled")]
     [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 2)]
     [HideInInspector]
     public ModuleProperty<bool> isEnabled;
-    [SteppedRange(0.0f, 100f, 1f)]
-    [PAMDisplayControl(SortIndex = 3)]
-    [HideInInspector]
     [LocalizedField("PartModules/RCS/RCSThrust")]
     [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 3)]
+    [HideInInspector]
+    [SteppedRange(0.0f, 100f, 1f)]
     public ModuleProperty<float> thrustPercentage;
     [HideInInspector]
+    [PAMDisplayControl(SortIndex = 4)]
     [KSPState]
     [LocalizedField("PartModules/RCS/AdvancedSettings")]
-    [PAMDisplayControl(SortIndex = 4)]
     public ModuleProperty<bool> IsAdvancedSettingsShown;
     [LocalizedField("PartModules/RCS/Pitch")]
     [KSPState(CopyToSymmetrySet = true)]
@@ -52,35 +52,35 @@ namespace KSP.Modules
     [PAMDisplayControl(SortIndex = 6)]
     [HideInInspector]
     public ModuleProperty<bool> enableYaw;
-    [LocalizedField("PartModules/RCS/Roll")]
     [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/RCS/Roll")]
+    [HideInInspector]
     [PAMDisplayControl(SortIndex = 7)]
-    [HideInInspector]
     public ModuleProperty<bool> enableRoll;
-    [HideInInspector]
-    [PAMDisplayControl(SortIndex = 8)]
     [LocalizedField("PartModules/RCS/PortStarboard")]
     [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 8)]
+    [HideInInspector]
     public ModuleProperty<bool> enableX;
+    [PAMDisplayControl(SortIndex = 9)]
     [LocalizedField("PartModules/RCS/DorsalVentral")]
     [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 9)]
     [HideInInspector]
     public ModuleProperty<bool> enableY;
-    [LocalizedField("PartModules/RCS/ForeAft")]
-    [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
+    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 10)]
+    [LocalizedField("PartModules/RCS/ForeAft")]
     public ModuleProperty<bool> enableZ;
-    [HideInInspector]
-    [PAMDisplayControl(SortIndex = 11)]
-    [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/RCS/ForeByThrottle")]
+    [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 11)]
+    [HideInInspector]
     public ModuleProperty<bool> foreByThrottle;
     [LocalizedField("PartModules/RCS/AlwaysFullAction")]
+    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 12)]
     [HideInInspector]
-    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<bool> fullThrust;
     [KSPDefinition]
     public PropellantDefinition Propellant;

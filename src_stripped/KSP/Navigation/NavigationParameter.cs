@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Navigation.NavigationParameter
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -24,21 +24,21 @@ namespace KSP.Navigation
     public SelectionPriorityMode SelectionPriorityMode;
     public bool IgnoreCovered;
     public float CoveredTolerance;
-    [Range(1f, 89f)]
     [Header("Simple mode")]
+    [Range(1f, 89f)]
     [SerializeField]
     private float _selectionAngularRange;
     [Range(0.0f, 100f)]
     [SerializeField]
     private float _offsetTolerance;
-    [Range(0.0f, 100f)]
     [SerializeField]
+    [Range(0.0f, 100f)]
     private float _directionalTolerance;
     [Header("Mixed mode")]
     [SerializeField]
     private float _mixedRadius;
-    [Header("Mixed offset tolerance mode")]
     [SerializeField]
+    [Header("Mixed offset tolerance mode")]
     private float _offsetToleranceNear;
     [SerializeField]
     private float _offsetToleranceFar;

@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSPPartParachuteAudio
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Modules;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ public class KSPPartParachuteAudio : KSPPartAudioBase
   }
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  protected override AK.Wwise.Event[] GetAudioEventForPartEvent(
+  protected override Event[] GetAudioEventForPartEvent(
     KSPPartAudioBase.PartAudioEvent partAudioEvent)
   {
     throw null;
@@ -37,17 +38,17 @@ public class KSPPartParachuteAudio : KSPPartAudioBase
   public class ParachuteSounds
   {
     [NonReorderable]
-    public AK.Wwise.Event[] onActivate;
+    public Event[] onActivate;
     [NonReorderable]
-    public AK.Wwise.Event[] onSemiDeployed;
+    public Event[] onSemiDeployed;
     [NonReorderable]
-    public AK.Wwise.Event[] onDeployed;
+    public Event[] onDeployed;
     [NonReorderable]
-    public AK.Wwise.Event[] OnCut;
+    public Event[] OnCut;
     [NonReorderable]
-    public AK.Wwise.Event[] OnStowed;
+    public Event[] OnStowed;
     [NonReorderable]
-    public AK.Wwise.Event[] onVABPartHighlight;
+    public Event[] onVABPartHighlight;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public ParachuteSounds() => throw null;

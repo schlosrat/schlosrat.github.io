@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.UIManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -26,7 +26,7 @@ namespace KSP.Game
 {
   public class UIManager : KerbalMonoBehaviour
   {
-    private const LogFilter LOGTAG = LogFilter.UI;
+    private const LogFilter LOGTAG = (LogFilter) 2097152;
     private const string LOGPREFIX = "[UIManager] ";
     [Header("UI Canvases")]
     [SerializeField]
@@ -56,8 +56,8 @@ namespace KSP.Game
     private IndicatorProvider _indicatorProvider;
     [SerializeField]
     private HighlightProvider _highlightProvider;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private ContextPanelController _contextPanelController;
     [SerializeField]
     internal Canvas _betaMark;
@@ -65,13 +65,13 @@ namespace KSP.Game
     public LoadingBar LoadingBar;
     public Curtain Curtain;
     public TextMeshProUGUI TextVersionNumber;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private ContextBindRoot _contextBindRoot;
     [Header("Zoom Mode")]
     public ZoomModeInfo ZoomModeInfo;
-    [Header("Part Outlines and MouseOver")]
     [SerializeField]
+    [Header("Part Outlines and MouseOver")]
     private string _outlinesLayerName;
     [SerializeField]
     private float mouseOverRaycastDistance;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: InputFieldFocusLockInputActions
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,7 +17,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof (InputFieldExtended))]
 public class InputFieldFocusLockInputActions : KerbalMonoBehaviour
 {
-  private const LogFilter LOG_TAG = LogFilter.UI;
+  private const LogFilter LOG_TAG = (LogFilter) 2097152;
   [Header("Input Action Maps To Disable")]
   public bool DisableAllInputActionMaps;
   [Space]
@@ -26,11 +26,11 @@ public class InputFieldFocusLockInputActions : KerbalMonoBehaviour
   public bool DisableInputActionsFlight;
   public bool DisableInputActionsMapView;
   private bool DisableInputAudio;
-  [Header("Debugging", order = 2)]
   [Space(order = 1)]
+  [Header("Debugging", order = 2)]
   public bool verboseLogging;
   private InputFieldExtended _inputField;
-  private KSP.Input.InputManager _inputManager;
+  private InputManager _inputManager;
   private GlobalInputDefinition _globalDefinition;
   private FlightInputDefinition _flightDefinition;
   private OabInputDefinition _oabDefinition;

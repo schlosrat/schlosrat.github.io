@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Video.LocalizedVideoPlayerUI
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -16,7 +16,7 @@ namespace KSP.Video
   [RequireComponent(typeof (CanvasGroup))]
   public class LocalizedVideoPlayerUI : PlaybackController
   {
-    private const LogFilter LOGTAG = LogFilter.UI;
+    private const LogFilter LOGTAG = (LogFilter) 2097152;
     private const string PREFIX = "[LocalizedVideoPlayerUI] ";
     [Header("UI Controls should be a child of this so they can be hidden/made inactive together.")]
     public CanvasGroup controlsUIGroup;

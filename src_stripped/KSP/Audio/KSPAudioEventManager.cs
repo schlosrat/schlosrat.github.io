@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Audio.KSPAudioEventManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Game;
 using KSP.Map;
 using KSP.Messages;
@@ -98,10 +99,10 @@ namespace KSP.Audio
     public void ResetAudioEventBindings() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void PostEvents(AK.Wwise.Event[] audioEventToPlay) => throw null;
+    private void PostEvents(Event[] audioEventToPlay) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void PostEvents(AK.Wwise.Event[] audioEventToPlay, GameObject sourceObject) => throw null;
+    private void PostEvents(Event[] audioEventToPlay, GameObject sourceObject) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void PostEvent(string audioEventToPlay) => throw null;
@@ -110,13 +111,13 @@ namespace KSP.Audio
     private uint GetIDFromString(string inString) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void PostAKEvents(AK.Wwise.Event[] audioEventToPlay) => throw null;
+    public static void PostAKEvents(Event[] audioEventToPlay) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static void PostAKEvent(string audioEventToPlay) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void PostAKEvents(AK.Wwise.Event[] audioEventToPlay, GameObject sourceObject) => throw null;
+    public static void PostAKEvents(Event[] audioEventToPlay, GameObject sourceObject) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static uint GetAudioIDFromString(string inString) => throw null;
@@ -494,15 +495,15 @@ namespace KSP.Audio
     public class UIEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] OnUIButtonDown;
+      public Event[] OnUIButtonDown;
       [NonReorderable]
-      public AK.Wwise.Event[] OnUIButtonHover;
+      public Event[] OnUIButtonHover;
       [NonReorderable]
-      public AK.Wwise.Event[] OnUIButtonToggle;
+      public Event[] OnUIButtonToggle;
       [NonReorderable]
-      public AK.Wwise.Event[] OnTabAwayResumeSound;
+      public Event[] OnTabAwayResumeSound;
       [NonReorderable]
-      public AK.Wwise.Event[] OnKSCBuildingClick;
+      public Event[] OnKSCBuildingClick;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public UIEvents() => throw null;
@@ -512,17 +513,17 @@ namespace KSP.Audio
     public class VehicleEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] OnVehicleActivated;
+      public Event[] OnVehicleActivated;
       [NonReorderable]
-      public AK.Wwise.Event[] OnVehicleDeactivated;
+      public Event[] OnVehicleDeactivated;
       [NonReorderable]
-      public AK.Wwise.Event[] OnVehicleDocked;
+      public Event[] OnVehicleDocked;
       [NonReorderable]
-      public AK.Wwise.Event[] OnVehicleUndocked;
+      public Event[] OnVehicleUndocked;
       [NonReorderable]
-      public AK.Wwise.Event[] OnActiveVehicleIsARover;
+      public Event[] OnActiveVehicleIsARover;
       [NonReorderable]
-      public AK.Wwise.Event[] OnActiveVehicleIsNotARover;
+      public Event[] OnActiveVehicleIsNotARover;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public VehicleEvents() => throw null;
@@ -532,63 +533,63 @@ namespace KSP.Audio
     public class GameFlowEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] onGameEnterKSC;
+      public Event[] onGameEnterKSC;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameEnterVAB;
+      public Event[] onGameEnterVAB;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameEnterDeepSpace;
+      public Event[] onGameEnterDeepSpace;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameActivateMonument;
+      public Event[] onGameActivateMonument;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLaunch;
+      public Event[] onGameLaunch;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLaunchAtmos;
+      public Event[] onGameLaunchAtmos;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLaunchLiftoff;
+      public Event[] onGameLaunchLiftoff;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLaunchOrbit;
+      public Event[] onGameLaunchOrbit;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLandingSafe;
+      public Event[] onGameLandingSafe;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLose;
+      public Event[] onGameLose;
       [NonReorderable]
-      public AK.Wwise.Event[] onGamePaused;
+      public Event[] onGamePaused;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameUnpaused;
+      public Event[] onGameUnpaused;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameEnterTutorial;
+      public Event[] onGameEnterTutorial;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLeaveTutorial;
+      public Event[] onGameLeaveTutorial;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameQuickSave;
+      public Event[] onGameQuickSave;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameQuickLoad;
+      public Event[] onGameQuickLoad;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationLaunchpad;
+      public Event[] onSetLaunchLocationLaunchpad;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationLaunchpad_1;
+      public Event[] onSetLaunchLocationLaunchpad_1;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationLaunchpad_2;
+      public Event[] onSetLaunchLocationLaunchpad_2;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationLaunchpad_3;
+      public Event[] onSetLaunchLocationLaunchpad_3;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationLaunchpad_4;
+      public Event[] onSetLaunchLocationLaunchpad_4;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationRunway;
+      public Event[] onSetLaunchLocationRunway;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationRunway_1;
+      public Event[] onSetLaunchLocationRunway_1;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationRunway_2;
+      public Event[] onSetLaunchLocationRunway_2;
       [NonReorderable]
-      public AK.Wwise.Event[] onSetLaunchLocationOrbital;
+      public Event[] onSetLaunchLocationOrbital;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameEnterTrainingCenter;
+      public Event[] onGameEnterTrainingCenter;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLeaveTrainingCenter;
+      public Event[] onGameLeaveTrainingCenter;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameEnterMissionControl;
+      public Event[] onGameEnterMissionControl;
       [NonReorderable]
-      public AK.Wwise.Event[] onGameLeaveMissionControl;
+      public Event[] onGameLeaveMissionControl;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public GameFlowEvents() => throw null;
@@ -598,51 +599,51 @@ namespace KSP.Audio
     public class VABSoundEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] onPartsListCategorySelected;
+      public Event[] onPartsListCategorySelected;
       [NonReorderable]
-      public AK.Wwise.Event[] onPartsListCategoryHover;
+      public Event[] onPartsListCategoryHover;
       [NonReorderable]
-      public AK.Wwise.Event[] onPartsListPartHover;
+      public Event[] onPartsListPartHover;
       [NonReorderable]
-      public AK.Wwise.Event[] onFavoritePartsListPartHover;
+      public Event[] onFavoritePartsListPartHover;
       [NonReorderable]
-      public AK.Wwise.Event[] onButtonLaunch;
+      public Event[] onButtonLaunch;
       [NonReorderable]
-      public AK.Wwise.Event[] onBttonToolToggle;
+      public Event[] onBttonToolToggle;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPartHighlight;
+      public Event[] onEditorPartHighlight;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPartSnapped;
+      public Event[] onEditorPartSnapped;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPlaceConnected;
+      public Event[] onEditorPlaceConnected;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPlaceNonConnected;
+      public Event[] onEditorPlaceNonConnected;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPartDisconnected;
+      public Event[] onEditorPartDisconnected;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPartGrabbed;
+      public Event[] onEditorPartGrabbed;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPartDropped;
+      public Event[] onEditorPartDropped;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorPlacePartTrash;
+      public Event[] onEditorPlacePartTrash;
       [NonReorderable]
-      public AK.Wwise.Event[] onEditorHoverPartTrash;
+      public Event[] onEditorHoverPartTrash;
       [NonReorderable]
-      public AK.Wwise.Event[] onVABCutsceneEnd;
+      public Event[] onVABCutsceneEnd;
       [NonReorderable]
-      public AK.Wwise.Event[] onVABEnterBlueprintMode;
+      public Event[] onVABEnterBlueprintMode;
       [NonReorderable]
-      public AK.Wwise.Event[] onVABExitBlueprintMode;
+      public Event[] onVABExitBlueprintMode;
       [NonReorderable]
-      public AK.Wwise.Event[] onVABBlueprintModeChangeOrientation;
+      public Event[] onVABBlueprintModeChangeOrientation;
       [NonReorderable]
-      public AK.Wwise.Event[] onVABCubeHoverStart;
+      public Event[] onVABCubeHoverStart;
       [NonReorderable]
-      public AK.Wwise.Event[] onVABCubeHoverStop;
+      public Event[] onVABCubeHoverStop;
       [NonReorderable]
-      public AK.Wwise.Event[] OnStagingStackBeginDrag;
+      public Event[] OnStagingStackBeginDrag;
       [NonReorderable]
-      public AK.Wwise.Event[] OnStagingStackEndDrag;
+      public Event[] OnStagingStackEndDrag;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public VABSoundEvents() => throw null;
@@ -652,9 +653,9 @@ namespace KSP.Audio
     public class TimeWarpLoop
     {
       [NonReorderable]
-      public AK.Wwise.Event TimeWarpStarted;
+      public Event TimeWarpStarted;
       [NonReorderable]
-      public AK.Wwise.Event TimeWarpFinished;
+      public Event TimeWarpFinished;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public TimeWarpLoop() => throw null;
@@ -682,11 +683,11 @@ namespace KSP.Audio
     public class FlightSoundEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] onPartHighlight;
+      public Event[] onPartHighlight;
       [NonReorderable]
-      public AK.Wwise.Event[] onPartMenuOpened;
+      public Event[] onPartMenuOpened;
       [NonReorderable]
-      public AK.Wwise.Event[] onPartMenuClosed;
+      public Event[] onPartMenuClosed;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public FlightSoundEvents() => throw null;
@@ -696,9 +697,9 @@ namespace KSP.Audio
     public class GizmoManipulationLoop
     {
       [NonReorderable]
-      public AK.Wwise.Event[] onStarted;
+      public Event[] onStarted;
       [NonReorderable]
-      public AK.Wwise.Event[] onFinished;
+      public Event[] onFinished;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public GizmoManipulationLoop() => throw null;
@@ -708,19 +709,19 @@ namespace KSP.Audio
     public class MapModeEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] onShowManeuverPopup;
+      public Event[] onShowManeuverPopup;
       [NonReorderable]
-      public AK.Wwise.Event[] onHideManeuverPopup;
+      public Event[] onHideManeuverPopup;
       [NonReorderable]
-      public AK.Wwise.Event[] onWarpTo;
+      public Event[] onWarpTo;
       [NonReorderable]
-      public AK.Wwise.Event[] onGizmoCreated;
+      public Event[] onGizmoCreated;
       [NonReorderable]
-      public AK.Wwise.Event[] onGizmoDeleted;
+      public Event[] onGizmoDeleted;
       [NonReorderable]
-      public AK.Wwise.Event[] onGizmoExpanded;
+      public Event[] onGizmoExpanded;
       [NonReorderable]
-      public AK.Wwise.Event[] onGizmoCollpased;
+      public Event[] onGizmoCollpased;
       public KSPAudioEventManager.GizmoManipulationLoop onGizmoPropgradeManipulated;
       public KSPAudioEventManager.GizmoManipulationLoop onGizmoRetrogradeManipulated;
       public KSPAudioEventManager.GizmoManipulationLoop onGizmoRadialOutManipulated;
@@ -730,13 +731,13 @@ namespace KSP.Audio
       public KSPAudioEventManager.GizmoManipulationLoop onGizmoDrag;
       public KSPAudioEventManager.GizmoManipulationLoop onManeuverScrub;
       [NonReorderable]
-      public AK.Wwise.Event[] onManeuverETA_RemaingingTime_3;
+      public Event[] onManeuverETA_RemaingingTime_3;
       [NonReorderable]
-      public AK.Wwise.Event[] onManeuverETA_RemaingingTime_2;
+      public Event[] onManeuverETA_RemaingingTime_2;
       [NonReorderable]
-      public AK.Wwise.Event[] onManeuverETA_RemaingingTime_1;
+      public Event[] onManeuverETA_RemaingingTime_1;
       [NonReorderable]
-      public AK.Wwise.Event[] onManeuverETA_RemaingingTime_0;
+      public Event[] onManeuverETA_RemaingingTime_0;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public MapModeEvents() => throw null;
@@ -746,17 +747,17 @@ namespace KSP.Audio
     public class NotificationEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] OnPassiveNotificationOpen;
+      public Event[] OnPassiveNotificationOpen;
       [NonReorderable]
-      public AK.Wwise.Event[] OnPassiveNotificationClose;
+      public Event[] OnPassiveNotificationClose;
       [NonReorderable]
-      public AK.Wwise.Event[] OnAlertNotificationOpen;
+      public Event[] OnAlertNotificationOpen;
       [NonReorderable]
-      public AK.Wwise.Event[] OnAlertNotificationClose;
+      public Event[] OnAlertNotificationClose;
       [NonReorderable]
-      public AK.Wwise.Event[] OnAdminNotificationOpen;
+      public Event[] OnAdminNotificationOpen;
       [NonReorderable]
-      public AK.Wwise.Event[] OnAdminNotificationClose;
+      public Event[] OnAdminNotificationClose;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public NotificationEvents() => throw null;
@@ -766,9 +767,9 @@ namespace KSP.Audio
     public class ResourceEvents
     {
       [NonReorderable]
-      public AK.Wwise.Event[] OnResourceTransfertStart;
+      public Event[] OnResourceTransfertStart;
       [NonReorderable]
-      public AK.Wwise.Event[] OnResourceTransfertStop;
+      public Event[] OnResourceTransfertStop;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public ResourceEvents() => throw null;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_CompoundPart
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -19,26 +19,26 @@ namespace KSP.Modules
   [Serializable]
   public class Data_CompoundPart : ModuleData
   {
-    [KSPDefinition]
     [Tooltip("Name of the starting anchor object to place at the start anchor end of the compound part.\nIf this is blank then it is assumed the whole part prefab model is placed at the start anchor end.\nYou Must supply both a StartAnchorName and EndAnchorName to use this feature.")]
+    [KSPDefinition]
     public string StartAnchorName;
     [KSPDefinition]
     [Tooltip("Transform where to place the linker/connector object at the start point of the compound part.\nIf this is blank the linker will be placed at the start anchor part transform position")]
     public string StartAnchorTransform;
-    [KSPDefinition]
     [Tooltip("Optional Transform that will be made to look at the other Anchor.")]
+    [KSPDefinition]
     public string StartAnchorLookTransform;
-    [KSPDefinition]
     [Tooltip("Name of the ending anchor object to place at the end anchor end of the compound part.\nIf this is blank then it is assumed the whole part prefab model is placed at the end anchor end.\nYou Must supply both a StartAnchorName and EndAnchorName to use this feature.")]
-    public string EndAnchorName;
     [KSPDefinition]
+    public string EndAnchorName;
     [Tooltip("Transform where to place the linker/connector object at the end point of the compound part.\nIf this is blank the linker will be placed at the end anchor part transform position")]
+    [KSPDefinition]
     public string EndAnchorTransform;
     [Tooltip("Optional Transform that will be made to look at the other Anchor.")]
     [KSPDefinition]
     public string EndAnchorLookTransform;
-    [KSPDefinition]
     [Tooltip("Name of the the linker/connector object transform which should be part of the part model.")]
+    [KSPDefinition]
     public string LinkerName;
     [KSPDefinition]
     public float LinkerMinLength;

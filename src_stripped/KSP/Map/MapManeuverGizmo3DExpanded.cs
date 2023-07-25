@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.MapManeuverGizmo3DExpanded
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,13 +14,13 @@ namespace KSP.Map
   public class MapManeuverGizmo3DExpanded : KerbalMonoBehaviour
   {
     private static readonly Vector3 DEFAULT_ARROW_SCALE;
-    [SerializeField]
     [Header("General")]
+    [SerializeField]
     private GameObject _center;
     [SerializeField]
     private GameObject _orientationIndicator;
-    [SerializeField]
     [Header("Directional Groups")]
+    [SerializeField]
     private GameObject _prograde;
     [SerializeField]
     private GameObject _retrograde;
@@ -32,8 +32,8 @@ namespace KSP.Map
     private GameObject _radialIn;
     [SerializeField]
     private GameObject _radialOut;
-    [SerializeField]
     [Header("Specific Visuals")]
+    [SerializeField]
     private float _maxFeedbackScale;
     [SerializeField]
     private float _feedbackSensitivity;

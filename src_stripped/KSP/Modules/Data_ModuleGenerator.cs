@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ModuleGenerator
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,17 +18,17 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_ModuleGenerator : ModuleData
   {
-    [PAMDisplayControl(SortIndex = 2)]
     [LocalizedField("PartModules/Generator/AlternatorOutput")]
+    [PAMDisplayControl(SortIndex = 2)]
     [KSPState]
     public ModuleProperty<double> GeneratorOutput;
-    [PAMDisplayControl(SortIndex = 3)]
+    [KSPState]
     [LocalizedField("PartModules/Generator/GeneratorHeat")]
-    [KSPState]
+    [PAMDisplayControl(SortIndex = 3)]
     public ModuleProperty<double> HeatGenerated;
-    [KSPState]
     [LocalizedField("PartModules/ResourceConverter/Status")]
     [PAMDisplayControl(SortIndex = 1)]
+    [KSPState]
     public ModuleProperty<string> DisplayStatus;
     [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Generator/ToggleGenerator")]
@@ -38,8 +38,8 @@ namespace KSP.Modules
     [LocalizedField("PartModules/Generator/Lifetime")]
     [PAMDisplayControl(SortIndex = 4)]
     public ModuleProperty<string> DisplayLifetime;
-    [KSPState]
     [Header("General Parameters")]
+    [KSPState]
     public bool GeneratorIsActive;
     [KSPDefinition]
     [Tooltip("This should not be enabled at the same time as AutoShutdown")]
@@ -48,9 +48,9 @@ namespace KSP.Modules
     public GeneratorStatus Status;
     [KSPDefinition]
     public PartModuleResourceSetting ResourceSetting;
+    [Tooltip("Whether the output should be reduced with time")]
     [Header("Decay Controls")]
     [KSPDefinition]
-    [Tooltip("Whether the output should be reduced with time")]
     public bool UseDecay;
     [KSPDefinition]
     [Tooltip("How long the generator takes to decay completely, in seconds")]
@@ -61,8 +61,8 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("If true, the decay timer starts as soon as the part is spawned. If false, the decay timer starts when MET starts")]
     public bool StartDecayImmediately;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public bool IsDecaying;
     [KSPState]
     [HideInInspector]
@@ -71,15 +71,15 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("This should be 0 if IsAlwaysActive is enabled")]
     public double FluxGenerated;
-    [Tooltip("This should not be enabled at the same time as IsAlwaysActive")]
     [KSPDefinition]
+    [Tooltip("This should not be enabled at the same time as IsAlwaysActive")]
     public bool AutoShutdown;
     [KSPDefinition]
     public double AutoShutdownTemperature;
     [KSPDefinition]
     public double SafeOperationTemperature;
-    [Header("Emissive Controls")]
     [KSPDefinition]
+    [Header("Emissive Controls")]
     public bool UseEmissive;
     [KSPDefinition]
     public bool UseEmissiveTemperature;

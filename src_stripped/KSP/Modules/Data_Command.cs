@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Command
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -25,9 +25,9 @@ namespace KSP.Modules
     [KSPState]
     [PAMDisplayControl(SortIndex = 2)]
     public ModuleProperty<CommandControlState> controlStatus;
-    [LocalizedField("PartModules/Command/CommandEnabled")]
-    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 3)]
+    [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/Command/CommandEnabled")]
     [HideInInspector]
     public ModuleProperty<bool> isCommandEnabled;
     [LocalizedField("PartModules/Command/ActiveControlName")]
@@ -39,9 +39,9 @@ namespace KSP.Modules
     [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 6)]
     public ModuleProperty<bool> hibernate;
-    [KSPState(CopyToSymmetrySet = true)]
-    [LocalizedField("PartModules/Command/HibernateInWarp")]
     [PAMDisplayControl(SortIndex = 7)]
+    [LocalizedField("PartModules/Command/HibernateInWarp")]
+    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<bool> hibernateInWarp;
     [KSPDefinition]
     public int minimumCrew;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Heatshield
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,13 +17,13 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_Heatshield : ModuleData
   {
-    [KSPState]
-    [PAMDisplayControl(SortIndex = 1)]
     [LocalizedField("PartModules/HeatShield/Status")]
-    public ModuleProperty<string> StatusDisplay;
+    [PAMDisplayControl(SortIndex = 1)]
     [KSPState]
-    [PAMDisplayControl(SortIndex = 2)]
+    public ModuleProperty<string> StatusDisplay;
     [LocalizedField("Ablator")]
+    [PAMDisplayControl(SortIndex = 2)]
+    [KSPState]
     public ModuleProperty<string> ResourceDisplay;
     [KSPState]
     public bool IsDeployed;
@@ -33,8 +33,8 @@ namespace KSP.Modules
     public float AblatorRatio;
     public double AblatorTonnesPerSecond;
     public double FluxRemoved;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public HeatshieldStatus CurrentStatus;
     [KSPState]
     public bool IsAblatorExhausted;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ProceduralWingShaderData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,8 +14,8 @@ namespace KSP.OAB
 {
   public class ProceduralWingShaderData : KerbalMonoBehaviour
   {
-    [SerializeField]
     [Header("Visible Meshes")]
+    [SerializeField]
     private SkinnedMeshRenderer flap;
     [SerializeField]
     private SkinnedMeshRenderer flapGuard;
@@ -48,8 +48,8 @@ namespace KSP.OAB
     private Transform rotControlL;
     [SerializeField]
     private Transform rotControlR;
-    [SerializeField]
     [Header("Projection Matrices")]
+    [SerializeField]
     private Transform projWingFront;
     [SerializeField]
     private Transform projWingBack;

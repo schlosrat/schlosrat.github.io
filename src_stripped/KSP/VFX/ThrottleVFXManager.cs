@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.VFX.ThrottleVFXManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -29,14 +29,14 @@ namespace KSP.VFX
     [FormerlySerializedAs("engineUsesDiscreteBursts")]
     [HideInInspector]
     public bool EngineUsesDiscreteBursts;
+    [HideInInspector]
     [FormerlySerializedAs("triggerDiscreteAnimation")]
-    [HideInInspector]
     public bool TriggerDiscreteAnimation;
-    [HideInInspector]
     [FormerlySerializedAs("animTriggerName")]
-    public string AnimTriggerName;
     [HideInInspector]
+    public string AnimTriggerName;
     [FormerlySerializedAs("isSolidFuelBooster")]
+    [HideInInspector]
     public bool IsSolidFuelBooster;
     public AtmosphereTransitionVFXHandling AtmoTransVFXHandler;
     private float _solidBoosterThrustValue;

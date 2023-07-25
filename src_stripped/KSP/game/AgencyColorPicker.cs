@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.AgencyColorPicker
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -26,8 +26,8 @@ namespace KSP.Game
     private const int MIN_WIDTH = 1;
     [SerializeField]
     private ContextBindRoot _bindRoot;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private AgencyColorPicker.ColorSettings _baseColor;
     [SerializeField]
     private AgencyColorPicker.ColorSettings _accentColor;
@@ -48,23 +48,23 @@ namespace KSP.Game
     private string _selectedAccentColorKey;
     [SerializeField]
     private string _setAsNewAgencyColorsKey;
+    [SerializeField]
     [Space(5f)]
     [Header("UI Buttons Highlight")]
-    [SerializeField]
     private Image _baseColorHighlight;
     [SerializeField]
     private Image _accentColorHighlight;
+    [SerializeField]
     [Space(5f)]
     [Header("UI Binding")]
-    [SerializeField]
     private UIValueBinder _baseColorPickerPreview;
     [SerializeField]
     private UIValueBinder _accentColorPickerPreview;
     [SerializeField]
     [Header("Images")]
     private RawImage _colorPickerImage;
-    [Header("Agency Flag Manager")]
     [SerializeField]
+    [Header("Agency Flag Manager")]
     private AgencyFlagManager _agencyFlagManager;
     private AgencyColorPicker.ColorModes _xColorMode;
     private AgencyColorPicker.ColorModes _yColorMode;

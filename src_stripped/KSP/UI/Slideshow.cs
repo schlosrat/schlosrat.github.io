@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Slideshow
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -20,36 +20,36 @@ namespace KSP.UI
   public class Slideshow : LoopVideoPlayer
   {
     protected int currentSlideIndex;
+    [SerializeField]
     [Header("Prefab References")]
-    [SerializeField]
     private ContextBindRoot _bindRoot;
+    [SerializeField]
     [Tooltip("Title Text")]
-    [SerializeField]
     protected TextMeshProUGUI _title;
-    [SerializeField]
     [Tooltip("Content Body Text")]
+    [SerializeField]
     protected TextMeshProUGUI _body;
     [Tooltip("This button is for closing the slideshow")]
     [SerializeField]
     protected ButtonExtended _closeButton;
+    [SerializeField]
     [Tooltip("Reference of the Parent Transform for the slide dot carousel.")]
-    [SerializeField]
     protected Transform _slideDotCarousel_T;
+    [SerializeField]
     [Tooltip("Reference of the slide dot for the carousel, that will get duplicated as needed.")]
-    [SerializeField]
     protected GameObject _slideDotPrefab;
-    [SerializeField]
     [Tooltip("This button is for cycling back the slides")]
+    [SerializeField]
     protected ButtonExtended _backButton;
-    [SerializeField]
     [Tooltip("This button is for cycling forward the slides")]
+    [SerializeField]
     protected ButtonExtended _nextButton;
-    [SerializeField]
     [Tooltip("This button is for opening and closing child windows.")]
-    protected KSP2UIWindow[] _childWindows;
-    [Header("Parameters")]
     [SerializeField]
+    protected KSP2UIWindow[] _childWindows;
     [Tooltip("True if slides will have wrap/loop behaviour, ie. next on last slide will display the first one.")]
+    [SerializeField]
+    [Header("Parameters")]
     protected bool _wrapsSlides;
     protected SlideData _currentSlide;
     protected List<SlideData> _slides;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.EyeAdaptationModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -54,8 +54,8 @@ namespace UnityEngine.PostProcessing
       public bool dynamicKeyValue;
       [Tooltip("Use \"Progressive\" if you want the auto exposure to be animated. Use \"Fixed\" otherwise.")]
       public EyeAdaptationModel.EyeAdaptationType adaptationType;
-      [Tooltip("Adaptation speed from a dark to a light environment.")]
       [Min(0.0f)]
+      [Tooltip("Adaptation speed from a dark to a light environment.")]
       public float speedUp;
       [Min(0.0f)]
       [Tooltip("Adaptation speed from a light to a dark environment.")]

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ProceduralPart
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -31,8 +31,8 @@ namespace KSP.Modules
     [HideInInspector]
     [KSPState]
     public Dictionary<string, float> sliderData;
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
     public Dictionary<string, bool> toggleData;
     [HideInInspector]
     [KSPState]
@@ -40,18 +40,18 @@ namespace KSP.Modules
     [KSPState]
     [HideInInspector]
     public float MassModifierAmount;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public float ResourceCostModifierAmount;
-    [JsonIgnore]
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
+    [JsonIgnore]
     public DragCube MeshCube;
     [Tooltip("Part density is the initially set mass from the part prefab / the initial default mesh area.\nIt is used to modify the mass and cost of the procedural part based on the shape set by the player at runtime.\nIf you do not set this value (or reset it to -1) it will be calculated and set when you export the prefab to the part JSON file.")]
     [KSPDefinition]
     public float BasePartDensity;
-    [JsonIgnore]
     [KSPState]
+    [JsonIgnore]
     [HideInInspector]
     public ProceduralPartDefinition ProceduralPartDefinition;
     [KSPDefinition]
@@ -59,8 +59,8 @@ namespace KSP.Modules
     [Tooltip("Set this string to the Name of the slider in the OffsetSliderSystem that you want to use to set the joint positions along for a multi-joint part that is set to use a single axis.")]
     [KSPDefinition]
     public string PartMultiJointScaleSliderKey;
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
     public float PartMultiJointLength;
 
     public override System.Type ModuleType

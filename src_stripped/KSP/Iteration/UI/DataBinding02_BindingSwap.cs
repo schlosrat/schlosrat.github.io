@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Iteration.UI.DataBinding02_BindingSwap
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -19,8 +19,8 @@ namespace KSP.Iteration.UI
 {
   public class DataBinding02_BindingSwap : MonoBehaviour
   {
-    [Header("UI Elements")]
     [SerializeField]
+    [Header("UI Elements")]
     private TMP_Text textInfo;
     [SerializeField]
     private Button buttonPrev;
@@ -32,18 +32,18 @@ namespace KSP.Iteration.UI
     private Button buttonRemove;
     [SerializeField]
     private Button buttonRandomize;
-    [SerializeField]
     [Header("UI Binding")]
+    [SerializeField]
     private RectTransform entityUILocator;
     [SerializeField]
     private UIData_DemoEntity entityUIPrefab;
     private UIData_DemoEntity entityUIInstance;
-    [SerializeField]
     [Header("The Index in the list we are displaying")]
+    [SerializeField]
     private int listIndex;
     private int lastIndex;
-    [SerializeField]
     [Header("The List of data we are displaying from")]
+    [SerializeField]
     private List<DemoEntity> entityList;
     private Property<IDemoEntity> selectedEntity;
 

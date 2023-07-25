@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.OrbitRendererConfiguration
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,30 +14,30 @@ namespace KSP.Map
   [CreateAssetMenu(fileName = "OrbitRendererConfiguration", menuName = "ScriptableObjects/Orbit Renderer Configuration")]
   public class OrbitRendererConfiguration : ScriptableObject
   {
-    [Space]
     [Range(0.0f, 32f)]
+    [Space]
     public int MaxIterations;
     public SubdivisionHeuristic SubdivisionHeuristics;
-    [Header("Subdivision Heuristic: TriangleArea")]
     [Range(1f, 40f)]
+    [Header("Subdivision Heuristic: TriangleArea")]
     public double TriangleAreaMin;
     [Header("Subdivision Heuristic: ScreenSizeRatio")]
     [Range(1f, 0.0f)]
     public double ScreenSizeRatioMax;
-    [Range(1f, 0.0f)]
     [Header("Subdivision Heuristic: SquaredPerimeter")]
+    [Range(1f, 0.0f)]
     public double SquarePerimeterSizeRatioMin;
     [Range(1f, 40f)]
     public double SquaredPerimeterMin;
-    [Min(4f)]
     [Space]
+    [Min(4f)]
     public int SeedPointsPerPeriod;
     [Min(32f)]
     public int MaxSeedPointsToGenerate;
     [Min(32f)]
     public int MaxCountPerPeriod;
-    [Space]
     [Min(0.0f)]
+    [Space]
     public float GenerationDelay;
     [Header("Point Rendering", order = 1)]
     [Space(order = 0)]

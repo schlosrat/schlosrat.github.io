@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: EdyCommonTools.RuntimeCanvasBase
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,29 +17,29 @@ namespace EdyCommonTools
     public RuntimeCanvasBase.Settings settings;
     [HideInInspector]
     public Font defaultFont;
+    [HideInInspector]
     [FormerlySerializedAs("width")]
-    [HideInInspector]
     public int old_width;
-    [HideInInspector]
     [FormerlySerializedAs("height")]
+    [HideInInspector]
     public int old_height;
-    [HideInInspector]
     [FormerlySerializedAs("rect")]
-    public Rect old_rect;
     [HideInInspector]
+    public Rect old_rect;
     [FormerlySerializedAs("gridX")]
+    [HideInInspector]
     public float old_gridX;
     [HideInInspector]
     [FormerlySerializedAs("gridY")]
     public float old_gridY;
-    [HideInInspector]
     [FormerlySerializedAs("autoResetBackground")]
+    [HideInInspector]
     public bool old_autoResetBackground;
     [HideInInspector]
     [FormerlySerializedAs("font")]
     public Font old_font;
-    [FormerlySerializedAs("fontSize")]
     [HideInInspector]
+    [FormerlySerializedAs("fontSize")]
     public int old_fontSize;
     private TextureCanvas m_canvas;
     private GUIStyle m_style;

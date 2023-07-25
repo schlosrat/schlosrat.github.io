@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: VehiclePhysics.VPAudioExtras
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -29,8 +29,8 @@ namespace VehiclePhysics
     public float maxDistance;
     [Tooltip("Volume is attenuated progressively until this distance")]
     public float attenuationDistance;
-    [Tooltip("Volume at Attenuation Distance. Beyond this distance is faded out to zero at Max Distance")]
     [Range(0.0f, 1f)]
+    [Tooltip("Volume at Attenuation Distance. Beyond this distance is faded out to zero at Max Distance")]
     public float attenuatedVolume;
     [Range(0.0f, 1f)]
     [Header("Low Pass Filter")]

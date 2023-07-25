@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyBehaviorValues
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -46,8 +46,8 @@ namespace KSP.OAB
     [Range(2f, 64f)]
     [Tooltip("Interval of Grid Divisions for the Heavy grid lines.")]
     public int gridDivisions;
-    [Range(2f, 10f)]
     [Tooltip("Interval of Grid Subdivisions for the Light grid lines.")]
+    [Range(2f, 10f)]
     public int gridSubdivisions;
     [Tooltip("Distance from Environment Center to place the Blueprint Grid.")]
     public float blueprintDistance;

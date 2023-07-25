@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.Line3DIntersect
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -26,8 +26,8 @@ namespace KSP.Map
     private float _closeBeginTrigger;
     [SerializeField]
     private float _farLeaveTrigger;
-    [SerializeField]
     [Header("Links")]
+    [SerializeField]
     private Camera _castCamera;
     [SerializeField]
     private Image _flag;
@@ -43,8 +43,8 @@ namespace KSP.Map
     private TextMeshProUGUI _isVisibleText;
     [SerializeField]
     private GameObject _indicatorTemplate;
-    [SerializeField]
     [Header("Stress test")]
+    [SerializeField]
     private bool _stressTest;
     [SerializeField]
     private int _sressPoints;

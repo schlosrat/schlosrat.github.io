@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Audio.AkWwiseEventPlayback
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Logging;
 using KSP.Video;
 using System.Runtime.CompilerServices;
@@ -15,12 +16,12 @@ namespace KSP.Audio
 {
   public class AkWwiseEventPlayback : MonoBehaviour, IPlaybackControllable
   {
-    private const LogFilter LOGTAG = LogFilter.Audio;
+    private const LogFilter LOGTAG = (LogFilter) 8;
     private const string PREFIX = "[VideoPlayer][AkWwiseEventPlayback] ";
     private const float FRAME_TIME_60_HZ = 0.0166666675f;
     [SerializeField]
     [Header("If set, will play this audio on Start")]
-    private AK.Wwise.Event _initialAudioData;
+    private Event _initialAudioData;
     private float _cachedDurationSeconds;
     private float _cachedFrameTimePercent;
     private float _storedTimeSeconds;
@@ -30,7 +31,7 @@ namespace KSP.Audio
     private float _lastTimeSeconds;
     private const uint EVENT_CALLBACK_FLAG = 540016649;
 
-    public AK.Wwise.Event audioData
+    public Event audioData
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       [MethodImpl(MethodImplOptions.NoInlining)] private set => throw null;
@@ -71,7 +72,7 @@ namespace KSP.Audio
     private void Update() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetAudioData(AK.Wwise.Event audioData) => throw null;
+    public void SetAudioData(Event audioData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining | MethodImplOptions.AggressiveInlining)]
     public void ClearAudioData() => throw null;
@@ -146,7 +147,7 @@ namespace KSP.Audio
     private class PlayingIDCookie
     {
       public uint playingID;
-      public AK.Wwise.Event eventSound;
+      public Event eventSound;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public PlayingIDCookie() => throw null;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.UI.Flyout
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -22,7 +22,7 @@ namespace UnityEngine.UI
     public float AlphaHitTestThreshold;
     private GameObject _dropdown;
     private Canvas _buttonCanvas;
-    private UnityEngine.UI.SelectionState lastState;
+    private SelectionState lastState;
     public SelectionStateEvent onStateTransition;
     public UnityEvent<bool> IsOpen;
 
@@ -31,7 +31,7 @@ namespace UnityEngine.UI
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
-    public UnityEngine.UI.SelectionState CurrentSelectionState
+    public SelectionState CurrentSelectionState
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -42,28 +42,28 @@ namespace UnityEngine.UI
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void Awake() => throw null;
+    protected virtual void Awake() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void OnEnable() => throw null;
+    protected virtual void OnEnable() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override GameObject CreateDropdownList(GameObject template) => throw null;
+    protected virtual GameObject CreateDropdownList(GameObject template) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void DestroyDropdownList(GameObject obj) => throw null;
+    protected virtual void DestroyDropdownList(GameObject obj) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected override void DoStateTransition(Selectable.SelectionState state, bool instant) => throw null;
+    protected virtual void DoStateTransition(Selectable.SelectionState state, bool instant) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private UnityEngine.UI.SelectionState ToExtendedSelectionState(Selectable.SelectionState state) => throw null;
+    private SelectionState ToExtendedSelectionState(Selectable.SelectionState state) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public override void OnPointerEnter(PointerEventData eventData) => throw null;
+    public virtual void OnPointerEnter(PointerEventData eventData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public override void OnPointerExit(PointerEventData eventData) => throw null;
+    public virtual void OnPointerExit(PointerEventData eventData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public Flyout() => throw null;

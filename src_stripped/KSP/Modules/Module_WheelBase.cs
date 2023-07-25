@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Module_WheelBase
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -26,8 +26,8 @@ namespace KSP.Modules
   {
     [SerializeField]
     protected Data_WheelBase dataWheelBase;
-    [ReadOnly]
     [Header("Runtime Variables Below here - Do not change")]
+    [ReadOnly]
     [SerializeField]
     private KSPWheelController _wheel;
     private bool _VFXCollisionTracked;
@@ -80,11 +80,11 @@ namespace KSP.Modules
     private Vector3 fixFwd;
     private Vector3 error;
     private Vector3 errorLast;
+    [SerializeField]
     [FormerlySerializedAs("kd")]
-    [SerializeField]
     private float driftDifferenceErrorCorrectionMul;
-    [FormerlySerializedAs("ki")]
     [SerializeField]
+    [FormerlySerializedAs("ki")]
     private float driftErrorCorrectionMul;
     private Module_WheelBase.DriftCorrectionState driftCorrectionState;
 

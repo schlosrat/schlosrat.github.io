@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: AnimationBehaviour_PhaseGraph
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -15,9 +15,9 @@ public class AnimationBehaviour_PhaseGraph : StateMachineBehaviour
   [SerializeField]
   [Tooltip("The name of the variable that represents the phase percentage goal float in the Anim Tree.")]
   private string phaseGoalName;
+  [SerializeField]
   [Tooltip("Time in seconds to travel from one extreme to the other. Bigger is slower.")]
   [FormerlySerializedAs("phaseChangeSpeed")]
-  [SerializeField]
   private float phaseChangeTime;
   [Tooltip("If on, will set the initial position of the phase graph to whatever the first goal is.")]
   [SerializeField]
@@ -28,14 +28,14 @@ public class AnimationBehaviour_PhaseGraph : StateMachineBehaviour
   [Tooltip("The Name of the Game Object to act as the source of the sounds. Will default to the root of the object if left empty or not found.")]
   [SerializeField]
   private string AudioCall_Source_Name;
+  [SerializeField]
   [Tooltip("When the phasegraph was stopped, and starts transitioning from a LOWER number to a HIGHER number, this sound will play.")]
-  [SerializeField]
   private string AudioCall_Forward_Starting;
+  [SerializeField]
   [Tooltip("When the phasegraph reaches its goal, from a LOWER number to a HIGHER number, this sound will play.")]
-  [SerializeField]
   private string AudioCall_Forward_Stopping;
-  [Tooltip("When the phasegraph was stopped, and starts transitioning from a HIGHER number to a LOWER number, this sound will play.")]
   [SerializeField]
+  [Tooltip("When the phasegraph was stopped, and starts transitioning from a HIGHER number to a LOWER number, this sound will play.")]
   private string AudioCall_Backward_Starting;
   [Tooltip("When the phasegraph reaches its goal, from a HIGHER number to a LOWER number, this sound will play.")]
   [SerializeField]

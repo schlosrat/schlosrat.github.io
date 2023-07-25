@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIValue_ReadNumberValueTape
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,24 +14,24 @@ namespace KSP.UI.Binding
 {
   public class UIValue_ReadNumberValueTape : UIValueBinder<float>
   {
-    [Tooltip("The transform to be rotated by the bound value")]
     [SerializeField]
+    [Tooltip("The transform to be rotated by the bound value")]
     private RectTransform _dialTransform;
     [SerializeField]
     [Tooltip("Labels to use for display on the dial")]
     private TextMeshProUGUI[] _labels;
-    [SerializeField]
     [Tooltip("Degrees of seperation between labels")]
-    private float _labelDegreeInterval;
-    [Tooltip("The value interval to display between labels")]
     [SerializeField]
+    private float _labelDegreeInterval;
+    [SerializeField]
+    [Tooltip("The value interval to display between labels")]
     private float _valueInterval;
     [SerializeField]
     private bool _clockwiseRotation;
     [SerializeField]
     private string numberTextFormat;
-    [Tooltip("Unit Text Field is optional")]
     [SerializeField]
+    [Tooltip("Unit Text Field is optional")]
     private float startSwitchThreshold;
     [SerializeField]
     private UIValue_ReadNumber_TextUnits.UnitEntry[] unitEntryArray;

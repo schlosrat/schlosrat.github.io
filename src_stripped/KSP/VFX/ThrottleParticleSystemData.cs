@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.VFX.ThrottleParticleSystemData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -39,16 +39,16 @@ namespace KSP.VFX
     public bool XYZSizePressureMode;
     public TRANSITIONTYPES sizeType;
     public TRANSITIONTYPES sizexyzType;
+    [FormerlySerializedAs("startSizeMin")]
     [SerializeField]
     [Range(0.0f, 1000f)]
-    [FormerlySerializedAs("startSizeMin")]
     public float sizeMin;
     [Range(0.0f, 1000f)]
     [FormerlySerializedAs("startSizeMax")]
     [SerializeField]
     public float sizeMax;
-    [SerializeField]
     [FormerlySerializedAs("startSizeMinXYZ")]
+    [SerializeField]
     public Vector3 sizeMinXYZ;
     [SerializeField]
     [FormerlySerializedAs("startSizeMaxXYZ")]
@@ -66,17 +66,17 @@ namespace KSP.VFX
     public Rect sizeCurveYRange;
     public Rect sizeCurveZRange;
     public Rect pressureCurveRange;
-    [FormerlySerializedAs("controlEmission")]
     [SerializeField]
+    [FormerlySerializedAs("controlEmission")]
     public bool controlEmissionOverTime;
     public TRANSITIONTYPES emissionOverTimeType;
-    [SerializeField]
+    [Range(0.0f, 1000f)]
     [FormerlySerializedAs("emissionMin")]
-    [Range(0.0f, 1000f)]
-    public float emissionOverTimeMin;
-    [Range(0.0f, 1000f)]
     [SerializeField]
+    public float emissionOverTimeMin;
     [FormerlySerializedAs("emissionMax")]
+    [SerializeField]
+    [Range(0.0f, 1000f)]
     public float emissionOverTimeMax;
     public AnimationCurve emissionOverTimeCurve;
     public Rect emissionOverTimeCurveRange;

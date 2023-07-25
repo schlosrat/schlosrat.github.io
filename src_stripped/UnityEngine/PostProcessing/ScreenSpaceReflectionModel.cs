@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.ScreenSpaceReflectionModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -43,17 +43,17 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct IntensitySettings
     {
-      [Range(0.0f, 2f)]
       [Tooltip("Nonphysical multiplier for the SSR reflections. 1.0 is physically based.")]
+      [Range(0.0f, 2f)]
       public float reflectionMultiplier;
       [Tooltip("How far away from the maxDistance to begin fading SSR.")]
       [Range(0.0f, 1000f)]
       public float fadeDistance;
-      [Tooltip("Amplify Fresnel fade out. Increase if floor reflections look good close to the surface and bad farther 'under' the floor.")]
       [Range(0.0f, 1f)]
+      [Tooltip("Amplify Fresnel fade out. Increase if floor reflections look good close to the surface and bad farther 'under' the floor.")]
       public float fresnelFade;
-      [Tooltip("Higher values correspond to a faster Fresnel fade as the reflection changes from the grazing angle.")]
       [Range(0.1f, 10f)]
+      [Tooltip("Higher values correspond to a faster Fresnel fade as the reflection changes from the grazing angle.")]
       public float fresnelFadePower;
     }
 
@@ -67,17 +67,17 @@ namespace UnityEngine.PostProcessing
       [Tooltip("Maximum reflection distance in world units.")]
       [Range(0.1f, 300f)]
       public float maxDistance;
-      [Tooltip("Max raytracing length.")]
       [Range(16f, 1024f)]
+      [Tooltip("Max raytracing length.")]
       public int iterationCount;
-      [Tooltip("Log base 2 of ray tracing coarse step size. Higher traces farther, lower gives better quality silhouettes.")]
       [Range(1f, 16f)]
+      [Tooltip("Log base 2 of ray tracing coarse step size. Higher traces farther, lower gives better quality silhouettes.")]
       public int stepSize;
-      [Range(0.01f, 10f)]
       [Tooltip("Typical thickness of columns, walls, furniture, and other objects that reflection rays might pass behind.")]
+      [Range(0.01f, 10f)]
       public float widthModifier;
-      [Range(0.1f, 8f)]
       [Tooltip("Blurriness of reflections.")]
+      [Range(0.1f, 8f)]
       public float reflectionBlur;
       [Tooltip("Disable for a performance gain in scenes where most glossy objects are horizontal, like floors, water, and tables. Leave on for scenes with glossy vertical objects.")]
       public bool reflectBackfaces;
@@ -86,8 +86,8 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct ScreenEdgeMask
     {
-      [Tooltip("Higher = fade out SSRR near the edge of the screen so that reflections don't pop under camera motion.")]
       [Range(0.0f, 1f)]
+      [Tooltip("Higher = fade out SSRR near the edge of the screen so that reflections don't pop under camera motion.")]
       public float intensity;
     }
 

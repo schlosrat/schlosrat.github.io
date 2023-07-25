@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: AmplifyImpostors.AmplifyImpostorAsset
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -37,20 +37,20 @@ namespace AmplifyImpostors
     [SerializeField]
     [Range(1f, 32f)]
     public int HorizontalFrames;
+    [SerializeField]
     [Range(1f, 33f)]
-    [SerializeField]
     public int VerticalFrames;
-    [SerializeField]
     [Range(0.0f, 64f)]
+    [SerializeField]
     public int PixelPadding;
-    [SerializeField]
     [Range(4f, 16f)]
+    [SerializeField]
     public int MaxVertices;
+    [SerializeField]
     [Range(0.0f, 0.2f)]
-    [SerializeField]
     public float Tolerance;
-    [Range(0.0f, 1f)]
     [SerializeField]
+    [Range(0.0f, 1f)]
     public float NormalScale;
     [SerializeField]
     public Vector2[] ShapePoints;

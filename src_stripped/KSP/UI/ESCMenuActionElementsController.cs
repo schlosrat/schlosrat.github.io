@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.ESCMenuActionElementsController
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,17 +17,17 @@ namespace KSP.UI
   {
     private const string STOP_MULTIPLAYER_SESSION_LOCALIZATION_KEY = "Stop Multiplayer Session";
     private const string LEAVE_MULTIPLAYER_SESSION_LOCALIZATION_KEY = "Leave Multiplayer Session";
-    [SerializeField]
     [Header("Remove For MP-Only Modes")]
+    [SerializeField]
     private GameObject[] _hideForMPOnly;
-    [SerializeField]
     [Header("Remove For Read-Only Modes")]
+    [SerializeField]
     private GameObject[] _hideForReadOnly;
+    [SerializeField]
     [Header("Quit To Main Menu Button")]
-    [SerializeField]
     private GameObject _quitToMainMenu;
-    [Header("Recover Vessel Button")]
     [SerializeField]
+    [Header("Recover Vessel Button")]
     private GameObject _recoverVesselButton;
     [Header("Revert to Launchpad Button")]
     [SerializeField]
@@ -36,15 +36,15 @@ namespace KSP.UI
     private Image _revertToLaunchpadIcon;
     [SerializeField]
     private TextMeshProUGUI _revertToLaunchpadText;
-    [SerializeField]
     [Header("Revert to VAB Button")]
+    [SerializeField]
     private CanvasGroup _revertToVABCanvasGroup;
     [SerializeField]
     private Image _revertToVABIcon;
     [SerializeField]
     private TextMeshProUGUI _revertToVABText;
-    [Header("Tracking Station Button")]
     [SerializeField]
+    [Header("Tracking Station Button")]
     private CanvasGroup _trackingStationCanvasGroup;
     [SerializeField]
     private Image _trackingStationIcon;

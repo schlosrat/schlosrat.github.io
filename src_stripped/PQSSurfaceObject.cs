@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: PQSSurfaceObject
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -29,20 +29,20 @@ public class PQSSurfaceObject : KerbalMonoBehaviour
   public bool CreateTransformModel;
   [FormerlySerializedAs("doCulling")]
   public bool ColliderCulling;
-  [Tooltip("Distance in meters from Observer to disable colliders")]
   [FormerlySerializedAs("cullingDistance")]
+  [Tooltip("Distance in meters from Observer to disable colliders")]
   public float ColliderCullingDistance;
-  [Tooltip("Optional Bounds for testing culling distances")]
   [FormerlySerializedAs("rendererForBoundsCulling")]
+  [Tooltip("Optional Bounds for testing culling distances")]
   public Renderer RendererForBoundsCulling;
   [Header("LODs")]
   public PQSSurfaceObject.LODGameObject[] GameObjectsToLOD;
-  [HideInInspector]
-  [SerializeField]
   [Header("Debug")]
-  private CelestialBodyBehavior _celestialBody;
   [SerializeField]
   [HideInInspector]
+  private CelestialBodyBehavior _celestialBody;
+  [HideInInspector]
+  [SerializeField]
   private PQS _sphere;
   [SerializeField]
   [HideInInspector]

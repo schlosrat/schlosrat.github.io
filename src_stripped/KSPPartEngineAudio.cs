@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSPPartEngineAudio
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Messages;
 using KSP.Modules;
 using System;
@@ -46,7 +47,7 @@ public class KSPPartEngineAudio : KSPPartAudioBase
   }
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  protected override AK.Wwise.Event[] GetAudioEventForPartEvent(
+  protected override Event[] GetAudioEventForPartEvent(
     KSPPartAudioBase.PartAudioEvent partAudioEvent)
   {
     throw null;
@@ -116,19 +117,19 @@ public class KSPPartEngineAudio : KSPPartAudioBase
   public class EngineSounds
   {
     [NonReorderable]
-    public AK.Wwise.Event[] onEngineStartEvent;
+    public Event[] onEngineStartEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onEngineStopEvent;
+    public Event[] onEngineStopEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onDestroyEvent;
+    public Event[] onDestroyEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onOutOfFuelEvents;
+    public Event[] onOutOfFuelEvents;
     [NonReorderable]
-    public AK.Wwise.Event[] onVABPartHighlight;
+    public Event[] onVABPartHighlight;
     [NonReorderable]
-    public AK.Wwise.Event[] onGimbalStartMoving;
+    public Event[] onGimbalStartMoving;
     [NonReorderable]
-    public AK.Wwise.Event[] onGimbalStopMoving;
+    public Event[] onGimbalStopMoving;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public EngineSounds() => throw null;
@@ -138,13 +139,13 @@ public class KSPPartEngineAudio : KSPPartAudioBase
   public class SecondaryEngineSounds
   {
     [NonReorderable]
-    public AK.Wwise.Event[] onEngineSecondModeStartEvent;
+    public Event[] onEngineSecondModeStartEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onEngineSecondModeStopEvent;
+    public Event[] onEngineSecondModeStopEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onEngineModeChangedFromFirstToSecond;
+    public Event[] onEngineModeChangedFromFirstToSecond;
     [NonReorderable]
-    public AK.Wwise.Event[] onEngineModeChangedFromSecondToFirst;
+    public Event[] onEngineModeChangedFromSecondToFirst;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public SecondaryEngineSounds() => throw null;

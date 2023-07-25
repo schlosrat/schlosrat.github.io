@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.StagingUIPartSymHighlight
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,20 +17,20 @@ namespace KSP.UI.Binding
 {
   public class StagingUIPartSymHighlight : UIValueBinder<bool>
   {
+    [SerializeField]
     [Tooltip("Highlight prefab, set in inspector!")]
-    [SerializeField]
     private GameObject highlightPrefab;
+    [SerializeField]
     [Tooltip("Set this as it's required to read properly the spacing between elements")]
-    [SerializeField]
     private VerticalLayoutGroup verticalLayoutGroup;
-    [Tooltip("(OAB) Property key for getting the part Symmetry Eet from the part being highlighted")]
     [SerializeField]
+    [Tooltip("(OAB) Property key for getting the part Symmetry Eet from the part being highlighted")]
     private string _symmetrySetKey;
     [Tooltip("(Flight) Sim side Property key for getting the part Symmetry Eet from the part being highlighted")]
     [SerializeField]
     private string _symmetrySetKeyFlight;
-    [Tooltip("Property key is for letting this folder know it has a part with sym highlighted.")]
     [SerializeField]
+    [Tooltip("Property key is for letting this folder know it has a part with sym highlighted.")]
     private string _partWithSymHighlightedKey;
     private Property<bool> _partWithsymHighlightValue;
     private KSP.OAB.SymmetrySet _partSymmetrySetOAB;

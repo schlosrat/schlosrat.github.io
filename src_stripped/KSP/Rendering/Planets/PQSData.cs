@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Rendering.Planets.PQSData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -24,8 +24,8 @@ namespace KSP.Rendering.Planets
     [Tooltip("Setting for non-spherical planets, to push the view frustrum of the planet beyond the normal radius")]
     [Range(1f, 2f)]
     public float viewBoundsMultiplier;
-    [Tooltip("Setting for non-spherical planets, to push the view plane beyond that of the normal values, handle with care")]
     [Range(0.1f, 3f)]
+    [Tooltip("Setting for non-spherical planets, to push the view plane beyond that of the normal values, handle with care")]
     public float[] viewPlaneCutoffMultipliers;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -42,8 +42,8 @@ namespace KSP.Rendering.Planets
       public int uvScale;
       [Tooltip("Height displacement for local height map")]
       public float heightScale;
-      [Tooltip("Subzone filter values for the R/G/B/A channels of the sub-zone mask")]
       [HideInInspector]
+      [Tooltip("Subzone filter values for the R/G/B/A channels of the sub-zone mask")]
       public Vector4 subZoneFilter;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
@@ -99,8 +99,8 @@ namespace KSP.Rendering.Planets
       [Tooltip("Dithering Scale")]
       [Range(0.001f, 10f)]
       public float DitheringScale;
-      [Tooltip("Offsets for direction value used for UV calculation")]
       [Header("Pole Distortion Settings")]
+      [Tooltip("Offsets for direction value used for UV calculation")]
       public Vector2 PoleDirectionOffset;
       [Tooltip("Offset for the v parameter to fix distortion near the poles")]
       public float UVOffsetV;

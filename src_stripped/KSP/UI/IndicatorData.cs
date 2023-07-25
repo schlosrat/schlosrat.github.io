@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.IndicatorData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.OAB;
 using KSP.Sim.impl;
 using KSP.Video;
@@ -30,8 +31,8 @@ namespace KSP.UI
     public Sprite mainSprite;
     public Texture rawImageTexture;
     public Vector2 imageSize;
-    [Header("Settings")]
     [Tooltip("True: Keep animating any animated content in the Image components even if off-screen")]
+    [Header("Settings")]
     public bool animateOffScreen;
     [Tooltip("True: Disables the body text component")]
     public bool showTitleOnly;
@@ -52,8 +53,8 @@ namespace KSP.UI
     public string prefabKey;
     public string tagName;
     [Header("Audio")]
-    public AK.Wwise.Event OnIndicatorAppearAudioEvent;
-    public AK.Wwise.Event OnIndicatorDisappearAudioEvent;
+    public Event OnIndicatorAppearAudioEvent;
+    public Event OnIndicatorDisappearAudioEvent;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void ClearData() => throw null;

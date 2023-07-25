@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.UI.SliderExtended
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Messages;
 using System.Runtime.CompilerServices;
 using TMPro;
@@ -16,9 +17,9 @@ namespace UnityEngine.UI
   public class SliderExtended : Slider, IPointerDownHandler, IEventSystemHandler, IPointerUpHandler
   {
     [NonReorderable]
-    public AK.Wwise.Event[] OnSliderStartedAudioEvents;
+    public Event[] OnSliderStartedAudioEvents;
     [NonReorderable]
-    public AK.Wwise.Event[] OnSliderFinishedAudioEvents;
+    public Event[] OnSliderFinishedAudioEvents;
     public TextMeshProUGUI TextLabelTop;
     public TextMeshProUGUI TextLabelBottom;
     public bool DisplayTopText;
@@ -90,7 +91,7 @@ namespace UnityEngine.UI
     protected override void OnDidApplyAnimationProperties() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected void PostAKEventsWithPositionalRTPC(AK.Wwise.Event[] EventsToPost) => throw null;
+    protected void PostAKEventsWithPositionalRTPC(Event[] EventsToPost) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public SliderExtended() => throw null;

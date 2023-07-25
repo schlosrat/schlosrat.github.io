@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.CampaignLoadMenu
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -28,15 +28,15 @@ namespace KSP.Game
     [SerializeField]
     [Header("Campaign Menu")]
     private CampaignMenu _campaignMenu;
-    [SerializeField]
     [Header("Load Game...")]
+    [SerializeField]
     private RectTransform _saveGamesListParent;
     [SerializeField]
     private SaveLoadDialogFileEntry _fileEntryPrefab;
     [SerializeField]
     private SyncToggleGroupWithChildren _loadGameToggleGroup;
-    [Header("Save Game...")]
     [SerializeField]
+    [Header("Save Game...")]
     private TextMeshProUGUI _lastPlayedLabel;
     [SerializeField]
     private TextMeshProUGUI _gameTimeLabel;
@@ -48,11 +48,11 @@ namespace KSP.Game
     private TextMeshProUGUI _gameTimeText;
     [SerializeField]
     private TextMeshProUGUI _gameModeText;
+    [SerializeField]
     [Header("Save Game...")]
-    [SerializeField]
     private int _excessDotsAmount;
-    [SerializeField]
     [Header("WarningModal")]
+    [SerializeField]
     private CanvasGroup _warningModal;
     private GameObjectPool<SaveLoadDialogFileEntry> _fileEntryPrefabPool;
     private List<GameObject> _fileEntryUIControls;

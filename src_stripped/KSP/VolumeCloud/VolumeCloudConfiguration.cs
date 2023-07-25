@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.VolumeCloud.VolumeCloudConfiguration
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -62,8 +62,8 @@ namespace KSP.VolumeCloud
     public List<VolumeCloudConfiguration.CumulusData> cumulusList;
     [SerializeField]
     public List<int> cumulusIndex;
-    [Range(0.0f, 1f)]
     [Header("Shape - Modifiers")]
+    [Range(0.0f, 1f)]
     public float cloudCoverageModifier;
     [Range(1f, 10000f)]
     public float detailVariationRange;
@@ -100,8 +100,8 @@ namespace KSP.VolumeCloud
     public float sunsetStart;
     [Range(-1f, 1f)]
     public float sunsetEnd;
-    [Range(0.01f, 50f)]
     [Header("Lighting - Multi Scattering Approximation")]
+    [Range(0.01f, 50f)]
     public float lightPenetrateDistance;
     [Range(0.01f, 1f)]
     private float multiScatteringScattering;
@@ -184,8 +184,8 @@ namespace KSP.VolumeCloud
     public bool enableFadeout;
     public float startFadeoutHeight;
     public float endFadeoutHeight;
-    [Range(1f, 100f)]
     [Header("Debug-Datas")]
+    [Range(1f, 100f)]
     public float debugData1;
     [Range(0.0f, 1000f)]
     public float debugData2;

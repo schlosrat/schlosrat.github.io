@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: SplashScreensManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,14 +14,14 @@ using UnityEngine.InputSystem;
 
 public class SplashScreensManager : MonoBehaviour
 {
+  [SerializeField]
   [Tooltip("Set the first animation to be displayed.")]
-  [SerializeField]
   private DOTweenAnimation _firstScreenAnimation;
+  [SerializeField]
   [Tooltip("Percentage in which the animations time scale will be multiplied duration will be reduced")]
-  [SerializeField]
   private float onSkipAnimationTimeMultiplier;
-  [Tooltip("Input we wish to use for being able to skip the splash screens")]
   [SerializeField]
+  [Tooltip("Input we wish to use for being able to skip the splash screens")]
   private InputActionReference skipSplashScreensInput;
   [SerializeField]
   private float safeGuardTimeToAutoDisableThis;

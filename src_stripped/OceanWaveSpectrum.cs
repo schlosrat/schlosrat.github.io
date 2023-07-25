@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: OceanWaveSpectrum
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -19,11 +19,11 @@ public class OceanWaveSpectrum : ScriptableObject
   public float _fetch;
   public static readonly float MIN_POWER_LOG;
   public static readonly float MAX_POWER_LOG;
-  [Tooltip("Variance of wave directions, in degrees")]
   [Range(0.0f, 180f)]
+  [Tooltip("Variance of wave directions, in degrees")]
   public float _waveDirectionVariance;
-  [Header("Gravity")]
   [Tooltip("Gravity")]
+  [Header("Gravity")]
   [Range(0.0f, 100f)]
   public float _gravity;
   [Range(0.0f, 25f)]
@@ -32,8 +32,8 @@ public class OceanWaveSpectrum : ScriptableObject
   [SerializeField]
   [HideInInspector]
   private float[] _powerLog;
-  [HideInInspector]
   [SerializeField]
+  [HideInInspector]
   public bool[] _powerDisabled;
   [HideInInspector]
   public float[] _chopScales;
@@ -41,10 +41,10 @@ public class OceanWaveSpectrum : ScriptableObject
   public float[] _gravityScales;
   [HideInInspector]
   public float _smallWavelengthMultiplier;
-  [Range(0.0f, 10f)]
-  [Tooltip("Multiplier")]
   [SerializeField]
   [HideInInspector]
+  [Range(0.0f, 10f)]
+  [Tooltip("Multiplier")]
   private float _multiplier;
 
   [MethodImpl(MethodImplOptions.NoInlining)]

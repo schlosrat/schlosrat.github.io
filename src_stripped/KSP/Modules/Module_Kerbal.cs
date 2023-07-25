@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Module_Kerbal
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -33,27 +33,27 @@ namespace KSP.Modules
     [Tooltip("CapsuleCollider for the character.")]
     public CapsuleCollider CharacterCapsuleCollider;
     [Tooltip("InteractPreset type to listen for on Airlock Use.")]
-    [Header("Interact")]
     [SerializeField]
+    [Header("Interact")]
     public InteractPresetAssetReference AirlockInteractPreset;
     [SerializeField]
     [Tooltip("InteractPreset type to listen for to start climbing a Ladder.")]
     public InteractPresetAssetReference LadderStartClimbInteractPreset;
-    [SerializeField]
     [Tooltip("InteractPreset type to listen for on Flag Removal.")]
+    [SerializeField]
     public InteractPresetAssetReference FlagRemovalInteractPreset;
+    [SerializeField]
     [Header("Climb")]
     [Tooltip("InteractPreset type to listen for to stop climbing or let go of a Ladder.")]
-    [SerializeField]
     public InteractPresetAssetReference LadderStopClimbInteractPreset;
     [Tooltip("InteractPreset type to listen for to clamber onto a platform available at the top of a Ladder.")]
     [SerializeField]
     public InteractPresetAssetReference LadderTopClamberInteractPreset;
-    [SerializeField]
     [Tooltip("InteractPreset type to listen for to clamber onto a Step or Low Obstacle.")]
+    [SerializeField]
     public InteractPresetAssetReference StepClamberInteractPreset;
-    [HideInInspector]
     [Header("Jetpack")]
+    [HideInInspector]
     public JetpackResourceManager JetpackResourceManager;
     [SerializeField]
     protected Data_Kerbal dataKerbal;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Animation.AnimationManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -20,14 +20,14 @@ namespace KSP.Animation
     [SerializeField]
     [FormerlySerializedAs("debugMode")]
     public bool DebugMode;
+    [SerializeField]
     [FormerlySerializedAs("emoteData")]
-    [SerializeField]
     protected AnimationManager.AnimSetData _emoteData;
+    [SerializeField]
     [FormerlySerializedAs("emoteAltData")]
-    [SerializeField]
     protected AnimationManager.AnimSetData _emoteAltData;
-    [SerializeField]
     [FormerlySerializedAs("fidgetData")]
+    [SerializeField]
     protected AnimationManager.AnimSetData _fidgetData;
     [SerializeField]
     [FormerlySerializedAs("fidgetAltData")]
@@ -46,17 +46,17 @@ namespace KSP.Animation
     [FormerlySerializedAs("character")]
     [HideInInspector]
     public Kerbal3DModel Character3DModel;
-    [FormerlySerializedAs("globalPlaybackMulName")]
     [SerializeField]
+    [FormerlySerializedAs("globalPlaybackMulName")]
     protected string _globalPlaybackMulParamName;
     [SerializeField]
     [FormerlySerializedAs("canFidgetParamName")]
     protected string _canFidgetParamName;
+    [SerializeField]
     [FormerlySerializedAs("eyeOffsetParamName")]
-    [SerializeField]
     protected string _eyeOffsetParamName;
-    [FormerlySerializedAs("eyeSymmetryParamName")]
     [SerializeField]
+    [FormerlySerializedAs("eyeSymmetryParamName")]
     protected string _eyeSymmetryParamName;
     protected int _globalPlaybackMulID;
     protected int _canFidgetID;

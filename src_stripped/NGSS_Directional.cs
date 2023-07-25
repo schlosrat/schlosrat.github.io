@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: NGSS_Directional
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -12,8 +12,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class NGSS_Directional : MonoBehaviour
 {
-  [Tooltip("If disabled, NGSS Directional shadows replacement will be removed from Graphics settings when OnDisable is called in this component.")]
   [Header("MAIN SETTINGS")]
+  [Tooltip("If disabled, NGSS Directional shadows replacement will be removed from Graphics settings when OnDisable is called in this component.")]
   public bool NGSS_KEEP_ONDISABLE;
   [Tooltip("Check this option if you don't need to update shadows variables at runtime, only once when scene loads.\nUseful to save some CPU cycles.")]
   public bool NGSS_NO_UPDATE_ON_PLAY;
@@ -33,30 +33,30 @@ public class NGSS_Directional : MonoBehaviour
   [Header("PCSS")]
   [Tooltip("PCSS Requires inline sampling and SM3.5.\nProvides Area Light soft-shadows.\nDisable it if you are looking for PCF filtering (uniform soft-shadows) which runs with SM3.0.")]
   public bool NGSS_PCSS_ENABLED;
+  [Range(0.0f, 2f)]
   [Tooltip("How soft shadows are when close to caster.")]
-  [Range(0.0f, 2f)]
   public float NGSS_PCSS_SOFTNESS_NEAR;
-  [Tooltip("How soft shadows are when far from caster.")]
   [Range(0.0f, 2f)]
+  [Tooltip("How soft shadows are when far from caster.")]
   public float NGSS_PCSS_SOFTNESS_FAR;
   [Header("NOISE")]
-  [Range(0.0f, 1f)]
   [Tooltip("If zero = 100% noise.\nIf one = 100% dithering.\nUseful when fighting banding.")]
+  [Range(0.0f, 1f)]
   public int NGSS_NOISE_TO_DITHERING_SCALE;
   [Tooltip("If you set the noise scale value to something less than 1 you need to input a noise texture.\nRecommended noise textures are blue noise signals.")]
   public Texture2D NGSS_NOISE_TEXTURE;
   [Range(1f, 3f)]
-  [Tooltip("How many iterations the Denoiser algorithm should do.\nRequires NGSS Shadows Libraries to be installed and Cascaded Shadows to be enabled in the Editor Graphics Settings.")]
   [Header("DENOISER")]
+  [Tooltip("How many iterations the Denoiser algorithm should do.\nRequires NGSS Shadows Libraries to be installed and Cascaded Shadows to be enabled in the Editor Graphics Settings.")]
   public int NGSS_DENOISER_ITERATIONS;
-  [Range(0.0f, 1f)]
   [Tooltip("Overall Denoiser softness.")]
+  [Range(0.0f, 1f)]
   public float NGSS_DENOISER_BLUR;
-  [Range(0.05f, 1f)]
   [Tooltip("The amount of shadow edges the Denoiser can tolerate during denoising.")]
+  [Range(0.05f, 1f)]
   public float NGSS_DENOISER_EDGE_TOLERANCE;
-  [Header("BIAS")]
   [Tooltip("This estimates receiver slope using derivatives and tries to tilt the filtering kernel along it.\nHowever, when doing it in screenspace from the depth texture can leads to shadow artifacts.\nThus it is disabled by default.")]
+  [Header("BIAS")]
   public bool NGSS_RECEIVER_PLANE_BIAS;
   [Header("GLOBAL SETTINGS")]
   [Tooltip("Enable it to let NGSS_Directional control global shadows settings through this component.\nDisable it if you want to manage shadows settings through Unity Quality & Graphics Settings panel.")]
@@ -68,8 +68,8 @@ public class NGSS_Directional : MonoBehaviour
   [Range(0.0f, 4f)]
   [Tooltip("Number of cascades the shadowmap will have. This option affects your cascade counts in Quality Settings.\nYou should entierly disable Cascaded Shadows (Graphics Menu) if you are targeting low-end devices.")]
   public int GLOBAL_CASCADES_COUNT;
-  [Tooltip("Used for the cascade stitching algorithm.\nCompute cascades splits distribution exponentially in a x*2^n form.\nIf 4 cascades, set this value to 0.1. If 2 cascades, set it to 0.25.\nThis option affects your cascade splits in Quality Settings.")]
   [Range(0.01f, 0.25f)]
+  [Tooltip("Used for the cascade stitching algorithm.\nCompute cascades splits distribution exponentially in a x*2^n form.\nIf 4 cascades, set this value to 0.1. If 2 cascades, set it to 0.25.\nThis option affects your cascade splits in Quality Settings.")]
   public float GLOBAL_CASCADES_SPLIT_VALUE;
   [Header("CASCADES")]
   [Tooltip("Blends cascades at seams intersection.\nAdditional overhead required for this option.")]

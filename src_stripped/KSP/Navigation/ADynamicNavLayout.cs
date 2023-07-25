@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Navigation.ADynamicNavLayout
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -27,15 +27,15 @@ namespace KSP.Navigation
     public LoadType LoadType;
     public int LoadDelayedFrames;
     public bool ActiveOnLoad;
-    [Tooltip("Should select last selected element when this layout refocused.")]
     [Header("Initialization - Selection")]
+    [Tooltip("Should select last selected element when this layout refocused.")]
     public bool SelectLastElement;
     public bool ResetSelectionOnUnload;
     public float StartSelectionDelayedSeconds;
     [Tooltip("Determine whether elements of this layout are accessable for parent layout.")]
     public bool IsAccessableForLayoutInParent;
-    [SerializeField]
     [Header("Selection - default navigation parameters")]
+    [SerializeField]
     private NavigationParameter _defaultNavParameter;
     public Selectable DefaultStartElement;
     public Image SelectionCursor;

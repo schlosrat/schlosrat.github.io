@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.Missions.Definitions.MissionData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -22,27 +22,27 @@ namespace KSP.Game.Missions.Definitions
     [JsonProperty]
     [KSPDefinition]
     public string MissionGroup;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public string name;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public string description;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public MissionType type;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public MissionOwner Owner;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public MissionState state;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public string missionScript;
     public List<MissionStage> missionStages;
-    [JsonProperty]
     [KSPDefinition]
+    [JsonProperty]
     public int currentStageIndex;
     [KSPDefinition]
     [JsonProperty]

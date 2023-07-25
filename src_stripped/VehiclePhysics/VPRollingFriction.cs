@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: VehiclePhysics.VPRollingFriction
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -24,8 +24,8 @@ namespace VehiclePhysics
     public float staticCoefficient;
     [Tooltip("The coefficent applied shifts progressively from static at 0 speed to dynamic at this speed and above (m/s)")]
     public float staticSpeedThreshold;
-    [FormerlySerializedAs("frictionFactors")]
     [Space(5f)]
+    [FormerlySerializedAs("frictionFactors")]
     public float[] axleFrictionFactors;
     [Space(5f)]
     [Tooltip("Shows a GUI label with the accumulated rolling friction force (RFF) applied in N")]

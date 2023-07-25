@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.ColorGradingModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -91,8 +91,8 @@ namespace UnityEngine.PostProcessing
       [Range(0.0f, 2f)]
       [Tooltip("Pushes the intensity of all colors.")]
       public float saturation;
-      [Tooltip("Expands or shrinks the overall range of tonal values.")]
       [Range(0.0f, 2f)]
+      [Tooltip("Expands or shrinks the overall range of tonal values.")]
       public float contrast;
 
       public static ColorGradingModel.BasicSettings defaultSettings

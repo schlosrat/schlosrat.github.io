@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.KSP2UIWindow
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using DG.Tweening;
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding;
@@ -22,8 +23,8 @@ namespace KSP.UI
     protected ContextBindRoot bindRoot;
     [SerializeField]
     protected DataContext dataContext;
-    [Header("Window Components")]
     [SerializeField]
+    [Header("Window Components")]
     protected RectTransform _headerPanel;
     [SerializeField]
     protected RectTransform _bodyPanel;
@@ -45,15 +46,15 @@ namespace KSP.UI
     public bool InvertBottomBorder;
     public bool InvertLeftBorder;
     public bool InvertRightBorder;
-    [NonReorderable]
     [Header("AudioEvents")]
     [SerializeField]
-    private AK.Wwise.Event[] OnUIWindowOpen;
     [NonReorderable]
+    private Event[] OnUIWindowOpen;
     [SerializeField]
-    private AK.Wwise.Event[] OnUIWindowClose;
-    [SerializeField]
+    [NonReorderable]
+    private Event[] OnUIWindowClose;
     [Header("Animation")]
+    [SerializeField]
     protected DOTweenAnimation OnUIWindowOpenAnim;
     [SerializeField]
     protected DOTweenAnimation OnUIWindowIdleLoopAnim;

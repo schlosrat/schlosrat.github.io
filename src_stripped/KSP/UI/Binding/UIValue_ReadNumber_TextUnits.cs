@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIValue_ReadNumber_TextUnits
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -24,18 +24,18 @@ namespace KSP.UI.Binding
     private TMP_Text numberText;
     [SerializeField]
     private string numberTextFormat;
-    [SerializeField]
     [Tooltip("Unit Text Field is optional")]
-    private TMP_Text unitText;
-    [Tooltip("Optional. Add loc path here for units to be divided by or just the unit if loc is not required.")]
     [SerializeField]
+    private TMP_Text unitText;
+    [SerializeField]
+    [Tooltip("Optional. Add loc path here for units to be divided by or just the unit if loc is not required.")]
     private string divisorUnit;
     [SerializeField]
     private float startSwitchThreshold;
     [SerializeField]
     private UIValue_ReadNumber_TextUnits.UnitEntry[] unitEntryArray;
-    [Tooltip("Note that using the rounding options will override the numberTextFormat")]
     [Header("Decimal rounding options")]
+    [Tooltip("Note that using the rounding options will override the numberTextFormat")]
     [SerializeField]
     private bool _roundValue;
     [SerializeField]

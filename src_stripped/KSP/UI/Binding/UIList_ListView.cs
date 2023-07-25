@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIList_ListView
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -19,14 +19,14 @@ namespace KSP.UI.Binding
     [FormerlySerializedAs("keysToInject")]
     [Header("Values Injected in each view element")]
     public ContextListView.InjectKeys injectKeys;
-    [SerializeField]
     [Header("Leave blank to get prefab from context")]
+    [SerializeField]
     protected ContextBindRoot elementPrefab;
     [SerializeField]
     [Header("if set will be resolve Element Prefab")]
     protected string elementPropertyKeyPath;
-    [Header("if set will resolve Element Pool")]
     [SerializeField]
+    [Header("if set will resolve Element Pool")]
     protected string _elementPoolPropetyKeyPath;
     protected MultiDragDropLogic multiDragDropLogic;
     [Header("if set will be resolve MultiDragDropLogic Reference")]

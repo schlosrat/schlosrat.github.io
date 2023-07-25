@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: ToggleByDistance
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -14,19 +14,19 @@ public class ToggleByDistance : MonoBehaviour
   [Tooltip("True = Off when too close, False = Off when too far")]
   [SerializeField]
   private bool turnOffWhenTooClose;
+  [SerializeField]
   [FormerlySerializedAs("GOsToToggle")]
-  [SerializeField]
   private GameObject[] gameObjectsToToggle;
+  [SerializeField]
   [FormerlySerializedAs("target1")]
-  [SerializeField]
   private Transform distanceTarget1;
-  [SerializeField]
   [FormerlySerializedAs("target2")]
+  [SerializeField]
   private Transform distanceTarget2;
   [SerializeField]
   private float distanceThreshold;
-  [Tooltip("Optional OffsetSliders to update with")]
   [SerializeField]
+  [Tooltip("Optional OffsetSliders to update with")]
   private OffsetSliders updateTarget;
   private float distanceSquared;
 

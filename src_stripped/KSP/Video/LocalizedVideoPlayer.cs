@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Video.LocalizedVideoPlayer
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -20,7 +20,7 @@ namespace KSP.Video
   public class LocalizedVideoPlayer : MonoBehaviour, IPlaybackControllable
   {
     private const float FRAME_TIME_60_HZ = 0.0166666675f;
-    private const LogFilter LOGTAG = LogFilter.General;
+    private const LogFilter LOGTAG = (LogFilter) 256;
     private const string PREFIX = "[VideoPlayer][LocalizedVideoPlayer] ";
     private static readonly Color ENABLED_SCREEN_COLOR;
     private static readonly Color DISABLED_SCREEN_COLOR;
@@ -53,8 +53,8 @@ namespace KSP.Video
     private float _lastTimeSeconds;
     private bool _videoPrepareIsQueued;
     private PlaybackState _lastPlaybackState;
-    [Space]
     [SerializeField]
+    [Space]
     private PlaybackControlEvent _playbackStateChanged;
     [Space]
     [SerializeField]

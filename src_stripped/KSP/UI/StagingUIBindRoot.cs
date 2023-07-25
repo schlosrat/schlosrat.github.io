@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.StagingUIBindRoot
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,10 +17,10 @@ namespace KSP.UI
 {
   public class StagingUIBindRoot : ContextBindRoot
   {
-    [Space(order = 0)]
     [Header("==== Data To Inject ===", order = 1)]
-    [Header("The Subcontext we will inject", order = 2)]
     [SerializeField]
+    [Header("The Subcontext we will inject", order = 2)]
+    [Space(order = 0)]
     private string uiSubContextKey;
     [Header("Properties to inject")]
     public string isAllExpandedKey;
@@ -49,8 +49,8 @@ namespace KSP.UI
     public string multiDragDropLogicKey;
     public HighlightedDragDropLogic HighlightedDragDropLogic;
     public string highlightedDragDropLogicKey;
-    [Header("==== Elements To Bind ===", order = 2)]
     [Space(order = 1)]
+    [Header("==== Elements To Bind ===", order = 2)]
     public RectTransform stagingBinLocator;
     private const string PROPERTY_STAGE_ELEMENT_POOL_KEY = "stageElementPool";
     private const string PROPERTY_PART_ELEMENT_POOL_KEY = "partElementPool";

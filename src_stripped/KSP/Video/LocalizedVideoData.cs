@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Video.LocalizedVideoData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -19,19 +20,19 @@ namespace KSP.Video
   {
     [SerializeField]
     private string m_title;
+    [SerializeField]
     [TextArea(4, 8)]
-    [SerializeField]
     private string m_description;
-    [SerializeField]
     [Header("Required")]
+    [SerializeField]
     private VideoClip m_videoClip;
     [SerializeField]
-    private AK.Wwise.Event m_musicAudioEvent;
-    [SerializeField]
+    private Event m_musicAudioEvent;
     [Header("Optional")]
-    private AK.Wwise.Event m_sfxAudioEvent;
-    [Header("Localization")]
     [SerializeField]
+    private Event m_sfxAudioEvent;
+    [SerializeField]
+    [Header("Localization")]
     private List<LocalizedVideoData.LanguageData> _localizationData;
     [Space]
     [SerializeField]
@@ -52,12 +53,12 @@ namespace KSP.Video
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
-    public AK.Wwise.Event MusicAudioEvent
+    public Event MusicAudioEvent
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
-    public AK.Wwise.Event SFXAudioEvent
+    public Event SFXAudioEvent
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -76,7 +77,7 @@ namespace KSP.Video
     public TextAsset GetSubtitleForLanguage(string Language) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public AK.Wwise.Event GetVoiceOverForLanguage(string Language) => throw null;
+    public Event GetVoiceOverForLanguage(string Language) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public LocalizedVideoData() => throw null;
@@ -86,7 +87,7 @@ namespace KSP.Video
     {
       public string Language;
       public TextAsset Subtitles;
-      public AK.Wwise.Event VoAudioEvent;
+      public Event VoAudioEvent;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public LanguageData() => throw null;

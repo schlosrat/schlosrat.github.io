@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.Map3DSpaceProvider
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,16 +18,16 @@ namespace KSP.Map
   [Serializable]
   public class Map3DSpaceProvider
   {
-    [FormerlySerializedAs("Map3DScaleInv")]
-    [SerializeField]
     [Tooltip("This is an inverse value. Consider what you see here to be 1 / <what you specify for this>. Bigger # = smaller map.")]
+    [SerializeField]
+    [FormerlySerializedAs("Map3DScaleInv")]
     private double _map3DScaleInv;
-    [FormerlySerializedAs("CelestialBodyScalar")]
     [Tooltip("scales all celestial body objects. This number should probably come from somewhere more defined.")]
     [SerializeField]
+    [FormerlySerializedAs("CelestialBodyScalar")]
     private double _celestialBodyScalar;
-    [Tooltip("the camera pivot is required To allow forced resetting when the map selection changes.")]
     [SerializeField]
+    [Tooltip("the camera pivot is required To allow forced resetting when the map selection changes.")]
     private Transform mapCamPivot;
     private List<Map3DFocusItem> selectableItemsWithSimInfo;
     private TransformModel defaultParent;
@@ -64,6 +64,11 @@ namespace KSP.Map
     }
 
     public TransformModel CameraModel
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public ITransformFrame OriginParentFrame
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }

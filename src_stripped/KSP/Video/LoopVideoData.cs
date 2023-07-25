@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Video.LoopVideoData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,23 +18,23 @@ namespace KSP.Video
   {
     [SerializeField]
     private string _title;
-    [SerializeField]
     [TextArea(4, 8)]
+    [SerializeField]
     private string _description;
     [SerializeField]
     private LoopVideoType _loopVideoType;
     [SerializeField]
     private VideoClip _videoClip;
-    [Range(0.0f, 10f)]
     [SerializeField]
+    [Range(0.0f, 10f)]
     private float _videoPlaybackSpeed;
     [SerializeField]
     private Sprite[] _gif;
+    [SerializeField]
     [Tooltip("Frames FPS")]
-    [SerializeField]
     private float _gifFPS;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private Sprite _preview;
 
     public string Title

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Drag
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -41,17 +41,17 @@ namespace KSP.Modules
     [HideInInspector]
     [KSPDefinition]
     public float[] weightedDepth;
-    [HideInInspector]
     [KSPDefinition]
+    [HideInInspector]
     public Vector3 weightedCenter;
-    [HideInInspector]
     [KSPDefinition]
+    [HideInInspector]
     public Vector3 weightedSize;
     [KSPDefinition]
     [HideInInspector]
     public bool isDragCubeRotated;
-    [KSPDefinition]
     [HideInInspector]
+    [KSPDefinition]
     public Quaternion dragCubeRotation;
     [KSPState(CopyToSymmetrySet = false)]
     [HideInInspector]
@@ -60,29 +60,29 @@ namespace KSP.Modules
     [PAMDisplayControl(SortIndex = 0)]
     [KSPState]
     public ModuleProperty<Vector3> DragForceDirection;
-    [KSPState]
-    [LocalizedField("PartModules/Drag/DragMagnitude")]
     [PAMDisplayControl(SortIndex = 1)]
+    [LocalizedField("PartModules/Drag/DragMagnitude")]
+    [KSPState]
     public ModuleProperty<float> DragForceMagnitude;
     [LocalizedField("PartModules/Drag/LiftDirection")]
     [PAMDisplayControl(SortIndex = 2)]
     [KSPState]
     public ModuleProperty<Vector3> LiftForceDirection;
-    [LocalizedField("PartModules/Drag/LiftMagnitude")]
     [KSPState]
+    [LocalizedField("PartModules/Drag/LiftMagnitude")]
     [PAMDisplayControl(SortIndex = 3)]
     public ModuleProperty<float> LiftForceMagnitude;
     [LocalizedField("PartModules/Drag/ReferenceArea")]
     [PAMDisplayControl(SortIndex = 4)]
     [KSPState]
     public ModuleProperty<float> ReferenceArea;
-    [KSPState]
     [LocalizedField("PartModules/Drag/ExposedArea")]
+    [KSPState]
     [PAMDisplayControl(SortIndex = 5)]
     public ModuleProperty<float> ExposedArea;
-    [KSPState]
-    [PAMDisplayControl(SortIndex = 6)]
     [LocalizedField("PartModules/Drag/TotalArea")]
+    [PAMDisplayControl(SortIndex = 6)]
+    [KSPState]
     public ModuleProperty<float> TotalArea;
     [JsonIgnore]
     public Data_Drag.CubeData cubeData;

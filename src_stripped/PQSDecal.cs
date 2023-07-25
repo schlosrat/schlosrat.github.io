@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: PQSDecal
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -13,12 +13,12 @@ public class PQSDecal : ScriptableObject
   public string DecalID;
   public float HeightScale;
   public PQSDecalHeightBlendMode HeightBlendMode;
-  [SerializeField]
   [Range(-1f, 1f)]
+  [SerializeField]
   public float HeightOffset;
   public PQSDecalAlphaFadeShape FadeShape;
-  [SerializeField]
   [Range(0.0f, 2f)]
+  [SerializeField]
   public float FadeStrength;
   [SerializeField]
   [Range(0.0f, 1f)]
@@ -40,8 +40,8 @@ public class PQSDecal : ScriptableObject
   public bool UseDecalTexturing;
   public bool UseTextureAlphaMask;
   public bool UseTextureHeightmapFade;
-  [Range(0.01f, 1.99f)]
   [SerializeField]
+  [Range(0.01f, 1.99f)]
   public float MaterialScaleFactor;
 
   [MethodImpl(MethodImplOptions.NoInlining)]

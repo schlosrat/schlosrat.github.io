@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ResourceConverter
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -21,36 +21,36 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_ResourceConverter : ModuleData
   {
-    [PAMDisplayControl(SortIndex = 1)]
     [LocalizedField("PartModules/Cooler/Enabled")]
     [KSPState]
     [HideInInspector]
+    [PAMDisplayControl(SortIndex = 1)]
     public ModuleProperty<bool> EnabledToggle;
-    [Range(0.0f, 1f)]
-    [PAMDisplayControl(SortIndex = 2)]
     [KSPState]
     [LocalizedField("PartModules/ResourceConverter/ConversionRate")]
     [HideInInspector]
+    [Range(0.0f, 1f)]
+    [PAMDisplayControl(SortIndex = 2)]
     public ModuleProperty<float> conversionRate;
     [LocalizedField("PartModules/ResourceConverter/Mode")]
     [KSPState]
     [PAMDisplayControl(SortIndex = 3)]
     [HideInInspector]
     public ModuleProperty<string> Mode;
-    [KSPState]
-    [PAMDisplayControl(SortIndex = 4)]
     [HideInInspector]
+    [KSPState]
     [LocalizedField("PartModules/ResourceConverter/Status")]
+    [PAMDisplayControl(SortIndex = 4)]
     public ModuleProperty<string> statusTxt;
+    [LocalizedField("PartModules/ResourceConverter/Input")]
+    [KSPState]
     [HideInInspector]
     [PAMDisplayControl(SortIndex = 5)]
-    [KSPState]
-    [LocalizedField("PartModules/ResourceConverter/Input")]
     public ModuleProperty<string> InputTxt;
-    [PAMDisplayControl(SortIndex = 6)]
-    [HideInInspector]
     [LocalizedField("PartModules/ResourceConverter/Output")]
     [KSPState]
+    [PAMDisplayControl(SortIndex = 6)]
+    [HideInInspector]
     public ModuleProperty<string> OutputTxt;
     [LocalizedField("PartModules/Generator/GeneratorHeat")]
     [PAMDisplayControl(SortIndex = 7)]
@@ -65,8 +65,8 @@ namespace KSP.Modules
     [KSPState]
     [HideInInspector]
     public bool ConverterIsActive;
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
     public int SelectedFormula;
     [KSPDefinition]
     public string ToggleName;

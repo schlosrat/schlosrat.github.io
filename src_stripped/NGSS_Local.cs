@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: NGSS_Local
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,10 +18,10 @@ public class NGSS_Local : MonoBehaviour
   public bool NGSS_NO_UPDATE_ON_PLAY;
   [Tooltip("If enabled, this component will manage GLOBAL SETTINGS for all Local shadows.\nEnable this option only in one of your scene local lights to avoid multiple lights fighting for global tweaks.\nLOCAL SETTINGS are not affected by this option.")]
   public bool NGSS_MANAGE_GLOBAL_SETTINGS;
-  [Header("GLOBAL SETTINGS")]
+  [Space]
   [Tooltip("Used to test blocker search and early bail out algorithms. Keep it as low as possible, might lead to noise artifacts if too low.\nRecommended values: Mobile = 8, Consoles & VR = 16, Desktop = 24")]
   [Range(4f, 32f)]
-  [Space]
+  [Header("GLOBAL SETTINGS")]
   public int NGSS_SAMPLING_TEST;
   [Tooltip("Number of samplers per pixel used for PCF and PCSS shadows algorithms.\nRecommended values: Mobile = 12, Consoles & VR = 24, Desktop Med = 32, Desktop High = 48, Desktop Ultra = 64")]
   [Range(4f, 64f)]
@@ -33,8 +33,8 @@ public class NGSS_Local : MonoBehaviour
   [Tooltip("If you set the noise scale value to something less than 1 you need to input a noise texture.\nRecommended noise textures are blue noise signals.")]
   public Texture2D NGSS_NOISE_TEXTURE;
   [Tooltip("Number of samplers per pixel used for PCF and PCSS shadows algorithms.\nRecommended values: Mobile = 12, Consoles & VR = 24, Desktop Med = 32, Desktop High = 48, Desktop Ultra = 64")]
-  [Space]
   [Range(0.0f, 1f)]
+  [Space]
   public float NGSS_SHADOWS_OPACITY;
   [Header("LOCAL SETTINGS")]
   [Tooltip("PCSS Requires inline sampling and SM3.5.\nProvides Area Light soft-shadows.\nDisable it if you are looking for PCF filtering (uniform soft-shadows) which runs with SM3.0.")]

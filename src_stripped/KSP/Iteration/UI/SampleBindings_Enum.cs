@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Iteration.UI.SampleBindings_Enum
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,30 +18,30 @@ namespace KSP.Iteration.UI
   {
     public ContextBindRoot bindRoot;
     private DataContext context;
+    [Header("----- SELECT MOCK DATA SOURCE -----", order = 2)]
     [Space(40f, order = 1)]
     [SerializeField]
-    [Header("----- SELECT MOCK DATA SOURCE -----", order = 2)]
     [Space(10f, order = 3)]
     private SampleBindings_Enum.MockDataMode mockDataMode;
     private PropertyExternal<SampleBindings_Enum.MockDataMode> mockDataModeProperty;
+    [SerializeField]
     [Space(30f, order = 1)]
     [Header("Mock Data Source: String Set", order = 2)]
-    [SerializeField]
     private string stringValue;
     [SerializeField]
     private List<string> allStringValues;
     private PropertyExternal<string> stringValueProp;
-    [Space(order = 1)]
-    [Header("Mock Data Source: Enum", order = 2)]
-    [Header("      GENERAL ENUM WARNING:", order = 3)]
-    [Header("      - Animations lag if you use inspector dropdowns!", order = 4)]
-    [Header("      - Test enum animations with 'auto change values'!", order = 5)]
     [SerializeField]
+    [Header("      - Test enum animations with 'auto change values'!", order = 5)]
+    [Header("      - Animations lag if you use inspector dropdowns!", order = 4)]
+    [Header("      GENERAL ENUM WARNING:", order = 3)]
+    [Header("Mock Data Source: Enum", order = 2)]
+    [Space(order = 1)]
     private SampleBindings_Enum.MockDemoEnum enumValue;
     private PropertyExternal<SampleBindings_Enum.MockDemoEnum> enumValueProperty;
-    [Header("Backend Changes", order = 2)]
     [Space(30f, order = 1)]
     [SerializeField]
+    [Header("Backend Changes", order = 2)]
     private bool autoChangeValues;
     [SerializeField]
     private float timeBetweenChanges;

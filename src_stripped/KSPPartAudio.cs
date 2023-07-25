@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSPPartAudio
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Messages;
 using KSP.Sim.impl;
 using System;
@@ -34,7 +35,7 @@ public class KSPPartAudio : KSPPartAudioBase
   }
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  protected override AK.Wwise.Event[] GetAudioEventForPartEvent(
+  protected override Event[] GetAudioEventForPartEvent(
     KSPPartAudioBase.PartAudioEvent partAudioEvent)
   {
     throw null;
@@ -116,7 +117,7 @@ public class KSPPartAudio : KSPPartAudioBase
   public class SoundEventCategory
   {
     public string category;
-    public AK.Wwise.Event akEvent;
+    public Event akEvent;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public SoundEventCategory() => throw null;
@@ -126,53 +127,53 @@ public class KSPPartAudio : KSPPartAudioBase
   public class Sounds
   {
     [NonReorderable]
-    public AK.Wwise.Event[] onActivateEvent;
+    public Event[] onActivateEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onInactiveEvent;
+    public Event[] onInactiveEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onOverheatEvent;
+    public Event[] onOverheatEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onDestroyEvent;
+    public Event[] onDestroyEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onDecoupleEvent;
+    public Event[] onDecoupleEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onLoadEvent;
+    public Event[] onLoadEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onUnloadEvent;
+    public Event[] onUnloadEvent;
     [NonReorderable]
-    public AK.Wwise.Event[] onJointBreak;
+    public Event[] onJointBreak;
     [NonReorderable]
-    public AK.Wwise.Event[] onPartCollision;
+    public Event[] onPartCollision;
     [NonReorderable]
-    public AK.Wwise.Event[] onPartCollisionStart;
+    public Event[] onPartCollisionStart;
     [NonReorderable]
-    public AK.Wwise.Event[] onPartCollisionStop;
+    public Event[] onPartCollisionStop;
     [NonReorderable]
-    public AK.Wwise.Event[] onSonicBoom;
+    public Event[] onSonicBoom;
     [NonReorderable]
-    public AK.Wwise.Event[] onFairingDeploy;
+    public Event[] onFairingDeploy;
     [NonReorderable]
-    public AK.Wwise.Event[] onDock;
+    public Event[] onDock;
     [NonReorderable]
-    public AK.Wwise.Event[] onUndock;
+    public Event[] onUndock;
     [NonReorderable]
-    public AK.Wwise.Event[] onShowHeatIndicator;
+    public Event[] onShowHeatIndicator;
     [NonReorderable]
-    public AK.Wwise.Event[] onHideHeatIndicator;
+    public Event[] onHideHeatIndicator;
     [NonReorderable]
-    public AK.Wwise.Event[] onLightTurnedOn;
+    public Event[] onLightTurnedOn;
     [NonReorderable]
-    public AK.Wwise.Event[] onLightTurnedOff;
+    public Event[] onLightTurnedOff;
     [NonReorderable]
-    public AK.Wwise.Event[] onVABPartHighlight;
+    public Event[] onVABPartHighlight;
     [NonReorderable]
-    public AK.Wwise.Event[] onResourceTransfertInboundStart;
+    public Event[] onResourceTransfertInboundStart;
     [NonReorderable]
-    public AK.Wwise.Event[] onResourceTransfertInboundStop;
+    public Event[] onResourceTransfertInboundStop;
     [NonReorderable]
-    public AK.Wwise.Event[] onResourceTransfertOutboundStart;
+    public Event[] onResourceTransfertOutboundStart;
     [NonReorderable]
-    public AK.Wwise.Event[] onResourceTransfertOutboundStop;
+    public Event[] onResourceTransfertOutboundStop;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public Sounds() => throw null;

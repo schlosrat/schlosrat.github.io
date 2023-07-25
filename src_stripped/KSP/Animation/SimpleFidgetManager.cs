@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Animation.SimpleFidgetManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,15 +17,15 @@ namespace KSP.Animation
   public class SimpleFidgetManager : KerbalMonoBehaviour
   {
     private Animator _animator;
-    [SerializeField]
     [FormerlySerializedAs("fidgetData")]
+    [SerializeField]
     private AnimationManager.AnimSetData _fidgetData;
     [FormerlySerializedAs("fidgetAltData")]
     [SerializeField]
     private AnimationManager.AnimSetData _fidgetAltData;
-    [Space(10f)]
-    [FormerlySerializedAs("fidgetCount")]
     [SerializeField]
+    [FormerlySerializedAs("fidgetCount")]
+    [Space(10f)]
     private int _fidgetCount;
     [FormerlySerializedAs("fidgetAltCount")]
     [SerializeField]
@@ -39,8 +39,8 @@ namespace KSP.Animation
     [FormerlySerializedAs("canFidgetParamName")]
     [SerializeField]
     private string _canFidgetParamName;
-    [FormerlySerializedAs("triggerName")]
     [SerializeField]
+    [FormerlySerializedAs("triggerName")]
     private string _triggerName;
     [FormerlySerializedAs("randomFidgetIntName")]
     [SerializeField]
@@ -51,8 +51,8 @@ namespace KSP.Animation
     [FormerlySerializedAs("playbackMulMin")]
     [SerializeField]
     private float _playbackMulMin;
-    [FormerlySerializedAs("playbackMulMax")]
     [SerializeField]
+    [FormerlySerializedAs("playbackMulMax")]
     private float _playbackMulMax;
     private static MPRandom _randomizer;
 

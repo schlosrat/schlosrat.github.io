@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIValue_WriteNumber_Slider
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -15,14 +15,14 @@ namespace KSP.UI.Binding
   [DisallowMultipleComponent]
   public class UIValue_WriteNumber_Slider : UIValueNumberBinder
   {
-    [Header("Slider Bar")]
     [SerializeField]
+    [Header("Slider Bar")]
     private SliderExtended slider;
     [SerializeField]
     [Header("Value Setting Behavior")]
     private bool setValueOnDrag;
-    [SerializeField]
     [Header("Visible Rounding Behavior")]
+    [SerializeField]
     private double snapToNearest;
     [SerializeField]
     private bool snapDuringDrag;

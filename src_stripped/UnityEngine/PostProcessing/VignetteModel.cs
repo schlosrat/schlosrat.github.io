@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.VignetteModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -39,16 +39,16 @@ namespace UnityEngine.PostProcessing
     {
       [Tooltip("Use the \"Classic\" mode for parametric controls. Use the \"Masked\" mode to use your own texture mask.")]
       public VignetteModel.Mode mode;
-      [ColorUsage(false)]
       [Tooltip("Vignette color. Use the alpha channel for transparency.")]
+      [ColorUsage(false)]
       public Color color;
       [Tooltip("Sets the vignette center point (screen center is [0.5,0.5]).")]
       public Vector2 center;
-      [Range(0.0f, 1f)]
       [Tooltip("Amount of vignetting on screen.")]
+      [Range(0.0f, 1f)]
       public float intensity;
-      [Range(0.01f, 1f)]
       [Tooltip("Smoothness of the vignette borders.")]
+      [Range(0.01f, 1f)]
       public float smoothness;
       [Range(0.0f, 1f)]
       [Tooltip("Lower values will make a square-ish vignette.")]

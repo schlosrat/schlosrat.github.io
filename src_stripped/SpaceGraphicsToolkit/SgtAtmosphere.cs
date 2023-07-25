@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: SpaceGraphicsToolkit.SgtAtmosphere
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -21,11 +21,11 @@ namespace SpaceGraphicsToolkit
     [SerializeField]
     [FormerlySerializedAs("Color")]
     private Color color;
-    [SerializeField]
     [FormerlySerializedAs("Brightness")]
-    private float brightness;
     [SerializeField]
+    private float brightness;
     [FormerlySerializedAs("RenderQueue")]
+    [SerializeField]
     private SgtRenderQueue renderQueue;
     [SerializeField]
     [FormerlySerializedAs("InnerDepthTex")]
@@ -33,33 +33,33 @@ namespace SpaceGraphicsToolkit
     [SerializeField]
     [FormerlySerializedAs("InnerMeshRadius")]
     private float innerMeshRadius;
-    [SerializeField]
     [FormerlySerializedAs("OuterDepthTex")]
+    [SerializeField]
     private Texture2D outerDepthTex;
     [FormerlySerializedAs("OuterMesh")]
     [SerializeField]
     private Mesh outerMesh;
-    [FormerlySerializedAs("OuterMeshRadius")]
     [SerializeField]
+    [FormerlySerializedAs("OuterMeshRadius")]
     private float outerMeshRadius;
     [Range(0.0f, 1000f)]
     [SerializeField]
     private float outerSoftness;
+    [SerializeField]
     [FormerlySerializedAs("Height")]
-    [SerializeField]
     private float height;
+    [SerializeField]
     [FormerlySerializedAs("InnerFog")]
-    [SerializeField]
     private float innerFog;
-    [FormerlySerializedAs("OuterFog")]
     [SerializeField]
+    [FormerlySerializedAs("OuterFog")]
     private float outerFog;
     [FormerlySerializedAs("Sky")]
     [SerializeField]
     private float sky;
     [FormerlySerializedAs("Middle")]
-    [Range(0.0f, 1f)]
     [SerializeField]
+    [Range(0.0f, 1f)]
     private float middle;
     [FormerlySerializedAs("CameraOffset")]
     [SerializeField]
@@ -67,8 +67,8 @@ namespace SpaceGraphicsToolkit
     [FormerlySerializedAs("Lit")]
     [SerializeField]
     private bool lit;
-    [SerializeField]
     [FormerlySerializedAs("LightingTex")]
+    [SerializeField]
     private Texture lightingTex;
     [FormerlySerializedAs("Scattering")]
     [SerializeField]
@@ -76,11 +76,11 @@ namespace SpaceGraphicsToolkit
     [SerializeField]
     [FormerlySerializedAs("GroundScattering")]
     private bool groundScattering;
+    [SerializeField]
     [FormerlySerializedAs("ScatteringTex")]
-    [SerializeField]
     private Texture scatteringTex;
-    [FormerlySerializedAs("ScatteringStrength")]
     [SerializeField]
+    [FormerlySerializedAs("ScatteringStrength")]
     private float scatteringStrength;
     [FormerlySerializedAs("ScatteringMie")]
     [SerializeField]
@@ -88,21 +88,21 @@ namespace SpaceGraphicsToolkit
     [FormerlySerializedAs("ScatteringRayleigh")]
     [SerializeField]
     private float scatteringRayleigh;
-    [SerializeField]
     [FormerlySerializedAs("Night")]
+    [SerializeField]
     private bool night;
     [FormerlySerializedAs("NightSky")]
     [SerializeField]
     private float nightSky;
-    [FormerlySerializedAs("NightEase")]
     [SerializeField]
+    [FormerlySerializedAs("NightEase")]
     private SgtEase.Type nightEase;
     [FormerlySerializedAs("NightStart")]
     [SerializeField]
     [Range(0.0f, 1f)]
     private float nightStart;
-    [Range(0.0f, 1f)]
     [FormerlySerializedAs("NightEnd")]
+    [Range(0.0f, 1f)]
     [SerializeField]
     private float nightEnd;
     [FormerlySerializedAs("NightPower")]

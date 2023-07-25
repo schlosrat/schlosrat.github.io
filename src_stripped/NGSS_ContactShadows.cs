@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: NGSS_ContactShadows
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -16,8 +16,8 @@ public class NGSS_ContactShadows : MonoBehaviour
   [Header("REFERENCES")]
   public Light contactShadowsLight;
   public Shader contactShadowsShader;
-  [Tooltip("Poisson Noise. Randomize samples to remove repeated patterns.")]
   [Header("SHADOWS SETTINGS")]
+  [Tooltip("Poisson Noise. Randomize samples to remove repeated patterns.")]
   public bool m_noiseFilter;
   [Tooltip("If enabled, backfaced lit fragments will be skipped increasing performance. Requires GBuffer normals.")]
   public bool m_deferredBackfaceOptimization;
@@ -27,8 +27,8 @@ public class NGSS_ContactShadows : MonoBehaviour
   [Range(0.01f, 1f)]
   [Tooltip("Tweak this value to remove soft-shadows leaking around edges.")]
   public float m_shadowsEdgeTolerance;
-  [Tooltip("Overall softness of the shadows.")]
   [Range(0.01f, 1f)]
+  [Tooltip("Overall softness of the shadows.")]
   public float m_shadowsSoftness;
   [Range(1f, 4f)]
   [Tooltip("Overall distance of the shadows.")]

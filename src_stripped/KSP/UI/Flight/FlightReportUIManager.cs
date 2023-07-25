@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Flight.FlightReportUIManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -50,24 +50,24 @@ namespace KSP.UI.Flight
     private FlightReportLogItem _logItemPrefab;
     [SerializeField]
     private RectTransform _logParentTransform;
-    [SerializeField]
     [Header("Crew Section")]
+    [SerializeField]
     private FlightReportCrewItem _crewItemPrefab;
     [SerializeField]
     private RectTransform _crewParentTransform;
-    [Header("Records Section")]
     [Tooltip("Time in seconds to wait for the next records' update.")]
     [SerializeField]
+    [Header("Records Section")]
     private double _recordsUpdateRate;
-    [SerializeField]
-    [Tooltip("List of localization terms for messages that are picked at random to display in the flight report if we are successful or not.")]
     [Header("Success and Failure Messages Section")]
+    [Tooltip("List of localization terms for messages that are picked at random to display in the flight report if we are successful or not.")]
+    [SerializeField]
     private string[] _successMessageLocTerms;
     [SerializeField]
     private string[] _failureMessageLocTerms;
     [Header("Tutorials Section")]
-    [SerializeField]
     [Tooltip("List of localization terms for messages that are picked at random to display in Tutorials Section.")]
+    [SerializeField]
     private string[] _tutorialMessageLocTerms;
     private DataContext _uiData;
     private Property<string> _flightStatusText;

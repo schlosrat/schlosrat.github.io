@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.Widget.UIWidget_indicator_navball
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -13,12 +13,12 @@ namespace KSP.UI.Binding.Widget
 {
   public class UIWidget_indicator_navball : UIWidget
   {
-    [Header("Navball - Readonly")]
     [SerializeField]
+    [Header("Navball - Readonly")]
     private UIValueBinder navballRotation;
+    [SerializeField]
     [Header("Indicators - Readonly")]
     [Header("NOTE: see TODO in code here")]
-    [SerializeField]
     private UIValue_ReadObject_NavMarker normalMarker;
     [SerializeField]
     private UIValue_ReadObject_NavMarker antiNormalMarker;
@@ -35,8 +35,8 @@ namespace KSP.UI.Binding.Widget
     private UIValue_ReadObject_NavMarker maneuverMarker;
     [SerializeField]
     private UIValueBinder haveManeuvers;
-    [Header("Enum for Velocity Mode")]
     [SerializeField]
+    [Header("Enum for Velocity Mode")]
     private UIValueBinder velocityMode;
 
     public IUIValueBindable<Quaternion> NavballRotation

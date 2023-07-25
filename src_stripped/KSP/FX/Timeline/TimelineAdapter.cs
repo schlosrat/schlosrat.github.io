@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.FX.Timeline.TimelineAdapter
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using KSP.Game;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -21,7 +22,7 @@ namespace KSP.FX.Timeline
     [Tooltip("If True, will look for ObjectProxy Tracks in timeline and resolve bindings through them")]
     public bool resolveObjectProxies;
     private List<GameObject> _spawnedObjects;
-    private List<AK.Wwise.Event> _timelineAudio;
+    private List<Event> _timelineAudio;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnDestroy() => throw null;

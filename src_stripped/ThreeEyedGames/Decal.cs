@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: ThreeEyedGames.Decal
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -12,8 +12,8 @@ using UnityEngine.Serialization;
 
 namespace ThreeEyedGames
 {
-  [ExecuteAlways]
   [RequireComponent(typeof (MeshRenderer))]
+  [ExecuteAlways]
   [RequireComponent(typeof (MeshFilter))]
   public class Decal : KerbalMonoBehaviour
   {
@@ -32,8 +32,8 @@ namespace ThreeEyedGames
     public int RenderOrder;
     [Tooltip("To which degree should the Decal be drawn? At 1, the Decal will be drawn with full effect. At 0, the Decal will not be drawn. Experiment with values greater than one.")]
     public float Fade;
-    [FormerlySerializedAs("LimitTo")]
     [Tooltip("Set a GameObject here to only draw this Decal on the MeshRenderer of the GO or any of its children.")]
+    [FormerlySerializedAs("LimitTo")]
     public GameObject MaskObj;
     [HideInInspector]
     public int MaskObjID;

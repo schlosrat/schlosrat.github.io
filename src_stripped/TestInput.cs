@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: TestInput
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -20,7 +20,7 @@ public class TestInput :
   IDisposable
 {
   private readonly InputActionMap m_Default;
-  private TestInput.IDefaultActions m_DefaultActionsCallbackInterface;
+  private List<TestInput.IDefaultActions> m_DefaultActionsCallbackInterfaces;
   private readonly InputAction m_Default_Button;
   private readonly InputAction m_Default_Axis;
   private int m_DefaultSchemeIndex;
@@ -122,6 +122,15 @@ public class TestInput :
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static implicit operator InputActionMap(TestInput.DefaultActions set) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void AddCallbacks(TestInput.IDefaultActions instance) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void UnregisterCallbacks(TestInput.IDefaultActions instance) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void RemoveCallbacks(TestInput.IDefaultActions instance) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetCallbacks(TestInput.IDefaultActions instance) => throw null;

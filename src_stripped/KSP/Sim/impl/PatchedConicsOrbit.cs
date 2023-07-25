@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.PatchedConicsOrbit
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -341,11 +341,36 @@ namespace KSP.Sim.impl
     public void UpdateFromOrbitAtUT(IOrbit orbit, double UT, CelestialBodyComponent toBody) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private static Vector3d GetVelocityAtUTInStarSpace(IOrbit orbit, double UT) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private static Vector3d GetVelocityAtUTInStarSpace(
+      IOrbit orbit,
+      double UT,
+      ref QuaternionD localToFixedRotation)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private static Vector3d GetPositionAtUTInStarSpace(IOrbit orbit, double UT) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private static Vector3d GetPositionAtUTInStarSpace(
+      IOrbit orbit,
+      double UT,
+      ref QuaternionD localToFixedRotation)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private static CelestialBodyComponent GetStar(CelestialBodyComponent referenceBody) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public void UpdateFromStateVectors(
-      ICoordinateSystem coordinateSystem,
-      Vector3d _pos,
-      IMotion relativeMotion,
-      Vector3d _vel,
+      Position position,
+      Velocity velocity,
       CelestialBodyComponent refBody,
       double UT)
     {
@@ -353,9 +378,9 @@ namespace KSP.Sim.impl
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void UpdateFromStateVectors(
-      Position position,
-      Velocity velocity,
+    private void UpdateFromStateVectors(
+      Vector3d posInRefBodySpace,
+      Vector3d velInRefBodySpace,
       CelestialBodyComponent refBody,
       double UT)
     {

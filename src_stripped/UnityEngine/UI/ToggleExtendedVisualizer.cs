@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.UI.ToggleExtendedVisualizer
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
+using AK.Wwise;
 using System.Runtime.CompilerServices;
 using UnityEngine.EventSystems;
 
@@ -19,13 +20,13 @@ namespace UnityEngine.UI
     public ToggleExtended toggle;
     public TransitionVisualToggle[] transitionVisuals;
     [NonReorderable]
-    public AK.Wwise.Event[] OnButtonPressedEvents;
+    public Event[] OnButtonPressedEvents;
     [NonReorderable]
-    public AK.Wwise.Event[] OnButtonHoverEvents;
+    public Event[] OnButtonHoverEvents;
     [NonReorderable]
-    public AK.Wwise.Event[] OnToggleEnabledButtonPressedEvents;
+    public Event[] OnToggleEnabledButtonPressedEvents;
     [NonReorderable]
-    public AK.Wwise.Event[] OnToggleDisabledButtonPressedEvents;
+    public Event[] OnToggleDisabledButtonPressedEvents;
     private uint _rtpcX;
     private uint _rtpcY;
     private bool _isHighlighted;
@@ -55,7 +56,7 @@ namespace UnityEngine.UI
     protected uint GetRTCPIDY() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    protected void PostAKEventsWithPositionalRTPC(AK.Wwise.Event[] EventsToPost) => throw null;
+    protected void PostAKEventsWithPositionalRTPC(Event[] EventsToPost) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void OnPointerExit(PointerEventData eventData) => throw null;

@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.AgencyFlagManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -19,8 +19,8 @@ namespace KSP.Game
     private ContextBindRoot _bindRoot;
     [SerializeField]
     private CreateCampaignMenu _createCampaignMenu;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private AgencyFlagsData _agencyFlags;
     [SerializeField]
     private AgencyFlagItem _flagPrefab;
@@ -28,11 +28,11 @@ namespace KSP.Game
     private RectTransform _flagParent;
     [SerializeField]
     private AgencyColorPicker _agencyColorPicker;
+    [SerializeField]
     [Space]
-    [SerializeField]
     private SyncToggleGroupWithChildren _syncToggleGroupWithChildren;
-    [Header("UI to hide on deactivate")]
     [SerializeField]
+    [Header("UI to hide on deactivate")]
     private GameObject[] _hideableUI;
     private DataContext _dataContext;
     private Property<Sprite> _selectedFlagIcon;

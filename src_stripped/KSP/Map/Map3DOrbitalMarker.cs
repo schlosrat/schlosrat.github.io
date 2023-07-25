@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.Map3DOrbitalMarker
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -26,8 +26,8 @@ namespace KSP.Map
     private Camera _viewCamera;
     private Canvas _parentCanvas;
     private CanvasScaler _parentCanvasScaler;
-    [Header("Display Properties")]
     [SerializeField]
+    [Header("Display Properties")]
     private RectTransform _contentContainer;
     [SerializeField]
     private RectTransform _panelContainer;
@@ -41,27 +41,27 @@ namespace KSP.Map
     private Graphic _expandedObject;
     [SerializeField]
     private bool _lockToCollapsed;
-    [Tooltip("The interval used to iterate around the overlap center to find an unoccupied position")]
-    [SerializeField]
     [Header("Overlap Handling Controls")]
+    [SerializeField]
+    [Tooltip("The interval used to iterate around the overlap center to find an unoccupied position")]
     private int _overlapResolveAngleInterval;
+    [SerializeField]
     [Tooltip("The distance interval to increase by when rotating around the overlap center to find an unoccupied position")]
-    [SerializeField]
     private float _overlapResolveDistanceInterval;
+    [SerializeField]
     [Tooltip("Max amount of iterations to perform when resolving overlap positions")]
-    [SerializeField]
     private int _positionResolveIterations;
-    [Tooltip("Max amount of markers to display within a given set of overlaps")]
     [SerializeField]
+    [Tooltip("Max amount of markers to display within a given set of overlaps")]
     private int _maxOverlapDisplay;
     [Tooltip("Markers with higher priorities are favored for display when the amount of overlapped markers exceeds _maxOverlapDisplay")]
     [SerializeField]
     private int _overlapDisplayPriority;
+    [SerializeField]
     [Header("Vector Stem Controls")]
-    [SerializeField]
     private UILineRenderer _stemVector;
-    [Header("Orientation Controls")]
     [SerializeField]
+    [Header("Orientation Controls")]
     private Map3DOrbitalMarker.OrientationData[] _collapsedOrientationPositions;
     [SerializeField]
     private Map3DOrbitalMarker.OrientationData[] _expandedOrientationPositions;

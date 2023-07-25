@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.Core.UIValue_ReadEnum_LocatorSet
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -29,15 +29,15 @@ namespace KSP.UI.Binding.Core
     [Header("MODE: Move Indicator To Locators")]
     [SerializeField]
     private bool animateSize;
-    [Tooltip("Must be parent of the Locators")]
     [Header("MODE: Move Locators To Indicator")]
+    [Tooltip("Must be parent of the Locators")]
     [SerializeField]
     private RectTransform locatorRoot;
     [Header("Value locators")]
     [SerializeField]
     private List<UIValue_ReadEnum_LocatorSet.SlidingLocatorEntry> locators;
-    [Tooltip("This is used when the current value is not mapped")]
     [SerializeField]
+    [Tooltip("This is used when the current value is not mapped")]
     [Header("Optional")]
     private RectTransform fallbackLocator;
     private Dictionary<string, RectTransform> valueMap;

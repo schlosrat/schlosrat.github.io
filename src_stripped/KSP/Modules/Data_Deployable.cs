@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Deployable
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -19,28 +19,28 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_Deployable : ModuleData
   {
-    [PAMDisplayControl(SortIndex = 1)]
     [LocalizedField("Extend Part")]
+    [PAMDisplayControl(SortIndex = 1)]
     [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
     public ModuleProperty<bool> toggleExtend;
-    [LocalizedField("PartModules/Deployable/Status")]
-    [PAMDisplayControl(SortIndex = 3)]
     [KSPState]
+    [PAMDisplayControl(SortIndex = 3)]
+    [LocalizedField("PartModules/Deployable/Status")]
     [HideInInspector]
     public ModuleProperty<string> statusTxt;
     [SteppedRange(0.0f, 1f, 0.01f)]
-    [HideInInspector]
     [PAMDisplayControl(SortIndex = 4)]
     [LocalizedField("PartModules/Deployable/DeployLimit")]
     [KSPState(CopyToSymmetrySet = true)]
-    public ModuleProperty<float> DeployLimit;
-    [KSPState]
     [HideInInspector]
+    public ModuleProperty<float> DeployLimit;
+    [HideInInspector]
+    [KSPState]
     public ModuleProperty<float> AnimationNormalizedTime;
-    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(ExcludeFromContext = true)]
     [JsonProperty]
+    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<Data_Deployable.DeployState> CurrentDeployState;
     [JsonIgnore]
     public Data_Deployable.DeployState DefaultDeployState;

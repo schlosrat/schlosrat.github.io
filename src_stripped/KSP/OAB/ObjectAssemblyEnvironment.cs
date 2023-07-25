@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyEnvironment
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -13,8 +13,8 @@ namespace KSP.OAB
 {
   public class ObjectAssemblyEnvironment : MonoBehaviour, IObjectAssemblyEnvironment
   {
-    [SerializeField]
     [Tooltip("The OAB Camera is kept within the area specified by this object. This CAN be null.")]
+    [SerializeField]
     private GameObject buildAreaBounds;
     [SerializeField]
     [Tooltip("Objects associated with this specific environment that get shown or hidden. Note that this root object isn't supposed to be shown/hidden.")]
@@ -26,11 +26,11 @@ namespace KSP.OAB
     private OABEnvironmentType environmentType;
     [SerializeField]
     private Transform environmentCenter;
+    [SerializeField]
     [Tooltip("Height size limit in meters for environment used in VAB")]
-    [SerializeField]
     private float maxVABHeight;
-    [Tooltip("Width size limit in meters for environment used in VAB")]
     [SerializeField]
+    [Tooltip("Width size limit in meters for environment used in VAB")]
     private float maxVABWidth;
     [SerializeField]
     [Tooltip("Depth size limit in meters for environment used in VAB")]
@@ -38,11 +38,11 @@ namespace KSP.OAB
     [Tooltip("BAE's maximum height size limit value in meters from the center of the cylinder (i.e. Environment Center)")]
     [SerializeField]
     private float maxBAEHeight;
+    [SerializeField]
     [Tooltip("BAE's minimum height size limit value in meters from the center of the cylinder (i.e. Environment Center)")]
-    [SerializeField]
     private float minBAEHeight;
-    [Tooltip("Radius in meters for size limit cylinder used in BAE")]
     [SerializeField]
+    [Tooltip("Radius in meters for size limit cylinder used in BAE")]
     private float maxBAERadius;
     [SerializeField]
     private List<CutsceneLocationLink> cutsceneLocations;

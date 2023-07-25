@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.CreateCampaignMenu
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -30,8 +30,8 @@ namespace KSP.Game
     private GameObject _singleplayerCampaignMenu;
     [SerializeField]
     private CampaignMenu _campaignMenu;
-    [Header("Other Menus")]
     [SerializeField]
+    [Header("Other Menus")]
     private CanvasGroup _gameModesMenu;
     [SerializeField]
     private CanvasGroup _difficultyMenu;
@@ -49,8 +49,8 @@ namespace KSP.Game
     private AgencyFlagManager _agencyFlagManager;
     [SerializeField]
     private CanvasGroup _FTUEConfirmationDialog;
-    [Header("WarningModal")]
     [SerializeField]
+    [Header("WarningModal")]
     private CanvasGroup _warningModal;
     [SerializeField]
     private CanvasGroup _campaignNameWarning;

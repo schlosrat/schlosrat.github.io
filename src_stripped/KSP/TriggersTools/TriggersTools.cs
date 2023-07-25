@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.TriggersTools.TriggersTools
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -57,8 +57,8 @@ namespace KSP.TriggersTools
     private Toggle dynamicSolverIterationToggle;
     [SerializeField]
     private Toggle dynamicTensorSolutionToggle;
-    [SerializeField]
     [Header("Input Labels")]
+    [SerializeField]
     private TextMeshProUGUI toggleInputsText;
     [SerializeField]
     private TextMeshProUGUI pitchValue;
@@ -68,8 +68,8 @@ namespace KSP.TriggersTools
     private TextMeshProUGUI rollValue;
     [SerializeField]
     private bool showInputValues;
-    [Header("Control State Labels")]
     [SerializeField]
+    [Header("Control State Labels")]
     private TextMeshProUGUI controlStateValue;
     [Header("Stats Labels")]
     [SerializeField]
@@ -82,8 +82,8 @@ namespace KSP.TriggersTools
     private Transform maneuverStatsParent;
     [SerializeField]
     private TriggersToolsManeuverNodeRow _maneuverRowPrefab;
-    [Header("Panels for scenes")]
     [SerializeField]
+    [Header("Panels for scenes")]
     private GameObject goNone;
     [SerializeField]
     private GameObject goFlight;
@@ -94,8 +94,8 @@ namespace KSP.TriggersTools
     private bool _ignoreValueChanged;
     private List<VesselComponent> _vessels;
     private Quaternion _navballRotation;
-    [SerializeField]
     [Header("Working Variables")]
+    [SerializeField]
     private bool _isControlPointsShowing;
     [SerializeField]
     private bool _isControlPointsRotated;

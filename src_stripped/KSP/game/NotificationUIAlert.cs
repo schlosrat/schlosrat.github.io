@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.NotificationUIAlert
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -45,8 +45,8 @@ namespace KSP.Game
     private CanvasGroup _timerCanvasGroup;
     [SerializeField]
     private CanvasGroup _trackingStationActionCanvasGroup;
-    [Header("Level of Importance - Colors")]
     [SerializeField]
+    [Header("Level of Importance - Colors")]
     private TextMeshProUGUI _notificationTitle;
     [SerializeField]
     private TextMeshProUGUI _alertTitle;
@@ -64,18 +64,18 @@ namespace KSP.Game
     private CanvasGroup _mediumLOICloseButton;
     [SerializeField]
     private CanvasGroup _lowLOICloseButton;
-    [Header("High")]
     [SerializeField]
+    [Header("High")]
     private Color _highBorderColor;
     [SerializeField]
     private Color _highBackgroundColor;
-    [Header("Medium")]
     [SerializeField]
+    [Header("Medium")]
     private Color _mediumBorderColor;
     [SerializeField]
     private Color _mediumBackgroundColor;
-    [Header("Low")]
     [SerializeField]
+    [Header("Low")]
     private Color _lowBorderColor;
     [SerializeField]
     private Color _lowBackgroundColor;

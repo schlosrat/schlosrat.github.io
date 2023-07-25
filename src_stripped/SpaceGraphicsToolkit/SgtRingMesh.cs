@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: SpaceGraphicsToolkit.SgtRingMesh
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -12,10 +12,10 @@ using UnityEngine.Serialization;
 
 namespace SpaceGraphicsToolkit
 {
-  [AddComponentMenu("Space Graphics Toolkit/SGT Ring Mesh")]
   [HelpURL("https://bitbucket.org/Darkcoder/space-graphics-toolkit/wiki/SgtRingMesh")]
-  [RequireComponent(typeof (SgtRing))]
   [ExecuteInEditMode]
+  [RequireComponent(typeof (SgtRing))]
+  [AddComponentMenu("Space Graphics Toolkit/SGT Ring Mesh")]
   public class SgtRingMesh : MonoBehaviour
   {
     [FormerlySerializedAs("Segments")]
@@ -24,17 +24,17 @@ namespace SpaceGraphicsToolkit
     [FormerlySerializedAs("SegmentDetail")]
     [SerializeField]
     private int segmentDetail;
-    [SerializeField]
     [FormerlySerializedAs("RadiusMin")]
-    private float radiusMin;
     [SerializeField]
+    private float radiusMin;
     [FormerlySerializedAs("RadiusMax")]
+    [SerializeField]
     private float radiusMax;
     [FormerlySerializedAs("RadiusDetail")]
     [SerializeField]
     private int radiusDetail;
-    [FormerlySerializedAs("BoundsShift")]
     [SerializeField]
+    [FormerlySerializedAs("BoundsShift")]
     private float boundsShift;
     [SerializeField]
     [FormerlySerializedAs("Shadow")]

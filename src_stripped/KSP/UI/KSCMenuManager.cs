@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.KSCMenuManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -22,7 +22,7 @@ namespace KSP.UI
   public class KSCMenuManager : UIModule
   {
     private const string PREFIX = "[GlobalEscapeMenu] ";
-    private const LogFilter LOGTAG = LogFilter.UI;
+    private const LogFilter LOGTAG = (LogFilter) 2097152;
     private const string KSC_MENU_PREFIX = "Menu/KSC/";
     private const string DEFAULT_COLONY_NAME = "Menu/KSC/KSC";
     private const string KSC_SELECTABLE_BUILDINGS_TAG = "KSCSelectableBuilding";

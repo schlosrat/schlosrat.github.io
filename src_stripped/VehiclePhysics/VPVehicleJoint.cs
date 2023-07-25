@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: VehiclePhysics.VPVehicleJoint
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -29,8 +29,8 @@ namespace VehiclePhysics
     public VPVehicleJoint.AngularJointMotion angularXMotion;
     public VPVehicleJoint.AngularJointMotion angularYMotion;
     public VPVehicleJoint.AngularJointMotion angularZMotion;
-    [HelpBox("These are used in Damped Spring constraints. Require Update Mode = On Fixed Update to be modified in runtime.", HelpBoxMessageType.None)]
     [Header("Target Pose")]
+    [HelpBox("These are used in Damped Spring constraints. Require Update Mode = On Fixed Update to be modified in runtime.", HelpBoxMessageType.None)]
     public Vector3 targetPosition;
     public Quaternion targetRotation;
     public bool resetFrameOnEnable;

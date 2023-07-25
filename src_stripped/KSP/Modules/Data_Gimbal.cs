@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Gimbal
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -17,31 +17,31 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_Gimbal : ModuleData
   {
-    [PAMDisplayControl(SortIndex = 2)]
-    [LocalizedField("PartModules/Gimbal/IsEnabled")]
     [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 2)]
     [HideInInspector]
+    [LocalizedField("PartModules/Gimbal/IsEnabled")]
     public ModuleProperty<bool> isEnabled;
     [LocalizedField("PartModules/Gimbal/Limiter")]
-    [KSPState(CopyToSymmetrySet = true)]
-    [SteppedRange(0.0f, 100f, 1f)]
     [PAMDisplayControl(SortIndex = 4)]
+    [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
+    [SteppedRange(0.0f, 100f, 1f)]
     public ModuleProperty<float> gimbalLimiter;
+    [HideInInspector]
     [LocalizedField("PartModules/Gimbal/PitchEnabled")]
     [PAMDisplayControl(SortIndex = 5)]
     [KSPState(CopyToSymmetrySet = true)]
-    [HideInInspector]
     public ModuleProperty<bool> enablePitch;
-    [PAMDisplayControl(SortIndex = 6)]
-    [LocalizedField("PartModules/Gimbal/YawEnabled")]
     [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 6)]
     [HideInInspector]
+    [LocalizedField("PartModules/Gimbal/YawEnabled")]
     public ModuleProperty<bool> enableYaw;
-    [HideInInspector]
     [PAMDisplayControl(SortIndex = 7)]
     [LocalizedField("PartModules/Gimbal/RollEnabled")]
     [KSPState(CopyToSymmetrySet = true)]
+    [HideInInspector]
     public ModuleProperty<bool> enableRoll;
     [LocalizedField("PartModules/Gimbal/AdvancedSettings")]
     [PAMDisplayControl(SortIndex = 3)]

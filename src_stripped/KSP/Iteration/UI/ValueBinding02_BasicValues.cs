@@ -1,7 +1,7 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Iteration.UI.ValueBinding02_BasicValues
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: F07798AD-7FDC-4402-AB44-D85C99F8E7B0
+// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
 // Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
 // XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
 
@@ -18,13 +18,13 @@ namespace KSP.Iteration.UI
     private UIValueBinder stringText;
     [SerializeField]
     private UIValueBinder stringField;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private UIValueBinder intText;
     [SerializeField]
     private UIValueBinder intField;
-    [Space]
     [SerializeField]
+    [Space]
     private UIValueBinder floatText;
     [SerializeField]
     private UIValueBinder floatField;
@@ -34,8 +34,8 @@ namespace KSP.Iteration.UI
     [Space]
     [SerializeField]
     private int intValue;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private float floatValue;
     private PropertyExternal<string> stringProp;
     private PropertyExternal<int> intProp;
