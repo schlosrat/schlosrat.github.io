@@ -3,8 +3,8 @@
     {
       "src": [
         {
-          "files": ["Assembly-CSharp.dll",
-                    "Assembly-CSharp.xml"],
+          "files": ["Assembly-CSharp-stripped.dll",
+                    "Assembly-CSharp-stripped.xml"],
           "src": "../DLL_stripped"
         }
       ],
