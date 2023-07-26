@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@master
       - name: Move XML file
         run: |
-          move DLL_stripped\Assembly-CSharp.xml DLL_stripped\Assembly-CSharp.xml.bak
+          move DLL_stripped\Assembly-CSharp-stripped.xml DLL_stripped\Assembly-CSharp-stripped.xml.bak
           dir DLL_stripped
         shell: cmd
       - name: Generate XML Documentation Directly
@@ -42,8 +42,8 @@ jobs:
       - name: Upload Assembly-CSharp.xml Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Assembly-CSharp.xml
-          path: DLL_stripped/Assembly-CSharp.xml
+          name: Assembly-CSharp-stripped.xml
+          path: DLL_stripped/Assembly-CSharp-stripped.xml
   publish-docs:
     needs: build
     environment:
@@ -53,29 +53,29 @@ jobs:
     steps:
       - name: Chekout
         uses: actions/checkout@v3
-      - name: Move old Assembly-CSharp.xml
+      - name: Move old Assembly-CSharp-stripped.xml
         run: |
-          mv DLL_stripped/Assembly-CSharp.xml DLL_stripped/Assembly-CSharp.xml.bak
+          mv DLL_stripped/Assembly-CSharp-stripped.xml DLL_stripped/Assembly-CSharp-stripped.xml.bak
           ls -l DLL_stripped
-          oldSize=$(find "DLL_stripped/Assembly-CSharp.xml.bak" -printf "%s")
-          echo "oldSize=$(find "DLL_stripped/Assembly-CSharp.xml.bak" -printf "%s")" >> "$GITHUB_ENV"
+          oldSize=$(find "DLL_stripped/Assembly-CSharp-stripped.xml.bak" -printf "%s")
+          echo "oldSize=$(find "DLL_stripped/Assembly-CSharp-stripped.xml.bak" -printf "%s")" >> "$GITHUB_ENV"
           echo "${{ env.oldSize }}"
-      - name: Download Assembly-CSharp.xml Artifact
+      - name: Download Assembly-CSharp-stripped.xml Artifact
         uses: actions/download-artifact@v3
         with:
-          name: Assembly-CSharp.xml
+          name: Assembly-CSharp-stripped.xml
           path: DLL_stripped
-      - name: Compare old Assembly-CSharp.xml to new
+      - name: Compare old Assembly-CSharp-stripped.xml to new
         run: |
           ls -l DLL_stripped
-          newSize=$(find "DLL_stripped/Assembly-CSharp.xml" -printf "%s")
-          echo "newSize=$(find "DLL_stripped/Assembly-CSharp.xml" -printf "%s")" >> "$GITHUB_ENV"
+          newSize=$(find "DLL_stripped/Assembly-CSharp-stripped.xml" -printf "%s")
+          echo "newSize=$(find "DLL_stripped/Assembly-CSharp-stripped.xml" -printf "%s")" >> "$GITHUB_ENV"
           now=$(date +%Y.%m.%d)
           echo "now=$(date +%Y.%m.%d)" >> "$GITHUB_ENV"
-          # fileTime=$(find -name "DLL_stripped/Assembly-CSharp.xml" -prune -printf '%TY.%Tm.%Td\n')
-          # echo "fileTime=$(find -name DLL_stripped/Assembly-CSharp.xml -prune -printf '%TY.%Tm.%Td\n')" >> "$GITHUB_ENV"
-          fileTime=$(date -r "DLL_stripped/Assembly-CSharp.xml" "+%Y.%m.%d.%H.%M")
-          echo "fileTime=$(date -r "DLL_stripped/Assembly-CSharp.xml" "+%Y.%m.%d.%H.%M")" >> "$GITHUB_ENV"
+          # fileTime=$(find -name "DLL_stripped/Assembly-CSharp-stripped.xml" -prune -printf '%TY.%Tm.%Td\n')
+          # echo "fileTime=$(find -name DLL_stripped/Assembly-CSharp-stripped.xml -prune -printf '%TY.%Tm.%Td\n')" >> "$GITHUB_ENV"
+          fileTime=$(date -r "DLL_stripped/Assembly-CSharp-stripped.xml" "+%Y.%m.%d.%H.%M")
+          echo "fileTime=$(date -r "DLL_stripped/Assembly-CSharp-stripped.xml" "+%Y.%m.%d.%H.%M")" >> "$GITHUB_ENV"
           echo "${{ env.newSize }}"
           echo "${{ env.now }}"
           echo "${{ env.fileTime }}"
@@ -102,7 +102,7 @@ jobs:
       - name: Push Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "DLL_stripped/Assembly-CSharp.xml"
+          artifacts: "DLL_stripped/Assembly-CSharp-stripped.xml"
           body: "* Updated XML Documentation"
           tag: "${{ env.fileTime }}"
           commit: "main"
