@@ -1,9 +1,197 @@
 <?xml version="1.0"?>
 <doc>
 <assembly>
-<name>Assembly-CSharp</name>
+<name>Assembly-CSharp-stripped</name>
 </assembly>
 <members>
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.Maneuver.ManeuverProvider.GetNodesForVessel(KSP.Sim.impl.IGGuid)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.Maneuver.ManeuverProvider.AddNodeToVessel(KSP.Sim.Maneuver.ManeuverNodeData)" -->
+
+<member name="M:KSP.Sim.Maneuver.ManeuverProvider.RemoveNodesFromVessel(KSP.Sim.impl.IGGuid,List{KSP.Sim.Maneuver.ManeuverNodeData})">
+    <summary>
+    Removes the provided list of nodes from the specified vessel.
+    </summary>
+    <param name="vesselID"></param>
+    <param name="nodeData"></param>
+    <exception cref="!:NullReferenceException"></exception>
+</member>
+
+<member name="M:KSP.Sim.Maneuver.ManeuverProvider.UpdateChangeOnNode(KSP.Sim.Maneuver.ManeuverNodeData,Vector3,Dictionary{Guid,KSP.Map.GizmoData}.ValueCollection)">
+    <summary>
+    Process an update to the burn vector (change parameter) for the provided node (nodeData parameter). This method checks EnoughDeltaVToChangeNode,
+    limiting the amount of the change if more is requested than the vessel is capable of. If the vessel is out of fuel the node is not updated, otherwise
+    the limited change is applied, ManeuverPlanComponent.UpdateChangeOnNode() is called, followed by this.UpdateActiveNode(), and this.UpdateAllChildNodeDetails().
+    </summary>
+    <param name="nodeData"></param>
+    <param name="change"></param>
+    <param name="lookupGizmoValues"></param>
+    <exception cref="!:NullReferenceException"></exception>
+</member>
+
+<member name="M:KSP.Sim.Maneuver.ManeuverProvider.UpdateTimeOnNode(KSP.Sim.Maneuver.ManeuverNodeData,System.Double,Dictionary{Guid,KSP.Map.GizmoData}.ValueCollection)">
+    <summary>
+    Process an update to the node.Time parameter
+    </summary>
+    <param name="nodeData"></param>
+    <param name="time"></param>
+    <param name="lookupGizmoValues"></param>
+    <exception cref="!:NullReferenceException"></exception>
+</member>
+
+<member name="M:KSP.Sim.Maneuver.ManeuverProvider.UpdateAllChildNodeDetails(KSP.Sim.Maneuver.ManeuverNodeData,Dictionary{Guid,KSP.Map.GizmoData}.ValueCollection)">
+    <summary>
+    Update all nodes that are subordinate to (later than and dependent upon) this node. This method calls this._game.SpaceSimulation.Maneuvers.UpdateNodeDetails.
+    </summary>
+    <param name="nodeData"></param>
+    <param name="lookupGizmoValues"></param>
+    <exception cref="!:NullReferenceException"></exception>
+</member>
+
+<member name="M:KSP.Sim.Maneuver.ManeuverProvider.UpdateNodeDetails(KSP.Sim.Maneuver.ManeuverNodeData)">
+    <summary>
+    Calls ManeuverPlanComponent.UpdateNodeDetails() and then this.UpdateActiveNode()
+    </summary>
+    <param name="nodeData"></param>
+    <exception cref="!:NullReferenceException"></exception>
+</member>
+
+<member name="M:KSP.Sim.Maneuver.ManeuverProvider.UpdateActiveNodeEta">
+    <summary>
+    Sets _activeManeuverProperty true and then validates the burn properties.
+    </summary>
+    <exception cref="!:NullReferenceException"></exception>
+</member>
+
+<member name="M:KSP.Sim.Maneuver.ManeuverProvider.UpdateActiveNode">
+    <summary>
+    If there is an _activeVesselPlan and that object has an ActiveNode, then sets _activeManeuverProperty true, sets _maneuverNodeNameProperty to the NodeName,
+    and then validates the burn properties, otherwsie sets _activeManeuverProperty false.
+    </summary>
+    <exception cref="!:NullReferenceException"></exception>
+</member>
+
+<member name="F:KSP.Sim.impl.ManeuverPlanComponent.TIME_CONSIDERED_CLOSE">
+    <summary>
+    Default = 60.0
+    </summary>
+</member>
+
+<member name="F:KSP.Sim.impl.ManeuverPlanComponent.OUT_OF_FUEL_EPSILON">
+    <summary>
+    Default = 0.001
+    </summary>
+</member>
+
+<member name="P:KSP.Sim.impl.ManeuverPlanComponent.ActiveNode">
+    <summary>
+    Returns the current active node if there is one, otherwise null.
+    </summary>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.OnStart(System.Double)">
+    <summary>
+    Subscribes to SOIEnteredMessage and SOIExitedMessage.
+    </summary>
+    <param name="universalTime"></param>
+</member>
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.GetState" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.GetNodes" -->
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.RebuildNodeData(Action)">
+    <summary>
+    If there is a _currentRebuildOperation (RebuildNodes is already running with a previous task), then stops the Coroutine, sets the list of current nodes,
+    and kicks off a new Coroutine call to RebuildNodes(onRebuild).
+    </summary>
+    <param name="onRebuild"></param>
+</member>
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.RebuildNodes(Action)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.IsValidNode(KSP.Sim.Maneuver.ManeuverNodeData)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.TryGetNode(System.Guid,KSP.Sim.Maneuver.ManeuverNodeData@)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.TryRemoveNode(System.Guid)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.EnoughDeltaVToAddNode" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.IsEngineInAirbreathingMode(KSP.Sim.DeltaV.VesselDeltaVComponent)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.EnoughDeltaVToAddNodeOnRebuild(KSP.Sim.Maneuver.ManeuverNodeData,Vector3d@)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.EnoughDeltaVToChangeNode(KSP.Sim.Maneuver.ManeuverNodeData,Vector3,Vector3@)" -->
+
+<!-- Badly formed XML comment ignored for member "M:KSP.Sim.impl.ManeuverPlanComponent.AddNode(KSP.Sim.Maneuver.ManeuverNodeData,System.Boolean)" -->
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.RemoveNode(KSP.Sim.Maneuver.ManeuverNodeData,System.Boolean)">
+    <summary>
+    Removes the specified node if found.
+    </summary>
+    <param name="nodeData"></param>
+    <param name="showMessageIfError"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.RemoveNodes(List{KSP.Sim.Maneuver.ManeuverNodeData})">
+    <summary>
+    Removes all the nodes found in the specified nodes list.
+    </summary>
+    <param name="nodes"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.UpdateChangeOnNode(KSP.Sim.Maneuver.ManeuverNodeData,Vector3)">
+    <summary>
+    Processes an update on the specified node structure applying the specified change to the burn vector provided there is sufficient DeltaV available.
+    If there is some DeltaV, but not enough for the whole change then a partial change will be applied. NOTE: This method just calls the next one by
+    passing it data.NodeID and the requested change.
+    </summary>
+    <param name="data"></param>
+    <param name="change"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.UpdateChangeOnNode(System.Guid,Vector3)">
+    <summary>
+    Processes an update on the specified nodeId applying the specified change to the burn vector provided there is sufficient DeltaV available.
+    If there is some DeltaV, but not enough for the whole change then a partial change will be applied.
+    </summary>
+    <param name="nodeId"></param>
+    <param name="change"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.UpdateTimeOnNode(KSP.Sim.Maneuver.ManeuverNodeData,System.Double)">
+    <summary>
+    Processes an update on the specified nodeData setting a new nodeData.Time value to adjust the timing of the node. NOTE: This method just calls the
+    next one bypassing it nodeData.NodeID and the updated time.
+    </summary>
+    <param name="nodeData"></param>
+    <param name="time"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.UpdateTimeOnNode(System.Guid,System.Double)">
+    <summary>
+    Processes an update on the specified nodeId setting a new nodeData.Time value to adjust the timing of the node.
+    </summary>
+    <param name="nodeId"></param>
+    <param name="time"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.RefreshManeuverNodeState(System.Int32)">
+    <summary>
+    Refresh the state of the specified (indexed) maneuver
+    </summary>
+    <param name="maneuverNumber"></param>
+</member>
+
+<member name="M:KSP.Sim.impl.ManeuverPlanComponent.OnRemoved(KSP.Sim.impl.SimulationObjectModel,System.Double)">
+    <summary>
+    Action triggered when a maneuver node is removed.
+    </summary>
+    <param name="simulationObject"></param>
+    <param name="universalTime"></param>
+</member>
+
 <member name="P:KSP.Sim.impl.OrbiterComponent.PatchedConicsOrbit">
     <summary>
     The current patch for this OrbiterComponent.
@@ -67,7 +255,7 @@
 <member name="P:KSP.Sim.impl.OrbiterComponent.localPosition">
     <summary>
     The current local position for this OrbiterComponent.
-    </summary>    [TypeConverterIgnore]
+    </summary>
 </member>
 
 <member name="P:KSP.Sim.impl.OrbiterComponent.relativeToMotion">
