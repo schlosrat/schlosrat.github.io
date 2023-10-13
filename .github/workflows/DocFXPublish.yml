@@ -16,7 +16,7 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# Allow only one concurrent deployment, skipping runs queued between the run in progress and the latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
@@ -34,7 +34,9 @@ jobs:
           dir DLL_stripped
         shell: cmd
       - name: Generate XML Documentation Directly
-        run: GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
+        run: |
+          GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
+          move DLL_stripped\Assembly-CSharp.xml DLL_stripped\Assembly-CSharp-stripped.xml
         shell: cmd
       - name: Check XML file
         run: dir DLL_stripped
