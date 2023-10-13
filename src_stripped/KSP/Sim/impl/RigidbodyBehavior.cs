@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.RigidbodyBehavior
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api;
 using System;
@@ -35,8 +35,8 @@ namespace KSP.Sim.impl
     public bool showGravity;
     [SerializeField]
     private bool _canSleep;
-    [SerializeField]
     [Header("Tensor Scaling")]
+    [SerializeField]
     private RigidbodyBehavior.MassScaleType _massScaleType;
     [SerializeField]
     private RigidbodyBehavior.MassScaleType _dynamicMassScaleType;
@@ -54,6 +54,8 @@ namespace KSP.Sim.impl
     private int _numGravityEaseUpdates;
     private static Collider[] _terrainOverlapTesthits;
     private int _executionPriorityOverride;
+    private bool _isHandCorrectionCheckPending;
+    private PartOwnerBehavior _ownerBehavior;
     private PartBehavior originalConnectPart;
     private Transform originalParent;
     public float _mass;

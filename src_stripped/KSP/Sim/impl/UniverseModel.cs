@@ -1,19 +1,25 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.UniverseModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api;
-using KSP.Sim.State;
+using KSP.Logging;
+using KSP.Messages;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace KSP.Sim.impl
 {
-  public class UniverseModel : IUniverseModel, ISimulationModelMap, IFixedUpdate, IPriorityOverride
+  public class UniverseModel : 
+    IUniverseModel,
+    ISimulationModelMap,
+    IFixedUpdate,
+    IPriorityOverride,
+    IUniverseTime
   {
     private ModelLookup _modelLookup;
     private List<SimulationObjectModel> scratchSimulationObjects;
@@ -30,9 +36,22 @@ namespace KSP.Sim.impl
     private readonly Dictionary<ulong, ColonyComponent>[] _playerOwnedColonies;
     private readonly Dictionary<IGGuid, KerbalComponent> _allKerbals;
     private readonly Dictionary<IGGuid, FlagComponent> _allFlags;
+    private readonly Dictionary<IGGuid, WaypointComponent> _allWaypoints;
     private readonly Dictionary<ulong, KerbalComponent>[] _playerOwnedKerbals;
     private TransformModel _galacticOrigin;
     private bool _isSimObjectCountDirty;
+    private SimUniverseTime _time;
+    private TimeScaleValues _prePauseScalars;
+    private const LogFilter LOG_FILTER = (LogFilter) 8388608;
+    private const string LOG_TAG = "[UniverseTime]";
+    private const float PHYSICS_TIME_SCALE_MAX = 4f;
+    private const float UNIVERSE_TIME_SCALE_MAX = 1E+12f;
+    private bool _isPendingTimescaleOverride;
+    private float _timescaleMultiplierOverride;
+    private bool _isTimescaleOverridenThisTick;
+    private static readonly TimeScaleValues DEFAULT_TIMEWARP_SCALARS;
+    private static readonly SimUniverseTime DEFAULT_SIM_TIME;
+    private MessageCenter _messageCenter;
 
     public ModelLookup ModelLookup
     {
@@ -42,18 +61,6 @@ namespace KSP.Sim.impl
     public int NumModels
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public double UniversalTime
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-      [MethodImpl(MethodImplOptions.NoInlining)] private set => throw null;
-    }
-
-    public double UniversalTimeDelta
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-      [MethodImpl(MethodImplOptions.NoInlining)] private set => throw null;
     }
 
     public ILateUpdateDriver lateUpdateDriver
@@ -150,7 +157,13 @@ namespace KSP.Sim.impl
       [MethodImpl(MethodImplOptions.NoInlining)] remove => throw null;
     }
 
-    public event Action<UniverseState> onUniverseStateUpdate
+    public event Action<bool> PausedChanged
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] add => throw null;
+      [MethodImpl(MethodImplOptions.NoInlining)] remove => throw null;
+    }
+
+    public event Action<bool, TimeScaleValues> TimescaleChanged
     {
       [MethodImpl(MethodImplOptions.NoInlining)] add => throw null;
       [MethodImpl(MethodImplOptions.NoInlining)] remove => throw null;
@@ -162,11 +175,37 @@ namespace KSP.Sim.impl
       [MethodImpl(MethodImplOptions.NoInlining)] private set => throw null;
     }
 
+    public SimUniverseTime Time
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public double UniverseTime
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public double UniverseTimeDelta
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public bool IsTimePaused
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public float TimeScale
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
     [MethodImpl(MethodImplOptions.NoInlining)]
     public UniverseModel(
       double universalTime,
       InertialFrame inertialReferenceFrame,
-      ILateUpdateDriver lateUpdateDriver)
+      ILateUpdateDriver lateUpdateDriver,
+      MessageCenter messageCenter)
     {
       throw null;
     }
@@ -225,6 +264,12 @@ namespace KSP.Sim.impl
     public void RemoveFlag(FlagComponent flag) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool AddWaypoint(WaypointComponent waypoint) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void RemoveWaypoint(WaypointComponent waypoint) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public bool AddPart(PartComponent part) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -237,6 +282,12 @@ namespace KSP.Sim.impl
     public void RemoveCelestialBody(CelestialBodyComponent celestialBody) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool SetTimePaused(bool isPaused) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void SetTimeScale(float timeScale, bool scalePhysics = false) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     SimulationObjectModel ISimulationModelMap.FromGlobalNameKey(string globalNameKey) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -244,6 +295,9 @@ namespace KSP.Sim.impl
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     SimulationObjectModel ISimulationModelMap.FromGlobalId(IGGuid globalId) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    internal void SetPendingTimescaleMultiplierOverride(float timescaleMultiplier) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public IEnumerable<SimulationObjectModel> GetAllSimObjects() => throw null;
@@ -267,6 +321,9 @@ namespace KSP.Sim.impl
     public List<VesselComponent> GetAllVessels() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    public IEnumerable<WaypointComponent> GetAllWaypoints() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public IEnumerable<VesselComponent> GetAllOwnedVessels(byte playerId) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -283,6 +340,9 @@ namespace KSP.Sim.impl
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public FlagComponent FindFlagComponent(IGGuid globalId) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public WaypointComponent FindWaypointComponent(IGGuid globalId) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public VesselComponent FindVesselComponent(byte playerId, ushort objectId) => throw null;
@@ -340,7 +400,7 @@ namespace KSP.Sim.impl
     public List<CelestialBodyComponent> GetAllCelestialBodies() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetUniversalTime(double time) => throw null;
+    public void SetUniverseTime(double ut, double deltaUT) => throw null;
 
     int IPriorityOverride.ExecutionPriorityOverride
     {
@@ -474,9 +534,6 @@ namespace KSP.Sim.impl
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void UpdateState(UniverseState state) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     public void Reset() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -489,5 +546,28 @@ namespace KSP.Sim.impl
     {
       throw null;
     }
+
+    internal int AllPartsCount
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    internal int AllKerbalsCount
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    internal int AllVesselsCount
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    internal int AllFlagsCount
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    static UniverseModel() => throw null;
   }
 }

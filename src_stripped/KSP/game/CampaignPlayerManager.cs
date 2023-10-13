@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.CampaignPlayerManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game.Missions.Definitions;
 using KSP.OAB;
@@ -17,13 +17,13 @@ namespace KSP.Game
 {
   public class CampaignPlayerManager
   {
-    public const OnCampaignPlayerEntryEventCallback DEFAULT_ON_CAMPAIGN_PLAYER_ENTRY_EVENT_CALLBACK = null;
+    public const OnCampaignPlayerMPActionCallback DEFAULT_ON_CAMPAIGN_PLAYER_MP_ACTION_CALLBACK = null;
     public const bool DEFAULT_PROPAGATE_UDPATES_FLAG = false;
     private List<CampaignPlayerEntry> _list;
     private Dictionary<string, CampaignPlayerEntry> _playerNameDict;
     private Dictionary<string, CampaignPlayerEntry> _playerGuidDict;
     private Dictionary<byte, CampaignPlayerEntry> _playerIdDict;
-    private OnCampaignPlayerEntryEventCallback _onCampaignPlayerEntryEventCallback;
+    private OnCampaignPlayerMPActionCallback _onCampaignPlayerMPActionCallback;
     private bool _propagateUpdatesFlag;
 
     public GameInstance Game
@@ -39,14 +39,14 @@ namespace KSP.Game
     [MethodImpl(MethodImplOptions.NoInlining)]
     public int IndexOfEntry(CampaignPlayerEntry campaignPlayerEntry) => throw null;
 
-    public OnCampaignPlayerEntryEventCallback OnCampaignPlayerEntryEventCallback
+    public OnCampaignPlayerMPActionCallback OnCampaignPlayerMPActionCallback
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetOnCampaignPlayerEntryEventCallback(
-      OnCampaignPlayerEntryEventCallback onCampaignPlayerEntryEventCallback)
+    public void SetOnCampaignPlayerMPActionCallback(
+      OnCampaignPlayerMPActionCallback onCampaignPlayerMPActionCallback)
     {
       throw null;
     }
@@ -144,8 +144,10 @@ namespace KSP.Game
       string copyLocationString,
       Dictionary<string, uint> favoritedParts,
       bool isFTUEEnabled,
-      List<MissionData> missions,
-      string completedTutorials,
+      List<MissionSaveData> missionSaveData,
+      List<string> completedTutorials,
+      List<string> completedFTUEs,
+      List<TrackedMissions> trackedMissions,
       Color partColorBase,
       Color partColorAccent)
     {

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.Map3DOrbitalMarker
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using DG.Tweening;
 using KSP.Api.CoreTypes;
@@ -26,8 +26,8 @@ namespace KSP.Map
     private Camera _viewCamera;
     private Canvas _parentCanvas;
     private CanvasScaler _parentCanvasScaler;
-    [SerializeField]
     [Header("Display Properties")]
+    [SerializeField]
     private RectTransform _contentContainer;
     [SerializeField]
     private RectTransform _panelContainer;
@@ -41,9 +41,9 @@ namespace KSP.Map
     private Graphic _expandedObject;
     [SerializeField]
     private bool _lockToCollapsed;
+    [Tooltip("The interval used to iterate around the overlap center to find an unoccupied position")]
     [Header("Overlap Handling Controls")]
     [SerializeField]
-    [Tooltip("The interval used to iterate around the overlap center to find an unoccupied position")]
     private int _overlapResolveAngleInterval;
     [SerializeField]
     [Tooltip("The distance interval to increase by when rotating around the overlap center to find an unoccupied position")]
@@ -54,11 +54,11 @@ namespace KSP.Map
     [SerializeField]
     [Tooltip("Max amount of markers to display within a given set of overlaps")]
     private int _maxOverlapDisplay;
+    [SerializeField]
     [Tooltip("Markers with higher priorities are favored for display when the amount of overlapped markers exceeds _maxOverlapDisplay")]
-    [SerializeField]
     private int _overlapDisplayPriority;
-    [SerializeField]
     [Header("Vector Stem Controls")]
+    [SerializeField]
     private UILineRenderer _stemVector;
     [SerializeField]
     [Header("Orientation Controls")]

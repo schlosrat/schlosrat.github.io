@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyPlacementTool
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Input;
@@ -23,7 +23,7 @@ namespace KSP.OAB
     private const float PITCH_LIMIT_DEGREES = 90f;
     private static readonly float EPSILON_SQR;
     private IDisposable iconLoadAction;
-    private List<IObjectAssemblyPart> closeParts;
+    private List<IObjectAssemblyPart> _closeParts;
     private OabInputDefinition _inputDefinition;
     private bool _modifierTriggered;
     private bool _disableStackAttachment;
@@ -153,6 +153,18 @@ namespace KSP.OAB
     protected virtual void OnPlacingPart(bool isAttachedToSomethingElse) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private void PlacePartOnAnchor(out OABActionType actionType) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool IsValidAttachNode() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void PlacePartOnStackAnchor() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void PlacePartOnSurfaceAnchor() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     private void ShowNodesOnAttachableParts(IObjectAssemblyPart part) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -211,6 +223,12 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnUpdate() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void UpdatePartHighlight() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool UpdateGrabbedPartAlignment() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnPostUpdate() => throw null;

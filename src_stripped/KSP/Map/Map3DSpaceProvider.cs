@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.Map3DSpaceProvider
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.impl;
@@ -22,9 +22,9 @@ namespace KSP.Map
     [SerializeField]
     [FormerlySerializedAs("Map3DScaleInv")]
     private double _map3DScaleInv;
-    [Tooltip("scales all celestial body objects. This number should probably come from somewhere more defined.")]
-    [SerializeField]
     [FormerlySerializedAs("CelestialBodyScalar")]
+    [SerializeField]
+    [Tooltip("scales all celestial body objects. This number should probably come from somewhere more defined.")]
     private double _celestialBodyScalar;
     [SerializeField]
     [Tooltip("the camera pivot is required To allow forced resetting when the map selection changes.")]

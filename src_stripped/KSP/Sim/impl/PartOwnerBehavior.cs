@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.PartOwnerBehavior
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Collections;
@@ -26,9 +26,12 @@ namespace KSP.Sim.impl
     private List<PartOwnerBehavior.JointConnection> jointConnections;
     private List<PartOwnerBehavior.JointConnection> _strutJointConnections;
     private List<ConfigurableJoint> _tempJointStorage;
+    private static List<AttachNodeData> _tempAttachNodeStorage;
     private Vector3d _gravityInPhysicsSpace;
     private bool _isGravityInPhysicsSpaceDirty;
+    private bool _isJointConnectionsDirty;
     public Vector3 CenterOfMass;
+    private HandOfKraken _handOfKraken;
 
     public JointOptimization jointOptimization
     {
@@ -86,6 +89,46 @@ namespace KSP.Sim.impl
     }
 
     public int JointsCount
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public IEnumerable<PartOwnerBehavior.JointConnection> JointConnections
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public bool IsHandOfKrakenCorrectingOrbit
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public Position HandOfKrakenExpectedPos
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public bool IsHandOfKrakenEnabled
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    internal bool IsHandOfKrakenTryingToCorrect
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    internal bool IsHandOfKrakenOrbitCorrectInStandOff
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    internal bool HasHandOfKrakenGotExpectedOrbit
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    internal bool IsHandOfKrakenOrbitUnderAcceleration
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -206,6 +249,9 @@ namespace KSP.Sim.impl
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    public void BreakJointConnection(PartOwnerBehavior.JointConnection jointConnection) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public void RemoveDisconnectedJointConnections(bool waitaFrame) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -244,8 +290,22 @@ namespace KSP.Sim.impl
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void ResetAllRigidbodyAndJointTransforms() => throw null;
 
+    [ContextMenu("Enable Orbit Override when no Acceleration")]
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void EnableHandOfKraken() => throw null;
+
+    [ContextMenu("Disable Orbit Override when no Acceleration")]
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void DisableHandOfKraken() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void StartHandOfKrakenOrbitCorrectStandOff() => throw null;
+
     [MethodImpl(MethodImplOptions.NoInlining)]
     public PartOwnerBehavior() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    static PartOwnerBehavior() => throw null;
 
     public enum JointConnectionType
     {

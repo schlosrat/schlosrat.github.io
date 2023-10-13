@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Utilities.GameObjectPool`1
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Collections.Generic;
@@ -15,32 +15,38 @@ namespace KSP.Utilities
   public class GameObjectPool<T> : IObjectPool<T>, IDisposable where T : Component
   {
     private T _targetObject;
-    private Transform _parentTransform;
     private Transform _poolParent;
+    private bool _didCreateGameObjectForPool;
     private Queue<T> _availablePool;
     private List<T> _instances;
     private Action<T> _onReset;
-
-    private Transform PoolParent
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public GameObjectPool(
       T targetObject,
       Action<T> onReset = null,
       Transform parent = null,
-      bool worldPositionStays = true)
+      bool worldPositionStays = true,
+      int prewarmCount = 0,
+      bool createGameObjectForPool = true)
     {
       throw null;
     }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void PreWarm(int count) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void Dispose() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public T FetchInstance() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public T FetchInstance(Transform newParent = null) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private T CreateInstance(Transform newParent = null) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void ReleaseInstance(T targetInstance) => throw null;

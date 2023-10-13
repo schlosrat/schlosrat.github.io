@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: PQSDecal
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -20,14 +20,14 @@ public class PQSDecal : ScriptableObject
   [Range(0.0f, 2f)]
   [SerializeField]
   public float FadeStrength;
-  [SerializeField]
   [Range(0.0f, 1f)]
+  [SerializeField]
   public float AlbedoOpacity;
-  [SerializeField]
   [Range(0.0f, 1f)]
+  [SerializeField]
   public float NormalOpacity;
-  [SerializeField]
   [Range(0.0f, 1f)]
+  [SerializeField]
   public float GradientOpacity;
   public Color Tint;
   public PQSDecalBlendMode NormalBlend;
@@ -40,8 +40,8 @@ public class PQSDecal : ScriptableObject
   public bool UseDecalTexturing;
   public bool UseTextureAlphaMask;
   public bool UseTextureHeightmapFade;
-  [SerializeField]
   [Range(0.01f, 1.99f)]
+  [SerializeField]
   public float MaterialScaleFactor;
 
   [MethodImpl(MethodImplOptions.NoInlining)]

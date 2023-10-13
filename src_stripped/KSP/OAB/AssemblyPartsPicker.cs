@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.AssemblyPartsPicker
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -49,18 +49,16 @@ namespace KSP.OAB
     public RectTransform cursorMovableArea;
     [Header("General Buttons")]
     public AssemblyPartsButton partButtonSimplePrefab;
-    [Header("Info Modal")]
-    public RectTransform modalParent;
-    public ObjectAssemblyFlexibleModal modalPrefab;
-    private ObjectAssemblyFlexibleModal _modalInstance;
+    [Header("Info Overlay")]
+    public PartInfoOverlay PartInfoOverlay;
     [Header("Categories, Filters, Search, Favorites")]
     public PartCategories currentCategory;
     public AssemblyPartFilterType currentFilter;
     public List<ObjectAssemblyCategoryButton> categoryButtons;
     [Space]
     public AssemblyFilterContainer filterContainerSimplePrefab;
-    public PartSizeColorBlock filterColors;
-    public PartSizeColorBlock filterHighlightColors;
+    public PartSizeColorData filterColors;
+    public PartSizeColorData filterHighlightColors;
     [Space]
     public DropdownExtended sortingDropdown;
     public Toggle togglePartsFiltersButton;
@@ -317,10 +315,12 @@ namespace KSP.OAB
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private Color GetFilterColorFromFilterEnum(int filterSubType) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private Color GetFilterHighlightColorFromFilterEnum(int filterSubType) => throw null;
+    public static Color GetFilterColorFromFilterEnum(
+      int filterSubType,
+      PartSizeColorData filterColors)
+    {
+      throw null;
+    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private int GetAlphaIndexForPart(IObjectAssemblyAvailablePart part) => throw null;
@@ -356,8 +356,6 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public AssemblyPartsPicker() => throw null;
-
-    public delegate Color GetFilterColorDelegate(int filter);
 
     private class PartToButtonDictionary : 
       BiDirectionalDictionary<IObjectAssemblyAvailablePart, AssemblyPartsButton>

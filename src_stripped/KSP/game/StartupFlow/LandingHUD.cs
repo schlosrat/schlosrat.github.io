@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.StartupFlow.LandingHUD
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding;
@@ -43,11 +43,10 @@ namespace KSP.Game.StartupFlow
     [Header("Sub Menus")]
     public CampaignMenu CampaignMenu;
     public GameObject MultiplayerMenu;
-    public PDLoginMenu LogInMenu;
     public GameObject Credits;
     public LegalMenu LegalMenu;
-    [SerializeField]
     [Space]
+    [SerializeField]
     private CanvasGroup _loginTopBar;
     [SerializeField]
     private TMP_Text _topBarButtonText;

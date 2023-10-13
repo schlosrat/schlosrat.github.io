@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_CompoundPart
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Animation;
 using KSP.Sim;
@@ -22,8 +22,8 @@ namespace KSP.Modules
     [Tooltip("Name of the starting anchor object to place at the start anchor end of the compound part.\nIf this is blank then it is assumed the whole part prefab model is placed at the start anchor end.\nYou Must supply both a StartAnchorName and EndAnchorName to use this feature.")]
     [KSPDefinition]
     public string StartAnchorName;
-    [KSPDefinition]
     [Tooltip("Transform where to place the linker/connector object at the start point of the compound part.\nIf this is blank the linker will be placed at the start anchor part transform position")]
+    [KSPDefinition]
     public string StartAnchorTransform;
     [Tooltip("Optional Transform that will be made to look at the other Anchor.")]
     [KSPDefinition]
@@ -37,8 +37,8 @@ namespace KSP.Modules
     [Tooltip("Optional Transform that will be made to look at the other Anchor.")]
     [KSPDefinition]
     public string EndAnchorLookTransform;
-    [Tooltip("Name of the the linker/connector object transform which should be part of the part model.")]
     [KSPDefinition]
+    [Tooltip("Name of the the linker/connector object transform which should be part of the part model.")]
     public string LinkerName;
     [KSPDefinition]
     public float LinkerMinLength;

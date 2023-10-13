@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Drag
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -35,14 +35,14 @@ namespace KSP.Modules
     [KSPDefinition]
     [HideInInspector]
     public float[] weightedDrag;
-    [HideInInspector]
     [KSPDefinition]
+    [HideInInspector]
     public float[] weightedDragMultiplier;
-    [HideInInspector]
     [KSPDefinition]
+    [HideInInspector]
     public float[] weightedDepth;
-    [KSPDefinition]
     [HideInInspector]
+    [KSPDefinition]
     public Vector3 weightedCenter;
     [KSPDefinition]
     [HideInInspector]
@@ -50,38 +50,38 @@ namespace KSP.Modules
     [KSPDefinition]
     [HideInInspector]
     public bool isDragCubeRotated;
-    [HideInInspector]
     [KSPDefinition]
-    public Quaternion dragCubeRotation;
-    [KSPState(CopyToSymmetrySet = false)]
     [HideInInspector]
+    public Quaternion dragCubeRotation;
+    [HideInInspector]
+    [KSPState(CopyToSymmetrySet = false)]
     public bool UpdateExposedArea;
+    [KSPState]
     [LocalizedField("PartModules/Drag/DragDirection")]
     [PAMDisplayControl(SortIndex = 0)]
-    [KSPState]
     public ModuleProperty<Vector3> DragForceDirection;
-    [PAMDisplayControl(SortIndex = 1)]
     [LocalizedField("PartModules/Drag/DragMagnitude")]
+    [PAMDisplayControl(SortIndex = 1)]
     [KSPState]
     public ModuleProperty<float> DragForceMagnitude;
     [LocalizedField("PartModules/Drag/LiftDirection")]
     [PAMDisplayControl(SortIndex = 2)]
     [KSPState]
     public ModuleProperty<Vector3> LiftForceDirection;
-    [KSPState]
     [LocalizedField("PartModules/Drag/LiftMagnitude")]
     [PAMDisplayControl(SortIndex = 3)]
+    [KSPState]
     public ModuleProperty<float> LiftForceMagnitude;
     [LocalizedField("PartModules/Drag/ReferenceArea")]
     [PAMDisplayControl(SortIndex = 4)]
     [KSPState]
     public ModuleProperty<float> ReferenceArea;
     [LocalizedField("PartModules/Drag/ExposedArea")]
-    [KSPState]
     [PAMDisplayControl(SortIndex = 5)]
+    [KSPState]
     public ModuleProperty<float> ExposedArea;
-    [LocalizedField("PartModules/Drag/TotalArea")]
     [PAMDisplayControl(SortIndex = 6)]
+    [LocalizedField("PartModules/Drag/TotalArea")]
     [KSPState]
     public ModuleProperty<float> TotalArea;
     [JsonIgnore]

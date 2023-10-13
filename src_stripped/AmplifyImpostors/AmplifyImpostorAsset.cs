@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: AmplifyImpostors.AmplifyImpostorAsset
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -18,8 +18,8 @@ namespace AmplifyImpostors
     public Material Material;
     [SerializeField]
     public Mesh Mesh;
-    [HideInInspector]
     [SerializeField]
+    [HideInInspector]
     public int Version;
     [SerializeField]
     public ImpostorType ImpostorType;
@@ -46,8 +46,8 @@ namespace AmplifyImpostors
     [Range(4f, 16f)]
     [SerializeField]
     public int MaxVertices;
-    [SerializeField]
     [Range(0.0f, 0.2f)]
+    [SerializeField]
     public float Tolerance;
     [SerializeField]
     [Range(0.0f, 1f)]

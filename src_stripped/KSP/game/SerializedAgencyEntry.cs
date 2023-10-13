@@ -1,11 +1,10 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.SerializedAgencyEntry
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
-using KSP.Game.Missions.Definitions;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -20,7 +19,7 @@ namespace KSP.Game
     public static Color DEFAULT_COLOR_BASE;
     public static Color DEFAULT_COLOR_ACCENT;
     public static string DEFAULT_FLAG_SPRITE_LOCATION;
-    public static List<MissionData> DEFAULT_MISSIONS;
+    public static List<KSP.Game.Missions.Definitions.MissionSaveData> DEFAULT_MISSION_SAVE_DATA;
     [JsonProperty("AgencyId")]
     public int AgencyId;
     [JsonProperty("AgencyName")]
@@ -31,8 +30,8 @@ namespace KSP.Game
     public Color ColorAccent;
     [JsonProperty("FlagSpriteLocation")]
     public string FlagSpriteLocation;
-    [JsonProperty("MissionData")]
-    public List<MissionData> Missions;
+    [JsonProperty("MissionSaveData")]
+    public List<KSP.Game.Missions.Definitions.MissionSaveData> MissionSaveData;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public SerializedAgencyEntry() => throw null;

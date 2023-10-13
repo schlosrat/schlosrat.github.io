@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Inspector.test.CallbackButtonsDemo
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -12,33 +12,33 @@ namespace KSP.Inspector.test
 {
   public class CallbackButtonsDemo : MonoBehaviour
   {
-    [Header("The CallbackButtons Attribute lets you")]
-    [Space]
-    [Header("One Callback Button")]
     [Header("callback is invoked, regardless of edit mode.")]
+    [Header("The CallbackButtons Attribute lets you")]
+    [Header("Add buttons on specific fields.")]
+    [Header("One Callback Button")]
+    [Space]
+    [Space]
     [Header("When a button is clicked, its corresponding")]
     [Space]
     [Space]
-    [Space]
-    [Space]
     [CallbackButtons(new string[] {"Callback01"})]
-    [Header("Add buttons on specific fields.")]
+    [Space]
     public int a;
+    [Header("One Callback Button with a static callback")]
     [Space]
     [CallbackButtons(new string[] {"Callback02"})]
-    [Header("One Callback Button with a static callback")]
     public int b;
-    [CallbackButtons(new string[] {"Callback03", "Callback04", "Callback05"})]
     [Header("Multiple Callback Buttons")]
     [Space]
+    [CallbackButtons(new string[] {"Callback03", "Callback04", "Callback05"})]
     public int c;
     [Header("Can pass value of current field into callback")]
-    [CallbackButtons(new string[] {"Callback06"})]
     [Space]
+    [CallbackButtons(new string[] {"Callback06"})]
     [Space]
     public int d;
-    [CallbackButtons(new string[] {"Callback06"})]
     [Header("And can resolve default arguments")]
+    [CallbackButtons(new string[] {"Callback06"})]
     [Space]
     public int e;
     [Space]
@@ -46,10 +46,10 @@ namespace KSP.Inspector.test
     [Header("Handling invalid buttons")]
     [CallbackButtons(new string[] {"BogusFunc", "NonDefaultInstance", "NonDefaultStatic"})]
     public int f;
-    [Space]
+    [CallbackButtons(new string[] {"IncCount", "DecCount", "StaticDoPrint"}, new string[] {"Increment Counter", "Decrement Counter", "Print Current value"})]
     [Space]
     [Header("Can provide custom text for buttons")]
-    [CallbackButtons(new string[] {"IncCount", "DecCount", "StaticDoPrint"}, new string[] {"Increment Counter", "Decrement Counter", "Print Current value"})]
+    [Space]
     public int count;
 
     [MethodImpl(MethodImplOptions.NoInlining)]

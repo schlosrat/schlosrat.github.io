@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.PartsManagerPartsList
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api;
 using KSP.Api.CoreTypes;
@@ -36,8 +36,8 @@ namespace KSP.Game
     private PartsManagerCategory _partsManagerCategoryPrefab;
     [SerializeField]
     private PartsManagerPart _partsManagerPartPrefab;
-    [Space]
     [SerializeField]
+    [Space]
     private PartsManagerFloatPropertySlider _sliderFloatUIPrefab;
     [SerializeField]
     private PartsManagerIntPropertySlider _sliderIntUIPrefab;
@@ -71,7 +71,7 @@ namespace KSP.Game
     private GameObjectPool<PartsManagerPropertyHeader> _headerPrefabPool;
     private GameObjectPool<PartsManagerPropertyFooter> _footerPrefabPool;
     private bool _isInitialized;
-    private bool _isDirty;
+    private bool isRebuildEntireUIQueued;
     private PartOwnerComponent _partOwner;
     private ObjectAssemblyBuilderEvents _oabEvents;
     private SubscriptionHandle _gameStateChangedHandle;
@@ -83,9 +83,10 @@ namespace KSP.Game
     private bool isFavorite;
     private IGGuid _partOwnerGuid;
     private IObjectAssembly _currentAssembly;
-    private readonly Dictionary<IGGuid, PartsManagerPart> _partUIMap;
     private readonly Dictionary<PartCategories, PartsManagerCategory> _allCategories;
     private readonly Dictionary<IGGuid, IInteractivePart> _allParts;
+    private readonly Dictionary<IGGuid, PartsManagerPart> _partUIMap;
+    private readonly List<IGGuid> _partsWithModulesSpawned;
     private PartBehaviourModule _moduleDataSortPartBehaviour;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -113,7 +114,7 @@ namespace KSP.Game
     public void SetAssembly(IObjectAssembly assembly) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void SyncVisuals() => throw null;
+    private void RebuildUIFromScratch() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private bool TryGetInteractiveParts(Dictionary<IGGuid, IInteractivePart> allParts) => throw null;
@@ -161,13 +162,68 @@ namespace KSP.Game
     private void UnregisterOnChangedForModules(IInteractivePart interactivePart) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void UpkeepModuleCategories() => throw null;
+    private void RemoveUnusedPartCategories() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool RemoveFromFavorite(IGGuid guid) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void AddAllUIForPart(IInteractivePart interactivePart) => throw null;
+    public void OnPartCategoryAccordionExpanded(PartsManagerCategory category) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnPartAccordionExpanded(PartsManagerPart part) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void AddUIForParts() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool IsCompoundPart(IInteractivePart part) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void AddUIForPart(IInteractivePart interactivePart, bool addUIOnlyIfVisible = true) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void AddPartCategoryUI(PartCategories partCategory, out PartsManagerCategory category) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void AddPartUI(
+      IInteractivePart interactivePart,
+      PartsManagerCategory category,
+      bool addUIOnlyIfVisible = true)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void AddPartModuleUI(IInteractivePart interactivePart, PartsManagerPart part) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool TryAddPartModuleDataUI(
+      PartsManagerPart part,
+      IProperty coreProperty,
+      IDataContextReadonly subContext,
+      int iModule,
+      int iModuleData)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private PartsManagerEntry GetPartsManagerEntryFromType(
+      System.Type type,
+      IDataContextReadonly subContext)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void AddPartModuleHeaderAndFooterUI(
+      PartBehaviourModule partModule,
+      PartsManagerPart part,
+      int iModule)
+    {
+      throw null;
+    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void AddEntryToPart(
@@ -202,7 +258,7 @@ namespace KSP.Game
     private bool NeedsRefresh() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void MarkDirty() => throw null;
+    public void QueueRebuildEntireUIFromScratch() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void Debug_Refresh() => throw null;

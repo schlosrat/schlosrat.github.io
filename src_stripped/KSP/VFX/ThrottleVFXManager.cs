@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.VFX.ThrottleVFXManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Messages;
@@ -22,18 +22,18 @@ namespace KSP.VFX
   {
     [Tooltip("Define the list of Action Events here for each Engine Mode.\n0 = The first (or only if only one engine mode for this engine), 1 = Second engine mode, and so on.")]
     public ThrottleVFXManager.FXModeActionEvent[] FXModeActionEvents;
-    [FormerlySerializedAs("debugMode")]
     [HideInInspector]
+    [FormerlySerializedAs("debugMode")]
     public bool DebugMode;
     private IFloatingOrigin _floatingOrigin;
+    [HideInInspector]
     [FormerlySerializedAs("engineUsesDiscreteBursts")]
-    [HideInInspector]
     public bool EngineUsesDiscreteBursts;
-    [HideInInspector]
     [FormerlySerializedAs("triggerDiscreteAnimation")]
-    public bool TriggerDiscreteAnimation;
-    [FormerlySerializedAs("animTriggerName")]
     [HideInInspector]
+    public bool TriggerDiscreteAnimation;
+    [HideInInspector]
+    [FormerlySerializedAs("animTriggerName")]
     public string AnimTriggerName;
     [FormerlySerializedAs("isSolidFuelBooster")]
     [HideInInspector]

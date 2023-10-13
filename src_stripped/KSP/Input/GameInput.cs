@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Input.GameInput
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Collections;
@@ -63,7 +63,7 @@ namespace KSP.Input
     private readonly InputAction m_Flight_WheelSteer;
     private readonly InputAction m_Flight_ActiveFuncitonMenu;
     private readonly InputAction m_Flight_ActiveSASLastUse;
-    private readonly InputAction m_Flight_activeCameraZoom;
+    private readonly InputAction m_Flight_toggleCameraZoom;
     private readonly InputAction m_Flight_ToggleAeroGUI;
     private readonly InputAction m_Flight_mouseSecondaryTap;
     private readonly InputAction m_Flight_mouseDoubleTap;
@@ -76,6 +76,8 @@ namespace KSP.Input
     private readonly InputAction m_Flight_InteractAlt;
     private readonly InputAction m_Flight_InteractAlt2;
     private readonly InputAction m_Flight_ToggleVesselLabels;
+    private readonly InputAction m_Flight_CameraZoom;
+    private readonly InputAction m_Flight_ToggleFreeCamera;
     private readonly InputActionMap m_Global;
     private List<GameInput.IGlobalActions> m_GlobalActionsCallbackInterfaces;
     private readonly InputAction m_Global_QuickSave;
@@ -171,7 +173,6 @@ namespace KSP.Input
     private readonly InputAction m_MapView_altKeyModifier;
     private readonly InputAction m_MapView_ctrlKeyModifier;
     private readonly InputAction m_MapView_cameraRotate;
-    private readonly InputAction m_MapView_mouseScroll;
     private readonly InputAction m_MapView_nextMapItem;
     private readonly InputAction m_MapView_previousMapItem;
     private readonly InputAction m_MapView_cameraZoom;
@@ -181,10 +182,11 @@ namespace KSP.Input
     private readonly InputAction m_MapView_Focus;
     private readonly InputActionMap m_RD;
     private List<GameInput.IRDActions> m_RDActionsCallbackInterfaces;
-    private readonly InputAction m_RD_mouseScroll;
+    private readonly InputAction m_RD_cameraZoom;
     private readonly InputAction m_RD_mousePosition;
     private readonly InputAction m_RD_cameraMovement;
     private readonly InputAction m_RD_cameraDragMouse;
+    private readonly InputAction m_RD_expandPartInfoTooltip;
     private readonly InputActionMap m_Cursor;
     private List<GameInput.ICursorActions> m_CursorActionsCallbackInterfaces;
     private readonly InputAction m_Cursor_LeftStick;
@@ -229,6 +231,7 @@ namespace KSP.Input
     private readonly InputActionMap m_KSC;
     private List<GameInput.IKSCActions> m_KSCActionsCallbackInterfaces;
     private readonly InputAction m_KSC_ShowMap;
+    private readonly InputAction m_KSC_CameraZoom;
     private readonly InputActionMap m_Audio;
     private List<GameInput.IAudioActions> m_AudioActionsCallbackInterfaces;
     private readonly InputAction m_Audio_MuteGame;
@@ -593,7 +596,7 @@ namespace KSP.Input
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       }
 
-      public InputAction activeCameraZoom
+      public InputAction toggleCameraZoom
       {
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       }
@@ -654,6 +657,16 @@ namespace KSP.Input
       }
 
       public InputAction ToggleVesselLabels
+      {
+        [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+      }
+
+      public InputAction CameraZoom
+      {
+        [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+      }
+
+      public InputAction ToggleFreeCamera
       {
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       }
@@ -1241,11 +1254,6 @@ namespace KSP.Input
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       }
 
-      public InputAction mouseScroll
-      {
-        [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-      }
-
       public InputAction nextMapItem
       {
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
@@ -1318,7 +1326,7 @@ namespace KSP.Input
       [MethodImpl(MethodImplOptions.NoInlining)]
       public RDActions(GameInput wrapper) => throw null;
 
-      public InputAction mouseScroll
+      public InputAction cameraZoom
       {
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       }
@@ -1334,6 +1342,11 @@ namespace KSP.Input
       }
 
       public InputAction cameraDragMouse
+      {
+        [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+      }
+
+      public InputAction expandPartInfoTooltip
       {
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       }
@@ -1817,6 +1830,11 @@ namespace KSP.Input
         [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       }
 
+      public InputAction CameraZoom
+      {
+        [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+      }
+
       [MethodImpl(MethodImplOptions.NoInlining)]
       public InputActionMap Get() => throw null;
 
@@ -1976,7 +1994,7 @@ namespace KSP.Input
 
       void OnActiveSASLastUse(InputAction.CallbackContext context);
 
-      void OnActiveCameraZoom(InputAction.CallbackContext context);
+      void OnToggleCameraZoom(InputAction.CallbackContext context);
 
       void OnToggleAeroGUI(InputAction.CallbackContext context);
 
@@ -2001,6 +2019,10 @@ namespace KSP.Input
       void OnInteractAlt2(InputAction.CallbackContext context);
 
       void OnToggleVesselLabels(InputAction.CallbackContext context);
+
+      void OnCameraZoom(InputAction.CallbackContext context);
+
+      void OnToggleFreeCamera(InputAction.CallbackContext context);
     }
 
     public interface IGlobalActions
@@ -2188,8 +2210,6 @@ namespace KSP.Input
 
       void OnCameraRotate(InputAction.CallbackContext context);
 
-      void OnMouseScroll(InputAction.CallbackContext context);
-
       void OnNextMapItem(InputAction.CallbackContext context);
 
       void OnPreviousMapItem(InputAction.CallbackContext context);
@@ -2207,13 +2227,15 @@ namespace KSP.Input
 
     public interface IRDActions
     {
-      void OnMouseScroll(InputAction.CallbackContext context);
+      void OnCameraZoom(InputAction.CallbackContext context);
 
       void OnMousePosition(InputAction.CallbackContext context);
 
       void OnCameraMovement(InputAction.CallbackContext context);
 
       void OnCameraDragMouse(InputAction.CallbackContext context);
+
+      void OnExpandPartInfoTooltip(InputAction.CallbackContext context);
     }
 
     public interface ICursorActions
@@ -2293,6 +2315,8 @@ namespace KSP.Input
     public interface IKSCActions
     {
       void OnShowMap(InputAction.CallbackContext context);
+
+      void OnCameraZoom(InputAction.CallbackContext context);
     }
 
     public interface IAudioActions

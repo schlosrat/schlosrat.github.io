@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: SpaceGraphicsToolkit.SgtCloudsphereModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Collections.Generic;
@@ -12,11 +12,11 @@ using UnityEngine;
 
 namespace SpaceGraphicsToolkit
 {
+  [RequireComponent(typeof (MeshRenderer))]
+  [DisallowMultipleComponent]
+  [RequireComponent(typeof (MeshFilter))]
   [ExecuteInEditMode]
   [AddComponentMenu("")]
-  [DisallowMultipleComponent]
-  [RequireComponent(typeof (MeshRenderer))]
-  [RequireComponent(typeof (MeshFilter))]
   public class SgtCloudsphereModel : MonoBehaviour
   {
     public SgtCloudsphere Cloudsphere;

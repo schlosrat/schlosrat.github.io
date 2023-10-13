@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.GHVABView
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -20,13 +20,13 @@ namespace KSP.UI
   {
     [SerializeField]
     private ContextBindRoot _bindRoot;
-    [Space]
     [SerializeField]
+    [Space]
     private OABSaveDialog _saveDialog;
     [SerializeField]
     private OABLoadDialog _loadDialog;
-    [Tooltip("Set this for handling is text focused, for opening console keyboard")]
     [SerializeField]
+    [Tooltip("Set this for handling is text focused, for opening console keyboard")]
     private TMP_InputField _nameInputField;
     private ObjectAssemblyBuilder _builder;
     private DataContext _dataContext;

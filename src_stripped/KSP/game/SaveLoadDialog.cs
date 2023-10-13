@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.SaveLoadDialog
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using DG.Tweening;
 using KSP.Api.CoreTypes;
@@ -27,9 +27,15 @@ namespace KSP.Game
     private const string GAME_TIME = "Menu/SaveLoad/GameTime";
     private const string LAST_PLAYED = "Menu/SaveLoad/LastPlayed";
     private const string OVERWRITE_GAME_WARNING = "Menu/SaveLoad/OverwriteGameWarning";
+    private const string SAVE_FILE_INVALID_NAME_ERROR_TITLE = "Menu/SaveLoad/SaveFileInvalidNameErrorTitle";
+    private const string SAVE_FILE_EMPTY_NAME_ERROR = "Menu/SaveLoad/EmptySaveFileNameWarning";
+    private const string SAVE_FILE_INVALID_CHARACTERS_ERROR = "Menu/SaveLoad/InvalidCharacterSaveFileNameWarning";
     private const string VESSEL_UNAVAILABLE = "Menu/Main/VesselUnavailable";
     private const string VESSEL_NAME_UNSET = "Menu/Main/VesselNameUnset";
     private const string LOCATION_UNAVAILABLE = "Menu/Main/LocationUnavailable";
+    private const string OK_BUTTON_LOC_PATH = "Menu/TrainingCenter/OK";
+    private const string ILLEGAL_CHARACTERS = "\\ / : * ? \" < > |";
+    private static char[] INVALID_FILENAME_CHARACTERS;
     public ContextBindRoot BindRoot;
     [HideInInspector]
     public bool IsLoading;
@@ -70,8 +76,8 @@ namespace KSP.Game
     [Header("Both...")]
     [SerializeField]
     private GameObject _horizontalInfoGameObject;
-    [Header("WarningModal")]
     [SerializeField]
+    [Header("WarningModal")]
     private CanvasGroup _warningModal;
     [SerializeField]
     private DOTweenAnimation _showAnimation;
@@ -138,6 +144,9 @@ namespace KSP.Game
     public void SetVisiblity(bool visible) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnLocalize() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public void OnHideAnimationComplete() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -171,6 +180,9 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private bool IsValidName(TMP_InputField saveFileName) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void PopInvalidFileNameWarningDialog(bool isNullOrEmpty) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void CancelWarningModal() => throw null;
@@ -224,6 +236,12 @@ namespace KSP.Game
     private void SetWarningMessageVisibility(CanvasGroup canvasGroup, bool visibility) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnDestroy() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public SaveLoadDialog() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    static SaveLoadDialog() => throw null;
   }
 }

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ResourceIntake
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -20,19 +20,19 @@ namespace KSP.Modules
   public sealed class Data_ResourceIntake : ModuleData
   {
     [LocalizedField("PartModules/ResourceIntake/IntakeEnabled")]
-    [PAMDisplayControl(SortIndex = 2)]
+    [HideInInspector]
     [KSPState(CopyToSymmetrySet = true)]
-    [HideInInspector]
+    [PAMDisplayControl(SortIndex = 2)]
     public ModuleProperty<bool> toggleResourceIntake;
+    [KSPState]
     [LocalizedField("PartModules/ResourceIntake/Flow")]
+    [HideInInspector]
     [PAMDisplayControl(SortIndex = 3)]
-    [KSPState]
-    [HideInInspector]
     public ModuleProperty<float> flowRate;
-    [HideInInspector]
-    [KSPState]
     [PAMDisplayControl(SortIndex = 1)]
     [LocalizedField("PartModules/ResourceIntake/Status")]
+    [KSPState]
+    [HideInInspector]
     public ModuleProperty<string> statusTxt;
     [KSPDefinition]
     public string resourceName;

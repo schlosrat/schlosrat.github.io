@@ -1,11 +1,13 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.GameManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
+using KSP.Assets;
 using KSP.Game.Flow;
+using KSP.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,8 +22,8 @@ namespace KSP.Game
   public class GameManager : MonoBehaviour
   {
     private static GameManager _instance;
-    [SerializeField]
     [Tooltip("Provide a reference for the Splash Screens prefab of the game.")]
+    [SerializeField]
     private GameObject _splashScreensPrefab;
     [Tooltip("Provide a reference to a prefab to determine the type of Game Instance that will be created.")]
     [SerializeField]
@@ -40,15 +42,23 @@ namespace KSP.Game
     [ReadOnly]
     [SerializeField]
     private GameInstance _game;
+    [SerializeField]
+    [ReadOnly]
+    private SplashScreensManager _splashScreens;
     [ReadOnly]
     [SerializeField]
-    private SplashScreensManager _splashScreens;
-    private readonly DifficultyOptionsDataManager _difficultyOptionsDataManager;
+    private AssetProvider _assets;
+    private DifficultyOptionsDataManager _difficultyOptionsDataManager;
+    [ReadOnly]
+    private FPSUIManager _fpsUIManager;
     [ReadOnly]
     private PersistentProfileManager _profileManager;
     private GameModeManager _gameModeManager;
     public List<AsyncOperationHandle> AsyncHandlesStartedDuringBoot;
     public bool HasPhotosensitivityWarningBeenShown;
+    private static double _elapsedRealTimeSinceStartup;
+    private const double ElapsedRealTimeFrameLimit = 10.0;
+    private static GameManager.PerfMeasurements _perfMeasurements;
 
     public static GameManager Instance
     {
@@ -72,7 +82,17 @@ namespace KSP.Game
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
+    public AssetProvider Assets
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
     public DifficultyOptionsDataManager DifficultyOptionsDataManager
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public FPSUIManager FPSUIManager
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -88,8 +108,39 @@ namespace KSP.Game
       [MethodImpl(MethodImplOptions.NoInlining)] private set => throw null;
     }
 
+    public static double ElapsedRealTimeSinceStartup
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public static float FPSLast
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public static float FPSSmoothed
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public static float FrameTimeLast
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public static float FrameTimeSmoothed
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void Awake() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void Update() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnDestroy() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void CreateSplashScreens(Action resolve, Action<string> reject) => throw null;
@@ -99,6 +150,9 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void InitializeDifficultyOptionsManager(Action resolve, Action<string> reject) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void CreateFPSUIManager(Action resolve, Action<string> reject) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void CreateGraphicsManager(Action resolve, Action<string> reject) => throw null;
@@ -131,6 +185,10 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool ShutdownGame() => throw null;
+
+    [ContextMenu("SendTestAnalytics")]
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void SendTestAnalytic() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public GameManager() => throw null;
@@ -222,6 +280,26 @@ namespace KSP.Game
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       private IEnumerator CoroutineFoo() => throw null;
+    }
+
+    private class PerfMeasurements
+    {
+      public float SmoothedFPS;
+      public float SmoothedFrameTime;
+      public float LastFPS;
+      public float LastFrameTime;
+      private float[] _frameTimes;
+      private float[] _fpsValues;
+      private int _currentSmoothedSample;
+
+      [MethodImpl(MethodImplOptions.NoInlining)]
+      internal void OnUpdate() => throw null;
+
+      [MethodImpl(MethodImplOptions.NoInlining)]
+      private void UpdateFPSAndFrameTimes() => throw null;
+
+      [MethodImpl(MethodImplOptions.NoInlining)]
+      public PerfMeasurements() => throw null;
     }
   }
 }

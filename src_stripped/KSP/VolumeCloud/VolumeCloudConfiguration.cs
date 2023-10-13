@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.VolumeCloud.VolumeCloudConfiguration
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Collections.Generic;
@@ -100,8 +100,8 @@ namespace KSP.VolumeCloud
     public float sunsetStart;
     [Range(-1f, 1f)]
     public float sunsetEnd;
-    [Header("Lighting - Multi Scattering Approximation")]
     [Range(0.01f, 50f)]
+    [Header("Lighting - Multi Scattering Approximation")]
     public float lightPenetrateDistance;
     [Range(0.01f, 1f)]
     private float multiScatteringScattering;
@@ -113,8 +113,8 @@ namespace KSP.VolumeCloud
     public float bloomStrengthG;
     public float silverSpreadUnderCloudG;
     public float bloomStrengthUnderCloudG;
-    [Header("Lighting - Silver")]
     [Range(0.0f, 0.5f)]
+    [Header("Lighting - Silver")]
     public float silverSpread;
     [Range(0.0f, 0.5f)]
     public float bloomStrength;

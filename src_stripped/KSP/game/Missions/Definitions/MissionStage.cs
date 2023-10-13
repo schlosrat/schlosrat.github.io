@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.Missions.Definitions.MissionStage
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using Newtonsoft.Json;
@@ -20,12 +20,30 @@ namespace KSP.Game.Missions.Definitions
     public const int INVALID_ID = -1;
     [JsonProperty]
     public int StageID;
-    [JsonProperty]
     [KSPDefinition]
+    [JsonProperty]
     public string name;
+    [JsonProperty]
+    [KSPDefinition]
+    public string description;
     [KSPDefinition]
     [JsonProperty]
-    public string description;
+    public string Objective;
+    [JsonProperty]
+    [KSPDefinition]
+    public bool DisplayObjective;
+    [JsonProperty]
+    [KSPDefinition]
+    public bool RevealObjectiveOnActivate;
+    [JsonProperty]
+    [KSPDefinition]
+    public MissionRewardType MissionRewardType;
+    [JsonProperty]
+    [KSPDefinition]
+    public string RewardAmount;
+    [KSPDefinition]
+    [JsonProperty]
+    public MissionReward MissionReward;
     [JsonProperty]
     [KSPDefinition]
     public bool IgnoreExceptionBranches;
@@ -36,8 +54,8 @@ namespace KSP.Game.Missions.Definitions
     [KSPDefinition]
     [JsonProperty]
     public string parentMissionID;
-    [JsonIgnore]
     [KSPDefinition]
+    [JsonIgnore]
     public Condition condition;
     [JsonProperty]
     [KSPDefinition]
@@ -45,8 +63,8 @@ namespace KSP.Game.Missions.Definitions
     [JsonProperty]
     [KSPState]
     public bool completed;
-    [KSPState]
     [JsonProperty]
+    [KSPState]
     public bool active;
     [JsonIgnore]
     [NonSerialized]

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.ESCMenuActionElementsController
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Runtime.CompilerServices;
@@ -17,11 +17,11 @@ namespace KSP.UI
   {
     private const string STOP_MULTIPLAYER_SESSION_LOCALIZATION_KEY = "Stop Multiplayer Session";
     private const string LEAVE_MULTIPLAYER_SESSION_LOCALIZATION_KEY = "Leave Multiplayer Session";
+    [SerializeField]
     [Header("Remove For MP-Only Modes")]
-    [SerializeField]
     private GameObject[] _hideForMPOnly;
-    [Header("Remove For Read-Only Modes")]
     [SerializeField]
+    [Header("Remove For Read-Only Modes")]
     private GameObject[] _hideForReadOnly;
     [SerializeField]
     [Header("Quit To Main Menu Button")]
@@ -50,8 +50,8 @@ namespace KSP.UI
     private Image _trackingStationIcon;
     [SerializeField]
     private TextMeshProUGUI _trackingStationText;
-    [Header("Mission Control Button")]
     [SerializeField]
+    [Header("Mission Control Button")]
     private GameObject _missionControlGameObject;
     [SerializeField]
     private CanvasGroup _missionControlCanvasGroup;
@@ -75,17 +75,17 @@ namespace KSP.UI
     private Image _trainingCenterIcon;
     [SerializeField]
     private TextMeshProUGUI _trainingCenterText;
-    [Header("Build Version Text")]
     [SerializeField]
+    [Header("Build Version Text")]
     private TextMeshProUGUI _buildVersionText;
     [SerializeField]
     private GameObject _emptyLineToHide;
+    [Range(0.0f, 255f)]
+    [SerializeField]
     [Header("Button Status Settings")]
-    [SerializeField]
-    [Range(0.0f, 255f)]
     private byte _enabledOpacity;
-    [SerializeField]
     [Range(0.0f, 255f)]
+    [SerializeField]
     private byte _disabledOpacity;
     private ESCMenuActionElements _escMenuActionElements;
     private bool _prevHasValidLaunchRevision;

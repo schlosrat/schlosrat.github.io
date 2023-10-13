@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyPartAnchorIcon
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding;
@@ -18,33 +18,23 @@ namespace KSP.OAB
     public ContextBindRoot bindRoot;
     public Toggle anchorToggle;
     public Image anchorIcon;
+    public Image anchorIconSmall;
     public ToggleExtendedVisualizer toggleVisualizer;
     public float distanceFrontAssembly;
-    private Property<bool> isAnchorIconActive;
-    private Property<bool> isAnchorIconInteractive;
-    private Property<bool> isAnchor;
-    private ObjectAssemblyPartTracker partTracker;
-    private IObjectAssembly objectAssembly;
-    private IObjectAssembly mainAssembly;
-    private IObjectAssemblyPart part;
-    private Bounds totalBounds;
-    private AssemblyIconMode currentMode;
-    private bool isOverPart;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public ObjectAssemblyPartAnchorIcon() => throw null;
+    private Property<bool> _isAnchorIconActive;
+    private Property<bool> _isAnchorIconInteractive;
+    private Property<bool> _isAnchor;
+    private Property<bool> _isTempAnchor;
+    private IObjectAssemblyPart _part;
+    private AssemblyIconMode _currentMode;
+    private bool _isOverPart;
+    private bool _isContextInitialized;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void OnDestroy() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void InitAnchorAssemblyIcon(
-      IObjectAssembly assembly,
-      IObjectAssembly mainAssembly,
-      IObjectAssemblyPart part)
-    {
-      throw null;
-    }
+    public void InitAnchorAssemblyIcon(IObjectAssemblyPart part) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void UpdateAnchorIcon(
@@ -74,6 +64,6 @@ namespace KSP.OAB
     public void SetIsAnchor(bool setAnchor) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void IsAnchorIconActive_OnChanged() => throw null;
+    public ObjectAssemblyPartAnchorIcon() => throw null;
   }
 }

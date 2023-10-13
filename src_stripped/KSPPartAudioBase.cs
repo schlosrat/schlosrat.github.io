@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSPPartAudioBase
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using AK.Wwise;
 using KSP.Audio;
@@ -29,7 +29,6 @@ public abstract class KSPPartAudioBase : KerbalMonoBehaviour
   protected bool _isAttachedToActiveVessel;
   protected bool _wasAttachedToMainVessel;
   private static bool _areAllBanksLoaded;
-  private static bool _areAllAkObjectsRegistered;
   private bool _isAudioReady;
   private List<KSPPartAudioBase.PartAudioEvent> _unplayedEventQueue;
   protected Dictionary<uint, float> _rtpcCachedValues;
@@ -72,9 +71,6 @@ public abstract class KSPPartAudioBase : KerbalMonoBehaviour
   public virtual void OnEnable() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  private void OnAllObjectsRegisteredInternal() => throw null;
-
-  [MethodImpl(MethodImplOptions.NoInlining)]
   private void OnAllBanksLoadedInternal() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
@@ -88,6 +84,9 @@ public abstract class KSPPartAudioBase : KerbalMonoBehaviour
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   public virtual void Update() => throw null;
+
+  [MethodImpl(MethodImplOptions.NoInlining)]
+  protected virtual bool RequireGetDependencies(GameState gameState) => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   private void GetDependencies() => throw null;

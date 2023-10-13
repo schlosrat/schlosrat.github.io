@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Animation.StackObjectsBetweenTwoPoints
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Inspector;
 using KSP.OAB;
@@ -25,32 +25,32 @@ namespace KSP.Animation
     [Tooltip("REQUIRED 2nd Point to build stack between")]
     [SerializeField]
     private Transform _pointB;
-    [Tooltip("REQUIRED Pieces to instance to build the stack with")]
     [SerializeField]
+    [Tooltip("REQUIRED Pieces to instance to build the stack with")]
     private List<GameObject> _originalStackPieces;
     [Space(15f)]
     [SerializeField]
     [Tooltip("OPTIONAL Scalable gamebject with collision under it")]
     private GameObject _scalableCollision;
-    [SerializeField]
     [Tooltip("false = Flip halfstack along Z axis. true = flip halfstack along X axis.")]
+    [SerializeField]
     private bool _flipHalfStackAlongAlternateAxis;
+    [SerializeField]
     [Tooltip("if true, will flip each piece in the half stack on the starting side without changing their order.")]
-    [SerializeField]
     private bool _reverseStartSideStack;
-    [Tooltip("if true, will flip each piece in the half stack on the ending side without changing their order.")]
     [SerializeField]
+    [Tooltip("if true, will flip each piece in the half stack on the ending side without changing their order.")]
     private bool _reverseEndSideStack;
     [SerializeField]
     private bool _doScaleEndPiece;
     [SerializeField]
     [Tooltip("false = Stack pieces between start and end point.\ntrue = do a single scaled piece between start and end point.")]
     private bool _doSinglePieceScaled;
-    [SerializeField]
     [Tooltip("OPTIONAL End piece to instance and scale at either end of stack")]
-    private GameObject _originalScalableEndPiece;
     [SerializeField]
+    private GameObject _originalScalableEndPiece;
     [Tooltip("OPTIONAL Decoration pieces to instance and place between each stack piece")]
+    [SerializeField]
     private List<GameObject> _originalStackDecorationPieces;
     private Transform _startAnchorLookTransform;
     private Transform _endAnchorLookTransform;
@@ -68,9 +68,9 @@ namespace KSP.Animation
     private ObjectAssemblyBuilderEvents _builderEvents;
     private List<Action> _actions;
     private bool _initialized;
+    [Space(15f)]
     [SerializeField]
     [ReadOnly]
-    [Space(15f)]
     private double _lastDistance;
 
     public GameObject StackRoot

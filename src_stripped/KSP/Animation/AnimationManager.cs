@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Animation.AnimationManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Networking.MP.Utils;
@@ -20,17 +20,17 @@ namespace KSP.Animation
     [SerializeField]
     [FormerlySerializedAs("debugMode")]
     public bool DebugMode;
-    [SerializeField]
     [FormerlySerializedAs("emoteData")]
+    [SerializeField]
     protected AnimationManager.AnimSetData _emoteData;
     [SerializeField]
     [FormerlySerializedAs("emoteAltData")]
     protected AnimationManager.AnimSetData _emoteAltData;
+    [SerializeField]
     [FormerlySerializedAs("fidgetData")]
-    [SerializeField]
     protected AnimationManager.AnimSetData _fidgetData;
-    [SerializeField]
     [FormerlySerializedAs("fidgetAltData")]
+    [SerializeField]
     protected AnimationManager.AnimSetData _fidgetAltData;
     [FormerlySerializedAs("emoteCount")]
     public int EmoteCount;
@@ -49,11 +49,11 @@ namespace KSP.Animation
     [SerializeField]
     [FormerlySerializedAs("globalPlaybackMulName")]
     protected string _globalPlaybackMulParamName;
-    [SerializeField]
     [FormerlySerializedAs("canFidgetParamName")]
-    protected string _canFidgetParamName;
     [SerializeField]
+    protected string _canFidgetParamName;
     [FormerlySerializedAs("eyeOffsetParamName")]
+    [SerializeField]
     protected string _eyeOffsetParamName;
     [SerializeField]
     [FormerlySerializedAs("eyeSymmetryParamName")]
@@ -113,8 +113,8 @@ namespace KSP.Animation
     {
       [FormerlySerializedAs("parentLayerName")]
       public string ParentLayerName;
-      [HideInInspector]
       [FormerlySerializedAs("parentLayerIndex")]
+      [HideInInspector]
       public int ParentLayerIndex;
       [FormerlySerializedAs("stateName")]
       public string StateName;

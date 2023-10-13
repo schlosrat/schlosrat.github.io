@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.DepthOfFieldModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -39,14 +39,14 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct Settings
     {
-      [Min(0.1f)]
       [Tooltip("Distance to the point of focus.")]
+      [Min(0.1f)]
       public float focusDistance;
       [Range(0.05f, 32f)]
       [Tooltip("Ratio of aperture (known as f-stop or f-number). The smaller the value is, the shallower the depth of field is.")]
       public float aperture;
-      [Range(1f, 300f)]
       [Tooltip("Distance between the lens and the film. The larger the value is, the shallower the depth of field is.")]
+      [Range(1f, 300f)]
       public float focalLength;
       [Tooltip("Calculate the focal length automatically from the field-of-view value set on the camera. Using this setting isn't recommended.")]
       public bool useCameraFov;

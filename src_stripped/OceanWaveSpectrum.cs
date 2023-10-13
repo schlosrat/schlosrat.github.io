@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: OceanWaveSpectrum
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -22,9 +22,9 @@ public class OceanWaveSpectrum : ScriptableObject
   [Range(0.0f, 180f)]
   [Tooltip("Variance of wave directions, in degrees")]
   public float _waveDirectionVariance;
-  [Tooltip("Gravity")]
-  [Header("Gravity")]
   [Range(0.0f, 100f)]
+  [Header("Gravity")]
+  [Tooltip("Gravity")]
   public float _gravity;
   [Range(0.0f, 25f)]
   [Tooltip("More gravity means faster waves.")]
@@ -42,9 +42,9 @@ public class OceanWaveSpectrum : ScriptableObject
   [HideInInspector]
   public float _smallWavelengthMultiplier;
   [SerializeField]
+  [Tooltip("Multiplier")]
   [HideInInspector]
   [Range(0.0f, 10f)]
-  [Tooltip("Multiplier")]
   private float _multiplier;
 
   [MethodImpl(MethodImplOptions.NoInlining)]

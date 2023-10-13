@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.EyeAdaptationModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -37,11 +37,11 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct Settings
     {
-      [Range(1f, 99f)]
       [Tooltip("Filters the dark part of the histogram when computing the average luminance to avoid very dark pixels from contributing to the auto exposure. Unit is in percent.")]
-      public float lowPercent;
       [Range(1f, 99f)]
+      public float lowPercent;
       [Tooltip("Filters the bright part of the histogram when computing the average luminance to avoid very dark pixels from contributing to the auto exposure. Unit is in percent.")]
+      [Range(1f, 99f)]
       public float highPercent;
       [Tooltip("Minimum average luminance to consider for auto exposure (in EV).")]
       public float minLuminance;
@@ -57,14 +57,14 @@ namespace UnityEngine.PostProcessing
       [Min(0.0f)]
       [Tooltip("Adaptation speed from a dark to a light environment.")]
       public float speedUp;
-      [Min(0.0f)]
       [Tooltip("Adaptation speed from a light to a dark environment.")]
+      [Min(0.0f)]
       public float speedDown;
       [Range(-16f, -1f)]
       [Tooltip("Lower bound for the brightness range of the generated histogram (in EV). The bigger the spread between min & max, the lower the precision will be.")]
       public int logMin;
-      [Range(1f, 16f)]
       [Tooltip("Upper bound for the brightness range of the generated histogram (in EV). The bigger the spread between min & max, the lower the precision will be.")]
+      [Range(1f, 16f)]
       public int logMax;
 
       public static EyeAdaptationModel.Settings defaultSettings

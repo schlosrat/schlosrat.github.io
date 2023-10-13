@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_WheelBase
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Inspector;
 using KSP.Sim;
@@ -27,11 +27,11 @@ namespace KSP.Modules
     public ModuleProperty<bool> AutoFriction;
     [SteppedRange(0.0f, 10f, 0.1f)]
     [LocalizedField("PartModules/Wheels/Friction")]
-    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 13)]
+    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<float> FrictionMultiplier;
-    [Tooltip("The Wheel type. Free = free spinning wheel. Motorized - Motorized wheel (rover wheel). Leg = Landing Leg.")]
     [KSPDefinition]
+    [Tooltip("The Wheel type. Free = free spinning wheel. Motorized - Motorized wheel (rover wheel). Leg = Landing Leg.")]
     public WheelType WheelType;
     [KSPDefinition]
     [Tooltip("If true the collider mesh for the wheel will be resized to fit the visual mesh of the wheel")]
@@ -39,8 +39,8 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("The radius of the wheel")]
     public float Radius;
-    [Tooltip("The center offset of the wheel")]
     [KSPDefinition]
+    [Tooltip("The center offset of the wheel")]
     public Vector3 Center;
     [KSPDefinition]
     [Tooltip("The mass of the wheel in Tons.")]
@@ -60,8 +60,8 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("This is the tire friction curve adherent start position. For Landing Legs this will be the peak x value.\nRefer to https://vehiclephysics.com/blocks/tires/")]
     public float AdherentStart;
-    [KSPDefinition]
     [Tooltip("This is the tire friction curve adherent value at the start position. For Landing Legs this will be the peak y value.\nRefer to https://vehiclephysics.com/blocks/tires/")]
+    [KSPDefinition]
     public float FrictionAdherent;
     [KSPDefinition]
     [Tooltip("This is the tire friction curve adherent peak start position.\nRefer to https://vehiclephysics.com/blocks/tires/")]
@@ -69,17 +69,17 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("This is the tire friction curve adherent peak value.\nRefer to https://vehiclephysics.com/blocks/tires/")]
     public float FrictionPeak;
-    [Tooltip("This is the tire friction curve adherent lowest point start position.\nRefer to https://vehiclephysics.com/blocks/tires/")]
     [KSPDefinition]
+    [Tooltip("This is the tire friction curve adherent lowest point start position.\nRefer to https://vehiclephysics.com/blocks/tires/")]
     public float LimitStart;
     [Tooltip("This is the tire friction curve adherent limit value.\nRefer to https://vehiclephysics.com/blocks/tires/")]
     [KSPDefinition]
     public float FrictionLimit;
-    [KSPDefinition]
     [Tooltip("Percent increase in friction at 0g. If geeBias = 1, then frictionMultiplier = 2.0 at 0g")]
-    public float GeeBias;
     [KSPDefinition]
+    public float GeeBias;
     [Tooltip("The ground height to allow when launching with the wheels deployed.")]
+    [KSPDefinition]
     public float GroundHeightOffset;
     [KSPDefinition]
     [Tooltip("The number of PhysX substeps when inactive")]
@@ -90,8 +90,8 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("How sharply tire forces are applied.")]
     public float TireForceSharpness;
-    [KSPDefinition]
     [Tooltip("How sharply suspension forces are applied.")]
+    [KSPDefinition]
     public float SuspensionForceSharpness;
     [Tooltip("This must be the wheel collider transform name from the model.")]
     [KSPDefinition]
@@ -99,8 +99,8 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("This must be the wheel transform (the bit that spins) name from the model.\nThis must be the deployment target transform (for Landing Legs) name from the model")]
     public string WheelTransformName;
-    [Tooltip("The rate as which the spring targetPosition is slerped in VPWheelCollider.")]
     [KSPDefinition]
+    [Tooltip("The rate as which the spring targetPosition is slerped in VPWheelCollider.")]
     public float SpringSlerpRate;
     [Tooltip("This is the minimum downforce to apply to the wheel.")]
     [KSPDefinition]
@@ -114,8 +114,8 @@ namespace KSP.Modules
     [Tooltip("Set this to a normalized value 0-1 where 0 is fully retracted and 1 is fully deployed.\nOnly applies to wheels that are deployable.\nAt this normalized time the subsystems will be turned on (suspension, wheel collider, etc) when deploying.")]
     [KSPDefinition]
     public float DeploymentSubsystemNormalized;
-    [KSPDefinition]
     [Tooltip("Set this to a normalized value 0-1 where 0 is fully deployed and 1 is fully retracted.\nOnly applies to wheels that are deployable.\nAt this normalized time the subsystems will be turned off (suspension, wheel collider, etc) when retracting.")]
+    [KSPDefinition]
     public float RetractionSubsystemNormalized;
     [Tooltip("Whether to use a stand in collider or not when deploying/retracting.\nThis is usually only used for larger deployable wheels that need a stand-in collider before the wheel collider is created.")]
     [KSPDefinition]

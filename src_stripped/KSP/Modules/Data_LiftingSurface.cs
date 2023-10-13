@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_LiftingSurface
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -16,22 +16,22 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_LiftingSurface : ModuleData
   {
-    [PAMDisplayControl(SortIndex = 15)]
+    [HideInInspector]
     [KSPState]
     [LocalizedField("PartModules/LiftingSurface/LiftDragRatio")]
-    [HideInInspector]
+    [PAMDisplayControl(SortIndex = 15)]
     public ModuleProperty<float> LiftDragRatio;
     [LocalizedField("PartModules/LiftingSurface/Lift")]
     [KSPState]
     [HideInInspector]
     public ModuleProperty<float> LiftScalar;
-    [LocalizedField("PartModules/LiftingSurface/Drag")]
     [KSPState]
     [HideInInspector]
+    [LocalizedField("PartModules/LiftingSurface/Drag")]
     public ModuleProperty<float> DragScalar;
+    [HideInInspector]
     [LocalizedField("PartModules/LiftingSurface/AOA")]
     [KSPState]
-    [HideInInspector]
     public ModuleProperty<float> AoA;
     [KSPDefinition]
     [Tooltip("If true lift is the same whether the surface is upside down or not.")]
@@ -42,11 +42,11 @@ namespace KSP.Modules
     [Tooltip("This curve is evaluated to obtain coefficient of lift multiplier based on the current mach speed of the vessel.")]
     [KSPDefinition]
     public FloatCurve liftMachCurve;
+    [KSPDefinition]
     [Tooltip("This curve is evaluated to obtain coefficient of drag for a given angle of attack in degrees.")]
-    [KSPDefinition]
     public FloatCurve dragCurve;
-    [Tooltip("This curve is evaluated to obtain coefficient of drag multiplier based on the current mach speed of the vessel.")]
     [KSPDefinition]
+    [Tooltip("This curve is evaluated to obtain coefficient of drag multiplier based on the current mach speed of the vessel.")]
     public FloatCurve dragMachCurve;
     [Tooltip("The name of the lifting surface curve that will be used from PhysicsGlobals.")]
     [KSPDefinition]
@@ -57,17 +57,17 @@ namespace KSP.Modules
     [Tooltip("1 = Positive transformDir, -1 = Negative transformDir")]
     [KSPDefinition]
     public float transformSign;
-    [KSPDefinition]
     [Tooltip("The Transform that provides the lift. If left blank will use the part transform.")]
-    public string transformName;
-    [Tooltip("If True the attachNodeNode must be attached to provide lift and drag forces.")]
     [KSPDefinition]
+    public string transformName;
+    [KSPDefinition]
+    [Tooltip("If True the attachNodeNode must be attached to provide lift and drag forces.")]
     public bool nodeEnabled;
     [Tooltip("The attachNodeNode that must be attached if nodeEnabled is true.")]
     [KSPDefinition]
     public string attachNodeName;
-    [KSPState]
     [Tooltip("Lift coefficient that scales the lift provided. - wing area. If Procedural leave this blank as it will be dynamically calculated.")]
+    [KSPState]
     public float deflectionLiftCoeff;
     [Tooltip("If true the lift is projected on plane that is the normal of the velocity direction.")]
     [KSPDefinition]
@@ -75,8 +75,8 @@ namespace KSP.Modules
     [Tooltip("Use the drag model in this module to calculate and apply drag forces.")]
     [KSPDefinition]
     public bool useInternalDragModel;
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
     public Vector3 CoPOffset;
     internal bool IsPartInMirrorSymmetry;
 

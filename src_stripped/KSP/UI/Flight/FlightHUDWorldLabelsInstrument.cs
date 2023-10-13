@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Flight.FlightHUDWorldLabelsInstrument
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -20,11 +20,19 @@ namespace KSP.UI.Flight
   public class FlightHUDWorldLabelsInstrument : UIFlightHUDInstrument
   {
     [SerializeField]
+    [Tooltip("Vessel label prefab")]
     private ContextBindRoot _labelPrefab;
-    private GameObjectPool<ContextBindRoot> _labelPool;
-    private Dictionary<VesselComponent, FlightHUDWorldLabelsInstrument.WorldLabel> _currentLabels;
+    [Tooltip("Waypoint label prefab")]
+    [SerializeField]
+    private ContextBindRoot _waypointLabelPrefab;
+    private GameObjectPool<ContextBindRoot> _labelPoolVessels;
+    private GameObjectPool<ContextBindRoot> _labelPoolWaypoints;
+    private Dictionary<IWorldLabelData, FlightHUDWorldLabelsInstrument.WorldLabel> _currentLabels;
     private ViewDataProvider _dataProvider;
-    private Queue<VesselComponent> _removalQueue;
+    private HashSet<WaypointComponent> _trackedWaypoints;
+    private HashSet<WaypointComponent> _temporaryWaypointsSet;
+    private Queue<IWorldLabelData> _removalQueue;
+    private Queue<WaypointComponent> _waypointRemovalQueue;
     private bool _labelsEnabled;
     private const string VESSEL_NAME_KEY = "VesselName";
     private const string DISTANCE_VALUE_KEY = "VesselDistance";
@@ -42,10 +50,10 @@ namespace KSP.UI.Flight
     private void OnVesselChanged(MessageCenterMessage msg) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void AddLabel(VesselComponent vessel) => throw null;
+    private void AddLabel(GameObjectPool<ContextBindRoot> labelPool, IWorldLabelData vessel) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void RemoveLabel(VesselComponent vessel) => throw null;
+    private void RemoveLabel(GameObjectPool<ContextBindRoot> labelPool, IWorldLabelData vessel) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void ResetLabels() => throw null;
@@ -71,7 +79,7 @@ namespace KSP.UI.Flight
     public class WorldLabel
     {
       private ContextBindRoot _prefab;
-      private VesselComponent _targetVessel;
+      private IWorldLabelData _targetVessel;
       private PropertyExternal<string> _vesselNameProp;
       private PropertyExternal<double> _vesselDistanceProp;
       private PropertyExternal<bool> _vesselTargetedProp;
@@ -84,10 +92,10 @@ namespace KSP.UI.Flight
       }
 
       [MethodImpl(MethodImplOptions.NoInlining)]
-      public WorldLabel(VesselComponent vessel, ContextBindRoot labelPrefab, bool labelsEnabled) => throw null;
+      public WorldLabel(IWorldLabelData vessel, ContextBindRoot labelPrefab, bool labelsEnabled) => throw null;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
-      public void BindData(VesselComponent vessel, bool labelsEnabled) => throw null;
+      public void BindData(IWorldLabelData vessel, bool labelsEnabled) => throw null;
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public void ValidateProperties() => throw null;

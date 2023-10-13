@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.StandardTooltipTarget
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Runtime.CompilerServices;
@@ -15,9 +15,9 @@ namespace KSP.UI
   {
     [SerializeField]
     private StandardTooltip _tooltipObject;
-    private StandardTooltip _currentTooltip;
-    [Tooltip("Rect transform to be used for tooltip position, instead of using current mouse position.")]
+    protected StandardTooltip _currentTooltip;
     [SerializeField]
+    [Tooltip("Rect transform to be used for tooltip position, instead of using current mouse position.")]
     private RectTransform _targetRectTransform;
     [SerializeField]
     private int _priority;

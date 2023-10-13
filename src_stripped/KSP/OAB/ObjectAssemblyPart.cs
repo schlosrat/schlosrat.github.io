@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyPart
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Messages;
@@ -46,7 +46,11 @@ namespace KSP.OAB
     private Quaternion _automaticSuggestedRotation;
     private IObjectAssembly _assembly;
     private bool _canStage;
-    private List<Collider> partColliders;
+    private Transform m_transform;
+    private bool hasInitTransform;
+    private Bounds cachedBounds;
+    private Vector3 cachedBoundsPosition;
+    private bool isBoundsDirty;
 
     public Transform PartTransform
     {
@@ -499,6 +503,11 @@ namespace KSP.OAB
       [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
     }
 
+    private new Transform transform
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
     public SelectablePart SelectablePartReference
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
@@ -619,6 +628,9 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void GetPartBounds(ref Bounds totalBounds) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void RecalculateCachedBounds() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void DestroyInteractivePart() => throw null;

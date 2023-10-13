@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIValue_ReadNumberValueTape
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.UI.Binding.Core;
 using System.Runtime.CompilerServices;
@@ -17,14 +17,14 @@ namespace KSP.UI.Binding
     [SerializeField]
     [Tooltip("The transform to be rotated by the bound value")]
     private RectTransform _dialTransform;
-    [SerializeField]
     [Tooltip("Labels to use for display on the dial")]
+    [SerializeField]
     private TextMeshProUGUI[] _labels;
+    [SerializeField]
     [Tooltip("Degrees of seperation between labels")]
-    [SerializeField]
     private float _labelDegreeInterval;
-    [SerializeField]
     [Tooltip("The value interval to display between labels")]
+    [SerializeField]
     private float _valueInterval;
     [SerializeField]
     private bool _clockwiseRotation;

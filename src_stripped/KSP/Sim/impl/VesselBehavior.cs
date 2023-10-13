@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.VesselBehavior
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Inspector;
 using KSP.Messages;
@@ -27,9 +27,9 @@ namespace KSP.Sim.impl
   {
     private PartOwnerBehavior _partOwner;
     protected PartBehavior partWithGroundContact;
-    [Header("Runtime State")]
-    [SerializeField]
     [ReadOnly]
+    [SerializeField]
+    [Header("Runtime State")]
     private VesselBehavior.PackState _packState;
     [SerializeField]
     [ReadOnly]
@@ -154,7 +154,7 @@ namespace KSP.Sim.impl
     private void CalculateBoundingShapesIfDirty(bool force = false) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnUniverseTimeScaleChanged(TimeScaleValues timeScaleValues) => throw null;
+    private void OnUniverseTimeScaleChanged(bool isPaused, TimeScaleValues timeScaleValues) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool IsVesselAtRest() => throw null;

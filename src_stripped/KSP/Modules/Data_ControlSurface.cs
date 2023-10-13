@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ControlSurface
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -17,32 +17,32 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_ControlSurface : ModuleData
   {
-    [HideInInspector]
-    [PAMDisplayControl(SortIndex = 1)]
-    [KSPState]
     [LocalizedField("PartModules/LiftingSurface/LiftDragRatio")]
+    [KSPState]
+    [PAMDisplayControl(SortIndex = 1)]
+    [HideInInspector]
     public ModuleProperty<float> LiftDragRatioParent;
+    [FormerlySerializedAs("deploy")]
+    [Tooltip("Is the control surface in a deployed state")]
     [LocalizedField("PartModules/ControlSurface/Deploy")]
     [KSPState(CopyToSymmetrySet = true)]
-    [Tooltip("Is the control surface in a deployed state")]
     [PAMDisplayControl(SortIndex = 2)]
-    [FormerlySerializedAs("deploy")]
     public ModuleProperty<bool> Deploy;
-    [LocalizedField("PartModules/ControlSurface/DeployAngle")]
+    [PAMDisplayControl(SortIndex = 3)]
     [FormerlySerializedAs("deployAngle")]
     [SteppedRange(-15f, 15f, 0.5f)]
     [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/ControlSurface/DeployAngle")]
     [Tooltip("Angle to which the control surface will deflect when deployed (acts as base angle for control deflection). In units of degrees.")]
-    [PAMDisplayControl(SortIndex = 3)]
     public ModuleProperty<float> DeployAngle;
-    [PAMDisplayControl(SortIndex = 3)]
-    [LocalizedField("PartModules/ControlSurface/Invert")]
     [Tooltip("Angle to which the control surface will deflect when deployed (acts as base angle for control deflection). In units of degrees.")]
     [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 3)]
+    [LocalizedField("PartModules/ControlSurface/Invert")]
     public ModuleProperty<bool> InvertControl;
-    [PAMDisplayControl(SortIndex = 5)]
     [HideInInspector]
     [LocalizedField("PartModules/ControlSurface/AdvancedSettings")]
+    [PAMDisplayControl(SortIndex = 5)]
     public ModuleProperty<bool> IsAdvancedSettingsShown;
     [Header("Control Surface Behaviour")]
     [LocalizedField("PartModules/ControlSurface/PitchEnabled")]
@@ -51,42 +51,42 @@ namespace KSP.Modules
     [PAMDisplayControl(SortIndex = 6)]
     [HideInInspector]
     public ModuleProperty<bool> EnablePitch;
-    [FormerlySerializedAs("enableYaw")]
-    [LocalizedField("PartModules/ControlSurface/YawEnabled")]
-    [KSPState(CopyToSymmetrySet = true)]
+    [HideInInspector]
     [PAMDisplayControl(SortIndex = 7)]
-    [HideInInspector]
-    public ModuleProperty<bool> EnableYaw;
-    [HideInInspector]
-    [PAMDisplayControl(SortIndex = 8)]
+    [LocalizedField("PartModules/ControlSurface/YawEnabled")]
+    [FormerlySerializedAs("enableYaw")]
     [KSPState(CopyToSymmetrySet = true)]
+    public ModuleProperty<bool> EnableYaw;
     [LocalizedField("PartModules/ControlSurface/RollEnabled")]
     [FormerlySerializedAs("enableRoll")]
-    public ModuleProperty<bool> EnableRoll;
-    [SteppedRange(0.0f, 15f, 0.5f)]
-    [Tooltip("Adjusts how much the control surface will be allowed to deflect to respond to control inputs.  Limits set by the config.  In units of degrees.")]
     [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 9)]
+    [HideInInspector]
+    [PAMDisplayControl(SortIndex = 8)]
+    public ModuleProperty<bool> EnableRoll;
+    [Tooltip("Adjusts how much the control surface will be allowed to deflect to respond to control inputs.  Limits set by the config.  In units of degrees.")]
+    [SteppedRange(0.0f, 15f, 0.5f)]
     [FormerlySerializedAs("authorityLimiter")]
     [LocalizedField("PartModules/ControlSurface/AuthorityLimiter")]
+    [PAMDisplayControl(SortIndex = 9)]
+    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<float> AuthorityLimiter;
+    [KSPState]
+    [HideInInspector]
     [LocalizedField("PartModules/LiftingSurface/Lift")]
     [PAMDisplayControl(SortIndex = 10)]
-    [HideInInspector]
-    [KSPState]
     public ModuleProperty<float> LiftScalarParent;
-    [HideInInspector]
-    [KSPState]
-    [PAMDisplayControl(SortIndex = 11)]
     [LocalizedField("PartModules/LiftingSurface/Drag")]
-    public ModuleProperty<float> DragScalarParent;
-    [PAMDisplayControl(SortIndex = 12)]
-    [LocalizedField("PartModules/LiftingSurface/AOA")]
-    [HideInInspector]
+    [PAMDisplayControl(SortIndex = 11)]
     [KSPState]
-    public ModuleProperty<float> AoAParent;
-    [PAMDisplayControl(SortIndex = 13)]
     [HideInInspector]
+    public ModuleProperty<float> DragScalarParent;
+    [LocalizedField("PartModules/LiftingSurface/AOA")]
+    [PAMDisplayControl(SortIndex = 12)]
+    [KSPState]
+    [HideInInspector]
+    public ModuleProperty<float> AoAParent;
+    [HideInInspector]
+    [PAMDisplayControl(SortIndex = 13)]
     [LocalizedField("PartModules/ControlSurface/Lift")]
     [KSPState]
     public ModuleProperty<float> LiftScalar;
@@ -97,8 +97,8 @@ namespace KSP.Modules
     public ModuleProperty<float> DragScalar;
     [LocalizedField("PartModules/ControlSurface/AOA")]
     [KSPState]
-    [HideInInspector]
     [PAMDisplayControl(SortIndex = 15)]
+    [HideInInspector]
     public ModuleProperty<float> AoA;
     [Header("Control Surface Setup")]
     [KSPState]
@@ -106,35 +106,35 @@ namespace KSP.Modules
     public bool IsCtrlSurfaceActive;
     [KSPState]
     public bool AllowControl;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public float LiftingCtrlSurfaceArea;
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
     public Vector3 CoPressureCtrlSurfaceOffset;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public Vector3 CtrlSurfacePivotOffset;
     [Tooltip("The Transform Direction that lift is provided in.\nThis is relative to the CtrlSurfacePivotTransformName Transform.")]
     [KSPDefinition]
     public Data_LiftingSurface.TransformDir CtrlTransformDir;
-    [KSPDefinition]
     [Tooltip("The Transform Axis that the control surface rotates around.\nThis is relative to the CtrlSurfacePivotTransformName Transform.")]
+    [KSPDefinition]
     public Data_LiftingSurface.TransformDir CtrlTransformRotAxis;
     [Tooltip("1 = Positive transformDir, -1 = Negative transformDir")]
     [KSPDefinition]
     public float CtrlTransformSign;
-    [FormerlySerializedAs("actuatorSpeedNormalScale")]
-    [KSPDefinition]
     [Tooltip("The transform that will be adjusted to show the visual impact of the control surface motion.")]
-    public string CtrlSurfacePivotTransformName;
     [KSPDefinition]
+    [FormerlySerializedAs("actuatorSpeedNormalScale")]
+    public string CtrlSurfacePivotTransformName;
     [Tooltip("Controls what axis the Lock functionality appears on.")]
+    [KSPDefinition]
     [FormerlySerializedAs("actuatorSpeedNormalScale")]
     public string CtrlSurfacePivotDeployAxis;
     [FormerlySerializedAs("actuatorSpeedNormalScale")]
-    [KSPDefinition]
     [Tooltip("Range (in degrees) the control surface can deflect.")]
+    [KSPDefinition]
     public float CtrlSurfaceRange;
     [KSPDefinition]
     [FormerlySerializedAs("actuatorSpeedNormalScale")]
@@ -148,8 +148,8 @@ namespace KSP.Modules
     [FormerlySerializedAs("actuatorSpeedNormalScale")]
     [KSPDefinition]
     public bool UseExponentialSpeed;
-    [KSPDefinition]
     [Tooltip("How fast the control surface actuator will try to respond in Degrees/sec ")]
+    [KSPDefinition]
     [FormerlySerializedAs("actuatorSpeedNormalScale")]
     public float ActuatorSpeedNormalScale;
     [Tooltip("Allow to have a minimum deploy angle instead of -CtrlSurfaceRange.")]
@@ -161,8 +161,8 @@ namespace KSP.Modules
     [KSPState]
     [HideInInspector]
     public bool MirrorDeploy;
-    [Tooltip("Multiple of Area of Mesh to get lift value.")]
     [KSPDefinition]
+    [Tooltip("Multiple of Area of Mesh to get lift value.")]
     public float MeshAreaLiftMultiplier;
     [KSPDefinition]
     public bool DisableLiftingSurfaceForce;

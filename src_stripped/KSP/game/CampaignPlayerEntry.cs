@@ -1,15 +1,16 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.CampaignPlayerEntry
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game.Missions.Definitions;
 using KSP.Networking.MP.Utils;
 using KSP.OAB;
 using KSP.Sim;
 using KSP.Sim.impl;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -36,7 +37,6 @@ namespace KSP.Game
     public const string DEFAULT_COPY_LOCATION_STRING = "";
     public const Dictionary<string, uint> DEFAULT_FAVORITED_PARTS = null;
     public const bool DEFAULT_IS_FTUE_ENABLED = true;
-    public const string DEFAULT_COMPLETED_TUTORIALS = "";
     public static Color DEFAULT_PART_COLOR_BASE;
     public static Color DEFAULT_PART_COLOR_ACCENT;
     private CampaignPlayerManager _campaignPlayerManager;
@@ -58,8 +58,10 @@ namespace KSP.Game
     private string _copyLocationString;
     private Dictionary<string, uint> _favoritedParts;
     private bool _isFTUEEnabled;
-    private List<MissionData> _missions;
-    private string _completedTutorials;
+    private List<KSP.Game.Missions.Definitions.MissionSaveData> _missionSaveData;
+    private List<string> _completedTutorials;
+    private List<string> _completedFTUEs;
+    private List<KSP.Game.Missions.Definitions.TrackedMissions> _trackedMissions;
     private Color _partColorBase;
     private Color _partColorAccent;
 
@@ -80,6 +82,10 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetPlayerNameString(string playerNameString, bool force = false) => throw null;
+
+    [Obsolete("KERBAL2-2802")]
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public static List<string> GetDefaultCompletedMissionIds() => throw null;
 
     public string PlayerGuidString
     {
@@ -250,24 +256,61 @@ namespace KSP.Game
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetIsFTUEEnabled(bool isFTUEEnabled) => throw null;
 
-    public List<MissionData> Missions
+    public List<KSP.Game.Missions.Definitions.MissionSaveData> MissionSaveData
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetMissions(List<MissionData> src) => throw null;
+    public void SetMissions(List<KSP.Game.Missions.Definitions.MissionSaveData> src) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ClearMissions() => throw null;
+    public void ClearMissionSaveData() => throw null;
 
-    public string CompletedTutorials
+    public IReadOnlyList<string> CompletedTutorials
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetCompletedTutorials(string completedTutorials) => throw null;
+    public void AddCompletedTutorial(string missionId) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    internal void SetCompletedTutorials(List<string> completedTutorials) => throw null;
+
+    public IReadOnlyList<string> CompletedFTUEs
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void AddCompletedFTUE(string missionId) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    internal void SetCompletedFTUEs(List<string> completedFTUEs) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void SetTrackedMissions(List<KSP.Game.Missions.Definitions.TrackedMissions> trackedMissions) => throw null;
+
+    public IReadOnlyList<KSP.Game.Missions.Definitions.TrackedMissions> TrackedMissions
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void AddTrackedMission(MissionOwner owner, int ownerId, string missionID) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void RemoveTrackedMission(MissionOwner owner, int ownerId, string missionID) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool TryGetTrackedMissions(
+      MissionOwner owner,
+      int ownerId,
+      out KSP.Game.Missions.Definitions.TrackedMissions trackedMissions)
+    {
+      throw null;
+    }
 
     public Color PartColorBase
     {
@@ -306,8 +349,10 @@ namespace KSP.Game
       string copyLocationString,
       Dictionary<string, uint> favoritedParts,
       bool isFTUEEnabled,
-      List<MissionData> missions,
-      string completedTutorials,
+      List<KSP.Game.Missions.Definitions.MissionSaveData> missionSaveData,
+      List<string> completedTutorials,
+      List<string> completedFTUEs,
+      List<KSP.Game.Missions.Definitions.TrackedMissions> trackedMissions,
       Color partColorBase,
       Color partColorAccent)
     {
@@ -338,8 +383,10 @@ namespace KSP.Game
       string copyLocationString,
       Dictionary<string, uint> favoritedParts,
       bool isFTUEEnabled,
-      List<MissionData> missions,
-      string completedTutorials,
+      List<KSP.Game.Missions.Definitions.MissionSaveData> missionSaveData,
+      List<string> completedTutorials,
+      List<string> completedFTUEs,
+      List<KSP.Game.Missions.Definitions.TrackedMissions> trackedMissions,
       Color partColorBase,
       Color partColorAccent)
     {

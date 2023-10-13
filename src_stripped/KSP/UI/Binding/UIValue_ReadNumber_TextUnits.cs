@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIValue_ReadNumber_TextUnits
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api;
 using KSP.UI.Binding.Core;
@@ -27,15 +27,15 @@ namespace KSP.UI.Binding
     [Tooltip("Unit Text Field is optional")]
     [SerializeField]
     private TMP_Text unitText;
-    [SerializeField]
     [Tooltip("Optional. Add loc path here for units to be divided by or just the unit if loc is not required.")]
+    [SerializeField]
     private string divisorUnit;
     [SerializeField]
     private float startSwitchThreshold;
     [SerializeField]
     private UIValue_ReadNumber_TextUnits.UnitEntry[] unitEntryArray;
-    [Header("Decimal rounding options")]
     [Tooltip("Note that using the rounding options will override the numberTextFormat")]
+    [Header("Decimal rounding options")]
     [SerializeField]
     private bool _roundValue;
     [SerializeField]
@@ -83,8 +83,8 @@ namespace KSP.UI.Binding
     public struct UnitEntry
     {
       public float unitMultiplier;
-      [Header("The loc term can also be used here")]
       [Tooltip("Add loc path here for units or just the unit if loc is not required.")]
+      [Header("The loc term can also be used here")]
       public string unitValue;
       public string numberTextFormat;
       public bool dontTruncateValue;

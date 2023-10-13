@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Networking.OnlineServices.Telemetry.Manager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Game.Missions;
@@ -42,15 +42,9 @@ namespace KSP.Networking.OnlineServices.Telemetry
     private bool _isInGameSession;
     private bool _isInApplicationSession;
     private bool _sendHeartbeatEvent;
-    private SubscriptionHandle _handleTutorialStarted;
-    private SubscriptionHandle _handleTutorialEnded;
-    private SubscriptionHandle _handleTutorialReStarted;
     private SubscriptionHandle _handleTutorialStep;
     private SubscriptionHandle _handleGameStateStart;
-    private SubscriptionHandle _handleGameStateEnd;
-    private SubscriptionHandle _handleGameStateChange;
     private SubscriptionHandle _handlePlayerLoggedIn;
-    private SubscriptionHandle _handleVesselLanded;
 
     private string _telemetryKey
     {
@@ -103,51 +97,25 @@ namespace KSP.Networking.OnlineServices.Telemetry
     private void ProcessEvent<T>(string eventName, T body) where T : MessageCenterMessage => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    internal void SendAnalyticsEvent<T>(string eventName, T eventData) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     private void SendDeviceInfo() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnUnityLog(string logString, string stackTrace, LogType type) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnGameStateLeft(MessageCenterMessage obj) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnGameStateEntered(MessageCenterMessage obj) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnGameStateChanged(MessageCenterMessage obj) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnTutorialStepCompleted(MessageCenterMessage obj) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnTutorialStarted(MessageCenterMessage obj) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnTutorialReStarted(MessageCenterMessage obj) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnTutorialEnded(MessageCenterMessage obj) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnPlayerLoggedIn(MessageCenterMessage obj) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnVesselLanded(MessageCenterMessage obj) => throw null;
+    public void SendPlayerLoggedInEvent(string entityKey, string playFabTelemetrySessionTicket) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SendVesselDestroyedEvent(
-      string celestialBodyName,
-      double latitude,
-      double longitude,
-      double altitude,
-      IGGuid vesselID)
-    {
-      throw null;
-    }
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SendVesselEnteredSOI(
       string celestialBodyName,
       double latitude,
       double longitude,
@@ -164,7 +132,7 @@ namespace KSP.Networking.OnlineServices.Telemetry
     private Dictionary<string, string> GetTitleEventHeaders() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private MissionData GetActiveMissionData() => throw null;
+    private MissionData GetActiveTutorialMissionData() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private string GetLocalIPv4() => throw null;

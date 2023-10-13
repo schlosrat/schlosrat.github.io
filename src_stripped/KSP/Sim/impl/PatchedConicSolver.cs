@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.PatchedConicSolver
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -24,17 +24,13 @@ namespace KSP.Sim.impl
     [MethodImpl(MethodImplOptions.NoInlining)]
     public PatchedConicSolver(OrbiterComponent orbiter, UniverseModel universeModel) => throw null;
 
-    /// <summary>
-    /// The maximum limit on the number of patches. The default value = 10.
-    /// </summary>
+    /// <summary>The maximum limit on the number of patches. The default value = 10.</summary>
     public int MaxTotalPatches
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
-    /// <summary>
-    /// The ObiterComponent object this class is associated with.
-    /// </summary>
+    /// <summary>The ObiterComponent object this class is associated with.</summary>
     public OrbiterComponent Orbiter
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
@@ -95,9 +91,7 @@ namespace KSP.Sim.impl
       throw null;
     }
 
-    /// <summary>
-    /// Initialize the first patch in the patchlist.
-    /// </summary>
+    /// <summary>Initialize the first patch in the patchlist.</summary>
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void InitializeFirstPatch() => throw null;
 
@@ -123,9 +117,7 @@ namespace KSP.Sim.impl
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void DecreasePatchLimit() => throw null;
 
-    /// <summary>
-    /// Action triggered by reference body change?
-    /// </summary>
+    /// <summary>Action triggered by reference body change?</summary>
     /// <param name="orbiter"></param>
     /// <param name="newReferenceBody"></param>
     [MethodImpl(MethodImplOptions.NoInlining)]

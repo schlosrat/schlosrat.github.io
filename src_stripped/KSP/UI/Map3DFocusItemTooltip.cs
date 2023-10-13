@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Map3DFocusItemTooltip
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Map;
@@ -23,10 +23,10 @@ namespace KSP.UI
     private const string NAME_KEY = "Name";
     private const string ALTITUDE_KEY = "Altitude";
     private const string VELOCITY_KEY = "Velocity";
-    private const string IS_CELESTIAL_BODY_KEY = "IsCelestialBody";
+    private const string HIDE_VELOCITY_ALTUTUDE_KEY = "HideVelocityAltitude";
     private const string CELESTIALBODY_LOC_PATH = "CelestialBody/";
     private Property<string> _nameProp;
-    private Property<bool> _isCelestialBodyProp;
+    private Property<bool> _hideVelocityAltitude;
     private PropertyExternal<double> _velocityProp;
     private PropertyExternal<double> _altitudeProp;
 

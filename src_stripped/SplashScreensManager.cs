@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: SplashScreensManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using DG.Tweening;
 using System;
@@ -17,8 +17,8 @@ public class SplashScreensManager : MonoBehaviour
   [SerializeField]
   [Tooltip("Set the first animation to be displayed.")]
   private DOTweenAnimation _firstScreenAnimation;
-  [SerializeField]
   [Tooltip("Percentage in which the animations time scale will be multiplied duration will be reduced")]
+  [SerializeField]
   private float onSkipAnimationTimeMultiplier;
   [SerializeField]
   [Tooltip("Input we wish to use for being able to skip the splash screens")]

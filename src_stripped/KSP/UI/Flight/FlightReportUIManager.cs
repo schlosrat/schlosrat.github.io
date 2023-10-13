@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Flight.FlightReportUIManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -33,25 +33,25 @@ namespace KSP.UI.Flight
     private Color _successStatusColor;
     [SerializeField]
     private Color _failureStatusColor;
-    [Header("Default window position")]
     [SerializeField]
+    [Header("Default window position")]
     private float _defaultXWindowOffset;
     [SerializeField]
     private float _defaultYWindowOffset;
-    [Header("Research Section")]
     [SerializeField]
+    [Header("Research Section")]
     private FlightReportResearchItem _researchItemPrefab;
     [SerializeField]
     private RectTransform _researchParentTransform;
     [SerializeField]
     private Sprite _debugResearchItemIcon;
-    [Header("Log Section")]
     [SerializeField]
+    [Header("Log Section")]
     private FlightReportLogItem _logItemPrefab;
     [SerializeField]
     private RectTransform _logParentTransform;
-    [Header("Crew Section")]
     [SerializeField]
+    [Header("Crew Section")]
     private FlightReportCrewItem _crewItemPrefab;
     [SerializeField]
     private RectTransform _crewParentTransform;
@@ -59,15 +59,15 @@ namespace KSP.UI.Flight
     [SerializeField]
     [Header("Records Section")]
     private double _recordsUpdateRate;
-    [Header("Success and Failure Messages Section")]
-    [Tooltip("List of localization terms for messages that are picked at random to display in the flight report if we are successful or not.")]
     [SerializeField]
+    [Tooltip("List of localization terms for messages that are picked at random to display in the flight report if we are successful or not.")]
+    [Header("Success and Failure Messages Section")]
     private string[] _successMessageLocTerms;
     [SerializeField]
     private string[] _failureMessageLocTerms;
-    [Header("Tutorials Section")]
-    [Tooltip("List of localization terms for messages that are picked at random to display in Tutorials Section.")]
     [SerializeField]
+    [Tooltip("List of localization terms for messages that are picked at random to display in Tutorials Section.")]
+    [Header("Tutorials Section")]
     private string[] _tutorialMessageLocTerms;
     private DataContext _uiData;
     private Property<string> _flightStatusText;

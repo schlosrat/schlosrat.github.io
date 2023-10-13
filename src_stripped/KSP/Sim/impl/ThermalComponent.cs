@@ -1,53 +1,44 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.ThermalComponent
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim.Converters;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using UnityEngine;
 
 namespace KSP.Sim.impl
 {
-  public class ThermalComponent : ObjectComponent
+  public class ThermalComponent : ObjectComponent, IDisposable
   {
-    public double TotalCoolingDemand;
     private const double AVERAGE_INITIAL_TEMPERATURE = 280.0;
-    private CelestialBodyComponent _currentCBData;
-    private Texture2D _bodySurfaceFluxMap;
-    private double _netPartFlux;
-    private double _partDeltaTemperature;
-    private double _bodyAtmosphereFlux;
-    private double _bodyLocalFlux;
-    private double _bodySurfaceFlux;
-    private double _minFlux;
-    private double _maxFlux;
+    public CelestialBodyComponent CurrentCBData;
     private List<PartComponentModule_Cooler> _coolingModules;
     private List<PartComponent> _partsToDestroy;
 
     [TypeConverterIgnore]
-    public override System.Type Type
+    public override Type Type
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [TypeConverterIgnore]
-    public override System.Type DefinitionType
+    public override Type DefinitionType
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [TypeConverterIgnore]
-    public override System.Type StateType
+    public override Type StateType
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [TypeConverterIgnore]
-    public override System.Type ViewObjectComponentType
+    public override Type ViewObjectComponentType
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -63,6 +54,15 @@ namespace KSP.Sim.impl
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public override object GetState() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    ~ThermalComponent() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void Dispose(bool disposing) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void Dispose() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public ThermalComponent() => throw null;

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Module_Drag
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Messages;
 using KSP.Sim;
@@ -22,6 +22,7 @@ namespace KSP.Modules
     public const float MINIMUM_VELOCITY_TO_UPDATE_AREA_PROPERTY = 0.05f;
     private const float KILOGRAM_TO_METRIC_TON = 0.001f;
     internal const float NEXT_NEIGHBOR_DEPTH_THRESHOLD = 1f;
+    private const int MAX_FRAMES_TO_WAIT_FOR_UNPACK = 15;
     internal static readonly Vector3[] FaceDirections;
     private static bool _showDragDebug;
     [FormerlySerializedAs("data")]
@@ -102,6 +103,9 @@ namespace KSP.Modules
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnPartDetached(MessageCenterMessage obj) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    protected void OnShowOcclusionDataValueChange(bool value) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void EnableAero() => throw null;

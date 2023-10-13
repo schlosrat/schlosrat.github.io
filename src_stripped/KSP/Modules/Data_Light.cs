@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Light
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -18,19 +18,19 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_Light : ModuleData
   {
+    [HideInInspector]
+    [PAMDisplayControl(SortIndex = 1)]
     [LocalizedField("PartModules/Light/LightSwitch")]
     [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 1)]
-    [HideInInspector]
     public ModuleProperty<bool> isLightEnabled;
-    [HideInInspector]
+    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 2)]
-    [SteppedRange(0.0f, 1f, 0.01f)]
     [LocalizedField("PartModules/Light/ColorR")]
-    [KSPState(CopyToSymmetrySet = true)]
+    [SteppedRange(0.0f, 1f, 0.01f)]
+    [HideInInspector]
     public ModuleProperty<float> lightColorR;
-    [LocalizedField("PartModules/Light/ColorG")]
     [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/Light/ColorG")]
     [PAMDisplayControl(SortIndex = 3)]
     [SteppedRange(0.0f, 1f, 0.01f)]
     [HideInInspector]
@@ -38,36 +38,36 @@ namespace KSP.Modules
     [LocalizedField("PartModules/Light/ColorB")]
     [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 4)]
-    [HideInInspector]
     [SteppedRange(0.0f, 1f, 0.01f)]
+    [HideInInspector]
     public ModuleProperty<float> lightColorB;
+    [PAMDisplayControl(SortIndex = 8)]
     [LocalizedField("PartModules/Light/LightEmission")]
     [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 8)]
     [HideInInspector]
     public ModuleProperty<bool> castLight;
     [HideInInspector]
-    [LocalizedField("PartModules/Light/BlinkOn")]
-    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 9)]
+    [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/Light/BlinkOn")]
     public ModuleProperty<bool> isBlinkEnabled;
+    [LocalizedField("PartModules/Light/BlinkRate")]
     [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 10)]
     [HideInInspector]
     [SteppedRange(0.2f, 2f, 0.1f)]
-    [LocalizedField("PartModules/Light/BlinkRate")]
     public ModuleProperty<float> blinkRate;
-    [LocalizedField("PartModules/Light/RotationAngle")]
-    [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 5)]
     [HideInInspector]
     [SteppedRange(0.0f, 360f, 5f)]
+    [PAMDisplayControl(SortIndex = 5)]
+    [LocalizedField("PartModules/Light/RotationAngle")]
+    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<float> rotationAngle;
     [LocalizedField("PartModules/Light/PitchAngle")]
     [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 6)]
     [HideInInspector]
     [SteppedRange(0.0f, 360f, 5f)]
-    [PAMDisplayControl(SortIndex = 6)]
     public ModuleProperty<float> pitchAngle;
     [LocalizedField("PartModules/Gimbal/AdvancedSettings")]
     [KSPState]
@@ -77,15 +77,15 @@ namespace KSP.Modules
     [HideInInspector]
     [KSPDefinition]
     public bool isSmoothTransitionEnabled;
+    [Tooltip("Name of the mesh renderer for emissive")]
     [Header("GameObject Config")]
     [KSPDefinition]
-    [Tooltip("Name of the mesh renderer for emissive")]
     public string LightMeshRendererName;
-    [KSPDefinition]
     [Tooltip("Whether the light consumes resources")]
-    public bool useResources;
-    [Tooltip("Resource required to operate this module if consumes resources")]
     [KSPDefinition]
+    public bool useResources;
+    [KSPDefinition]
+    [Tooltip("Resource required to operate this module if consumes resources")]
     public PartModuleResourceSetting requiredResource;
     [KSPDefinition]
     public float lightBrightenDuration;
@@ -122,11 +122,11 @@ namespace KSP.Modules
     [Tooltip("Default red component of the light color")]
     [KSPDefinition]
     public float LightR;
-    [KSPDefinition]
     [Tooltip("Default green component of the light color")]
-    public float LightG;
     [KSPDefinition]
+    public float LightG;
     [Tooltip("Default blue component of the light color")]
+    [KSPDefinition]
     public float LightB;
     [HideInInspector]
     public bool HasResourcesToOperate;

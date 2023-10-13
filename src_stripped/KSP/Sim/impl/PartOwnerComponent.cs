@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.PartOwnerComponent
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Messages;
 using KSP.Modules;
@@ -272,16 +272,6 @@ namespace KSP.Sim.impl
     public bool TryGetPart(IGGuid guid, out PartComponent part) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void DetachPart(
-      System.Guid partGuid,
-      System.Guid? promotionGuid = null,
-      bool forceRemove = false,
-      bool ignoreChildrenOfCompoundParts = false)
-    {
-      throw null;
-    }
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     public void DetachPart(
       PartComponent part,
       System.Guid? promotionGuid = null,
@@ -292,7 +282,7 @@ namespace KSP.Sim.impl
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public List<PartComponent> DetachPart(
+    internal List<PartComponent> DetachPart(
       PartComponent part,
       bool forceRemove,
       bool ignoreChildrenOfCompoundParts,

@@ -18,6 +18,7 @@ namespace KSP.Sim.impl
     private bool _engineFound;
     private PartComponentModule_Engine _engineModule;
     private double _decayMultiplier;
+    private double _resourceFlow;
 
     public override Type PartBehaviourModuleType
     {

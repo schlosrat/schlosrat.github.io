@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.DebugTools.VesselCoordinateLocationWindow
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Runtime.CompilerServices;
@@ -51,6 +51,28 @@ namespace KSP.DebugTools
     private TMP_Text _landedText;
     [SerializeField]
     private TMP_Text _splashedText;
+    [SerializeField]
+    private TMP_Text _altitudeFromRadiusText;
+    [SerializeField]
+    private TMP_Text _altitudeFromTerrainText;
+    [SerializeField]
+    private TMP_Text _altitudeFromSeaLevelText;
+    [SerializeField]
+    private TMP_Text _altitudeFromSceneryText;
+    [SerializeField]
+    private TMP_Text _altitudeFromSurfaceText;
+    [SerializeField]
+    private TMP_Text _handOfKrakenEnabled;
+    [SerializeField]
+    private TMP_Text _handOfKrakenIsCorrectingOrbit;
+    [SerializeField]
+    private TMP_Text _handOfKrakenHasExpectedOrbitPos;
+    [SerializeField]
+    private TMP_Text _handOfKrakenIsUnderAccel;
+    [SerializeField]
+    private TMP_Text _handOfKrakenIsOrbitStandOff;
+    [SerializeField]
+    private TMP_Text _handOfKrakenPhysicsMode;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void Awake() => throw null;
@@ -99,6 +121,9 @@ namespace KSP.DebugTools
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void CopyOriginDistanceText() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void ToggleHand() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void HideWindow() => throw null;

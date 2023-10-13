@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Input.FlightInputDefinition
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine.InputSystem;
@@ -12,8 +12,7 @@ namespace KSP.Input
 {
   public class FlightInputDefinition : InputDefinition
   {
-    private const string DOCKING_CONTROLS_MESSAGE = "Flight/FlightControlsDocking";
-    private const string NORMAL_CONTROLS_MESSAGE = "Flight/FlightControlsNormal";
+    private const string UI_SCROLL_TAG = "UI_SCROLL";
     private GameInput.FlightActions _inputSourceMap;
     private bool _isRotationLinearControlsSwapped;
 
@@ -182,6 +181,12 @@ namespace KSP.Input
     private void OnCameraPan(InputAction.CallbackContext context) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnCameraZoom(InputAction.CallbackContext context) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnToggleVesselLabels(InputAction.CallbackContext context) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnToggleFreeCamera(InputAction.CallbackContext context) => throw null;
   }
 }

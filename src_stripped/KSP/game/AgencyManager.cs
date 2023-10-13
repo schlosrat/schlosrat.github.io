@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.AgencyManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game.Missions.Definitions;
 using KSP.Sim;
@@ -15,11 +15,11 @@ namespace KSP.Game
 {
   public class AgencyManager
   {
-    public const OnAgencyEventCallback DEFAULT_ON_AGENCY_EVENT_CALLBACK = null;
+    public const OnAgencyMPActionCallback DEFAULT_ON_AGENCY_MP_ACTION_CALLBACK = null;
     public const bool DEFAULT_PROPAGATE_EVENTS_FLAG = false;
     private List<AgencyEntry> _list;
     private Dictionary<int, AgencyEntry> _agencyIdDict;
-    private OnAgencyEventCallback _onAgencyEventCallback;
+    private OnAgencyMPActionCallback _onAgencyMPActionCallback;
     private bool _propagateEventsFlag;
 
     public GameInstance Game
@@ -35,13 +35,13 @@ namespace KSP.Game
     [MethodImpl(MethodImplOptions.NoInlining)]
     public int IndexOfEntry(AgencyEntry agencyEntry) => throw null;
 
-    public OnAgencyEventCallback OnAgencyEventCallback
+    public OnAgencyMPActionCallback OnAgencyMPActionCallback
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetOnAgencyEventCallback(OnAgencyEventCallback onAgencyEventCallback) => throw null;
+    public void SetOnAgencyMPActionCallback(OnAgencyMPActionCallback onAgencyMPActionCallback) => throw null;
 
     public bool PropagateEventsFlag
     {
@@ -106,7 +106,7 @@ namespace KSP.Game
       Color colorBase,
       Color colorAccent,
       string flagSpritelocation,
-      List<MissionData> missions)
+      List<MissionSaveData> missionSaveData)
     {
       throw null;
     }
@@ -117,7 +117,7 @@ namespace KSP.Game
       Color colorBase,
       Color colorAccent,
       string flagSpritelocation,
-      List<MissionData> missions)
+      List<MissionSaveData> missionSaveData)
     {
       throw null;
     }

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Rendering.DrawMeshRendererToRawImage
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -14,15 +14,15 @@ namespace KSP.Rendering
 {
   public class DrawMeshRendererToRawImage : MonoBehaviour
   {
-    [SerializeField]
-    [Tooltip("Property to link the canvas's raw image representation of the rendered prefab group")]
     [Header("Resulting UI Image")]
+    [Tooltip("Property to link the canvas's raw image representation of the rendered prefab group")]
+    [SerializeField]
     private RawImage _rawImage;
     [Space(5f)]
     [SerializeField]
     private MeshRenderer[] _meshRenderers;
-    [SerializeField]
     [Header("Texture")]
+    [SerializeField]
     private string _textureName;
     [SerializeField]
     private int _maxTextureSize;
@@ -43,6 +43,7 @@ namespace KSP.Rendering
     private int _currentPixelWidth;
     private int _currentPixelHeight;
     private bool[] _renderersRenderedLastFrame;
+    private Material[] _materialsRenderedLastFrame;
     [SerializeField]
     [Header("Outline")]
     private bool _applyOutline;
@@ -93,6 +94,9 @@ namespace KSP.Rendering
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private bool HasRendererListChanged() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool HasMaterialsChanged() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private static int GetNearestPowerOfTwo(int input) => throw null;

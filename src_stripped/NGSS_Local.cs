@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: NGSS_Local
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -32,9 +32,9 @@ public class NGSS_Local : MonoBehaviour
   public int NGSS_NOISE_TO_DITHERING_SCALE;
   [Tooltip("If you set the noise scale value to something less than 1 you need to input a noise texture.\nRecommended noise textures are blue noise signals.")]
   public Texture2D NGSS_NOISE_TEXTURE;
-  [Tooltip("Number of samplers per pixel used for PCF and PCSS shadows algorithms.\nRecommended values: Mobile = 12, Consoles & VR = 24, Desktop Med = 32, Desktop High = 48, Desktop Ultra = 64")]
   [Range(0.0f, 1f)]
   [Space]
+  [Tooltip("Number of samplers per pixel used for PCF and PCSS shadows algorithms.\nRecommended values: Mobile = 12, Consoles & VR = 24, Desktop Med = 32, Desktop High = 48, Desktop Ultra = 64")]
   public float NGSS_SHADOWS_OPACITY;
   [Header("LOCAL SETTINGS")]
   [Tooltip("PCSS Requires inline sampling and SM3.5.\nProvides Area Light soft-shadows.\nDisable it if you are looking for PCF filtering (uniform soft-shadows) which runs with SM3.0.")]
@@ -45,12 +45,12 @@ public class NGSS_Local : MonoBehaviour
   [Tooltip("How soft shadows are when far from caster. Low values means sharper shadows.")]
   [Range(0.0f, 2f)]
   public float NGSS_PCSS_SOFTNESS_FAR;
-  [Range(0.0f, 1f)]
   [Tooltip("Value to fix blocker search bias artefacts. Be careful with extreme values, can lead to false self-shadowing.")]
+  [Range(0.0f, 1f)]
   public float NGSS_PCSS_BLOCKER_BIAS;
   [Space]
-  [Tooltip("Defines the Penumbra size of this shadows.")]
   [Range(0.0f, 1f)]
+  [Tooltip("Defines the Penumbra size of this shadows.")]
   public float NGSS_SHADOWS_SOFTNESS;
   [Tooltip("Shadows resolution.\nUseQualitySettings = From Quality Settings, SuperLow = 512, Low = 1024, Med = 2048, High = 4096, Ultra = 8192.")]
   public NGSS_Local.ShadowMapResolution NGSS_SHADOWS_RESOLUTION;

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Networking.MP.MPVars
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Networking.MP.Serialize;
 using System;
@@ -37,7 +37,7 @@ namespace KSP.Networking.MP
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void PopulateDynamicDefaultValues() => throw null;
+    public static void PopulateDynamicDefaultValuesForNetworkProtocol() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static bool SaveStringToPasswordString(string saveString, out string passwordString) => throw null;

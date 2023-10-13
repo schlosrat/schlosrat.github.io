@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.IndicatorData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using AK.Wwise;
 using KSP.OAB;
@@ -21,8 +21,8 @@ namespace KSP.UI
     [Header("Localization")]
     public string titleKey;
     public string bodyTextKey;
-    [Tooltip("Normalized position within canvas delta size, 0,0 as center 1 and -1 for corners.")]
     [Header("Positioning")]
+    [Tooltip("Normalized position within canvas delta size, 0,0 as center 1 and -1 for corners.")]
     public Vector2 normalizedPos;
     public float xOffset;
     public float yOffset;
@@ -31,8 +31,8 @@ namespace KSP.UI
     public Sprite mainSprite;
     public Texture rawImageTexture;
     public Vector2 imageSize;
-    [Tooltip("True: Keep animating any animated content in the Image components even if off-screen")]
     [Header("Settings")]
+    [Tooltip("True: Keep animating any animated content in the Image components even if off-screen")]
     public bool animateOffScreen;
     [Tooltip("True: Disables the body text component")]
     public bool showTitleOnly;

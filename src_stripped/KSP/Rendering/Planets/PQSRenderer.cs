@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Rendering.Planets.PQSRenderer
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using AwesomeTechnologies.Utility;
 using KSP.Game;
@@ -119,6 +119,7 @@ namespace KSP.Rendering.Planets
     private static readonly int sp_WorldToPlanetMatrix;
     private static readonly int sp_WorldToOceanMatrix;
     private static readonly int sp_OceanRadius;
+    private static readonly int sp_OceanRadiusOffsetHeight;
     private static readonly int sp_CameraPosOnPlanet;
     private static readonly int sp_CenterOfPlanet;
     private static readonly int sp_UnderWaterDiffuseColor;
@@ -246,6 +247,8 @@ namespace KSP.Rendering.Planets
     private const float TESSELLATION_FACTOR_MEDIUM = 5f;
     private const float TESSELLATION_FACTOR_LOW = 4f;
     private const float TESSELLATION_FACTOR_DEFAULT = 1f;
+    private const float OCEAN_RADIUS_OFFSET = 10f;
+    private const float OCEAN_RADIUS_OFFSET_HEIGHT = 200000f;
     private PQSRenderer.OceanType _oceanType;
     private Material _oceanMaterial;
     private Material _oceanSpereMaterial;
@@ -295,6 +298,7 @@ namespace KSP.Rendering.Planets
     private Vector4 _params;
     private float _worldSizePerPixel;
     private float _tessellationFactor;
+    private float _oceanRadiusOffset;
     private DateTime _startTime;
     private float _deltaTime;
     private float _runningTime;
@@ -466,7 +470,8 @@ namespace KSP.Rendering.Planets
     private float _currScaledTransition;
     private CelestialBodyGIProbeDataReference _localGIProbes;
     public bool _drawPlanetQueued;
-    private Vector3 _lastPQSPosition;
+    private readonly List<IPQSOverlay> _overlays;
+    private CommandBuffer _overlayCommandBuffer;
     private bool _regeneratePQSTiles;
     private static readonly int DECAL_OFFSET_ID;
     private static readonly int PQS_TO_WORLD_MATRIX_ID;
@@ -763,6 +768,15 @@ namespace KSP.Rendering.Planets
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void DrawPQSDeferredDecalSurfacePass(Material selectedMaterial, Camera targetCamera) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void AddOverlay(IPQSOverlay overlay) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void RemoveOverlay(IPQSOverlay overlay) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void DrawPQSOverlays(Camera targetCamera) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void DrawPQSQuads(

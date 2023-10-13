@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: VideoLanguageTrackManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Collections;
 using System.Collections.Generic;
@@ -15,8 +15,8 @@ using UnityEngine.Video;
 
 public class VideoLanguageTrackManager : MonoBehaviour
 {
-  [SerializeField]
   [Tooltip("Connect the Video Player Component you want this component to manage.")]
+  [SerializeField]
   private VideoPlayer videoPlayer;
   private List<VideoLanguageTrackManager.ManagedTrackInfo> audioTrackInfoList;
 

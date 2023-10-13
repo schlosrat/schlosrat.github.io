@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Basic2DTooltipTarget
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Runtime.CompilerServices;
@@ -18,15 +18,15 @@ namespace KSP.UI
     private Basic2DTooltip _tooltipPrefab;
     [SerializeField]
     private Vector2 _tooltipOffset;
-    [SerializeField]
     [Header("Tooltip data")]
+    [SerializeField]
     protected BasicTextTooltipData _tooltipData;
     [SerializeField]
-    [Tooltip("Check if the tooltip is not supposed to follow the mouse pointer")]
     [Space]
+    [Tooltip("Check if the tooltip is not supposed to follow the mouse pointer")]
     private bool _isAnchoredToTarget;
-    [Header("Tweakable values if the tooltip is anchored to the target")]
     [SerializeField]
+    [Header("Tweakable values if the tooltip is anchored to the target")]
     private bool _useTargetWidth;
     [SerializeField]
     private TooltipPivotEnum _tooltipPivot;

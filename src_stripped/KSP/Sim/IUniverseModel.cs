@@ -1,13 +1,12 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.IUniverseModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api;
 using KSP.Sim.impl;
-using KSP.Sim.State;
 using System;
 using System.Collections.Generic;
 
@@ -19,11 +18,9 @@ namespace KSP.Sim
 
     ILateUpdateDriver lateUpdateDriver { get; }
 
-    void UpdateState(UniverseState state);
+    double UniverseTime { get; }
 
-    double UniversalTime { get; }
-
-    double UniversalTimeDelta { get; }
+    double UniverseTimeDelta { get; }
 
     string ViewPrefabAssetKey { get; }
 
@@ -91,7 +88,7 @@ namespace KSP.Sim
 
     VesselComponent FindVesselComponent(IGGuid guid);
 
-    void SetUniversalTime(double time);
+    void SetUniverseTime(double universeTime, double deltaUT);
 
     bool AddSimulationObject(SimulationObjectModel model);
 
@@ -124,8 +121,6 @@ namespace KSP.Sim
     event Action<VesselComponent> onVesselAdded;
 
     event Action<VesselComponent> onVesselRemoved;
-
-    event Action<UniverseState> onUniverseStateUpdate;
 
     void Reset();
   }

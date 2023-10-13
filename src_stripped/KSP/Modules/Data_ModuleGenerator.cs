@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ModuleGenerator
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -26,17 +26,17 @@ namespace KSP.Modules
     [LocalizedField("PartModules/Generator/GeneratorHeat")]
     [PAMDisplayControl(SortIndex = 3)]
     public ModuleProperty<double> HeatGenerated;
+    [KSPState]
     [LocalizedField("PartModules/ResourceConverter/Status")]
     [PAMDisplayControl(SortIndex = 1)]
-    [KSPState]
     public ModuleProperty<string> DisplayStatus;
-    [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Generator/ToggleGenerator")]
+    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 3)]
     public ModuleProperty<bool> GeneratorEnabled;
-    [KSPState]
     [LocalizedField("PartModules/Generator/Lifetime")]
     [PAMDisplayControl(SortIndex = 4)]
+    [KSPState]
     public ModuleProperty<string> DisplayLifetime;
     [Header("General Parameters")]
     [KSPState]
@@ -48,9 +48,9 @@ namespace KSP.Modules
     public GeneratorStatus Status;
     [KSPDefinition]
     public PartModuleResourceSetting ResourceSetting;
-    [Tooltip("Whether the output should be reduced with time")]
-    [Header("Decay Controls")]
     [KSPDefinition]
+    [Header("Decay Controls")]
+    [Tooltip("Whether the output should be reduced with time")]
     public bool UseDecay;
     [KSPDefinition]
     [Tooltip("How long the generator takes to decay completely, in seconds")]

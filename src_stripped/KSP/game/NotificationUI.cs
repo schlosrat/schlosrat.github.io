@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.NotificationUI
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using DG.Tweening;
 using KSP.Api.CoreTypes;
@@ -30,17 +30,17 @@ namespace KSP.Game
     protected LayoutElement _contentLayoutElement;
     protected Property<Sprite> _primaryIcon;
     protected DataContext _dataContext;
-    [Header("Tunable Properties")]
     [SerializeField]
+    [Header("Tunable Properties")]
     protected float _notificationHeight;
     [SerializeField]
     protected Vector3 _offsetFromDefaultPosition;
-    [Header("DoTween Animations")]
     [SerializeField]
     [Tooltip("Set the DOTween Fade In Animation")]
+    [Header("DoTween Animations")]
     protected DOTweenAnimation fadeInAnimation;
-    [Tooltip("Set the DOTween Fade Out Animation")]
     [SerializeField]
+    [Tooltip("Set the DOTween Fade Out Animation")]
     protected DOTweenAnimation fadeOutAnimation;
     protected NotificationUIProvider _notificationUIProvider;
     protected NotificationData _notificationData;

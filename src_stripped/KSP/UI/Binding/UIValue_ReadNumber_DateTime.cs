@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIValue_ReadNumber_DateTime
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding.Core;
@@ -17,6 +17,9 @@ namespace KSP.UI.Binding
   {
     private int daysInYear;
     private int hoursInDay;
+    [Tooltip("Indicates whether the years and days should be displayed as 1-based instead of 0-based. This is for display purposes only.")]
+    [SerializeField]
+    private bool isOneBased;
     [Header("Display as a single text...")]
     [SerializeField]
     private TMP_Text dateTimeText;
@@ -36,6 +39,12 @@ namespace KSP.UI.Binding
     private UIValueBinder secondDisplay;
     [SerializeField]
     private UIValueBinder millisecondDisplay;
+    private const int YEARS_INDEX = 0;
+    private const int DAYS_INDEX = 1;
+    private const int HOURS_INDEX = 2;
+    private const int MINUTES_INDEX = 3;
+    private const int SECONDS_INDEX = 4;
+    private const int MILLISECONDS_INDEX = 5;
     private Property<double>[] timeProperties;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -46,6 +55,9 @@ namespace KSP.UI.Binding
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnDisable() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void SetIsOneBased(bool isOneBased) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static UIValue_ReadNumber_DateTime.DateTime ComputeDateTime(

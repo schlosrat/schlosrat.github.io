@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.UniverseCameraManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -35,6 +35,7 @@ namespace KSP.Sim.impl
     private FlightCameraContext _currentFlightCameraContext;
     public bool CameraFineMovementEnabled;
     public Vector2 CameraPanValue;
+    public Vector2 CameraZoomValue;
     private Dictionary<CameraID, UniverseCameraManager.CameraRenderData> CameraRenderMap;
     private bool _inputEnabled;
     private CameraMouseLook _cameraMouseLook;
@@ -43,7 +44,7 @@ namespace KSP.Sim.impl
     public GimbalState gimbalStateForKSCCameraOrigin;
     private bool _flightViewDormant;
     private VesselComponent _activeVessel;
-    private VABFlightCamera _vabFlightCam;
+    private VABFlightCamera _vabFlightCamera;
     public GimbalState targetGimbalState;
     private FlightCameraRenderStack_Scaled _scaledCameraStack;
     private FlightCameraRenderStack_Physics _physicsCameraStack;
@@ -81,7 +82,7 @@ namespace KSP.Sim.impl
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public bool TryGetMainPhysicsCameraUnityTransform(out Transform cameraTransform) => throw null;
+    public static bool TryGetMainPhysicsCameraUnityTransform(out Transform cameraTransform) => throw null;
 
     public ICameraRig FlightCamera
     {
@@ -160,10 +161,7 @@ namespace KSP.Sim.impl
     private void OnGroundCameraTweakablesInstantiated(CameraTweakables defaultCameraTweakables) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void OnVABLoaded() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void OnVABUnloaded() => throw null;
+    public void ReleaseFlightCameraFromOab() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnDestroy() => throw null;
@@ -291,6 +289,9 @@ namespace KSP.Sim.impl
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnCameraPan(Vector2 value) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnCameraZoom(Vector2 value) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public UniverseCameraManager() => throw null;

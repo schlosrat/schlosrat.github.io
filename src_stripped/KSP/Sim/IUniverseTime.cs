@@ -1,36 +1,29 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.IUniverseTime
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
+using KSP.Sim.impl;
 using System;
 
 namespace KSP.Sim
 {
   public interface IUniverseTime
   {
-    IUniverseTimeCommandEntry CommandEntry { get; }
-
-    event Action<bool> IsTimePausedChanged;
+    double UniverseTime { get; }
 
     bool IsTimePaused { get; }
 
-    event Action<TimeScaleValues> TimeScaleChanged;
+    bool SetTimePaused(bool isPaused);
 
-    event Action<float> UniverseTimeScaleChanged;
+    float TimeScale { get; }
 
-    TimeScaleValues TimeScaleValues { get; }
+    void SetTimeScale(float rate, bool scalePhysics);
 
-    float PhysicsTimeScale { get; }
+    event Action<bool> PausedChanged;
 
-    float PhysicsToUniverseMultiplier { get; }
-
-    float UniverseTimeScale { get; }
-
-    float MaxPhysicsTimeScale { get; }
-
-    float MaxUniverseTimeScale { get; }
+    event Action<bool, TimeScaleValues> TimescaleChanged;
   }
 }

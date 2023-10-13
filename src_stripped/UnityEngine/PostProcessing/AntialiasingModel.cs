@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.AntialiasingModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -46,11 +46,11 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct FxaaQualitySettings
     {
-      [Range(0.0f, 1f)]
       [Tooltip("The amount of desired sub-pixel aliasing removal. Effects the sharpeness of the output.")]
+      [Range(0.0f, 1f)]
       public float subpixelAliasingRemovalAmount;
-      [Range(0.063f, 0.333f)]
       [Tooltip("The minimum amount of local contrast required to qualify a region as containing an edge.")]
+      [Range(0.063f, 0.333f)]
       public float edgeDetectionThreshold;
       [Range(0.0f, 0.0833f)]
       [Tooltip("Local contrast adaptation value to disallow the algorithm from executing on the darker regions.")]
@@ -96,17 +96,17 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct TaaSettings
     {
-      [Tooltip("The diameter (in texels) inside which jitter samples are spread. Smaller values result in crisper but more aliased output, while larger values result in more stable but blurrier output.")]
       [Range(0.1f, 1f)]
+      [Tooltip("The diameter (in texels) inside which jitter samples are spread. Smaller values result in crisper but more aliased output, while larger values result in more stable but blurrier output.")]
       public float jitterSpread;
-      [Range(0.0f, 3f)]
       [Tooltip("Controls the amount of sharpening applied to the color buffer.")]
+      [Range(0.0f, 3f)]
       public float sharpen;
       [Range(0.0f, 0.99f)]
       [Tooltip("The blend coefficient for a stationary fragment. Controls the percentage of history sample blended into the final color.")]
       public float stationaryBlending;
-      [Range(0.0f, 0.99f)]
       [Tooltip("The blend coefficient for a fragment with significant motion. Controls the percentage of history sample blended into the final color.")]
+      [Range(0.0f, 0.99f)]
       public float motionBlending;
 
       public static AntialiasingModel.TaaSettings defaultSettings

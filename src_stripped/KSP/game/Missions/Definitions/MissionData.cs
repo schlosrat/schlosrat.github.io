@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.Missions.Definitions.MissionData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game.Missions.State;
 using KSP.Sim;
@@ -22,18 +22,23 @@ namespace KSP.Game.Missions.Definitions
     [JsonProperty]
     [KSPDefinition]
     public string MissionGroup;
-    [JsonProperty]
     [KSPDefinition]
+    [JsonProperty]
     public string name;
-    [JsonProperty]
     [KSPDefinition]
+    [JsonProperty]
     public string description;
-    [JsonProperty]
     [KSPDefinition]
+    [JsonProperty]
+    public string GameModeFeatureId;
+    [KSPDefinition]
+    [JsonProperty]
     public MissionType type;
     [JsonProperty]
     [KSPDefinition]
     public MissionOwner Owner;
+    public const int DEFAULT_OWNER_ID = 1;
+    protected int OwnerId;
     [JsonProperty]
     [KSPDefinition]
     public MissionState state;
@@ -41,14 +46,17 @@ namespace KSP.Game.Missions.Definitions
     [KSPDefinition]
     public string missionScript;
     public List<MissionStage> missionStages;
-    [KSPDefinition]
     [JsonProperty]
+    [KSPDefinition]
     public int currentStageIndex;
     [KSPDefinition]
     [JsonProperty]
-    public bool hidden;
-    [KSPDefinition]
+    public bool Hidden;
     [JsonProperty]
+    [KSPDefinition]
+    public bool VisibleRewards;
+    [JsonProperty]
+    [KSPDefinition]
     public bool pendingCompletionTest;
     [JsonProperty]
     [KSPDefinition]
@@ -59,6 +67,9 @@ namespace KSP.Game.Missions.Definitions
     [JsonProperty]
     [KSPDefinition]
     public List<MissionBranch> ExceptionBranches;
+    [KSPDefinition]
+    [JsonProperty]
+    public List<MissionBranch> PreRequisiteBranches;
     [KSPDefinition]
     [JsonProperty]
     public string MissionSaveAssetKey;
@@ -140,5 +151,14 @@ namespace KSP.Game.Missions.Definitions
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private bool CurrentStageUpdatesExceptionBranches() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool CanTestPreRequisiteBranches() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void SetOwnerId(int newOwnerId) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public int GetOwnerId() => throw null;
   }
 }

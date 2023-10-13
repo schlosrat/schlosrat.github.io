@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.UI.TransitionVisualData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -14,16 +14,16 @@ namespace UnityEngine.UI
   [Serializable]
   public struct TransitionVisualData
   {
+    [HideInInspector]
     [SerializeField]
-    [HideInInspector]
     private bool m_IgnoreColorTransition;
-    [HideInInspector]
     [FormerlySerializedAs("colorPreset")]
     [SerializeField]
-    private ColorBlockPreset m_ColorPreset;
-    [FormerlySerializedAs("m_ColorFadeDuration")]
-    [SerializeField]
     [HideInInspector]
+    private ColorBlockPreset m_ColorPreset;
+    [HideInInspector]
+    [SerializeField]
+    [FormerlySerializedAs("m_ColorFadeDuration")]
     private float m_ColorDuration;
     [SerializeField]
     [HideInInspector]
@@ -40,8 +40,8 @@ namespace UnityEngine.UI
     [FormerlySerializedAs("OnPress")]
     [SerializeField]
     private SpriteEntry OnPress;
-    [FormerlySerializedAs("OnDisabled")]
     [SerializeField]
+    [FormerlySerializedAs("OnDisabled")]
     private SpriteEntry OnDisabled;
     [SerializeField]
     private SpriteEntry OnSelect;

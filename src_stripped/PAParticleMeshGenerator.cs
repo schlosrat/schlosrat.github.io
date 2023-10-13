@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: PAParticleMeshGenerator
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -11,26 +11,26 @@ using UnityEngine;
 public class PAParticleMeshGenerator : MonoBehaviour, ISerializationCallbackReceiver
 {
   private const int DATA_STRUCTURE_VERSION = 2;
-  [SerializeField]
   [HideInInspector]
+  [SerializeField]
   protected Vector3[] verts;
-  [HideInInspector]
   [SerializeField]
+  [HideInInspector]
   protected Vector3[] normals;
-  [HideInInspector]
   [SerializeField]
+  [HideInInspector]
   protected Vector4[] tangents;
-  [HideInInspector]
   [SerializeField]
+  [HideInInspector]
   protected Vector2[] uv0;
-  [HideInInspector]
   [SerializeField]
+  [HideInInspector]
   protected Vector2[] uv1;
-  [HideInInspector]
   [SerializeField]
+  [HideInInspector]
   protected Color[] colors;
-  [SerializeField]
   [HideInInspector]
+  [SerializeField]
   protected int[] triangles;
   [SerializeField]
   [HideInInspector]

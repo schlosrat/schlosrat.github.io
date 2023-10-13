@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.CreateCampaignMenu
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding;
@@ -49,8 +49,8 @@ namespace KSP.Game
     private AgencyFlagManager _agencyFlagManager;
     [SerializeField]
     private CanvasGroup _FTUEConfirmationDialog;
-    [SerializeField]
     [Header("WarningModal")]
+    [SerializeField]
     private CanvasGroup _warningModal;
     [SerializeField]
     private CanvasGroup _campaignNameWarning;
@@ -63,7 +63,6 @@ namespace KSP.Game
     private Property<bool> _isFTUEEnabled;
     private Property<string> _warningMessage;
     private CanvasGroup _currentSelectedMenu;
-    private string _selectedGameMode;
     private List<SaveFileInfo> _campaignSaves;
     private string _currentSelectedDifficultyOption;
     private string _defaultCampaignName;
@@ -149,6 +148,15 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void ToggleFTUEConfirmationPanel(bool bValue) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnLocalizeEvent() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnDestroy() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void LocalizeText() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public CreateCampaignMenu() => throw null;

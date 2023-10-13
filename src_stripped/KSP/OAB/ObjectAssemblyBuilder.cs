@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyBuilder
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -33,8 +33,8 @@ namespace KSP.OAB
     public ObjectAssemblyAssets BuilderAssets;
     private ObjectAssemblyBuilderHUD _OABHUD;
     [SerializeField]
-    [Header("Camera Settings")]
     [Tooltip("The camera prefab to instantiate. Use CameraManager to get the current camera at runtime.")]
+    [Header("Camera Settings")]
     private ObjectAssemblyCameraManager assemblyCameraPrefab;
     private GameObject blueprintSmallObject;
     private GameObject blueprintLargeObject;
@@ -409,10 +409,6 @@ namespace KSP.OAB
     {
       private ObjectAssemblyBuilder builder;
       private bool _isAttemptingLaunch;
-      private static readonly HashSet<string> HACK_AudioListenerNameBlacklist;
-      private Dictionary<AudioListener, bool> HACK_AudioListenerEnabledCache;
-      private static readonly HashSet<string> HACK_CameraNameBlacklist;
-      private Dictionary<Camera, bool> HACK_CachedCameraEnabledCache;
 
       public GameInstance Game
       {
@@ -589,18 +585,6 @@ namespace KSP.OAB
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       private void UpdateBlueprintGrid() => throw null;
-
-      [MethodImpl(MethodImplOptions.NoInlining)]
-      private void HACK_HandleOABChange(bool isOAB) => throw null;
-
-      [MethodImpl(MethodImplOptions.NoInlining)]
-      private void HACK_HandleOABChangeAudioListeners(bool isOAB) => throw null;
-
-      [MethodImpl(MethodImplOptions.NoInlining)]
-      private void HACK_HandleOABChangeCameraCulling(bool isOAB) => throw null;
-
-      [MethodImpl(MethodImplOptions.NoInlining)]
-      static ObjectAssemblyBuilderEventsManager() => throw null;
     }
 
     public class RuntimeQAPartData

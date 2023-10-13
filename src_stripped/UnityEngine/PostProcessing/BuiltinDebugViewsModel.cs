@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.BuiltinDebugViewsModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -58,14 +58,14 @@ namespace UnityEngine.PostProcessing
       [Range(0.0f, 1f)]
       [Tooltip("Opacity of the per-pixel motion vector colors.")]
       public float motionImageOpacity;
-      [Tooltip("Because motion vectors are mainly very small vectors, you can use this setting to make them more visible.")]
       [Min(0.0f)]
+      [Tooltip("Because motion vectors are mainly very small vectors, you can use this setting to make them more visible.")]
       public float motionImageAmplitude;
-      [Tooltip("Opacity for the motion vector arrows.")]
       [Range(0.0f, 1f)]
+      [Tooltip("Opacity for the motion vector arrows.")]
       public float motionVectorsOpacity;
-      [Tooltip("The arrow density on screen.")]
       [Range(8f, 64f)]
+      [Tooltip("The arrow density on screen.")]
       public int motionVectorsResolution;
       [Tooltip("Tweaks the arrows length.")]
       [Min(0.0f)]

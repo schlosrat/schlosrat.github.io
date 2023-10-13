@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.ObjectActionGroups
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim.Definitions;
 using System.Collections.Generic;
@@ -15,6 +15,7 @@ namespace KSP.Sim.impl
   {
     protected DictionaryValueList<KSPActionGroup, ActionGroup> _groups;
     protected Dictionary<KSPActionGroup, HashSet<IGGuid>> _partIds;
+    private bool _isDirty;
 
     public ActionGroup this[KSPActionGroup key]
     {
@@ -28,7 +29,10 @@ namespace KSP.Sim.impl
     private void CreateDictionary() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void RebuildList() => throw null;
+    public void SetDirty() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void RebuildListFromScratchIfDirty() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected void SetActionGroupStateInternal(KSPActionGroup group, bool newState) => throw null;

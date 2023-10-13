@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ManipulationWidget
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Collections.Generic;
@@ -19,8 +19,8 @@ namespace KSP.OAB
     protected ObjectAssemblyInputHandler input;
     [SerializeField]
     protected bool _scaleWidgetToPreserveScreenSize;
-    [Tooltip("Tells the tool if it should even consider trying to snap positions to a grid when snap is enabled by the user. If this is true but snap is disabled by the user, no snap will be attempted.")]
     [SerializeField]
+    [Tooltip("Tells the tool if it should even consider trying to snap positions to a grid when snap is enabled by the user. If this is true but snap is disabled by the user, no snap will be attempted.")]
     protected bool _canSnapTranslation;
     [Tooltip("Tells the tool if it should even consider trying to snap rotations to existing angles when snap is enabled by the user. If this is true but snap is disabled by the user, no snap will be attempted.")]
     [SerializeField]

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: VariableHeightPartStacker
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Collections.Generic;
@@ -14,9 +14,9 @@ using UnityEngine.Serialization;
 public class VariableHeightPartStacker : KerbalMonoBehaviour
 {
   public string AttachBoneName;
-  [Space(10f)]
   [Range(0.0f, 50f)]
   [SerializeField]
+  [Space(10f)]
   [FormerlySerializedAs("stackCount")]
   private int _stackCount;
   public GameObject BaseGameObject;

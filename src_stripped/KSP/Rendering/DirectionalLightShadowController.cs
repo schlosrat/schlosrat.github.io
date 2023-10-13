@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Rendering.DirectionalLightShadowController
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Runtime.CompilerServices;
@@ -21,8 +21,8 @@ namespace KSP.Rendering
     public bool NgssUpdateOnPlay;
     [Tooltip("Shadows resolution.\nUseQualitySettings = From Quality Settings, SuperLow = 512, Low = 1024, Med = 2048, High = 4096, Ultra = 8192, Mega = 16384.")]
     public DirectionalLightShadowController.ShadowMapResolution NgssShadowsResolution;
-    [Header("BASE SAMPLING")]
     [Range(4f, 32f)]
+    [Header("BASE SAMPLING")]
     [Tooltip("Used to test blocker search and early bail out algorithms. Keep it as low as possible, might lead to white noise if too low.\nRecommended values: Mobile = 8, Consoles & VR = 16, Desktop = 24")]
     public int NgssSamplingTest;
     [Tooltip("Number of samplers per pixel used for PCF and PCSS shadows algorithms.\nRecommended values: Mobile = 16, Consoles & VR = 32, Desktop Med = 48, Desktop High = 64, Desktop Ultra = 128")]
@@ -41,24 +41,24 @@ namespace KSP.Rendering
     [Tooltip("How soft shadows are when far from caster.")]
     [Range(0.0f, 2f)]
     public float NgssPcssSoftnessFar;
-    [Tooltip("If zero = 100% noise.\nIf one = 100% dithering.\nUseful when fighting banding.")]
-    [Header("NOISE")]
     [Range(0.0f, 1f)]
+    [Header("NOISE")]
+    [Tooltip("If zero = 100% noise.\nIf one = 100% dithering.\nUseful when fighting banding.")]
     public int NgssNoiseToDitheringScale;
     [Tooltip("If you set the noise scale value to something less than 1 you need to input a noise texture.\nRecommended noise textures are blue noise signals.")]
     public Texture2D NgssNoiseTexture;
+    [Header("DENOISER")]
     [Tooltip("How many iterations the Denoiser algorithm should do.\nRequires NGSS Shadows Libraries to be installed and Cascaded Shadows to be enabled in the Editor Graphics Settings.")]
     [Range(1f, 3f)]
-    [Header("DENOISER")]
     public int NgssDenoiserIterations;
-    [Range(0.0f, 1f)]
     [Tooltip("Overall Denoiser softness.")]
+    [Range(0.0f, 1f)]
     public float NgssDenoiserBlur;
     [Range(0.05f, 1f)]
     [Tooltip("The amount of shadow edges the Denoiser can tolerate during denoising.")]
     public float NgssDenoiserEdgeTolerance;
-    [Tooltip("This estimates receiver slope using derivatives and tries to tilt the filtering kernel along it.\nHowever, when doing it in screenspace from the depth texture can leads to shadow artifacts.\nThus it is disabled by default.")]
     [Header("BIAS")]
+    [Tooltip("This estimates receiver slope using derivatives and tries to tilt the filtering kernel along it.\nHowever, when doing it in screenspace from the depth texture can leads to shadow artifacts.\nThus it is disabled by default.")]
     public bool NgssReceiverPlaneBias;
     [Tooltip("Enable it to let NGSS_Directional control global shadows settings through this component.\nDisable it if you want to manage shadows settings through Unity Quality & Graphics Settings panel.")]
     [Header("GLOBAL SETTINGS")]
@@ -69,14 +69,14 @@ namespace KSP.Rendering
     public float GlobalShadowsDistance;
     [Tooltip("Used for the cascade stitching algorithm.\nThese values set the cascade distances as well as number of cascades.")]
     public ShadowCascadeSplits GlobalCascades;
-    [Tooltip("Blends cascades at seams intersection.\nAdditional overhead required for this option.")]
     [Header("CASCADES")]
+    [Tooltip("Blends cascades at seams intersection.\nAdditional overhead required for this option.")]
     public bool NgssCascadesBlending;
     [Range(0.0f, 2f)]
     [Tooltip("Tweak this value to adjust the blending transition between cascades.")]
     public float NgssCascadesBlendingValue;
-    [Range(0.0f, 1f)]
     [Tooltip("If one, softness across cascades will be matched using splits distribution, resulting in realistic soft-ness over distance.\nIf zero the softness distribution will be based on cascade index, resulting in blurrier shadows over distance thus less realistic.")]
+    [Range(0.0f, 1f)]
     public float NgssCascadesSoftnessNormalization;
     private const string NGSS_NOISE_TEXTURE_KEY = "BlueNoise/BlueNoise_R8_8.png";
     private bool _isSetup;

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.MapManeuverGizmo
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -27,8 +27,8 @@ namespace KSP.Map
     public Action<Guid> GizmoMoved;
     public Action<MapManeuverGizmo> GizmoExpanded;
     public Action<MapManeuverGizmo> GizmoCollapsed;
-    [Header("Connections")]
     [SerializeField]
+    [Header("Connections")]
     private MapManeuverGizmo3DExpanded _expandedGizmo;
     [SerializeField]
     private MapManeuverGizmo2DCollapsed _collapsedGizmo;
@@ -36,8 +36,8 @@ namespace KSP.Map
     private GameObject _movementGizmo;
     [SerializeField]
     private ContextBindRoot _gizmoBindRoot;
-    [SerializeField]
     [Header("Input")]
+    [SerializeField]
     private MapManeuverInputTarget _mouseoverTarget;
     [Min(0.01f)]
     [Tooltip("This value is inversed - lower values will have greater effects")]

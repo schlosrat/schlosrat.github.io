@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyCameraManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Messages;
@@ -37,11 +37,11 @@ namespace KSP.OAB
     [Tooltip("Part HalfHeight Percentage in range [0, 1], such that 0 is the Part Center, and 1 is the Part Height Extent.\nWe check whether or not this resultant Part position is on Screen.\nIf the Camera is above the Part, we get this resultant Part position by moving downwards from Part Center.\nIf the Camera is below the Part, we get this resultant Part position by moving upwards from Part Center.")]
     [Range(0.0f, 1f)]
     public float PartHalfHeightPercentage;
-    [Range(0.0f, 1f)]
     [Tooltip("Screen HalfWidth Percentage in range [0, 1], such that 0 is the Screen Center, and 1 is the Screen Width Extent.\nIf the resultant Part position is outside this Screen dimension, the Part will be considered off Screen and we will perform the Camera adjustment.")]
-    public float ScreenHalfWidthPercentage;
     [Range(0.0f, 1f)]
+    public float ScreenHalfWidthPercentage;
     [Tooltip("Screen HalfHeight Percentage in range [0, 1], such that 0 is the Screen Center, and 1 is the Screen Height Extent.\nIf the resultant Part position is outside this Screen dimension, the Part will be considered off Screen and we will perform the Camera adjustment.")]
+    [Range(0.0f, 1f)]
     public float ScreenHalfHeightPercentage;
     private ObjectAssemblyBuilderEvents _events;
     private ObjectAssemblyUIEvents _uiEvents;
@@ -186,7 +186,7 @@ namespace KSP.OAB
     public Vector3 GetForwardNormal() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void ResetCameraSettings(bool toggle) => throw null;
+    private void ResetCameraSettings(bool enableCameraComponent) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void InitCameraDrivers() => throw null;
@@ -249,6 +249,9 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void StartCameraOrbitTargetBlend() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void ToggleCameraPanningAxis() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnPartDeleted(MessageCenterMessage msg) => throw null;

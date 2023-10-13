@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.PartsManagerCategory
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding;
@@ -28,10 +28,15 @@ namespace KSP.Game
     private Transform _accordianContent;
     [SerializeField]
     private ToggleExtended _toggle;
+    [SerializeField]
+    private Image _categoryIcon;
+    [SerializeField]
+    private List<Sprite> _categoryIcons;
     private DataContext _dataContext;
     private Property<string> _categoryName;
     private List<PartsManagerPart> _internalParts;
     private GameObjectPool<PartsManagerCategory> _pool;
+    private PartsManagerPartsList parentPartsList;
 
     public List<PartsManagerPart> InternalParts
     {
@@ -48,7 +53,13 @@ namespace KSP.Game
     protected void Awake() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void Initialize(GameObjectPool<PartsManagerCategory> pool, PartCategories category) => throw null;
+    public void Initialize(
+      GameObjectPool<PartsManagerCategory> pool,
+      PartCategories category,
+      PartsManagerPartsList partsList)
+    {
+      throw null;
+    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void AddPart(PartsManagerPart entry) => throw null;
@@ -58,6 +69,18 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetExpanded(bool expanded) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool IsExpanded() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnToggleValueChanged(bool newState) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnLocalize() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnDestroy() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public PartsManagerCategory() => throw null;

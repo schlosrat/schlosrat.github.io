@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSPAudioDopplerTester
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using AK.Wwise;
 using System.Runtime.CompilerServices;
@@ -21,11 +21,11 @@ public class KSPAudioDopplerTester : MonoBehaviour
   public Transform PointABC;
   [SerializeField]
   public bool JustGoFromAToBThankYou;
-  [SerializeField]
   [Space(10f)]
-  public GameObject AudioListener;
   [SerializeField]
+  public GameObject AudioListener;
   [Space(20f)]
+  [SerializeField]
   public float Speed;
   [SerializeField]
   public float SpeedOfSound;
@@ -33,12 +33,12 @@ public class KSPAudioDopplerTester : MonoBehaviour
   public float MaxDistance;
   [SerializeField]
   public float PauseTimeOnPoints;
-  [Space(10f)]
   [SerializeField]
+  [Space(10f)]
   public bool Verbose;
   [Range(0.0f, 1f)]
-  [SerializeField]
   [Space(20f)]
+  [SerializeField]
   public float ThrustPercentage;
   [SerializeField]
   public float StaticPressure;
@@ -46,14 +46,14 @@ public class KSPAudioDopplerTester : MonoBehaviour
   public float Mass;
   [SerializeField]
   public float GForce;
-  [Space(10f)]
   [SerializeField]
+  [Space(10f)]
   public RTPC RTPC_01;
   [SerializeField]
   public float RTPC_01_Value;
   private float _rtpc01Cache;
-  [Space(5f)]
   [SerializeField]
+  [Space(5f)]
   public RTPC RTPC_02;
   [SerializeField]
   public float RTPC_02_Value;
@@ -64,14 +64,14 @@ public class KSPAudioDopplerTester : MonoBehaviour
   [SerializeField]
   public float RTPC_03_Value;
   private float _rtpc03Cache;
-  [Space(5f)]
   [SerializeField]
+  [Space(5f)]
   public RTPC RTPC_04;
   [SerializeField]
   public float RTPC_04_Value;
   private float _rtpc04Cache;
-  [Space(5f)]
   [SerializeField]
+  [Space(5f)]
   public RTPC RTPC_05;
   [SerializeField]
   public float RTPC_05_Value;

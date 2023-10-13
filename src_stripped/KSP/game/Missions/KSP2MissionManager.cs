@@ -1,15 +1,15 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.Missions.KSP2MissionManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game.Missions.Definitions;
 using KSP.Game.Missions.State;
 using KSP.Messages;
+using KSP.Networking.MP.Message;
 using KSP.OAB;
-using KSP.Sim;
 using KSP.UI;
 using System;
 using System.Collections.Generic;
@@ -20,38 +20,35 @@ namespace KSP.Game.Missions
 {
   public class KSP2MissionManager : KerbalMonoBehaviour
   {
-    public const string DIALOG_PREFAB = "TrainingCenter.prefab";
-    private List<string> _baseGlobalMissionJsonStringList;
-    private List<string> _baseAgencyMissionJsonStringList;
-    private List<string> _basePlayerMissionJsonStringList;
-    private List<MissionData> _baseGlobalMissionDataList;
-    private List<MissionData> _baseAgencyMissionDataList;
-    private List<MissionData> _basePlayerMissionDataList;
-    private List<MissionData> missions;
-    private string _completedTutorialIDs;
-    private List<MissionData> _completedTutorials;
-    private List<MissionData> _completedMissions;
+    public const string MISSIONS_ADDRESSABLE_LABEL = "missions";
+    public const string LESSSONS_ADDRESSABLE_LABEL = "lesson";
+    public const string TRAINING_CENTER_DIALOG_PREFAB = "TrainingCenter.prefab";
+    public const string TUTORIAL_MESSAGE_BOX_PREFAB = "TutorialMessageBox.prefab";
+    public const string TUTORIAL_SCREEN_VIDEO_PREFAB = "TutorialFullScreenVideo.prefab";
+    public const string TUTORIALS_ADDRESSABLES_LABEL = "main_tutorial";
+    private List<MissionData> _missionDefinitions;
+    private List<KSP.Game.Missions.Definitions.ActiveMissions> _activeMissions;
+    private Stack<MissionData> _missionsToAdd;
+    private List<string> _completedTutorialsIds;
     private KSP2MissionLuaInterface luaInterface;
-    private KSP2MissionUI missionUI;
     private bool isReady;
     private bool _missionsInitialized;
-    private string _currentTutorialMissionSave;
     private TutorialsItems Tutorials;
-    private bool _isInTutorial;
-    private bool _tutorialMode;
-    private bool _transitioningToNextTutorial;
-    private bool _restartingMission;
-    private string _lastMissionIDPlayed;
-    private static readonly GameState[] _statesToStopTimeWarp;
-    private bool _revertActiveVesselInOAB;
-    private OABHistoricalSnapshot backedUpOABHistoricalSnapshot;
-    private MissionData _activeMission;
-    private MissionData _completedMission;
-    private List<Tuple<TextAsset, Texture2D>> _workspacesToLoad;
     private readonly List<MainTutorialsItem> _tutorialItems;
     private readonly List<SubTutorialsItem> _subTutorialsItems;
     private readonly List<MissionData> _lessons;
-    private float cooldownRate;
+    private bool _isInTutorial;
+    private bool _transitioningToNextTutorial;
+    private bool _restartingMission;
+    private int _lastMissionPlayedOwnerId;
+    private MissionOwner _lastMissionPlayedOwnerType;
+    private string _lastMissionPlayedId;
+    private static readonly GameState[] _statesToStopTimeWarp;
+    private bool _revertActiveVesselInOAB;
+    private List<string> _stringCacheList;
+    private OABHistoricalSnapshot backedUpOABHistoricalSnapshot;
+    private List<Tuple<TextAsset, Texture2D>> _workspacesToLoad;
+    private const float COOLDOWN_RATE = 0.3f;
     private float _cachedCooldownTime;
     private UIView _backupViewState;
     public float heavypropertyCooldownRate;
@@ -63,78 +60,12 @@ namespace KSP.Game.Missions
     private SubscriptionHandle _onGameStateChangedHandle;
     private SubscriptionHandle _onMapModeChangedHandle;
     private SubscriptionHandle _onQuitToMainMenuHandle;
-    private MissionData _crossLoadMission;
     private byte[] _missionReloadSnapshot;
+    private int _reloadSnapshotCurrentStageIndex;
     private string _savedActiveCampaignName;
     private byte[] _saveGameData;
 
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void SetStringList(ref List<string> dest, List<string> src) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void ImportMissionJsonStringList(
-      List<MissionData> missionDataList,
-      List<string> src)
-    {
-      throw null;
-    }
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public static MissionData FindMissionDataByID(List<MissionData> missionDataList, string id) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void ApplyMissionSaveDataToList(
-      List<MissionData> missionDataList,
-      List<MissionData> src)
-    {
-      throw null;
-    }
-
-    public List<string> BaseGlobalMissionJsonStringList
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public List<string> BaseAgencyMissionJsonStringList
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public List<string> BasePlayerMissionJsonStringList
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public List<MissionData> BaseGlobalMissionDataList
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public List<MissionData> BaseAgencyMissionDataList
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public List<MissionData> BasePlayerMissionDataList
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetBaseGlobalMissionJsonStringList(List<string> src) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetBaseAgencyMissionJsonStringList(List<string> src) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SetBasePlayerMissionJsonStringList(List<string> src) => throw null;
-
-    public List<MissionData> Missions
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public string CompletedTutorialIDs
+    public List<KSP.Game.Missions.Definitions.ActiveMissions> ActiveMissions
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -172,16 +103,6 @@ namespace KSP.Game.Missions
       [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
     }
 
-    public MissionData ActiveMission
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public MissionData CompletedMission
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
     private bool HasValidSaveBuffer
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
@@ -191,16 +112,47 @@ namespace KSP.Game.Missions
     public void CheckForMyPlayersFTUEEnabled() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void LoadMissions(MissionData mission) => throw null;
+    private bool RemoveMissionDataFromActiveMissions(
+      KSP.Game.Missions.Definitions.ActiveMissions activeMissions,
+      MissionData missionData)
+    {
+      throw null;
+    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void TryActivateMission(MissionData mission) => throw null;
+    public bool TryGetActiveTutorial(
+      out MissionData tutorialData,
+      out KSP.Game.Missions.Definitions.ActiveMissions activeMissions)
+    {
+      throw null;
+    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public ref List<MissionData> GetMissions() => throw null;
+    public void TryActivateMission(MissionData mission) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public bool TryGetMissionData(string missionID, out MissionData missionData) => throw null;
+    public List<MissionData> GetMissionDefinitions() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void Start() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void Update() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void AddNewActiveMission(MissionData missionData) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void AddNewActiveMission(string missionID) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnMissionDataItemLoaded(TextAsset textAsset) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public MainTutorialsItem[] GetTutorials() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public SubTutorialsItem[] GetLessons() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void LoadTutorials() => throw null;
@@ -215,51 +167,22 @@ namespace KSP.Game.Missions
     private void OnLessonAssetLoaded(TextAsset lessonTextAsset) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public MainTutorialsItem[] GetTutorials() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public SubTutorialsItem[] GetLessons() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public List<MissionData> GetCompletedMissionsList() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     public List<MissionData> GetCompletedTutorialsList() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ApplyTutorialProgress() => throw null;
+    public void LoadTutorialAndFTUEProgress() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public bool ApplyProgressFromSavedGame(SerializedSavedGame data) => throw null;
+    public void TryActivateMissions() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void InitializeMissions() => throw null;
+    public void InitializeActiveMissions() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public static void MergeMissionDataProgress(MissionData fromData, MissionData toData) => throw null;
+    public void ReloadSnapshot(MissionData missionData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public bool SaveProgressToSavedGame(SerializedSavedGame data) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void UpdateTutorialsProgressToCampaignPlayer() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void CreateReloadSnapshot() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnReloadSnapshotCreated(
-      LoadOrSaveCampaignTicket loadOrSaveCampaignTicket,
-      bool success)
-    {
-      throw null;
-    }
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ReloadSnapshot(string missionID) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ActivateMission(string missionID) => throw null;
+    public void CreateReloadSnapshot(int currentStageIndex) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetMissionState(
@@ -271,7 +194,7 @@ namespace KSP.Game.Missions
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ResetMissionState(string missionID) => throw null;
+    public void ResetMissionState(MissionOwner owner, int ownerID, string missionID) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void LoadTutorialSave(
@@ -297,16 +220,13 @@ namespace KSP.Game.Missions
     public void SetBackCachedActiveCampaignName() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ResetAllMissions() => throw null;
+    public void ResetAllActiveMissions() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void AbortTutorialCallback(bool success, Action onCompletedCallback) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void AbortTutorial(bool reloadPriorState = false, Action onCompleteCallback = null) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ResetCompletedTutorials() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void AbortTutorialMessageHandler(MessageCenterMessage msg) => throw null;
@@ -336,19 +256,10 @@ namespace KSP.Game.Missions
     public void PlayNextTutorial(string nextMissionID) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void Start() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     public void Shutdown() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void Update() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnStartGameShutdown(MessageCenterMessage msg) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ToggleMissionUI(MessageCenterMessage message) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void BackupOABHistoricalSnapshot(OABHistoricalSnapshot snapshot) => throw null;
@@ -373,6 +284,14 @@ namespace KSP.Game.Missions
     public void ClearTutorialWorkspacestoLoad() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnReloadSnapshotCreated(
+      LoadOrSaveCampaignTicket loadOrSaveCampaignTicket,
+      bool success)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetBackupViewState(UIView view) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -380,6 +299,15 @@ namespace KSP.Game.Missions
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void HideDialogsAndStopTimewarp() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool TriggerMissionMPAction(MissionMPActionData missionMPActionData) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool ProcessMissionMPAction(MissionMPActionData missionMPActionData) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool TryGetActiveTutorial(string misisonID, out MissionData tutorialMissionData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public KSP2MissionManager() => throw null;

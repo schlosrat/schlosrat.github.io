@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Command
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -20,27 +20,27 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_Command : ModuleData
   {
+    [PAMDisplayControl(SortIndex = 2)]
     [HideInInspector]
     [LocalizedField("PartModules/Command/ControlStatus")]
     [KSPState]
-    [PAMDisplayControl(SortIndex = 2)]
     public ModuleProperty<CommandControlState> controlStatus;
+    [HideInInspector]
     [PAMDisplayControl(SortIndex = 3)]
     [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Command/CommandEnabled")]
-    [HideInInspector]
     public ModuleProperty<bool> isCommandEnabled;
-    [LocalizedField("PartModules/Command/ActiveControlName")]
-    [KSPState]
     [PAMDisplayControl(SortIndex = 5)]
     [HideInInspector]
+    [LocalizedField("PartModules/Command/ActiveControlName")]
+    [KSPState]
     public ModuleProperty<string> activeControlName;
-    [LocalizedField("PartModules/Command/Hibernate")]
-    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 6)]
+    [KSPState(CopyToSymmetrySet = true)]
+    [LocalizedField("PartModules/Command/Hibernate")]
     public ModuleProperty<bool> hibernate;
-    [PAMDisplayControl(SortIndex = 7)]
     [LocalizedField("PartModules/Command/HibernateInWarp")]
+    [PAMDisplayControl(SortIndex = 7)]
     [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<bool> hibernateInWarp;
     [KSPDefinition]

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.VFX.ThrottleParticleSystemData
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System;
@@ -39,19 +39,19 @@ namespace KSP.VFX
     public bool XYZSizePressureMode;
     public TRANSITIONTYPES sizeType;
     public TRANSITIONTYPES sizexyzType;
+    [Range(0.0f, 1000f)]
+    [SerializeField]
     [FormerlySerializedAs("startSizeMin")]
-    [SerializeField]
-    [Range(0.0f, 1000f)]
     public float sizeMin;
-    [Range(0.0f, 1000f)]
-    [FormerlySerializedAs("startSizeMax")]
     [SerializeField]
+    [FormerlySerializedAs("startSizeMax")]
+    [Range(0.0f, 1000f)]
     public float sizeMax;
     [FormerlySerializedAs("startSizeMinXYZ")]
     [SerializeField]
     public Vector3 sizeMinXYZ;
-    [SerializeField]
     [FormerlySerializedAs("startSizeMaxXYZ")]
+    [SerializeField]
     public Vector3 sizeMaxXYZ;
     public AnimationCurve sizeCurve;
     public AnimationCurve sizeCurveX;
@@ -66,17 +66,17 @@ namespace KSP.VFX
     public Rect sizeCurveYRange;
     public Rect sizeCurveZRange;
     public Rect pressureCurveRange;
-    [SerializeField]
     [FormerlySerializedAs("controlEmission")]
+    [SerializeField]
     public bool controlEmissionOverTime;
     public TRANSITIONTYPES emissionOverTimeType;
-    [Range(0.0f, 1000f)]
-    [FormerlySerializedAs("emissionMin")]
     [SerializeField]
+    [FormerlySerializedAs("emissionMin")]
+    [Range(0.0f, 1000f)]
     public float emissionOverTimeMin;
+    [Range(0.0f, 1000f)]
     [FormerlySerializedAs("emissionMax")]
     [SerializeField]
-    [Range(0.0f, 1000f)]
     public float emissionOverTimeMax;
     public AnimationCurve emissionOverTimeCurve;
     public Rect emissionOverTimeCurveRange;

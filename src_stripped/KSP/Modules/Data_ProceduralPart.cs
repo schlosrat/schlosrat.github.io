@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_ProceduralPart
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.OAB;
 using KSP.Sim;
@@ -24,15 +24,15 @@ namespace KSP.Modules
     IResourceCostModifier,
     IMultiJointScaleModifier
   {
-    [HideInInspector]
     [FormerlySerializedAs("TargetPartIndex")]
     [KSPState]
+    [HideInInspector]
     public int meshOptionIndex;
-    [HideInInspector]
     [KSPState]
+    [HideInInspector]
     public Dictionary<string, float> sliderData;
-    [KSPState]
     [HideInInspector]
+    [KSPState]
     public Dictionary<string, bool> toggleData;
     [HideInInspector]
     [KSPState]
@@ -51,8 +51,8 @@ namespace KSP.Modules
     [KSPDefinition]
     public float BasePartDensity;
     [KSPState]
-    [JsonIgnore]
     [HideInInspector]
+    [JsonIgnore]
     public ProceduralPartDefinition ProceduralPartDefinition;
     [KSPDefinition]
     public string ProceduralPartTypeName;

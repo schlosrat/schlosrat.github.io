@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: RandomlyEnableChildrenOnStart
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -11,17 +11,17 @@ using UnityEngine.Serialization;
 
 public class RandomlyEnableChildrenOnStart : MonoBehaviour
 {
-  [FormerlySerializedAs("stateToRandomlySet")]
   [SerializeField]
+  [FormerlySerializedAs("stateToRandomlySet")]
   private bool _stateToSet;
   [SerializeField]
   [FormerlySerializedAs("min")]
   private int _min;
+  [SerializeField]
   [FormerlySerializedAs("max")]
-  [SerializeField]
   private int _max;
-  [Space(5f)]
   [SerializeField]
+  [Space(5f)]
   private bool _reEnableChildrenOnEnable;
   private static System.Random _randomizer;
   private bool _initialized;

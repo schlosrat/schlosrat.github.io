@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.NotificationEvents
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Messages;
 using System.Runtime.CompilerServices;
@@ -55,8 +55,8 @@ namespace KSP.Game
     private const string AUDIO_UNMUTED_KEY = "Application/Flow/UnmuteSound";
     private const string MUSIC_MUTED_KEY = "Application/Flow/MuteMusic";
     private const string MUSIC_UNMUTED_KEY = "Application/Flow/UnmuteMusic";
-    [Header("Flight")]
     [SerializeField]
+    [Header("Flight")]
     private float _solarPanelsIneffectiveTimeBetweenNotifications;
     [SerializeField]
     private float _throttleLockedDueToTimewarpTimeBetweenNotifications;
@@ -64,6 +64,7 @@ namespace KSP.Game
     private float _vesselLostControlTimeBetweenNotifications;
     private GameInstance _game;
     private SubscriptionHandle _debugVizualizerNotificationHandle;
+    private SubscriptionHandle _vesselRecoverableNotificationHandle;
     private SubscriptionHandle _observerCannotLeaveActiveVesselNotificationHandle;
     private SubscriptionHandle _nonActiveVesselOnCrashTrajectoryNotificationHandle;
     private SubscriptionHandle _deployablePartAvailabilityChangedNotificationHandle;

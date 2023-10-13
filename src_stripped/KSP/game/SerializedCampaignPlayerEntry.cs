@@ -1,11 +1,10 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.SerializedCampaignPlayerEntry
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
-using KSP.Game.Missions.Definitions;
 using KSP.Networking.MP.Utils;
 using KSP.OAB;
 using KSP.Sim;
@@ -38,8 +37,7 @@ namespace KSP.Game
     public const string DEFAULT_COPY_LOCATION_STRING = null;
     public const Dictionary<string, uint> DEFAULT_FAVORITED_PARTS = null;
     public const bool DEFAULT_IS_FTUE_ENABLED = false;
-    public const List<MissionData> DEFAULT_MISSIONS = null;
-    public const string DEFAULT_COMPLETED_TUTORIALS = null;
+    public const List<KSP.Game.Missions.Definitions.MissionSaveData> DEFAULT_MISSION_SAVE_DATA = null;
     public static Color DEFAULT_PART_COLOR_BASE;
     public static Color DEFAULT_PART_COLOR_ACCENT;
     [JsonProperty("PlayerName")]
@@ -78,10 +76,14 @@ namespace KSP.Game
     public Dictionary<string, uint> FavoritedParts;
     [JsonProperty("FTUE")]
     public bool IsFTUEEnabled;
-    [JsonProperty("MissionData")]
-    public List<MissionData> Missions;
-    [JsonProperty("CompletedTutorials")]
-    public string CompletedTutorials;
+    [JsonProperty("MissionSaveData")]
+    public List<KSP.Game.Missions.Definitions.MissionSaveData> MissionSaveData;
+    [JsonProperty("CompletedTutorialList")]
+    public List<string> CompletedTutorials;
+    [JsonProperty("CompletedFTUEList")]
+    public List<string> CompletedFTUEs;
+    [JsonProperty("TrackedMissions")]
+    public List<KSP.Game.Missions.Definitions.TrackedMissions> TrackedMissions;
     [JsonProperty("PartColorBase")]
     public Color PartColorBase;
     [JsonProperty("PartColorAccent")]

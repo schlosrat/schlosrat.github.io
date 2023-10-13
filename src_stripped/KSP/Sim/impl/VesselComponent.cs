@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.VesselComponent
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Logging;
@@ -24,7 +24,7 @@ using UnityEngine;
 
 namespace KSP.Sim.impl
 {
-  public class VesselComponent : ObjectComponent, IPhysicsOwner
+  public class VesselComponent : ObjectComponent, IPhysicsOwner, IWorldLabelData
   {
     private const LogFilter LOGFLAG = (LogFilter) 8388608;
     private const string ELECTRIC_CHARGE_RESOURCE_NAME = "ElectricCharge";
@@ -33,6 +33,7 @@ namespace KSP.Sim.impl
     private const int TELEPORT_CLOSE_ENOUGH_ALTITUDE = 5000;
     private const double PRELAUNCH_MOVEMENT_VELOCITY_THRESHOLD = 2.5;
     private const double OUT_OF_ELECTRIC_CHARGE_TOLERANCE = 0.0001;
+    private const double MIN_ALTITUDE_TO_COUNT_AS_FLIGHT = 100.0;
     private string logTag;
     private string cmdTag;
     private ResourceDefinitionID _electricChargeResourceID;
@@ -78,6 +79,7 @@ namespace KSP.Sim.impl
     private bool _landed;
     private bool _hasLaunched;
     private bool _hasTeleported;
+    private double _maxAltitudeReachedDuringFlight;
     private int _totalCommandCrewCapacity;
     private static double NullHorizonRelative;
     private bool _loadedFromSave;
@@ -330,6 +332,11 @@ namespace KSP.Sim.impl
     }
 
     public Position CenterOfMass
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public Position LabelPosition
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -686,11 +693,19 @@ namespace KSP.Sim.impl
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
+    public LabelCategory LabelCategory
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void ApplyFlightCtrlState(FlightCtrlStateIncremental stateDiff) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetFlightControlState(FlightCtrlState state, bool isRemote = false) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void SyncFlightControlState(FlightCtrlState state, bool isRemote = false) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool SetTargetByID(IGGuid targetId) => throw null;
@@ -769,7 +784,10 @@ namespace KSP.Sim.impl
     public bool SetAutopilotEnableDisable(bool state) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public bool IsUnderThrust() => throw null;
+    public bool IsUnderEngineThrust() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool IsUnderAcceleration() => throw null;
 
     public bool IsKerbalEVA
     {
@@ -1042,6 +1060,9 @@ namespace KSP.Sim.impl
     private void UpdateVesselSituation() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private void TrackVesselLandedAfterFlight() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     private void HandleVesselLaunchedMessages() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -1049,6 +1070,9 @@ namespace KSP.Sim.impl
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void HandleVesselSplashedMessages() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void SendVesselLandedMessage() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void RefreshDragData() => throw null;
@@ -1123,7 +1147,7 @@ namespace KSP.Sim.impl
     public bool IsVesselAtRest() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public List<CrewMemberComponent> GetVesselCrew() => throw null;
+    private bool IsVesselInFlight() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void RebuildActionGroups() => throw null;

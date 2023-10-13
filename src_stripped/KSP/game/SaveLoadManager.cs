@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.SaveLoadManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Contexts.Game;
 using KSP.Game.Flow;
@@ -369,6 +369,9 @@ namespace KSP.Game
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private void PublishLoadFinishedMessage(bool isSuccess) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public static void LogMessage(string message) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -385,7 +388,7 @@ namespace KSP.Game
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public static string ConvertSecondsToGameTime(double time) => throw null;
+    public static string ConvertUTSecondsToUIDateTime(double time) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private static int CompareToLastWriteTimeUtc(IOProvider.IGFileInfo f1, IOProvider.IGFileInfo f2) => throw null;

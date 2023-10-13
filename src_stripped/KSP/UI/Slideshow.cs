@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Slideshow
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding;
@@ -20,23 +20,23 @@ namespace KSP.UI
   public class Slideshow : LoopVideoPlayer
   {
     protected int currentSlideIndex;
-    [SerializeField]
     [Header("Prefab References")]
-    private ContextBindRoot _bindRoot;
     [SerializeField]
+    private ContextBindRoot _bindRoot;
     [Tooltip("Title Text")]
+    [SerializeField]
     protected TextMeshProUGUI _title;
     [Tooltip("Content Body Text")]
     [SerializeField]
     protected TextMeshProUGUI _body;
-    [Tooltip("This button is for closing the slideshow")]
     [SerializeField]
+    [Tooltip("This button is for closing the slideshow")]
     protected ButtonExtended _closeButton;
     [SerializeField]
     [Tooltip("Reference of the Parent Transform for the slide dot carousel.")]
     protected Transform _slideDotCarousel_T;
-    [SerializeField]
     [Tooltip("Reference of the slide dot for the carousel, that will get duplicated as needed.")]
+    [SerializeField]
     protected GameObject _slideDotPrefab;
     [Tooltip("This button is for cycling back the slides")]
     [SerializeField]
@@ -58,8 +58,8 @@ namespace KSP.UI
     [Tooltip("Loc String when the next button will display Next")]
     [SerializeField]
     protected string _nextButtonIsNext;
-    [SerializeField]
     [Tooltip("Loc String when the next button will display Finish")]
+    [SerializeField]
     protected string _nextButtonIsFinish;
     protected string translationCache;
     protected bool buttonsSubscribed;

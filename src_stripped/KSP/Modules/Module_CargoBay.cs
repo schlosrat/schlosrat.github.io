@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Module_CargoBay
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Messages;
 using KSP.Sim;
@@ -20,10 +20,11 @@ namespace KSP.Modules
   [DisallowMultipleComponent]
   public class Module_CargoBay : PartBehaviourModule
   {
-    [FormerlySerializedAs("data")]
     [SerializeField]
+    [FormerlySerializedAs("data")]
     protected Data_CargoBay dataCargoBay;
     private Data_Deployable _dataDeployable;
+    private Data_Fairing _dataFairing;
     private List<PartBehavior> _connectingParts;
     private List<Module_CargoBay> _connectedCargoBays;
     private List<PartCollider> _ownColliders;

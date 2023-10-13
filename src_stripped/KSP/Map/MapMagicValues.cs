@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.MapMagicValues
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using Shapes;
 using System.Runtime.CompilerServices;
@@ -63,6 +63,7 @@ namespace KSP.Map
     public const string ACCORDION_CONTENT = "AccordianContent";
     public const string DATA_CONTEXT_NAME = "MapUISelectableDataContext";
     public const string NOTIFICATION_CANNOT_LEAVE_ACTIVE_VESSEL = "NOTIFICATION_CANNOT_LEAVE_ACTIVE_VESSEL";
+    public const string UI_SCROLL_TAG = "UI_SCROLL";
     public const double DISTANCE_FROM_CB_LIMIT = 600000997669.0;
     public const string REPORTS_EARNED_OUT_OF_AVAILABLE = "12/45";
     public const string SCIENCE_EARNED_OUT_OF_AVAILABLE = "200/1000";
@@ -161,6 +162,11 @@ namespace KSP.Map
     }
 
     public static Color NonActiveVesselColor
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    }
+
+    public static Color WaypointColor
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }

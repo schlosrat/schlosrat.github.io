@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.ResourceSystem.ResourceFlowRequestManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.OAB;
 using KSP.Sim.impl;
@@ -23,6 +23,9 @@ namespace KSP.Sim.ResourceSystem
     private bool _infiniteFuelCheatEnabled;
     private bool _infiniteECCheatEnabled;
     private DictionaryValueList<ResourceFlowRequestManager.RequestContainerGroupKey, ResourceContainerGroupSequence> _RequestContainersGroups;
+    private bool _isDirty;
+    private ObjectAssembly _objectAssembly;
+    private PartOwnerComponent _partOwner;
     private DictionaryValueList<ResourceFlowRequestHandle, ResourceFlowRequestManager.ManagedRequestWrapper> _requestWrappers;
     private readonly HashSet<ResourceFlowRequestHandle> _activeRequests;
     private readonly HashSet<ResourceFlowRequestHandle> _inactiveRequests;
@@ -45,7 +48,17 @@ namespace KSP.Sim.ResourceSystem
     [MethodImpl(MethodImplOptions.NoInlining)]
     public ResourceFlowRequestManager(
       ResourceDefinitionDatabase resourceDefinitionDatabase,
-      FlowGraph flowGraph)
+      FlowGraph flowGraph,
+      ObjectAssembly objectAssembly)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public ResourceFlowRequestManager(
+      ResourceDefinitionDatabase resourceDefinitionDatabase,
+      FlowGraph flowGraph,
+      PartOwnerComponent partOwner)
     {
       throw null;
     }
@@ -137,10 +150,16 @@ namespace KSP.Sim.ResourceSystem
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void MarkAllResourceSolversDirty(PartOwnerComponent partOwner) => throw null;
+    public void RebuildAllResourceSolvers(PartOwnerComponent partOwner) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void MarkAllResourceSolversDirty(ObjectAssembly assembly) => throw null;
+    private void RebuildAllResourceSolvers(ObjectAssembly assembly) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void MarkDirty() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void RebuildIfDirty() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private IEnumerator UpdateFlowRequestsOAB() => throw null;

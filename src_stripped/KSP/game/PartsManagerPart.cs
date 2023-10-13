@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.PartsManagerPart
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Sim.impl;
@@ -30,9 +30,13 @@ namespace KSP.Game
     private IInteractivePart _part;
     private PartsManagerCategory _uiCategory;
     private GameObjectPool<PartsManagerPart> _pool;
+    private PartsManagerPartsList _parentPartsList;
     private bool isFavorite;
     public Property<bool> IsHighlighted;
     public PropertyReadonly<IGGuid> Guid;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public IInteractivePart GetInteractivePart() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetCategory(PartsManagerCategory category) => throw null;
@@ -61,7 +65,8 @@ namespace KSP.Game
     public void Initialize(
       GameObjectPool<PartsManagerPart> pool,
       IGGuid guid,
-      IInteractivePart part)
+      IInteractivePart part,
+      PartsManagerPartsList _parentList)
     {
       throw null;
     }
@@ -74,6 +79,9 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void ReturnToPool() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public bool IsExpanded() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void SetExpanded(bool expanded) => throw null;
@@ -96,6 +104,9 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void SetPartHighlight(IGGuid partGuid) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnToggleValueChanged(bool newState) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public PartsManagerPart() => throw null;

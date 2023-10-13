@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_WheelSteering
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -23,11 +23,11 @@ namespace KSP.Modules
     [KSPDefinition]
     [Tooltip("This curve defines the rate of wheel turn related to the speed of the wheel.\nThe x values of the curve are the speed and the y values are the rate of wheel turn.")]
     public FloatCurve SteeringCurve;
+    [KSPDefinition]
     [Tooltip("This curve defines the maximum steering angle of wheel as a multiplier that will be applied based on the speed of the wheel.\nThe x values of the curve is the speed and the y values are the multiplier. y values are clamped between 0 and 1.")]
-    [KSPDefinition]
     public FloatCurve SteeringMaxAngleCurve;
-    [Tooltip("This is how fast the wheel will turn/respond to player input.")]
     [KSPDefinition]
+    [Tooltip("This is how fast the wheel will turn/respond to player input.")]
     public float SteeringResponse;
     [HideInInspector]
     [KSPState]
@@ -36,19 +36,19 @@ namespace KSP.Modules
     [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Wheels/SteeringEnabled")]
     public ModuleProperty<bool> SteeringEnabled;
-    [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Wheels/SteeringDirection")]
+    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 2)]
     public ModuleProperty<bool> SteeringInvert;
     [LocalizedField("PartModules/Wheels/SteeringAdjust")]
     [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 8)]
     [Tooltip("If true steeringCurve and steeringMaxAngleCurve will be applied to the wheel steering.\nIf false the curves will not be applied and the values set via advanced tweakable sliders are applied instead.")]
+    [PAMDisplayControl(SortIndex = 8)]
     public ModuleProperty<bool> AutoSteeringAdjust;
-    [LocalizedField("PartModules/Wheels/SteeringAngleLimiter")]
-    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 9)]
     [SteppedRange(0.05f, 10f, 0.05f)]
+    [LocalizedField("PartModules/Wheels/SteeringAngleLimiter")]
+    [KSPState(CopyToSymmetrySet = true)]
     public ModuleProperty<float> AngleTweakable;
     [LocalizedField("PartModules/Wheels/SteeringResponse")]
     [KSPState(CopyToSymmetrySet = true)]

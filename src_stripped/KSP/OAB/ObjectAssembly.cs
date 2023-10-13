@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssembly
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Modules;
 using KSP.Sim;
@@ -21,7 +21,6 @@ namespace KSP.OAB
   public class ObjectAssembly : MustInitialize<ObjectAssemblyAssets>, IObjectAssembly
   {
     private readonly FlowGraph flowGraph;
-    private Vector3d CenterOfMass;
     private AssemblyActionGroups _actionGroupList;
     private List<IObjectAssemblyPart> _crewableParts;
     private bool isLaunchAssembly;
@@ -30,7 +29,7 @@ namespace KSP.OAB
     private ObjectAssemblyLaunchIcon oabLaunchIcon;
     private ObjectAssemblyAssets builderAssets;
     private ObjectAssemblyPartTracker partTracker;
-    private Dictionary<IObjectAssemblyPart, ObjectAssemblyPartAnchorIcon> partAnchorIcons;
+    private Dictionary<IObjectAssemblyPart, ObjectAssemblyPartAnchorIcon> _partAnchorIcons;
     private bool _isInitialized;
     private bool _isInitializing;
     private static CenterOfThrustQuery _cacheThrustQuery;
@@ -190,7 +189,10 @@ namespace KSP.OAB
     public void SetAnchor(IObjectAssemblyPart anchor, bool resetResourceSolvers = false) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void ToggleAnchorIcons(IObjectAssemblyPart anchor) => throw null;
+    public void SetAnchorExternal(IObjectAssemblyPart anchor, bool resetResourceSolvers = false) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void ToggleAnchorIcons() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static void FlipParentChildRelationshipsToNewAnchor(
@@ -216,6 +218,12 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void RemovePartInternal(IObjectAssemblyPart partToRemove, bool derived = false) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void SetResourceSolversDirty() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void SetActionGroupsDirty() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private bool IsAssemblyActive() => throw null;
@@ -283,9 +291,6 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool HasPartWithName(List<string> partNames, bool exactMatch) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void RebuildActionGroups() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool AddActionToActionGroup(ModuleActionGroupAction action, KSPActionGroup group) => throw null;

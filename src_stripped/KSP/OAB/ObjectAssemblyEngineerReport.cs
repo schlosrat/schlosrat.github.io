@@ -1,14 +1,15 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyEngineerReport
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Messages;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEngine;
 
 namespace KSP.OAB
 {
@@ -19,6 +20,7 @@ namespace KSP.OAB
     private List<EngineeringReportFlawItem> checklist;
     private List<EngineeringReportFlawItem> activeConcerns;
     private bool hasInit;
+    private EngineeringReportFlawListCheckConfig _flawListCheckConfig;
 
     public event Action OnUpdateNeeded
     {
@@ -45,6 +47,9 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public List<string> GetCriticalConcernLocTerms() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public List<string> GetPartsRequiringHeatShieldCheck() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void UpdateReport(OABSessionInformation stats) => throw null;
@@ -81,6 +86,12 @@ namespace KSP.OAB
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void BuildChecklist() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void BuildFlawListCheckData() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnBuildFlawListCheckDataLoaded(TextAsset flawListCheckData) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnAssemblyResourceMassRecalculated(MessageCenterMessage msg) => throw null;

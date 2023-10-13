@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.ObjectAssemblyMagicValues
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -53,6 +53,7 @@ namespace KSP.OAB
       public const string VABHistorySlug = "VAB/History/";
       public const string VABSizeSlug = "VAB/Size/";
       public const string VABTooltipSlug = "VAB/Tooltip/";
+      public const string VABMenuSlug = "Menu/VAB/";
       public const string VABWorkspaceVehicleDefaultName = "VAB/Fly Safe";
       public const string VABWorkspaceDefaultName = "VAB/WorkspaceDefaultName";
       public const string VABAutoSaveName = "VAB/AutoSaveFileName";
@@ -93,6 +94,9 @@ namespace KSP.OAB
       public const string DeleteWorkspace = "Menu/VAB/DeleteWorkspace";
       public const string DeleteButton = "Menu/SaveLoad/Delete";
       public const string DontDelete = "Menu/VAB/DontDelete";
+      public const string FavoritePartPCClickSprite = "<sprite name=Mouse_Middle>";
+      public const string FavoritePartXboxClickSprie = "<sprite name=Xbox_RS>";
+      public const string FavoritePartPSClickSprie = "<sprite name=PS_R3>";
       public const string MESSAGE_NOTHING_TO_LAUNCH = "Menu/VAB/Messages/NothingToLaunch";
       public const string MESSAGE_NOTHING_TO_LAUNCH_OBJS_REMAIN = "VAB/Messages/NothingToLaunchObjsRemain";
       public const string MESSAGE_ALREADY_LAUNCHING = "Menu/VAB/Messages/AlreadyLaunching";

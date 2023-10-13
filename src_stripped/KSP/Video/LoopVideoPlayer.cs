@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Video.LoopVideoPlayer
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.UI;
 using System;
@@ -18,8 +18,8 @@ namespace KSP.Video
   {
     protected const float FRAME_TIME_60_HZ = 0.0166666675f;
     protected bool _isPlaying;
-    [SerializeField]
     [Tooltip("Will play on Start and OnEnable.")]
+    [SerializeField]
     protected bool playAutomatically;
     protected bool autoAddedToProvider;
     [SerializeField]
@@ -34,9 +34,9 @@ namespace KSP.Video
     protected RawImage _videoPlayerUIScreen;
     [SerializeField]
     protected Image _border;
+    [Tooltip("Set this on Indicator or TooltipPrefabs")]
     [SerializeField]
     [Header("If not null this will play on Start")]
-    [Tooltip("Set this on Indicator or TooltipPrefabs")]
     protected LoopVideoData _defaultVideoData;
     protected RenderTexture _videoPlayerTexture;
     protected LoopVideoData _currentVideoData;

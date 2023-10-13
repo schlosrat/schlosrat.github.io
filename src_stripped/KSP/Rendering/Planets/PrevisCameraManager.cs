@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Rendering.Planets.PrevisCameraManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Rendering.impl;
@@ -18,8 +18,8 @@ namespace KSP.Rendering.Planets
 {
   public class PrevisCameraManager : MonoBehaviour
   {
-    [Header("PQS")]
     [FormerlySerializedAs("pqsTestScene")]
+    [Header("PQS")]
     public PrevisCameraModes previsCameraModes;
     private PQS pqs;
     private Transform _pqsTransform;
@@ -58,16 +58,16 @@ namespace KSP.Rendering.Planets
     private bool updateReady;
     [ReadOnlyUnityInspectorProperty]
     public string pqsName;
-    [ReadOnlyUnityInspectorProperty]
     [Header("Star")]
+    [ReadOnlyUnityInspectorProperty]
     public string sunName;
     public GameObject sunPrefab;
     private Transform sunScaledObj;
     public double sunDistance;
     public double sunAngle;
     private double sunRadius;
-    [ReadOnlyUnityInspectorProperty]
     [Header("Neighbor")]
+    [ReadOnlyUnityInspectorProperty]
     public string neighborName;
     public GameObject neighborPrefab;
     private Transform neighborScaledObj;

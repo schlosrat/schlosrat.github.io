@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.Map3DSpaceProviderTarget
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using System.Runtime.CompilerServices;
@@ -13,14 +13,14 @@ namespace KSP.Map
 {
   public class Map3DSpaceProviderTarget : KerbalMonoBehaviour
   {
-    [Header("Local Position")]
     [Tooltip("Does this object have its local position impacted by the associated item's model?")]
+    [Header("Local Position")]
     public bool adjustPosition;
-    [Tooltip("Does this object have its local rotation impacted by the associated item's model?")]
     [Header("Local Rotation")]
+    [Tooltip("Does this object have its local rotation impacted by the associated item's model?")]
     public bool adjustRotation;
-    [Tooltip("Does this object have its local scale impacted by the associated item's model?")]
     [Header("Local Scale")]
+    [Tooltip("Does this object have its local scale impacted by the associated item's model?")]
     public bool adjustScale;
     [Tooltip("Hand-authored planets have additional scale to be accounted for. This does so during scale calculations. Try togging this if the object you have is way too small or way too large.")]
     public bool scaleAsAuthoredPlanet;

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Examples.DebugBindings_VAB_PartPicker
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.OAB;
@@ -15,8 +15,8 @@ namespace KSP.UI.Examples
 {
   public class DebugBindings_VAB_PartPicker : DebugBindings_Root
   {
-    [SerializeField]
     [Header("Faux Game Data")]
+    [SerializeField]
     private AssemblyBuilderPartCategory partCategory;
     [SerializeField]
     private DebugBindings_VAB_PartPicker.Mock_PartSortMode partSortMode;
@@ -32,8 +32,8 @@ namespace KSP.UI.Examples
     private string tooltipPartDescription;
     [SerializeField]
     private Texture tooltipPartIcon;
-    [SerializeField]
     [Space(15f)]
+    [SerializeField]
     private UIGroup_PartPicker partPickerGroup;
     private PropertyExternal<string> partCategoryProp;
     private PropertyExternal<string> partSortModeProp;

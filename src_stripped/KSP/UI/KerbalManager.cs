@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.KerbalManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -20,7 +20,7 @@ using UnityEngine.UI;
 
 namespace KSP.UI
 {
-  public class KerbalManager : KerbalMonoBehaviour
+  public class KerbalManager : PopUpUIManagerBase
   {
     private const string VAB_PARTS_PICKER_LOC_PATH = "VAB/PartsPicker/";
     private const string KSC_ABBREVIATED_LOC_KEY = "Menu/KSC/KSC";
@@ -29,8 +29,8 @@ namespace KSP.UI
     private DataContext _context;
     private CanvasGroup _canvasGroup;
     private KerbalRosterManager _kerbalRosterManager;
-    [SerializeField]
     [Header("Behavior")]
+    [SerializeField]
     private bool _populateLocationsOnOpen;
     [Header("Prefabs")]
     [SerializeField]
@@ -108,17 +108,17 @@ namespace KSP.UI
     private bool _isLocationListDirty;
     private bool _isVisible;
 
-    public bool IsVisible
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-      [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
-    }
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    protected override bool GetVisibleStatus() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    protected override void SetVisibilityOfManager(bool isVisible) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void Initialize() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnDestroy() => throw null;
+    protected override void OnDestroy() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void LateUpdate() => throw null;
@@ -247,9 +247,6 @@ namespace KSP.UI
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnLocationListDirtyingEvent(MessageCenterMessage msg) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnGameStateChanged(MessageCenterMessage msg) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnDeleteAssembly(IObjectAssembly deletedAssembly) => throw null;

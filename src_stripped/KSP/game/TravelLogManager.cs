@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.TravelLogManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Messages;
 using KSP.Sim;
@@ -18,6 +18,7 @@ namespace KSP.Game
     public const string LOG_VESSEL_LAUNCHED = "Flight/FlightReport/Log/Vessel Launched";
     public const string LOG_VESSEL_RECOVERED = "Flight/FlightReport/Log/Vessel Recovered";
     public const string LOG_VESSEL_DESTROYED = "Flight/FlightReport/Log/Vessel Destroyed";
+    public const string LOG_VESSEL_LANDED = "Flight/FlightReport/Log/Vessel Landed";
     public const string LOG_VESSEL_ENTERED_SOI = "Flight/FlightReport/Log/Entered SOI";
     public const string LOG_PART_CRASHED = "Flight/FlightReport/Log/Part Crashed";
     public const string LOG_PART_EXPLODED = "Flight/FlightReport/Log/Part Exploded";
@@ -29,8 +30,10 @@ namespace KSP.Game
     private DictionaryValueList<string, TravelEventDefinition> _events;
     private DictionaryValueList<IGGuid, TravelObject> _objects;
     private List<TravelObjectEvent> _objectEvents;
+    private TravelFirsts _firsts;
     private Dictionary<IGGuid, List<TravelObjectEvent>> _lookupEventsByTravelId;
     private static readonly TravelEventDefinition _eventVesselLaunched;
+    private static readonly TravelEventDefinition _eventVesselLanded;
     private static readonly TravelEventDefinition _eventVesselDestroyed;
     private static readonly TravelEventDefinition _eventVesselRecovered;
     private static readonly TravelEventDefinition _eventVesselSOIEntered;
@@ -64,6 +67,9 @@ namespace KSP.Game
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnVesselLaunched(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnVesselLandedAfterFlight(MessageCenterMessage msg) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnVesselDestroyed(MessageCenterMessage msg) => throw null;
@@ -124,6 +130,9 @@ namespace KSP.Game
     {
       throw null;
     }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool IsExistingEvent(TravelObjectEvent newEvent) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private TravelObject GetValidTravelObject(IGGuid travelObjectId) => throw null;

@@ -1,10 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.DebugTools.SimObjectItem
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
+using KSP.Game;
 using KSP.Sim;
 using KSP.Sim.impl;
 using System.Runtime.CompilerServices;
@@ -14,7 +15,7 @@ using UnityEngine.UI;
 
 namespace KSP.DebugTools
 {
-  public class SimObjectItem : MonoBehaviour
+  internal class SimObjectItem : FlightToolsItem<SimulationObjectModel>
   {
     [SerializeField]
     private TextMeshProUGUI _textName;
@@ -28,13 +29,11 @@ namespace KSP.DebugTools
     private Button _buttonSetActive;
     [SerializeField]
     private Button _buttonDestroy;
-    private SimulationObjectModel _simObject;
+    private static string[] PHYSICS_MODE_ENUM_NAMES;
+    private static string[] TRANSFORM_FRAMETYPE_ENUM_NAMES;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void SyncTo(SimulationObjectModel simObject) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void Refresh() => throw null;
+    public override void SyncTo(SimulationObjectModel simObject) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void ToggleLoadUnloadViewObject() => throw null;
@@ -75,7 +74,7 @@ namespace KSP.DebugTools
     private void UpdateButtonStates() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private static bool IsViewObjectLoaded(SimulationObjectModel simObject) => throw null;
+    private static bool IsViewObjectLoaded(GameInstance game, SimulationObjectModel simObject) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public SimObjectItem() => throw null;

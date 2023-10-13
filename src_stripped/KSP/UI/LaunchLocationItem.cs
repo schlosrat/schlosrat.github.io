@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.LaunchLocationItem
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using DG.Tweening;
 using KSP.Api.CoreTypes;
@@ -27,8 +27,8 @@ namespace KSP.UI
     private const int INDEX_NOT_FOUND = -1;
     [SerializeField]
     private ContextBindRoot _bindRoot;
-    [Space]
     [SerializeField]
+    [Space]
     private ToggleExtended _toggle;
     [SerializeField]
     [Header("Button Actions")]
@@ -50,6 +50,12 @@ namespace KSP.UI
     private Property<string> _optionName;
     private Property<string> _vesselName;
     private Property<bool> _isVesselRecoverable;
+
+    public string OptionLabelUnlocalized
+    {
+      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+      [MethodImpl(MethodImplOptions.NoInlining)] private set => throw null;
+    }
 
     public string OptionLabel
     {
@@ -105,6 +111,9 @@ namespace KSP.UI
     {
       throw null;
     }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void LocalizeOptionLabel() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void SetLaunchpadAvailability() => throw null;

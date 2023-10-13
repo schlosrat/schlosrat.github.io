@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.KerbalPhotoBooth
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Networking.MP.Utils;
 using System;
@@ -34,8 +34,8 @@ namespace KSP.Game
     private int _resolution;
     [SerializeField]
     private int _numberOfSimultaneousModels;
-    [Space(10f)]
     [SerializeField]
+    [Space(10f)]
     private int _poseIndexMax;
     [SerializeField]
     private string _poseIndexParamName;
@@ -68,8 +68,8 @@ namespace KSP.Game
     private string _attrForEyeHeight;
     [SerializeField]
     private string _attrForEyeSymmetry;
-    [Header("Debug")]
     [SerializeField]
+    [Header("Debug")]
     private bool _saveDebugTextureFiles;
     [SerializeField]
     private string _debugTextureFileDirectory;

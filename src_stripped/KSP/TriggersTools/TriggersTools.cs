@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.TriggersTools.TriggersTools
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Messages;
@@ -23,8 +23,8 @@ namespace KSP.TriggersTools
   {
     private const string TRIGGERSTOOLS_ADDRESSABLE = "TriggersToolsWindow.prefab";
     private static GameObject _instance;
-    [SerializeField]
     [Header("Display Prefabs")]
+    [SerializeField]
     private DebugShapesArrowComponent debugArrowPrefab;
     [SerializeField]
     private DebugShapesAxesComponent debugAxesPrefab;
@@ -46,8 +46,6 @@ namespace KSP.TriggersTools
     [SerializeField]
     private Toggle physicsForceToggle;
     [SerializeField]
-    private Toggle partTempsToggle;
-    [SerializeField]
     private Toggle tensorScalingEnabledToggle;
     [SerializeField]
     private Toggle multiJointsToggle;
@@ -57,8 +55,8 @@ namespace KSP.TriggersTools
     private Toggle dynamicSolverIterationToggle;
     [SerializeField]
     private Toggle dynamicTensorSolutionToggle;
-    [Header("Input Labels")]
     [SerializeField]
+    [Header("Input Labels")]
     private TextMeshProUGUI toggleInputsText;
     [SerializeField]
     private TextMeshProUGUI pitchValue;
@@ -68,11 +66,11 @@ namespace KSP.TriggersTools
     private TextMeshProUGUI rollValue;
     [SerializeField]
     private bool showInputValues;
-    [SerializeField]
     [Header("Control State Labels")]
-    private TextMeshProUGUI controlStateValue;
-    [Header("Stats Labels")]
     [SerializeField]
+    private TextMeshProUGUI controlStateValue;
+    [SerializeField]
+    [Header("Stats Labels")]
     private TextMeshProUGUI togglePartsText;
     [SerializeField]
     private Transform partStatsParent;
@@ -82,8 +80,8 @@ namespace KSP.TriggersTools
     private Transform maneuverStatsParent;
     [SerializeField]
     private TriggersToolsManeuverNodeRow _maneuverRowPrefab;
-    [SerializeField]
     [Header("Panels for scenes")]
+    [SerializeField]
     private GameObject goNone;
     [SerializeField]
     private GameObject goFlight;

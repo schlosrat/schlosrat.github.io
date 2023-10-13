@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Gimbal
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -17,35 +17,35 @@ namespace KSP.Modules
   [Serializable]
   public sealed class Data_Gimbal : ModuleData
   {
-    [KSPState(CopyToSymmetrySet = true)]
-    [PAMDisplayControl(SortIndex = 2)]
     [HideInInspector]
+    [KSPState(CopyToSymmetrySet = true)]
     [LocalizedField("PartModules/Gimbal/IsEnabled")]
+    [PAMDisplayControl(SortIndex = 2)]
     public ModuleProperty<bool> isEnabled;
     [LocalizedField("PartModules/Gimbal/Limiter")]
     [PAMDisplayControl(SortIndex = 4)]
-    [KSPState(CopyToSymmetrySet = true)]
-    [HideInInspector]
     [SteppedRange(0.0f, 100f, 1f)]
-    public ModuleProperty<float> gimbalLimiter;
     [HideInInspector]
-    [LocalizedField("PartModules/Gimbal/PitchEnabled")]
+    [KSPState(CopyToSymmetrySet = true)]
+    public ModuleProperty<float> gimbalLimiter;
     [PAMDisplayControl(SortIndex = 5)]
     [KSPState(CopyToSymmetrySet = true)]
+    [HideInInspector]
+    [LocalizedField("PartModules/Gimbal/PitchEnabled")]
     public ModuleProperty<bool> enablePitch;
-    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 6)]
+    [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
     [LocalizedField("PartModules/Gimbal/YawEnabled")]
     public ModuleProperty<bool> enableYaw;
-    [PAMDisplayControl(SortIndex = 7)]
     [LocalizedField("PartModules/Gimbal/RollEnabled")]
-    [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
+    [KSPState(CopyToSymmetrySet = true)]
+    [PAMDisplayControl(SortIndex = 7)]
     public ModuleProperty<bool> enableRoll;
+    [HideInInspector]
     [LocalizedField("PartModules/Gimbal/AdvancedSettings")]
     [PAMDisplayControl(SortIndex = 3)]
-    [HideInInspector]
     public ModuleProperty<bool> IsAdvancedSettingsShown;
     [KSPDefinition]
     public string gimbalTransformName;

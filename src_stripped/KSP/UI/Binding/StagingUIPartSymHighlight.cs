@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.StagingUIPartSymHighlight
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Staging.UI;
@@ -23,14 +23,14 @@ namespace KSP.UI.Binding
     [SerializeField]
     [Tooltip("Set this as it's required to read properly the spacing between elements")]
     private VerticalLayoutGroup verticalLayoutGroup;
-    [SerializeField]
     [Tooltip("(OAB) Property key for getting the part Symmetry Eet from the part being highlighted")]
+    [SerializeField]
     private string _symmetrySetKey;
     [Tooltip("(Flight) Sim side Property key for getting the part Symmetry Eet from the part being highlighted")]
     [SerializeField]
     private string _symmetrySetKeyFlight;
-    [SerializeField]
     [Tooltip("Property key is for letting this folder know it has a part with sym highlighted.")]
+    [SerializeField]
     private string _partWithSymHighlightedKey;
     private Property<bool> _partWithsymHighlightValue;
     private KSP.OAB.SymmetrySet _partSymmetrySetOAB;

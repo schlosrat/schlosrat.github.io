@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.StagingUIBindRoot
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api;
 using KSP.Api.CoreTypes;
@@ -17,10 +17,10 @@ namespace KSP.UI
 {
   public class StagingUIBindRoot : ContextBindRoot
   {
-    [Header("==== Data To Inject ===", order = 1)]
+    [Space(order = 0)]
     [SerializeField]
     [Header("The Subcontext we will inject", order = 2)]
-    [Space(order = 0)]
+    [Header("==== Data To Inject ===", order = 1)]
     private string uiSubContextKey;
     [Header("Properties to inject")]
     public string isAllExpandedKey;
@@ -32,8 +32,8 @@ namespace KSP.UI
     [Header("Prefabs To Inject")]
     public string stageElementPrefabKey;
     public ContextBindRoot flightStageElementPrefab;
-    [FormerlySerializedAs("partGroupElementPrefabKey")]
     [Space]
+    [FormerlySerializedAs("partGroupElementPrefabKey")]
     public string partElementPrefabKey;
     [FormerlySerializedAs("flightPartGroupElementPrefab")]
     public ContextBindRoot flightPartElementPrefab;

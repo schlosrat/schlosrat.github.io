@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.CampaignLoadMenu
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI;
@@ -25,8 +25,8 @@ namespace KSP.Game
     private const string LAST_PLAYED = "Menu/SaveLoad/LastPlayed";
     private const string DELETE_GAME_WARNING = "Menu/SaveLoad/DeleteGameWarning";
     public ContextBindRoot BindRoot;
-    [SerializeField]
     [Header("Campaign Menu")]
+    [SerializeField]
     private CampaignMenu _campaignMenu;
     [Header("Load Game...")]
     [SerializeField]
@@ -48,8 +48,8 @@ namespace KSP.Game
     private TextMeshProUGUI _gameTimeText;
     [SerializeField]
     private TextMeshProUGUI _gameModeText;
-    [SerializeField]
     [Header("Save Game...")]
+    [SerializeField]
     private int _excessDotsAmount;
     [Header("WarningModal")]
     [SerializeField]
@@ -65,7 +65,7 @@ namespace KSP.Game
     private Property<Sprite> _playerFlag;
     private Property<string> _campaignName;
     private Property<string> _saveName;
-    private Property<long> _playerScience;
+    private Property<float> _playerScience;
     private Property<long> _flights;
     private Property<string> _lastPlayed;
     private Property<string> _universeTime;

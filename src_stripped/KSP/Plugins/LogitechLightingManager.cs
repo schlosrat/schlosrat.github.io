@@ -1,13 +1,15 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Plugins.LogitechLightingManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
 using KSP.Messages;
 using KSP.Messages.PropertyWatchers;
+using KSP.Sim;
+using KSP.Sim.impl;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -19,13 +21,25 @@ namespace KSP.Plugins
   public class LogitechLightingManager : IUpdate
   {
     private bool _isInitialized;
+    private bool _isEnabled;
     private GameInstance _game;
     private GameState _currentGameState;
-    private ElectricityLevel electricityLevelWatcher;
+    private VesselComponent _activeVessel;
+    private ElectricityLevel _electricityLevelWatcher;
+    private VesselSOIPropertyWatcher _vesselSOIWatcher;
+    private CelestialBodySelected _celestialBodySelectedWatcher;
+    private TimeZoomStepSelectedPropertyWatcher _timeZoomStepSelectedPropertyWatcher;
     private Dictionary<string, LogitechLightingManager.LogitechKeyboardBitmapKeys> _unityBindingsMap;
-    private byte[] lightingBitmap;
+    private byte[] _lightingBitmap;
+    private Color _rotationControlsColor;
+    private Color _translationControlsColor;
+    private Color _kerbalMovementControlsColor;
+    private Color _kerbalJetpackMovementControlsColor;
+    private const float _rcsControlFlashPeriod = 1f;
     private Color _throttleControlsColor;
-    private Color _steeringControlsColor;
+    private Color _readyActionGroupColor;
+    private Color _partialReadyActionGroupColor;
+    private Color _notReadyActionGroupColor;
     private bool _playLowPowerEffect;
     private const float _lowPowerEffectPeriod = 1f;
     private Color _lowPowerEffectColor;
@@ -41,9 +55,66 @@ namespace KSP.Plugins
     private bool _playStageOutOfFuelEffect;
     private const float _stageOutOfFuelEffectPeriod = 0.5f;
     private Color _stageOutOfFuelEffectColor;
+    private const float _partDestroyedEffectDuration = 0.75f;
+    private float _partDestroyedEffectStart;
+    private Color _partDestroyedEffectColor;
+    private bool _vesselDestroyedEffect;
+    private const float _vesselDestroyedEffectDuration = 0.75f;
+    private float _vesselDestroyedEffectStart;
+    private Color _vesselDestroyedEffectColor;
+    private const LogitechLightingManager.LogitechKeyboardBitmapKeys _landingEffectCenterKey = LogitechLightingManager.LogitechKeyboardBitmapKeys.G;
+    private Dictionary<int, HashSet<LogitechLightingManager.LogitechKeyboardBitmapKeys>> _landingEffectFrames;
+    private float _landingEffectStart;
+    private float _landingEffectStep;
+    private const float _landingEffectDuration = 5f;
+    private const float _landingEffectDimAmount = 1f;
+    private const int _landingEffectAnimationNumberOfPulses = 5;
+    private Color _timewarpEffectColor;
+    private Color _timewarpPauseEffectColor;
+    private const float _timewarpEffectDimAmount = 0.66f;
+    private double _timewarpEffectStep;
+    private const double _timewarpEffectMaxStep = 150.0;
+    private const LogitechLightingManager.LogitechKeyboardBitmapKeys _timewarpEffectRow1StartingKey = LogitechLightingManager.LogitechKeyboardBitmapKeys.Q;
+    private const LogitechLightingManager.LogitechKeyboardBitmapKeys _timewarpEffectRow2StartingKey = LogitechLightingManager.LogitechKeyboardBitmapKeys.A;
+    private const LogitechLightingManager.LogitechKeyboardBitmapKeys _timewarpEffectRow3StartingKey = LogitechLightingManager.LogitechKeyboardBitmapKeys.BACKSLASH_UK;
+    private const int _timewarpEffectAffectedKeys = 12;
+    private const int _timewarpEffectNumberOfChevrons = 3;
+    private const int _timewarpEffectChevronSpacing = 4;
+    private bool _pauseEffect;
+    private LogitechLightingManager.LogitechKeyboardBitmapKeys[] _pauseEffectKeys;
+    private Color _defaultEnvironmentColor;
+    private Dictionary<string, Color> _celestialBodyColorMap;
+    private const LogitechLightingManager.LogitechKeyboardBitmapKeys _logitechBitmapSentinel = ~LogitechLightingManager.LogitechKeyboardBitmapKeys.ESC;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public LogitechLightingManager(GameInstance game) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void InitializeSDK() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void UninitializeSDK() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void EnableIntegration(bool isEnabled) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private bool IsValidLogitechKey(
+      LogitechLightingManager.LogitechKeyboardBitmapKeys key)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private LogitechLightingManager.LogitechKeyboardBitmapKeys ToLogitechKeyboardBitmapKey(
+      int x,
+      int y)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void GenerateSuccessfulLandingAnimation() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void ConnectEvents() => throw null;
@@ -58,7 +129,13 @@ namespace KSP.Plugins
     public void OnUpdate(float dt) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private Color GetActionGroupColor(KSPActionGroupState groupState) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     private void ResetBitmapWithColor(Color color) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void DimBitmap(float dimAmount) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void SetBitmapColorForKey(
@@ -75,7 +152,18 @@ namespace KSP.Plugins
     private LogitechLightingManager.LogitechKeyboardBitmapKeys ToLogitechKey(InputBinding binding) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private Dictionary<int, HashSet<LogitechLightingManager.LogitechKeyboardBitmapKeys>> GenerateCircleBitmapsAroundKey(
+      LogitechLightingManager.LogitechKeyboardBitmapKeys centerKey,
+      int maxRadius)
+    {
+      throw null;
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnGameStateChanged(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnPauseStateChanged(MessageCenterMessage msg) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnStageChanged(MessageCenterMessage msg) => throw null;
@@ -100,6 +188,27 @@ namespace KSP.Plugins
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnLaunchSequenceComplete(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnPartDestroyed(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnVesselDestroyed(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnVesselCreated(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnActiveVesselChange(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnVesselSituationChangedMessage(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnVesselLandedOnGroundMessage(MessageCenterMessage msg) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public void OnVesselLandedInWaterMessage(MessageCenterMessage msg) => throw null;
 
     private enum LogitechKeyboardBitmapKeys
     {

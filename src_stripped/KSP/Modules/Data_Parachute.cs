@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Modules.Data_Parachute
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Sim;
 using KSP.Sim.Definitions;
@@ -61,8 +61,8 @@ namespace KSP.Modules
     public double SecondsForRisky;
     [KSPDefinition]
     public double SafetyMultiplier;
-    [FormerlySerializedAs("pressureShakeLayerIndex")]
     [KSPDefinition]
+    [FormerlySerializedAs("pressureShakeLayerIndex")]
     public int pressureOscillationLayerIndex;
     [FormerlySerializedAs("maximumPressureShakeVelocity")]
     [KSPDefinition]
@@ -73,21 +73,21 @@ namespace KSP.Modules
     public bool shieldedCanDeploy;
     [KSPDefinition]
     public double areaDeployed;
-    [KSPState]
-    [PAMDisplayControl(SortIndex = 1)]
     [LocalizedField("PartModules/Parachute/ChuteSafety")]
+    [PAMDisplayControl(SortIndex = 1)]
+    [KSPState]
     [HideInInspector]
     public ModuleProperty<Data_Parachute.DeploymentSafeStates> deploymentSafetyState;
-    [HideInInspector]
-    [LocalizedField("PartModules/Parachute/MinPressure")]
-    [KSPState(CopyToSymmetrySet = true)]
     [SteppedRange(0.01f, 0.75f, 0.01f)]
+    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 9)]
+    [LocalizedField("PartModules/Parachute/MinPressure")]
+    [HideInInspector]
     public ModuleProperty<float> minAirPressureToOpen;
     [LocalizedField("PartModules/Parachute/DeployAltitude")]
-    [PAMDisplayControl(SortIndex = 10)]
     [KSPState(CopyToSymmetrySet = true)]
     [SteppedRange(50f, 5000f, 50f)]
+    [PAMDisplayControl(SortIndex = 10)]
     public ModuleProperty<float> deployAltitude;
     [LocalizedField("PartModules/Parachute/SpreadAngle")]
     [PAMDisplayControl(SortIndex = 11)]
@@ -103,13 +103,13 @@ namespace KSP.Modules
     [KSPState]
     public ModuleProperty<Data_Parachute.DeploymentStates> deployState;
     [LocalizedField("PartModules/Parachute/DeployMode")]
-    [KSPState(CopyToSymmetrySet = true)]
     [HideInInspector]
+    [KSPState(CopyToSymmetrySet = true)]
     [PAMDisplayControl(SortIndex = 8)]
     public ModuleProperty<Data_Parachute.DeployMode> DeploymentMode;
+    [HideInInspector]
     [LocalizedField("PartModules/Parachute/DeploySettings")]
     [PAMDisplayControl(SortIndex = 7)]
-    [HideInInspector]
     public ModuleProperty<bool> IsDeploySettingsShown;
     [KSPState]
     public double chuteTemp;

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: PQSDecalInstance
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using AwesomeTechnologies.Utility;
 using System.Runtime.CompilerServices;
@@ -26,21 +26,21 @@ public class PQSDecalInstance : MonoBehaviour
   public PQSDecalController PqsDecalController;
   public float HeightScale;
   public PQSDecalHeightBlendMode HeightBlendMode;
-  [SerializeField]
   [Range(-1f, 1f)]
+  [SerializeField]
   public float HeightOffset;
   public PQSDecalAlphaFadeShape FadeShape;
-  [SerializeField]
   [Range(0.0f, 2f)]
+  [SerializeField]
   public float FadeStrength;
   [Range(0.0f, 1f)]
   [SerializeField]
   public float AlbedoOpacity;
-  [SerializeField]
   [Range(0.0f, 1f)]
+  [SerializeField]
   public float GradientOpacity;
-  [SerializeField]
   [Range(0.0f, 1f)]
+  [SerializeField]
   public float NormalOpacity;
   public Color Tint;
   public PQSDecalBlendMode NormalBlend;
@@ -49,8 +49,8 @@ public class PQSDecalInstance : MonoBehaviour
   public bool UseDecalTexturing;
   public bool UseTextureAlphaMask;
   public bool UseTextureHeightmapFade;
-  [Range(0.01f, 1.99f)]
   [SerializeField]
+  [Range(0.01f, 1.99f)]
   public float MaterialScaleFactor;
   public bool OverrideUseTextureAlphaMask;
   public bool OverrideUseTextureHeightmapFade;

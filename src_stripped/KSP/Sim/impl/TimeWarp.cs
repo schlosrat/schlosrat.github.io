@@ -1,11 +1,12 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.impl.TimeWarp
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
-using KSP.Game;
+using KSP.Input;
+using KSP.Messages;
 using System;
 using System.Runtime.CompilerServices;
 
@@ -13,8 +14,9 @@ namespace KSP.Sim.impl
 {
   public class TimeWarp : IFixedUpdate, IPriorityOverride
   {
-    private readonly GameInstance _game;
-    private readonly UniverseTime _universeTime;
+    private readonly IUniverseTime _simTime;
+    private readonly IMessageCenter _messageCenter;
+    private readonly IViewController _viewController;
     public const int NO_TIME_WARP_INDEX = 0;
     public const int MAX_PHYSICS_WARP_RATE_INDEX = 2;
     public const float DEFAULT_MAX_WARP_TO = 10f;
@@ -88,16 +90,13 @@ namespace KSP.Sim.impl
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public TimeWarp(GameInstance game, UniverseTime universeTime) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnTimeWarpIncrease() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnTimeWarpDecrease() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnTimeWarpStop() => throw null;
+    public TimeWarp(
+      IUniverseTime universeTime,
+      IViewController viewController,
+      IMessageCenter messageCenter)
+    {
+      throw null;
+    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public float GetRate(int rateIndex) => throw null;
@@ -122,6 +121,9 @@ namespace KSP.Sim.impl
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void CancelAutoWarp() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public float GetNextTickTimescaleMultiplier() => throw null;
 
     int IPriorityOverride.ExecutionPriorityOverride
     {
@@ -190,7 +192,22 @@ namespace KSP.Sim.impl
     private static int GetOrbitalEventLookaheadTimeSeconds(PatchTransitionType patchTransitionType) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void StopTimeWarpByGameState(GameState[] statesToCauseStop, bool instant = false) => throw null;
+    internal void BindTimeWarpIncrease(GlobalInputDefinition flightDefinition, string id) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    internal void BindTimeWarpDecrease(GlobalInputDefinition flightDefinition, string id) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    internal void BindTimeWarpStop(GlobalInputDefinition flightDefinition, string id) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnTimeWarpIncrease() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnTimeWarpDecrease() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnTimeWarpStop() => throw null;
 
     public readonly struct TimeWarpLevel
     {

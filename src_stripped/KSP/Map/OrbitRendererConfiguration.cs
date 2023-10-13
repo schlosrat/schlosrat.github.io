@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.OrbitRendererConfiguration
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using Shapes;
 using System.Runtime.CompilerServices;
@@ -14,12 +14,12 @@ namespace KSP.Map
   [CreateAssetMenu(fileName = "OrbitRendererConfiguration", menuName = "ScriptableObjects/Orbit Renderer Configuration")]
   public class OrbitRendererConfiguration : ScriptableObject
   {
-    [Range(0.0f, 32f)]
     [Space]
+    [Range(0.0f, 32f)]
     public int MaxIterations;
     public SubdivisionHeuristic SubdivisionHeuristics;
-    [Range(1f, 40f)]
     [Header("Subdivision Heuristic: TriangleArea")]
+    [Range(1f, 40f)]
     public double TriangleAreaMin;
     [Header("Subdivision Heuristic: ScreenSizeRatio")]
     [Range(1f, 0.0f)]
@@ -39,8 +39,8 @@ namespace KSP.Map
     [Min(0.0f)]
     [Space]
     public float GenerationDelay;
-    [Header("Point Rendering", order = 1)]
     [Space(order = 0)]
+    [Header("Point Rendering", order = 1)]
     public bool UsePolyline;
     public ShapesBlendMode BlendMode;
     public ThicknessSpace ThicknessSpace;
@@ -55,6 +55,7 @@ namespace KSP.Map
     public Color DefaultMapObjectColor;
     public Color ActiveVesselMapColor;
     public Color NonActiveVesselColor;
+    public Color WaypointColor;
     public int MapDefaultDottedLineSize;
     [Space]
     public Color TrajectoryOrbitStartColor;
@@ -84,8 +85,8 @@ namespace KSP.Map
     public float ManeuverNonImpulseDashLength;
     [Min(0.0f)]
     public float ManeuverNonImpulseDashGap;
-    [Space]
     [Min(0.0f)]
+    [Space]
     public float CelestialBodyOrbitThickness;
     public OrbitRenderSegment.RenderStyle CelestialBodyRenderStyle;
     [Min(0.0f)]

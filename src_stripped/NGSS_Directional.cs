@@ -1,15 +1,15 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: NGSS_Directional
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[RequireComponent(typeof (Light))]
 [ExecuteInEditMode]
+[RequireComponent(typeof (Light))]
 public class NGSS_Directional : MonoBehaviour
 {
   [Header("MAIN SETTINGS")]
@@ -19,9 +19,9 @@ public class NGSS_Directional : MonoBehaviour
   public bool NGSS_NO_UPDATE_ON_PLAY;
   [Tooltip("Shadows resolution.\nUseQualitySettings = From Quality Settings, SuperLow = 512, Low = 1024, Med = 2048, High = 4096, Ultra = 8192, Mega = 16384.")]
   public NGSS_Directional.ShadowMapResolution NGSS_SHADOWS_RESOLUTION;
-  [Range(4f, 32f)]
-  [Header("BASE SAMPLING")]
   [Tooltip("Used to test blocker search and early bail out algorithms. Keep it as low as possible, might lead to white noise if too low.\nRecommended values: Mobile = 8, Consoles & VR = 16, Desktop = 24")]
+  [Header("BASE SAMPLING")]
+  [Range(4f, 32f)]
   public int NGSS_SAMPLING_TEST;
   [Tooltip("Number of samplers per pixel used for PCF and PCSS shadows algorithms.\nRecommended values: Mobile = 16, Consoles & VR = 32, Desktop Med = 48, Desktop High = 64, Desktop Ultra = 128")]
   [Range(8f, 128f)]
@@ -33,21 +33,21 @@ public class NGSS_Directional : MonoBehaviour
   [Header("PCSS")]
   [Tooltip("PCSS Requires inline sampling and SM3.5.\nProvides Area Light soft-shadows.\nDisable it if you are looking for PCF filtering (uniform soft-shadows) which runs with SM3.0.")]
   public bool NGSS_PCSS_ENABLED;
-  [Range(0.0f, 2f)]
   [Tooltip("How soft shadows are when close to caster.")]
-  public float NGSS_PCSS_SOFTNESS_NEAR;
   [Range(0.0f, 2f)]
+  public float NGSS_PCSS_SOFTNESS_NEAR;
   [Tooltip("How soft shadows are when far from caster.")]
+  [Range(0.0f, 2f)]
   public float NGSS_PCSS_SOFTNESS_FAR;
-  [Header("NOISE")]
   [Tooltip("If zero = 100% noise.\nIf one = 100% dithering.\nUseful when fighting banding.")]
+  [Header("NOISE")]
   [Range(0.0f, 1f)]
   public int NGSS_NOISE_TO_DITHERING_SCALE;
   [Tooltip("If you set the noise scale value to something less than 1 you need to input a noise texture.\nRecommended noise textures are blue noise signals.")]
   public Texture2D NGSS_NOISE_TEXTURE;
-  [Range(1f, 3f)]
   [Header("DENOISER")]
   [Tooltip("How many iterations the Denoiser algorithm should do.\nRequires NGSS Shadows Libraries to be installed and Cascaded Shadows to be enabled in the Editor Graphics Settings.")]
+  [Range(1f, 3f)]
   public int NGSS_DENOISER_ITERATIONS;
   [Tooltip("Overall Denoiser softness.")]
   [Range(0.0f, 1f)]
@@ -55,8 +55,8 @@ public class NGSS_Directional : MonoBehaviour
   [Tooltip("The amount of shadow edges the Denoiser can tolerate during denoising.")]
   [Range(0.05f, 1f)]
   public float NGSS_DENOISER_EDGE_TOLERANCE;
-  [Tooltip("This estimates receiver slope using derivatives and tries to tilt the filtering kernel along it.\nHowever, when doing it in screenspace from the depth texture can leads to shadow artifacts.\nThus it is disabled by default.")]
   [Header("BIAS")]
+  [Tooltip("This estimates receiver slope using derivatives and tries to tilt the filtering kernel along it.\nHowever, when doing it in screenspace from the depth texture can leads to shadow artifacts.\nThus it is disabled by default.")]
   public bool NGSS_RECEIVER_PLANE_BIAS;
   [Header("GLOBAL SETTINGS")]
   [Tooltip("Enable it to let NGSS_Directional control global shadows settings through this component.\nDisable it if you want to manage shadows settings through Unity Quality & Graphics Settings panel.")]
@@ -65,8 +65,8 @@ public class NGSS_Directional : MonoBehaviour
   public ShadowProjection GLOBAL_SHADOWS_PROJECTION;
   [Tooltip("Sets the maximum distance at wich shadows are visible from camera.\nThis option affects your shadow distance in Quality Settings.")]
   public float GLOBAL_SHADOWS_DISTANCE;
-  [Range(0.0f, 4f)]
   [Tooltip("Number of cascades the shadowmap will have. This option affects your cascade counts in Quality Settings.\nYou should entierly disable Cascaded Shadows (Graphics Menu) if you are targeting low-end devices.")]
+  [Range(0.0f, 4f)]
   public int GLOBAL_CASCADES_COUNT;
   [Range(0.01f, 0.25f)]
   [Tooltip("Used for the cascade stitching algorithm.\nCompute cascades splits distribution exponentially in a x*2^n form.\nIf 4 cascades, set this value to 0.1. If 2 cascades, set it to 0.25.\nThis option affects your cascade splits in Quality Settings.")]

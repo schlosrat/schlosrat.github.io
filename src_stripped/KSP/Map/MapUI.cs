@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Map.MapUI
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Game;
@@ -61,8 +61,8 @@ namespace KSP.Map
     [Header("Search")]
     [SerializeField]
     private InputFieldExtended _searchText;
-    [SerializeField]
     [Header("Filter")]
+    [SerializeField]
     private TrackingStationSearchFilter _trackingStationSearchFilter;
     [SerializeField]
     private GameObject _celestialBodyObjectPickerViewport;
@@ -72,13 +72,13 @@ namespace KSP.Map
     private GameObject _objectTypeViewport;
     [SerializeField]
     private GameObject _objectTypeNoFavoritesSelectedObject;
-    [Header("Crew Section")]
     [SerializeField]
+    [Header("Crew Section")]
     private InfoPanelCrewMember _crewMemberPrefab;
     [SerializeField]
     private RectTransform _crewMemberParentTrasform;
-    [Header("Alerts Section")]
     [SerializeField]
+    [Header("Alerts Section")]
     private NotificationUIAlert _alertPrefab;
     [SerializeField]
     private RectTransform _alertParentTrasform;
@@ -87,6 +87,7 @@ namespace KSP.Map
     private Dictionary<IGGuid, MapUISelectableEntry> _vesselSelectableEntries;
     private Dictionary<MapUISelectableEntry, IGGuid> _vesselParentToBeInstantiated;
     private Dictionary<MapUISelectableEntry, IGGuid> _colonyParentToBeInstantiated;
+    private Dictionary<MapUISelectableEntry, IGGuid> _waypointParentToBeInstantiated;
     private MapUISelectableEntry _previous;
     private MapUISelectableEntry _focusedEntry;
     private List<MapUISelectableEntry> _mapUIItems;
@@ -368,6 +369,9 @@ namespace KSP.Map
     private void HandleVesselObjectEntryConfigurations(MapItem item, MapUISelectableEntry obj) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
+    private void HandleWaypointObjectEntryConfigurations(MapItem item, MapUISelectableEntry obj) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
     private void HandleDebrisObjectEntryConfigurations(MapItem item, MapUISelectableEntry obj) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
@@ -454,6 +458,9 @@ namespace KSP.Map
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void OnDestroy() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnLocalize() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public MapUI() => throw null;

@@ -1,23 +1,23 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: NGSS_ContactShadows
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-[ImageEffectAllowedInSceneView]
 [ExecuteInEditMode]
+[ImageEffectAllowedInSceneView]
 public class NGSS_ContactShadows : MonoBehaviour
 {
   [Header("REFERENCES")]
   public Light contactShadowsLight;
   public Shader contactShadowsShader;
-  [Header("SHADOWS SETTINGS")]
   [Tooltip("Poisson Noise. Randomize samples to remove repeated patterns.")]
+  [Header("SHADOWS SETTINGS")]
   public bool m_noiseFilter;
   [Tooltip("If enabled, backfaced lit fragments will be skipped increasing performance. Requires GBuffer normals.")]
   public bool m_deferredBackfaceOptimization;
@@ -27,14 +27,14 @@ public class NGSS_ContactShadows : MonoBehaviour
   [Range(0.01f, 1f)]
   [Tooltip("Tweak this value to remove soft-shadows leaking around edges.")]
   public float m_shadowsEdgeTolerance;
-  [Range(0.01f, 1f)]
   [Tooltip("Overall softness of the shadows.")]
+  [Range(0.01f, 1f)]
   public float m_shadowsSoftness;
   [Range(1f, 4f)]
   [Tooltip("Overall distance of the shadows.")]
   public float m_shadowsDistance;
-  [Tooltip("The distance where shadows start to fade.")]
   [Range(0.1f, 4f)]
+  [Tooltip("The distance where shadows start to fade.")]
   public float m_shadowsFade;
   [Tooltip("Tweak this value if your objects display backface shadows.")]
   [Range(0.0f, 1f)]

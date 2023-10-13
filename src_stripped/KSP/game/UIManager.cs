@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.UIManager
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Logging;
@@ -56,8 +56,8 @@ namespace KSP.Game
     private IndicatorProvider _indicatorProvider;
     [SerializeField]
     private HighlightProvider _highlightProvider;
-    [Space]
     [SerializeField]
+    [Space]
     private ContextPanelController _contextPanelController;
     [SerializeField]
     internal Canvas _betaMark;
@@ -82,7 +82,7 @@ namespace KSP.Game
     public Property<GameState> PropertyGameState;
     public Property<string> PropertyPlayerName;
     public Property<string> PropertyPlayerAgency;
-    public Property<long> PropertyPlayerScience;
+    public Property<float> PropertyPlayerScience;
     public Property<long> PropertyPlayerPlayTime;
     public Property<string> PropertyGameMode;
     public Property<bool> PropertyIsMultiplayer;
@@ -231,10 +231,10 @@ namespace KSP.Game
     private void LoadKSCTrackingStation() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public void DoFlightMapHide() => throw null;
+    public void TransitionAwayFromMapState() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void HideMapIfVisible() => throw null;
+    public void HideMapIfVisible() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void ToggleEscapeMenu_performed() => throw null;

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: DebugVisualizer
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.ScriptInterop;
 using System.Runtime.CompilerServices;
@@ -11,23 +11,15 @@ using UnityEngine;
 
 public class DebugVisualizer : MonoBehaviour
 {
-  private bool RenderFrameTimes;
   private bool _enableTimer;
   private GUIStyle textStyle;
   private bool showTextureStreamingStats;
+  private bool _showAuthenticationInfo;
   private DebugVisualizer.kTextPos textPosition;
-  private int currentSample;
-  private float[] frameTimes;
-  private float[] fpsHistory;
-  private float smoothedFrameTime;
-  private float smoothedFPS;
   private IScriptEnvironment ScriptInjector;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   private void Start() => throw null;
-
-  [MethodImpl(MethodImplOptions.NoInlining)]
-  private void Update() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   protected void OnGUI() => throw null;
@@ -36,19 +28,13 @@ public class DebugVisualizer : MonoBehaviour
   public void RegisterEnvironment(IScriptEnvironment scriptEnvironment) => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  public float GetSmoothedFPS() => throw null;
-
-  [MethodImpl(MethodImplOptions.NoInlining)]
-  public void SetShowFPS(bool value) => throw null;
-
-  [MethodImpl(MethodImplOptions.NoInlining)]
   private bool ToggleLocalizationDebugMode() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   private bool QAPrintPartsInBuildersCSVs() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  private int ShowFrameTimes(bool show) => throw null;
+  public int ShowFrameTimes(bool show) => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   private bool GetShowFrameTimes() => throw null;
@@ -73,9 +59,6 @@ public class DebugVisualizer : MonoBehaviour
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   private bool SetTextPosition(string textPos) => throw null;
-
-  [MethodImpl(MethodImplOptions.NoInlining)]
-  private void UpdatePerfData() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   private void ToggleVesselTools() => throw null;
@@ -162,6 +145,35 @@ public class DebugVisualizer : MonoBehaviour
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   private void ToggleNotificationsCanvasVisibility(bool hidden) => throw null;
+
+  [MethodImpl(MethodImplOptions.NoInlining)]
+  private void ToggleAuthenticationInfo() => throw null;
+
+  [MethodImpl(MethodImplOptions.NoInlining)]
+  private void RenderAuthenticationInfo(
+    string playFabId,
+    string firstPartyId,
+    string firstPartyUsername,
+    string pDId,
+    string pDUsername,
+    ref float textLeft,
+    ref float textTop,
+    ref float textWidth,
+    ref float textHeight)
+  {
+    throw null;
+  }
+
+  [MethodImpl(MethodImplOptions.NoInlining)]
+  private static void RenderText(
+    string text,
+    ref float textLeft,
+    ref float textTop,
+    ref float textWidth,
+    ref float textHeight)
+  {
+    throw null;
+  }
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   public DebugVisualizer() => throw null;

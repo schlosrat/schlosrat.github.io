@@ -1,13 +1,12 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSPPartAudio
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using AK.Wwise;
 using KSP.Messages;
-using KSP.Sim.impl;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -23,9 +22,7 @@ public class KSPPartAudio : KSPPartAudioBase
   private bool _IsInCollision;
   private int _collisionStayFrame;
   private int _nbOfFrameToReleaseCollision;
-  private double _oldMachNumber;
   private bool _isShowingHeatIndicator;
-  private VesselBehavior _vessel;
   public List<KSPPartAudio.SoundEventCategory> namedSoundEvents;
   public KSPPartAudio.Sounds sounds;
 
@@ -93,16 +90,10 @@ public class KSPPartAudio : KSPPartAudioBase
   private void UpdateCollisionLoop() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
-  private void GetDependencies() => throw null;
-
-  [MethodImpl(MethodImplOptions.NoInlining)]
   public void InitDecoupleModuleAudio() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   public override void Update() => throw null;
-
-  [MethodImpl(MethodImplOptions.NoInlining)]
-  private void UpdateSonicBoom() => throw null;
 
   [MethodImpl(MethodImplOptions.NoInlining)]
   public void OnShowHeatIndicator() => throw null;

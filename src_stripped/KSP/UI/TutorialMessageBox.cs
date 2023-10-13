@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.TutorialMessageBox
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.UserInterface;
 using System.Collections.Generic;
@@ -18,15 +18,15 @@ namespace KSP.UI
   [PrefabName("TutorialMessageBox.prefab")]
   public class TutorialMessageBox : KSP2UIWindow
   {
-    [Space(5f)]
     [SerializeField]
+    [Space(5f)]
     private Image smallImage;
     [SerializeField]
     private Transform gifTextArea;
     [SerializeField]
     private VideoPlayer player;
-    [Header("Positioning")]
     [SerializeField]
+    [Header("Positioning")]
     private Vector2 _defaultPosition;
     [SerializeField]
     private Vector2 _defaultPivot;
@@ -41,8 +41,8 @@ namespace KSP.UI
     private TextMeshProUGUI tittleText;
     [SerializeField]
     private TextMeshProUGUI messageBoxText;
-    [Header("Buttons")]
     [SerializeField]
+    [Header("Buttons")]
     private Transform buttonArea;
     [SerializeField]
     private ButtonExtended endTutorialButton;
@@ -52,8 +52,8 @@ namespace KSP.UI
     private ButtonExtended replayButton;
     [SerializeField]
     private ButtonExtended continueToNextTutorial;
-    [Header("Other Summary Settings")]
     [SerializeField]
+    [Header("Other Summary Settings")]
     private Image windowTitleBackground;
     [SerializeField]
     private Transform descriptionsContainer;

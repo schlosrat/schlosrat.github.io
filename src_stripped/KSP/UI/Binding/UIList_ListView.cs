@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.UIList_ListView
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api;
 using KSP.UI.Binding.Core;
@@ -22,20 +22,20 @@ namespace KSP.UI.Binding
     [Header("Leave blank to get prefab from context")]
     [SerializeField]
     protected ContextBindRoot elementPrefab;
-    [SerializeField]
     [Header("if set will be resolve Element Prefab")]
-    protected string elementPropertyKeyPath;
     [SerializeField]
+    protected string elementPropertyKeyPath;
     [Header("if set will resolve Element Pool")]
+    [SerializeField]
     protected string _elementPoolPropetyKeyPath;
     protected MultiDragDropLogic multiDragDropLogic;
-    [Header("if set will be resolve MultiDragDropLogic Reference")]
     [SerializeField]
+    [Header("if set will be resolve MultiDragDropLogic Reference")]
     protected string multiDragDropPropertyKeyPath;
     private bool multiDragDropAdded;
     protected HighlightedDragDropLogic highlightedDragDropLogic;
-    [SerializeField]
     [Tooltip("If set will be resolve HighlightDragDropLogic Reference")]
+    [SerializeField]
     protected string highlightedDragDropPropertyKeyPath;
     private bool highlightedDragDropAdded;
     [SerializeField]
@@ -44,8 +44,8 @@ namespace KSP.UI.Binding
     public Transform elementContainer;
     [SerializeField]
     protected bool destroyChildrenOnStart;
-    [SerializeField]
     [Space]
+    [SerializeField]
     protected bool reverseOrder;
     protected GameObjectPool<ContextBindRoot> _elementPool;
     public UIList_ListView.ElementModifyDelegate modifyElementOnCreation;

@@ -20,6 +20,7 @@ namespace KSP.Sim.impl
     private bool _hasResourcesToOperate;
     private bool _lastHasResourcesToOperate;
     private bool _requestOutstanding;
+    private bool _lastIsHibernating;
     private bool _hasCrewToOperate;
     private bool _hasCommNetToOperate;
     protected Data_Command dataCommand;

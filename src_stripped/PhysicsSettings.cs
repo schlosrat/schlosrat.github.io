@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: PhysicsSettings
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.IO;
 using KSP.Sim.impl;
@@ -17,7 +17,7 @@ public class PhysicsSettings : VersionedBase
 {
   public const string PhysicsSettingsFilename = "PhysicsSettings";
   public const IOProvider.DataLocation PhysicsSettingsFileLocation = IOProvider.DataLocation.Global;
-  public const string CURRENT_FILE_VERSION = "0.1.6";
+  public const string CURRENT_FILE_VERSION = "0.1.7";
   public static readonly string[] PreviousFileVersionsThatRequireReset;
   private static PhysicsSettings _physicsSettings;
   public const string SIM_PHYSX_SCENERY_COLLIDER_LAYER_MASK_NAME = "Default";
@@ -65,6 +65,8 @@ public class PhysicsSettings : VersionedBase
   public static double GraviticForceMultiplier;
   [JsonProperty("PHYSX_RB_SQR_MAG_THRESHOLD")]
   private double _physxRbSqrMagThreshold;
+  [JsonProperty("PHYSX_RB_SQR_MAG_GRAVITY_THRESHOLD")]
+  private double _physxRbSqrMagGravityThreshold;
   [JsonProperty("PHYSX_MASS_TOLERANCE")]
   private float _physxMassTolerance;
   [JsonProperty("PHYSX_MINIMUM_PART_MASS")]
@@ -123,6 +125,12 @@ public class PhysicsSettings : VersionedBase
   private bool _autoStrutDisplay;
   [JsonProperty("DisableTimeWarpWhileUnderThrust")]
   private bool _disableTimeWarpWhileUnderThrust;
+  [JsonProperty("EnableOrbitalCorrectionOnInit")]
+  private bool _enableOrbitalCorrectionOnInit;
+  [JsonProperty("OrbitalCorrectionInitializationDelay")]
+  private float _orbitalCorrectionInitializationDelay;
+  [JsonProperty("OrbitalCorrectionStandOffPeriod")]
+  private float _orbitalCorrectionStandOffPeriod;
   [JsonProperty("IdealGasConstant")]
   private double _idealGasConstant;
   [JsonProperty("BoltzmannConstant")]
@@ -528,6 +536,12 @@ public class PhysicsSettings : VersionedBase
     [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
   }
 
+  public static double PHYSX_RB_SQR_MAG_GRAVITY_THRESHOLD
+  {
+    [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
+  }
+
   public static float PHYSX_MASS_TOLERANCE
   {
     [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
@@ -699,6 +713,24 @@ public class PhysicsSettings : VersionedBase
   }
 
   public static bool DisableTimeWarpWhileUnderThrust
+  {
+    [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
+  }
+
+  public static bool EnableOrbitalCorrectionOnInit
+  {
+    [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
+  }
+
+  public static float OrbitalCorrectionInitializationDelay
+  {
+    [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
+    [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
+  }
+
+  public static float OrbitalCorrectionStandOffPeriod
   {
     [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;

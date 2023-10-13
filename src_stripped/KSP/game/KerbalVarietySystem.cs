@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.KerbalVarietySystem
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Modding.Variety;
 using KSP.Networking.MP.Utils;
@@ -22,10 +22,8 @@ namespace KSP.Game
     public const string FEMALE_TAG = "_F_";
     public const string NEUTRAL_TAG = "_N_";
     public const string DEFAULT_ATTRIBUTE_SET_NAME = "KERBALATTRIBUTES_EVA";
-    public const string NAMELIST_TAG = "KERBALNAMES";
     public const string KERBAL_ORIGIN_TYPE_ATTRIBUTE_NAME = "ORIGINTYPE";
     public const string BUNDLELABEL_KERBAL_VARIETY = "kerbal_variety";
-    private static char[] BIO_DELIMITER_CHARS;
     private const string NAME_CATEGORY_KEY = "_names_";
     private const string COLOR_CATEGORY_KEY = "_color_";
     private const string BIO_CATEGORY_KEY = "_bio_";
@@ -147,7 +145,16 @@ namespace KSP.Game
     public List<string> GetBiographySubgroup(string subsetName) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    public int GenerateAttributeSeed(string fullName, string attributeName) => throw null;
+    public static int GenerateAttributeSeed(string fullName, string attributeName) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public static MPRandom GetSeededRandomizer(
+      string firstName,
+      string surname,
+      string attributeName)
+    {
+      throw null;
+    }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public int GenerateUnsafeAttributeSeed(string fullName, string attributeName) => throw null;
@@ -200,6 +207,9 @@ namespace KSP.Game
     {
       throw null;
     }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    public static bool TryGetColorFromString(string potentialColorAsString, out Color outputColor) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private string GetKerbalTypeTagFromPreloadInfo(VarietyPreloadInfo typePreloadInfo) => throw null;

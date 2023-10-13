@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.OAB.Utils
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -48,13 +48,7 @@ namespace KSP.OAB
     public static GameObject GetChild(GameObject obj, string childName) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private static void GetBoundsHelper(IObjectAssemblyPart part, ref Bounds totalbounds) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     public static void GetBoundsHelper(IObjectAssembly assembly, ref Bounds totalbounds) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public static Bounds GetBounds(IObjectAssemblyPart rootPart) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static ObjectAssemblyPart GetOABPartFromCollider(Collider col, IObjectAssembly assembly) => throw null;

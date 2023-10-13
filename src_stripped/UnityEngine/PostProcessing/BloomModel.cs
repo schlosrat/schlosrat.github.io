@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.BloomModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -31,14 +31,14 @@ namespace UnityEngine.PostProcessing
     [Serializable]
     public struct BloomSettings
     {
-      [Min(0.0f)]
       [Tooltip("Strength of the bloom filter.")]
-      public float intensity;
-      [Tooltip("Filters out pixels under this level of brightness.")]
       [Min(0.0f)]
+      public float intensity;
+      [Min(0.0f)]
+      [Tooltip("Filters out pixels under this level of brightness.")]
       public float threshold;
-      [Range(0.0f, 1f)]
       [Tooltip("Makes transition between under/over-threshold gradual (0 = hard threshold, 1 = soft threshold).")]
+      [Range(0.0f, 1f)]
       public float softKnee;
       [Range(1f, 7f)]
       [Tooltip("Changes extent of veiling effects in a screen resolution-independent fashion.")]
@@ -63,8 +63,8 @@ namespace UnityEngine.PostProcessing
     {
       [Tooltip("Dirtiness texture to add smudges or dust to the lens.")]
       public Texture texture;
-      [Min(0.0f)]
       [Tooltip("Amount of lens dirtiness.")]
+      [Min(0.0f)]
       public float intensity;
 
       public static BloomModel.LensDirtSettings defaultSettings

@@ -1,16 +1,14 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.SerializedSavedGame
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Game;
-using KSP.Game.Missions.Definitions;
 using KSP.Sim.Definitions;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
@@ -32,7 +30,6 @@ namespace KSP.Sim
     [JsonProperty("CampaignPlayers")]
     public SerializedCampaignPlayerEntry[] CampaignPlayers;
     public SerializedAssembly[] Vessels;
-    public List<MissionData> missionData;
     public SerializedColonyData ColonyData;
     public SerializedKerbalRoster KerbalData;
     public SerializedFlag[] PlantedFlags;

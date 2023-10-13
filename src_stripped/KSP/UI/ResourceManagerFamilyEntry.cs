@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.ResourceManagerFamilyEntry
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Sim.impl;
@@ -25,9 +25,13 @@ namespace KSP.UI
     private ResourceManagerUI _resourceManagerUI;
     private string _partNameLocalized;
     private string _familyTitleFormat;
+    private string _partFamily;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public ResourceManagerFamilyEntry(ResourceManagerUI resourceManagerUI, PartComponent part) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void LocalizePartName() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public bool AddPart(VesselComponent activeVessel, PartComponent part, bool fireEvent = true) => throw null;
@@ -43,5 +47,8 @@ namespace KSP.UI
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     internal void Cleanup(VesselComponent activeVessel) => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnLocalizeEvent() => throw null;
   }
 }

@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.MotionBlurModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -34,8 +34,8 @@ namespace UnityEngine.PostProcessing
       [Range(0.0f, 360f)]
       [Tooltip("The angle of rotary shutter. Larger values give longer exposure.")]
       public float shutterAngle;
-      [Range(4f, 32f)]
       [Tooltip("The amount of sample points, which affects quality and performances.")]
+      [Range(4f, 32f)]
       public int sampleCount;
       [Range(0.0f, 1f)]
       [Tooltip("The strength of multiple frame blending. The opacity of preceding frames are determined from this coefficient and time differences.")]

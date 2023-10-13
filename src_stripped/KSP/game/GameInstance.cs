@@ -1,12 +1,11 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.GameInstance
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using Game.Data;
-using KSP.Assets;
 using KSP.Audio;
 using KSP.Contexts.Game;
 using KSP.DebugTools;
@@ -47,9 +46,6 @@ namespace KSP.Game
     private LocalPlayer _localPlayer;
     private CampaignPlayerManager _campaignPlayerManager;
     private AgencyManager _agencyManager;
-    [SerializeField]
-    [ReadOnly]
-    private AssetProvider _assets;
     [ReadOnly]
     private SaveLoadManager _saveLoadManager;
     private SettingsMenuManager _settingsMenuManager;
@@ -63,19 +59,17 @@ namespace KSP.Game
     private IScriptInterop _scriptInterop;
     public bool DebugMessagesEnabled;
     [SerializeField]
-    private GameObject _assetPrefab;
-    [SerializeField]
     private GameObject _mouseManagerPrefab;
     private bool _isInitialized;
     [Header("UI Manager")]
-    [ReadOnly]
     [SerializeField]
+    [ReadOnly]
     private UIManager _ui;
     [SerializeField]
     private GameObject _uiManagerPrefab;
-    [SerializeField]
-    [ReadOnly]
     [Header("Audio Initializer")]
+    [ReadOnly]
+    [SerializeField]
     private KSPAudioInitializer _kspAudioInitializer;
     [Tooltip("Provide a reference to a prefab to determine the type of KSPAudioInitializer that will be created.")]
     [SerializeField]
@@ -152,11 +146,6 @@ namespace KSP.Game
     }
 
     public AgencyManager AgencyManager
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-    }
-
-    public AssetProvider Assets
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
@@ -312,18 +301,6 @@ namespace KSP.Game
     }
 
     public ColonyManagerDialog ColonyManagerDialog
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-      [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
-    }
-
-    public ResearchDevelopmentTechTreeController ResearchDevelopmentTechTree
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-      [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
-    }
-
-    public ResearchDevelopmentController ResearchDevelopment
     {
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
       [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
@@ -677,16 +654,7 @@ namespace KSP.Game
     public void TransitionToMissionControl() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private IEnumerator AsyncMissionControlTransition(GameObject missionControlGO) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void FinishMissionControlTransition() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    public void TransitionToResearchAndDevelopment() => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
-    private void ShowResearchAndDevelopment() => throw null;
+    public IEnumerator AsyncMissionControlTransition(GameObject missionControlGO) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void BroadcastCheatValueChanged(

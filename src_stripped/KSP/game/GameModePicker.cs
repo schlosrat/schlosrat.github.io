@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.GameModePicker
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.UI.Binding;
@@ -30,15 +30,22 @@ namespace KSP.Game
     private CreateCampaignMenu _createCampaignMenu;
     private IReadOnlyList<string> _availableModes;
     private List<(string id, GameModeButtonContext context, ToggleExtended toggle)> _modeButtons;
+    private bool _isInitialized;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void Awake() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void Initialize() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void Enable(CreateCampaignMenu createCampaignMenu, string modeOnEnable) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void CreateGameModeButtons() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void UpdateGameModeButtonsLocalization() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void SelectGameMode(string modeId) => throw null;

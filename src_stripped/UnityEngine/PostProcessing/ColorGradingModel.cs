@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: UnityEngine.PostProcessing.ColorGradingModel
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Runtime.CompilerServices;
@@ -79,11 +79,11 @@ namespace UnityEngine.PostProcessing
     {
       [Tooltip("Adjusts the overall exposure of the scene in EV units. This is applied after HDR effect and right before tonemapping so it won't affect previous effects in the chain.")]
       public float postExposure;
-      [Range(-100f, 100f)]
       [Tooltip("Sets the white balance to a custom color temperature.")]
-      public float temperature;
       [Range(-100f, 100f)]
+      public float temperature;
       [Tooltip("Sets the white balance to compensate for a green or magenta tint.")]
+      [Range(-100f, 100f)]
       public float tint;
       [Tooltip("Shift the hue of all colors.")]
       [Range(-180f, 180f)]
@@ -91,8 +91,8 @@ namespace UnityEngine.PostProcessing
       [Range(0.0f, 2f)]
       [Tooltip("Pushes the intensity of all colors.")]
       public float saturation;
-      [Range(0.0f, 2f)]
       [Tooltip("Expands or shrinks the overall range of tonal values.")]
+      [Range(0.0f, 2f)]
       public float contrast;
 
       public static ColorGradingModel.BasicSettings defaultSettings

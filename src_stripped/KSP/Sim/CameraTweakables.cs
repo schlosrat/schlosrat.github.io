@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.CameraTweakables
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using Newtonsoft.Json;
 using System.Runtime.CompilerServices;
@@ -11,8 +11,8 @@ using UnityEngine;
 
 namespace KSP.Sim
 {
-  [JsonObject]
   [CreateAssetMenu(fileName = "CameraTweakables", menuName = "ScriptableObjects/CameraTweakables", order = 66)]
+  [JsonObject]
   public class CameraTweakables : ScriptableObject
   {
     private const string CURRENT_TWEAKABLES_VERSION = "0.2";
@@ -36,19 +36,19 @@ namespace KSP.Sim
     public double defaultFOV;
     [JsonProperty]
     public double defaultSize;
-    [Range(0.0f, -90f)]
+    [JsonProperty]
     [Tooltip("A value from 0 to -90 that determines how far the camera can manually pitch down.")]
-    [JsonProperty]
+    [Range(0.0f, -90f)]
     public double minPitch;
-    [JsonProperty]
     [Range(0.0f, 90f)]
     [Tooltip("A value from 0 to 90 that determines how far the camera can manually pitch up.")]
+    [JsonProperty]
     public double maxPitch;
     [Tooltip("How far in the camera can be zoomed from its focal point.")]
     [JsonProperty]
     public double minDistance;
-    [Tooltip("How far the camera is zoomed from its focal point by default")]
     [JsonProperty]
+    [Tooltip("How far the camera is zoomed from its focal point by default")]
     public double DefaultDistance;
     [Tooltip("How far out the camera can be zoomed out from its focal point.")]
     [JsonProperty]
@@ -68,27 +68,27 @@ namespace KSP.Sim
     [JsonProperty]
     [Tooltip("The maximum distance the camera can pan away from the focal point.")]
     public float maxPanDistance;
+    [JsonProperty]
     [Tooltip("The minimum distance the camera can pan away from the focal point.")]
-    [JsonProperty]
     public float fineMovementModifier;
-    [Min(0.0f)]
+    [JsonProperty]
     [Tooltip("Duration in seconds for camera blend after switching camera mode.")]
-    [JsonProperty]
+    [Min(0.0f)]
     public float switchCameraModeBlendDuration;
-    [JsonProperty]
     [Tooltip("Function to use during camera blend after switching camera mode.")]
+    [JsonProperty]
     public BlendFunction switchCameraModeBlendFunction;
     [JsonProperty]
     [Min(0.0f)]
     public float terrainCollisionBuffer;
     [JsonProperty]
     public int terrainRaycastBufferSize;
-    [Tooltip("Duration in seconds for camera blend to kick in after no collision.")]
     [Min(0.0f)]
+    [Tooltip("Duration in seconds for camera blend to kick in after no collision.")]
     [JsonProperty]
     public float terrainCollisionCameraBlendDelay;
-    [Tooltip("Duration in seconds for camera blend after terrain collision.")]
     [Min(0.0f)]
+    [Tooltip("Duration in seconds for camera blend after terrain collision.")]
     [JsonProperty]
     public float terrainCollisionCameraBlendDuration;
     [Tooltip("Function to use during camera blend after terrain collision.")]
@@ -96,8 +96,8 @@ namespace KSP.Sim
     public BlendFunction terrainCollisionCameraBlendFunction;
     [JsonProperty]
     public bool lockCursor;
-    [Tooltip("Flag that makes the camera check if the cursor is over UI elements before applying zoom in and zoom out.")]
     [JsonProperty]
+    [Tooltip("Flag that makes the camera check if the cursor is over UI elements before applying zoom in and zoom out.")]
     public bool BlockZoomOverUI;
     [JsonProperty]
     [Tooltip("Tag names that will be checked if collection is not null or empty, for selectively block zoom when hovering UI elements with the cursor.")]

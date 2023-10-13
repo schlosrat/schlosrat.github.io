@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Game.TripPlanner
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using KSP.Api.CoreTypes;
 using KSP.Messages;
@@ -18,10 +18,10 @@ namespace KSP.Game
 {
   [RequireComponent(typeof (RectTransform))]
   [RequireComponent(typeof (CanvasGroup))]
-  public class TripPlanner : KerbalMonoBehaviour
+  public class TripPlanner : PopUpUIManagerBase
   {
-    [Header("Self")]
     [SerializeField]
+    [Header("Self")]
     private ContextBindRoot tripPlannerBindRoot;
     [SerializeField]
     private RectTransform _rectTransform;
@@ -36,9 +36,9 @@ namespace KSP.Game
     private float _defaultXWindowOffset;
     [SerializeField]
     private float _defaultYWindowOffset;
+    [SerializeField]
     [Header("Forecast Messaging")]
     [Space(10f)]
-    [SerializeField]
     private string[] withinRangeForecasts;
     [SerializeField]
     private string[] outsideRangeForecasts;
@@ -58,12 +58,12 @@ namespace KSP.Game
     private int _currentOriginIndex;
     private double _destinationCost;
     private string _forecastMessage;
+    private string _forecastMessageUnlocalized;
     [SerializeField]
     private double _targetUT;
     private bool _destinationWithinRange;
     private bool _foreCastMessageUpdatedOnce;
     private SubscriptionHandle _onDeltavValueChanged;
-    private SubscriptionHandle _gameStateChangedHandle;
     private SubscriptionHandle _OABNewAssemblyHandle;
     private SubscriptionHandle _TripPlanerOriginOrDestinationChangedyHandle;
     private SubscriptionHandle _OnTimeWapCompleted;
@@ -91,13 +91,13 @@ namespace KSP.Game
     }
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void Awake() => throw null;
+    protected override void Awake() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void BindContext() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnDestroy() => throw null;
+    protected override void OnDestroy() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void CloseWindow() => throw null;
@@ -109,19 +109,19 @@ namespace KSP.Game
     private void RoundTripSelected() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
-    private void OnGameStateChanged(MessageCenterMessage msg) => throw null;
-
-    [MethodImpl(MethodImplOptions.NoInlining)]
     private void OnTimeWarpCompleted(MessageCenterMessage msg) => throw null;
 
-    public bool IsVisible
-    {
-      [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
-      [MethodImpl(MethodImplOptions.NoInlining)] set => throw null;
-    }
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    protected override bool GetVisibleStatus() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    protected override void SetVisibilityOfManager(bool visible) => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void Initialize() => throw null;
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private void OnLocalizeEvent() => throw null;
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     private void UpdateData() => throw null;
@@ -170,6 +170,8 @@ namespace KSP.Game
 
     public class TripEdgeDataContext : DataContext
     {
+      private const string TRIPPLANNER_LOC_SLUG = "VAB/TripPlanner/";
+      private string _destinationName;
       public Property<string> LocalizedDestination;
       public Property<double> DeltaVTotalCost;
       public Property<double> DeltaVCost;
@@ -178,7 +180,7 @@ namespace KSP.Game
 
       [MethodImpl(MethodImplOptions.NoInlining)]
       public TripEdgeDataContext(
-        string localizedDestination,
+        string destinationName,
         double deltaVTotalCost,
         double deltaVCost,
         double inclinationCost,
@@ -186,6 +188,9 @@ namespace KSP.Game
       {
         throw null;
       }
+
+      [MethodImpl(MethodImplOptions.NoInlining)]
+      public void LocalizeDestination() => throw null;
     }
   }
 }

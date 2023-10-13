@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.UI.Binding.Core.UIValue_ReadEnum_GraphicSet
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System;
 using System.Collections.Generic;
@@ -17,15 +17,19 @@ namespace KSP.UI.Binding.Core
   {
     [SerializeField]
     private Graphic[] targetGraphics;
+    [Tooltip("Sets the cross fade color value on the graphic")]
     [SerializeField]
     private bool updateColor;
+    [Tooltip("Sets the raw color value on the graphic")]
+    [SerializeField]
+    private bool setGraphicColor;
     [SerializeField]
     private float colorFadeDuration;
     [Header("Choose Sprite/Color for each Value")]
     [SerializeField]
     private UIValue_ReadEnum_GraphicSet.GraphicEntry[] graphicValues;
-    [SerializeField]
     [Header("Fallback - used when value is not mapped")]
+    [SerializeField]
     private UIValue_ReadEnum_GraphicSet.FallbackEntry fallbackValue;
     protected Dictionary<string, UIValue_ReadEnum_GraphicSet.GraphicEntry> valueMap;
 

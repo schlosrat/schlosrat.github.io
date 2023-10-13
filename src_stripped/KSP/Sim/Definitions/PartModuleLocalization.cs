@@ -1,9 +1,9 @@
 ﻿// Decompiled with JetBrains decompiler
 // Type: KSP.Sim.Definitions.PartModuleLocalization
 // Assembly: Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-// MVID: 57799B60-A4CD-4DF8-B3C9-AEC811D65AED
-// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp.dll
-// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp.xml
+// MVID: 0F37EC74-8184-4DF6-B7AF-AB13D81C547A
+// Assembly location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.dll
+// XML documentation location: C:\KSP2\DLL_stripped\Assembly-CSharp-stripped.xml
 
 using System.Runtime.CompilerServices;
 
@@ -322,6 +322,20 @@ namespace KSP.Sim.Definitions
     public const string ACTION_CONTROLSURFACE_PITCH_ENABLED_TOGGLE = "PartModules/ControlSurface/PitchEnabled/Toggle";
     public const string ACTION_CONTROLSURFACE_YAW_ENABLED_TOGGLE = "PartModules/ControlSurface/YawEnabled/Toggle";
     public const string ACTION_CONTROLSURFACE_ROLL_ENABLED_TOGGLE = "PartModules/ControlSurface/RollEnabled/Toggle";
+    public const string FIELD_SCIENCE_EXPERIMENT_NAME = "PartModules/ScienceExperiment/Name";
+    public const string FIELD_SCIENCE_EXPERIMENT_RUN = "PartModules/ScienceExperiment/Run";
+    public const string FIELD_SCIENCE_EXPERIMENT_CANCEL = "PartModules/ScienceExperiment/Cancel";
+    public const string FIELD_SCIENCE_EXPERIMENT_PAUSE = "PartModules/ScienceExperiment/Pause";
+    public const string FIELD_SCIENCE_EXPERIMENT_RESUME = "PartModules/ScienceExperiment/Resume";
+    public const string FIELD_SCIENCE_EXPERIMENT_LOCATION = "PartModules/ScienceExperiment/Location";
+    public const string FIELD_SCIENCE_EXPERIMENT_READY = "PartModules/ScienceExperiment/Ready";
+    public const string FIELD_SCIENCE_EXPERIMENT_RUNNING = "PartModules/ScienceExperiment/Running";
+    public const string FIELD_SCIENCE_EXPERIMENT_PAUSED = "PartModules/ScienceExperiment/Paused";
+    public const string FIELD_SCIENCE_EXPERIMENT_INSUFFICIENT_RESOURCE = "PartModules/ScienceExperiment/InsufficientResource";
+    public const string FIELD_SCIENCE_EXPERIMENT_INSUFFICIENT_CREW = "PartModules/ScienceExperiment/InsufficientCrew";
+    public const string FIELD_SCIENCE_EXPERIMENT_NO_CONTROL = "PartModules/ScienceExperiment/NoControl";
+    public const string FIELD_SCIENCE_EXPERIMENT_LOCATION_CHANGED = "PartModules/ScienceExperiment/LocationChanged";
+    public const string FIELD_SCIENCE_EXPERIMENT_INVALID_LOCATION = "PartModules/ScienceExperiment/InvalidLocation";
 
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static string GetAngleString(float value, string format, bool flipSign = false) => throw null;
