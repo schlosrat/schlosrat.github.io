@@ -33,7 +33,7 @@ jobs:
           move DLL_stripped\Assembly-CSharp-stripped.xml DLL_stripped\Assembly-CSharp-stripped.xml.bak
           dir DLL_stripped
         shell: cmd
-      - name: Generate XML Documentation Directly
+      - name: Generate XML Documentation Directly with Rename
         run: |
           GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
           move DLL_stripped\Assembly-CSharp.xml DLL_stripped\Assembly-CSharp-stripped.xml
