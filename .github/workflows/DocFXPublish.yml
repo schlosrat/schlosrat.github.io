@@ -37,6 +37,7 @@ jobs:
         run: |
           GenDoc\GenDoc.exe src_stripped\Assembly-CSharp-Stripped.sln DLL_stripped
           move DLL_stripped\Assembly-CSharp.xml DLL_stripped\Assembly-CSharp-stripped.xml
+          dir DLL_stripped
         shell: cmd
       - name: Check XML file
         run: dir DLL_stripped
