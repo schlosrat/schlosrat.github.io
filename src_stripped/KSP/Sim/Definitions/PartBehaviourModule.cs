@@ -152,6 +152,9 @@ namespace KSP.Sim.Definitions
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnStart() => throw null;
 
+    /// <summary>
+    /// It appears this doesn't trigger at all?
+    /// </summary>>
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnShutdown() => throw null;
 
@@ -198,21 +201,42 @@ namespace KSP.Sim.Definitions
       [MethodImpl(MethodImplOptions.NoInlining)] get => throw null;
     }
 
+    /// <summary>
+    /// It appears this doesn't trigger at all?
+    /// </summary>
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void OnFixedUpdate(float deltaTime) => throw null;
 
+    /// <summary>
+    /// This starts triggering when the Flight scene is loaded and then keeps triggering 
+    /// </summary>
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnModuleFixedUpdate(float fixedDeltaTime) => throw null;
 
+    /// <summary>
+    /// This starts triggering as soon as the part is first placed in the OAB scene.
+    /// Does not trigger anymore when scene transitions fo Flight. 
+    /// </summary>
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnModuleOABFixedUpdate(float fixedDeltaTime) => throw null;
 
+    /// <summary>
+    /// This starts triggering as soon as the part is first placed in the OAB scene.
+    /// Keeps triggering in every scene after this.
+    /// OnUpdate is called every frame. 
+    /// </summary>
     [MethodImpl(MethodImplOptions.NoInlining)]
     public virtual void OnUpdate(float deltaTime) => throw null;
 
+    /// <summary>
+    /// It appears this doesn't trigger at all?
+    /// </summary>
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnModuleUpdate(float deltaTime) => throw null;
 
+    /// <summary>
+    /// It appears this doesn't trigger at all?
+    /// </summary>
     [MethodImpl(MethodImplOptions.NoInlining)]
     protected virtual void OnModuleOABUpdate(float deltaTime) => throw null;
 
